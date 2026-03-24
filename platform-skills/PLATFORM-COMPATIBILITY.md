@@ -207,7 +207,7 @@ conditionally activated.
 
 #### Level 3: Extension (`gemini-extension/`)
 
-Full MCP server providing 6 callable tools and 4 slash commands.
+Full MCP server providing 7 callable tools and 4 slash commands.
 
 **Install:**
 ```bash
@@ -219,7 +219,7 @@ gemini extensions link gemini-extension
 Stored at `~/.gemini/extensions/strm-mapping/` after linking.
 
 **MCP tools:** `strm_compute_strength`, `strm_generate_filename`, `strm_build_csv_header`,
-`strm_validate_row`, `strm_list_input_files`, `strm_check_existing_mapping`
+`strm_validate_row`, `strm_validate_csv`, `strm_list_input_files`, `strm_check_existing_mapping`
 
 **Slash commands:** `/strm:init`, `/strm:map`, `/strm:gap-analysis`, `/strm:validate`
 
@@ -376,7 +376,7 @@ All platform versions maintain identical STRM methodology:
 | CSV columns | 12 columns, fixed order |
 | File naming | `Set Theory Relationship Mapping (STRM)_ [(<Focal>-to-<Bridge>)-to-<Target>]...` |
 | Artifact folders | `working-directory/mapping-artifacts/YYYY-MM-DD_<Focal>-to-<Target>/` |
-| Transitivity | Full truth table for derived mappings |
+| Transitivity | Full truth table for derived mappings, including `anything` + `not_related` => `not_related` |
 | Inverse relationships | `subset_of` ↔ `superset_of`; others self-inverse |
 | Risk/threat enrichment | Opt-in only — never auto-loaded |
 

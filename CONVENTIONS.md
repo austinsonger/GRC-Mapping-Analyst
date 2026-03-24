@@ -27,7 +27,7 @@ STRM methodology and output format described below.
 
 - Always read `knowledge/ir8477-strm-reference.md` before performing any mapping work.
 - Always write output files to `working-directory/` — never to the repository root.
-- Always copy (never modify) `TEMPLATE_Set Theory Relationship Mapping (STRM).csv` as the starting point.
+- Always initialize new mapping files with `node scripts/bin/strm-init-mapping.mjs` to create the canonical CSV header and artifact path.
 - Always check for existing STRM files for a source→target pair before creating a new one.
 - Always confirm both the source (Focal) and target (Reference) document before starting.
 
@@ -52,6 +52,26 @@ STRM methodology and output format described below.
 | `superset_of` | FDE scope entirely contains RDE |
 | `intersects_with` | FDE and RDE partially overlap |
 | `not_related` | Zero meaningful overlap (rare) |
+
+---
+
+## Relationship Decision Matrix
+
+Use this as a fast consistency check before finalizing `STRM Relationship`:
+
+| Relationship | Use When | Do Not Use When |
+|---|---|---|
+| `equal` | Both controls require the same scope and obligation level | One control is broader/narrower, or obligation differs (`SHALL` vs `SHOULD`) |
+| `subset_of` | FDE requirements are fully contained by RDE | FDE includes obligations not present in RDE |
+| `superset_of` | FDE explicitly includes all RDE requirements plus more | RDE contains requirements absent from FDE |
+| `intersects_with` | They share objective, but each has unique scope/mechanism | One fully contains the other |
+| `not_related` | No meaningful objective overlap after semantic review | There is any substantive overlap (use `intersects_with`) |
+
+### Edge-Case Checks
+
+- If one control states `SHALL` and the other `SHOULD`, default to containment (`subset_of`/`superset_of`), not `equal`.
+- If one control includes explicit lifecycle phases (for example create/review/disable) and the other only one phase, this is usually `subset_of`.
+- If one control includes enhancement clauses/parameters not present in the peer control, this is usually `intersects_with` or containment, not `equal`.
 
 ---
 
@@ -145,6 +165,7 @@ Place the completed CSV inside the dated folder when mapping is fully complete.
 | subset_of | subset_of | subset_of |
 | superset_of | superset_of | superset_of |
 | not_related | anything | not_related |
+| anything | not_related | not_related |
 | intersects_with | anything | indeterminate — do not auto-generate; flag for review |
 
 ---

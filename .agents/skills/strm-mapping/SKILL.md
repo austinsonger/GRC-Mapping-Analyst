@@ -99,9 +99,10 @@ already specified in the request:
 |---|---|
 | Step 1 (Gather) | `node scripts/bin/strm-check-existing-mapping.mjs --focal "<Focal>" --target "<Target>" --working-dir working-directory` |
 | Step 1 (JSON input) | `node scripts/bin/strm-extract-json.mjs <file.json>` |
-| Step 3 (Map rows) | `node scripts/bin/strm-map-extracted.mjs --focal "<Focal>" --target "<Target>" --focal-csv "<focal-extracted.csv>" --target-csv "<target-extracted.csv>" --output "<output.csv>"` |
-| Step 4 (Write CSV) | `node scripts/bin/strm-init-mapping.mjs --focal "<Focal>" --target "<Target>" --working-dir working-directory`, then `node scripts/bin/strm-generate-filename.mjs --focal "<Focal>" --target "<Target>" [--bridge "<Bridge>"]` |
-| Step 5 (Manual QA, required) | No script. Review every row and correct relationship/confidence/rationale/notes before validation. |
+| Workflow automation (optional) | `node scripts/bin/strm-run-workflow.mjs --focal "<Focal>" --target "<Target>" --focal-input "<path>" --target-input "<path>" [--manual-qa-done]` |
+| Step 3 (Map rows) | `node scripts/bin/strm-map-extracted.mjs --focal "<Focal>" --target "<Target>" --focal-csv "<focal-extracted.csv>" --target-csv "<target-extracted.csv>" --output "<output.csv>" [--top-k 1] [--review-flags]` |
+| Step 4 (Write CSV) | `node scripts/bin/strm-init-mapping.mjs --focal "<Focal>" --target "<Target>" --working-dir working-directory` (creates canonical filename + artifact path) |
+| Step 5 (Manual QA, required) | `node scripts/bin/strm-init-review-log.mjs --focal "<Focal>" --target "<Target>" --csv "<output.csv>"` (optional scaffold), then review every row and correct relationship/confidence/rationale/notes before validation. |
 | Post-completion (required) | `node scripts/bin/strm-validate-csv.mjs --file "<output.csv>"` |
 | Post-completion | `node scripts/bin/strm-gap-report.mjs --file "<output.csv>" --focal "<Focal>" --target "<Target>" --working-dir working-directory` |
 

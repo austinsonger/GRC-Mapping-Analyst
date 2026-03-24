@@ -1,0 +1,84 @@
+# Manual Review Log — HIPAA to NYDFS
+
+- Date: 2026-03-24
+- Mapping CSV: /Users/austinsonger/code/strm-Mapping/working-directory/mapping-artifacts/2026-03-24_HIPAA-to-NYDFS/Set Theory Relationship Mapping (STRM)_ [(HIPAA-to-HIPAA)-to-NYDFS] - HIPAA to NYDFS.csv
+
+## Summary
+
+- Rows reviewed: <count>
+- Rows changed: <count>
+- Changed FDE IDs: <comma-separated list>
+
+## Changed Rows
+
+- [ ] Row 2: 164.306(a) -> 500.15 (<old> => <new>) | Reason: <justification>
+- [ ] Row 3: 164.306(b) -> 500.2 (<old> => <new>) | Reason: <justification>
+- [ ] Row 4: 164.306(c) -> 500.2 (<old> => <new>) | Reason: <justification>
+- [ ] Row 5: 164.306(d) -> 500.9 (<old> => <new>) | Reason: <justification>
+- [ ] Row 6: 164.306(e) -> 500.7 (<old> => <new>) | Reason: <justification>
+- [ ] Row 7: 164.308(a)(1)(i) -> 500.2 (<old> => <new>) | Reason: <justification>
+- [ ] Row 8: 164.308(a)(1)(ii)(A) -> 500.9 (<old> => <new>) | Reason: <justification>
+- [ ] Row 9: 164.308(a)(1)(ii)(B) -> 500.9 (<old> => <new>) | Reason: <justification>
+- [ ] Row 10: 164.308(a)(1)(ii)(C) -> 500.3 (<old> => <new>) | Reason: <justification>
+- [ ] Row 11: 164.308(a)(1)(ii)(D) -> 500.14 (<old> => <new>) | Reason: <justification>
+- [ ] Row 12: 164.308(a)(2) -> 500.13 (<old> => <new>) | Reason: <justification>
+- [ ] Row 13: 164.308(a)(3)(i) -> 500.14 (<old> => <new>) | Reason: <justification>
+- [ ] Row 14: 164.308(a)(3)(ii)(A) -> 500.14 (<old> => <new>) | Reason: <justification>
+- [ ] Row 15: 164.308(a)(3)(ii)(B) -> 500.14 (<old> => <new>) | Reason: <justification>
+- [ ] Row 16: 164.308(a)(3)(ii)(C) -> 500.14 (<old> => <new>) | Reason: <justification>
+- [ ] Row 17: 164.308(a)(4)(i) -> 500.7 (<old> => <new>) | Reason: <justification>
+- [ ] Row 18: 164.308(a)(4)(ii)(A) -> 500.14 (<old> => <new>) | Reason: <justification>
+- [ ] Row 19: 164.308(a)(4)(ii)(B) -> 500.7 (<old> => <new>) | Reason: <justification>
+- [ ] Row 20: 164.308(a)(4)(ii)(C) -> 500.7 (<old> => <new>) | Reason: <justification>
+- [ ] Row 21: 164.308(a)(5)(i) -> 500.14 (<old> => <new>) | Reason: <justification>
+- [ ] Row 22: 164.308(a)(5)(ii)(A) -> 500.9 (<old> => <new>) | Reason: <justification>
+- [ ] Row 23: 164.308(a)(5)(ii)(B) -> 500.13 (<old> => <new>) | Reason: <justification>
+- [ ] Row 24: 164.308(a)(5)(ii)(C) -> 500.14 (<old> => <new>) | Reason: <justification>
+- [ ] Row 25: 164.308(a)(5)(ii)(D) -> 500.13 (<old> => <new>) | Reason: <justification>
+- [ ] Row 26: 164.308(a)(6)(i) -> 500.16 (<old> => <new>) | Reason: <justification>
+- [ ] Row 27: 164.308(a)(6)(ii) -> 500.16 (<old> => <new>) | Reason: <justification>
+- [ ] Row 28: 164.308(a)(7)(i) -> 500.16 (<old> => <new>) | Reason: <justification>
+- [ ] Row 29: 164.308(a)(7)(ii)(A) -> 500.13 (<old> => <new>) | Reason: <justification>
+- [ ] Row 30: 164.308(a)(7)(ii)(B) -> 500.16 (<old> => <new>) | Reason: <justification>
+- [ ] Row 31: 164.308(a)(7)(ii)(C) -> 500.16 (<old> => <new>) | Reason: <justification>
+- [ ] Row 32: 164.308(a)(7)(ii)(D) -> 500.8 (<old> => <new>) | Reason: <justification>
+- [ ] Row 33: 164.308(a)(7)(ii)(E) -> 500.13 (<old> => <new>) | Reason: <justification>
+- [ ] Row 34: 164.308(a)(8) -> 500.13 (<old> => <new>) | Reason: <justification>
+- [ ] Row 35: 164.308(b)(1) -> 500.15 (<old> => <new>) | Reason: <justification>
+- [ ] Row 36: 164.308(b)(4) -> 500.16 (<old> => <new>) | Reason: <justification>
+- [ ] Row 37: 164.310 (a)(1) -> 500.7 (<old> => <new>) | Reason: <justification>
+- [ ] Row 38: 164.310(a)(2)(i) -> 500.16 (<old> => <new>) | Reason: <justification>
+- [ ] Row 39: 164.310(a)(2)(ii) -> 500.14 (<old> => <new>) | Reason: <justification>
+- [ ] Row 40: 164.310(a)(2)(iii) -> 500.7 (<old> => <new>) | Reason: <justification>
+- [ ] Row 41: 164.310(a)(2)(iv) -> 500.14 (<old> => <new>) | Reason: <justification>
+- [ ] Row 42: 164.310(b) -> 500.14 (<old> => <new>) | Reason: <justification>
+- [ ] Row 43: 164.310(c) -> 500.14 (<old> => <new>) | Reason: <justification>
+- [ ] Row 44: 164.310(d)(1) -> 500.14 (<old> => <new>) | Reason: <justification>
+- [ ] Row 45: 164.310(d)(2)(i) -> 500.13 (<old> => <new>) | Reason: <justification>
+- [ ] Row 46: 164.310(d)(2)(ii) -> 500.14 (<old> => <new>) | Reason: <justification>
+- [ ] Row 47: 164.310(d)(2)(iii) -> 500.2 (<old> => <new>) | Reason: <justification>
+- [ ] Row 48: 164.310(d)(2)(iv) -> 500.13 (<old> => <new>) | Reason: <justification>
+- [ ] Row 49: 164.312(a)(1) -> 500.7 (<old> => <new>) | Reason: <justification>
+- [ ] Row 50: 164.312(a)(2)(i) -> 500.7 (<old> => <new>) | Reason: <justification>
+- [ ] Row 51: 164.312(a)(2)(ii) -> 500.7 (<old> => <new>) | Reason: <justification>
+- [ ] Row 52: 164.312(a)(2)(iii) -> 500.14 (<old> => <new>) | Reason: <justification>
+- [ ] Row 53: 164.312(a)(2)(iv) -> 500.15 (<old> => <new>) | Reason: <justification>
+- [ ] Row 54: 164.312(b) -> 500.6 (<old> => <new>) | Reason: <justification>
+- [ ] Row 55: 164.312(c)(1) -> 500.14 (<old> => <new>) | Reason: <justification>
+- [ ] Row 56: 164.312(c)(2) -> 500.14 (<old> => <new>) | Reason: <justification>
+- [ ] Row 57: 164.312(d) -> 500.12 (<old> => <new>) | Reason: <justification>
+- [ ] Row 58: 164.312(e)(1) -> 500.14 (<old> => <new>) | Reason: <justification>
+- [ ] Row 59: 164.312(e)(2)(i) -> 500.15 (<old> => <new>) | Reason: <justification>
+- [ ] Row 60: 164.312(e)(2)(ii) -> 500.15 (<old> => <new>) | Reason: <justification>
+- [ ] Row 61: 164.314(a)(1) -> 500.9 (<old> => <new>) | Reason: <justification>
+- [ ] Row 62: 164.314(a)(2) -> 500.16 (<old> => <new>) | Reason: <justification>
+- [ ] Row 63: 164.314(b)(1) -> 500.16 (<old> => <new>) | Reason: <justification>
+- [ ] Row 64: 164.314(b)(2)(i) -> 500.16 (<old> => <new>) | Reason: <justification>
+- [ ] Row 65: 164.314(b)(2)(ii) -> 500.9 (<old> => <new>) | Reason: <justification>
+- [ ] Row 66: 164.314(b)(2)(iii) -> 500.15 (<old> => <new>) | Reason: <justification>
+- [ ] Row 67: 164.314(b)(2)(iv) -> 500.16 (<old> => <new>) | Reason: <justification>
+- [ ] Row 68: 164.316(a) -> 500.13 (<old> => <new>) | Reason: <justification>
+- [ ] Row 69: 164.316(b)(1) -> 500.2 (<old> => <new>) | Reason: <justification>
+- [ ] Row 70: 164.316(b)(2)(i) -> 500.9 (<old> => <new>) | Reason: <justification>
+- [ ] Row 71: 164.316(b)(2)(ii) -> 500.13 (<old> => <new>) | Reason: <justification>
+- [ ] Row 72: 164.316(b)(2)(iii) -> 500.7 (<old> => <new>) | Reason: <justification>

@@ -3,7 +3,10 @@ import fs from 'node:fs/promises';
 import { findColumnIndexes, parseCsv, validateDataRow } from '../lib/strm-core.mjs';
 
 function usage() {
-  console.error('Usage: node scripts/bin/strm-validate-csv.mjs --file <path-to-strm-csv>');
+  console.error(
+    'Usage: node scripts/bin/strm-validate-csv.mjs --file <path-to-strm-csv> ' +
+    '[--focal-csv <path-to-focal-controls-csv>] [--strict-coverage]'
+  );
 }
 
 function readArg(args, name) {
@@ -14,6 +17,8 @@ function readArg(args, name) {
 
 const args = process.argv.slice(2);
 const file = readArg(args, '--file');
+const focalCsv = readArg(args, '--focal-csv');
+const strictCoverage = args.includes('--strict-coverage');
 if (!file) {
   usage();
   process.exit(1);
@@ -46,6 +51,20 @@ if (missing.length > 0) {
 const errors = [];
 const warnings = [];
 let dataRows = 0;
+const seenPairs = new Map();
+const mappedFdes = new Set();
+
+const unresolvedTargetHeaders = header
+  .filter((h) => String(h ?? '').toLowerCase().includes('<target>'))
+  .map((h) => String(h ?? '').trim())
+  .filter(Boolean);
+
+if (unresolvedTargetHeaders.length > 0) {
+  errors.push(
+    `Header contains unresolved <Target> placeholders: ${unresolvedTargetHeaders.join(', ')}. ` +
+    'Replace with the actual target framework name in columns I and K.'
+  );
+}
 
 for (let i = 1; i < rows.length; i += 1) {
   const row = rows[i];
@@ -56,6 +75,56 @@ for (let i = 1; i < rows.length; i += 1) {
   const result = validateDataRow(row, idx, i + 1);
   errors.push(...result.errors);
   warnings.push(...result.warnings);
+
+  const fdeNum = String(row[idx.fdeNum] ?? '').trim();
+  const targetId = String(row[idx.targetId] ?? '').trim();
+  if (fdeNum) mappedFdes.add(fdeNum);
+  if (fdeNum && targetId) {
+    const key = `${fdeNum}|||${targetId}`;
+    if (seenPairs.has(key)) {
+      errors.push(
+        `Row ${i + 1}: duplicate mapping pair ${fdeNum} -> ${targetId}. ` +
+        `First seen at row ${seenPairs.get(key)}.`
+      );
+    } else {
+      seenPairs.set(key, i + 1);
+    }
+  }
+}
+
+if (focalCsv) {
+  const focalText = await fs.readFile(focalCsv, 'utf8');
+  const focalRows = parseCsv(focalText);
+  if (focalRows.length > 0) {
+    const focalHeader = focalRows[0].map((v) => String(v ?? '').trim().toLowerCase());
+    const preferredColumns = ['controlid', 'fde#', 'id', 'control id'];
+    let focalIdIdx = -1;
+    for (const name of preferredColumns) {
+      focalIdIdx = focalHeader.indexOf(name);
+      if (focalIdIdx >= 0) break;
+    }
+    if (focalIdIdx === -1) focalIdIdx = 0;
+
+    const expectedFdes = new Set();
+    for (let i = 1; i < focalRows.length; i += 1) {
+      const id = String(focalRows[i][focalIdIdx] ?? '').trim();
+      if (id) expectedFdes.add(id);
+    }
+
+    const unmapped = [...expectedFdes].filter((id) => !mappedFdes.has(id));
+    if (unmapped.length > 0) {
+      const msg =
+        `Coverage check: ${unmapped.length} focal control(s) have no mapped rows in output CSV. ` +
+        `Examples: ${unmapped.slice(0, 10).join(', ')}${unmapped.length > 10 ? ' ...' : ''}`;
+      if (strictCoverage) {
+        errors.push(msg);
+      } else {
+        warnings.push(msg);
+      }
+    }
+  } else {
+    warnings.push(`Coverage check skipped: focal CSV '${focalCsv}' is empty.`);
+  }
 }
 
 const payload = {

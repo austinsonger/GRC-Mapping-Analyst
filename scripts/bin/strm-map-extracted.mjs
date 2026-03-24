@@ -4,7 +4,7 @@ import { buildHeader, computeStrength, parseCsv, toCsv } from '../lib/strm-core.
 
 function usage() {
   console.error(
-    'Usage: node scripts/bin/strm-map-extracted.mjs --focal "HIPAA" --target "NYDFS" --focal-csv <path> --target-csv <path> --output <path>'
+    'Usage: node scripts/bin/strm-map-extracted.mjs --focal "HIPAA" --target "NYDFS" --focal-csv <path> --target-csv <path> --output <path> [--top-k 1] [--review-flags]'
   );
 }
 
@@ -20,9 +20,16 @@ const targetName = readArg(args, '--target');
 const focalCsv = readArg(args, '--focal-csv');
 const targetCsv = readArg(args, '--target-csv');
 const outputPath = readArg(args, '--output');
+const topKRaw = readArg(args, '--top-k');
+const topK = topKRaw ? Number.parseInt(topKRaw, 10) : 1;
+const reviewFlagsEnabled = args.includes('--review-flags');
 
 if (!focalName || !targetName || !focalCsv || !targetCsv || !outputPath) {
   usage();
+  process.exit(1);
+}
+if (!Number.isInteger(topK) || topK < 1) {
+  console.error('--top-k must be an integer >= 1');
   process.exit(1);
 }
 
@@ -177,6 +184,15 @@ function buildNotes(rel, sharedThemes, srcUnique, tgtUnique) {
   return `No substantive thematic overlap detected. Focal terms: ${srcScope}. Target terms: ${tgtScope}.`;
 }
 
+function collectReviewFlags({ score, margin, conf, relationship }) {
+  const flags = [];
+  if (margin < 0.015) flags.push('low_margin');
+  if (score < 0.2) flags.push('weak_signal');
+  if (conf !== 'high') flags.push('medium_confidence');
+  if (relationship === 'not_related') flags.push('verify_not_related');
+  return flags;
+}
+
 const focalText = await fs.readFile(focalCsv, 'utf8');
 const targetText = await fs.readFile(targetCsv, 'utf8');
 
@@ -207,61 +223,70 @@ const targetControls = parseControls(targetText).map((c) => {
 const outRows = [buildHeader(targetName)];
 
 for (const src of focalControls) {
-  let best = null;
-  let secondBestScore = -1;
+  const scored = [];
   for (const tgt of targetControls) {
     const lexical = jaccard(src.tokens, tgt.tokens);
     const titleLexical = jaccard(tokenSet(src.titleFreq), tokenSet(tgt.titleFreq));
     const overlap = [...src.themes].filter((x) => tgt.themes.has(x)).length;
     const score = titleLexical * 0.45 + lexical * 0.40 + Math.min(0.15, overlap * 0.075);
-    if (!best || score > best.score) {
-      if (best) secondBestScore = Math.max(secondBestScore, best.score);
-      best = { tgt, lexical, titleLexical, overlap, score };
-    } else {
-      secondBestScore = Math.max(secondBestScore, score);
-    }
+    scored.push({ tgt, lexical, titleLexical, overlap, score });
   }
+  scored.sort((a, b) => b.score - a.score);
+  const selected = scored.slice(0, Math.min(topK, scored.length));
+  if (selected.length === 0) continue;
 
-  const tgt = best.tgt;
-  const margin = best.score - (secondBestScore < 0 ? 0 : secondBestScore);
-  let relationship = classify(src, tgt, { ...best, margin });
-  if (relationship === 'not_related' && best.score > 0.08) relationship = 'intersects_with';
+  for (let candidateIndex = 0; candidateIndex < selected.length; candidateIndex += 1) {
+    const candidate = selected[candidateIndex];
+    const nextScore = scored[candidateIndex + 1]?.score ?? 0;
+    const margin = candidate.score - nextScore;
+    const tgt = candidate.tgt;
+    let relationship = classify(src, tgt, { ...candidate, margin });
+    if (relationship === 'not_related' && candidate.score > 0.08) relationship = 'intersects_with';
 
-  const conf = confidence(best.score);
-  const rationaleType = 'functional';
-  const strength = computeStrength(relationship, conf, rationaleType).score;
+    const conf = confidence(candidate.score);
+    const rationaleType = 'functional';
+    const strength = computeStrength(relationship, conf, rationaleType).score;
 
-  const sharedThemes = [...src.themes].filter((t) => tgt.themes.has(t));
-  const shared = sharedThemes[0] ?? 'security and privacy governance';
-  const srcUnique = topTokens(src.freq, tgt.tokens);
-  const tgtUnique = topTokens(tgt.freq, src.tokens);
+    const sharedThemes = [...src.themes].filter((t) => tgt.themes.has(t));
+    const shared = sharedThemes[0] ?? 'security and privacy governance';
+    const srcUnique = topTokens(src.freq, tgt.tokens);
+    const tgtUnique = topTokens(tgt.freq, src.tokens);
 
-  const rationale = `${focalName} ${src.controlId} requires ${clip(src.description, 180)}. ${targetName} ${tgt.controlId} requires ${clip(tgt.description, 180)}. Both address ${shared}. ${relationTail(relationship)}`;
-  const notes = buildNotes(relationship, sharedThemes, srcUnique, tgtUnique);
+    const rationale = `${focalName} ${src.controlId} requires ${clip(src.description, 180)}. ${targetName} ${tgt.controlId} requires ${clip(tgt.description, 180)}. Both address ${shared}. ${relationTail(relationship)}`;
+    let notes = buildNotes(relationship, sharedThemes, srcUnique, tgtUnique);
+    if (reviewFlagsEnabled) {
+      const flags = collectReviewFlags({ score: candidate.score, margin, conf, relationship });
+      if (flags.length > 0) {
+        notes = `${notes} Review Flags: ${flags.join(', ')}.`;
+      }
+    }
 
-  outRows.push([
-    src.controlId,
-    src.title || src.controlId,
-    clip(src.description, 500),
-    conf,
-    rationaleType,
-    rationale,
-    relationship,
-    String(strength),
-    tgt.title || tgt.controlId,
-    tgt.controlId,
-    clip(tgt.description, 500),
-    notes,
-  ]);
+    outRows.push([
+      src.controlId,
+      src.title || src.controlId,
+      clip(src.description, 500),
+      conf,
+      rationaleType,
+      rationale,
+      relationship,
+      String(strength),
+      tgt.title || tgt.controlId,
+      tgt.controlId,
+      clip(tgt.description, 500),
+      notes,
+    ]);
+  }
 }
 
 await fs.writeFile(outputPath, toCsv(outRows), 'utf8');
 
-const relationshipDistribution = outRows.slice(1).reduce((acc, row) => {
+const dataRows = outRows.slice(1);
+const relationshipDistribution = dataRows.reduce((acc, row) => {
   const rel = row[6];
   acc[rel] = (acc[rel] ?? 0) + 1;
   return acc;
 }, {});
+const flaggedRows = dataRows.filter((row) => String(row[11] ?? '').includes('Review Flags:')).length;
 
 console.log(
   JSON.stringify(
@@ -269,6 +294,9 @@ console.log(
       status: 'ok',
       outputPath,
       rowsWritten: outRows.length - 1,
+      topK,
+      reviewFlagsEnabled,
+      flaggedRows,
       relationshipDistribution,
     },
     null,

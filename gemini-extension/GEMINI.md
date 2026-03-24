@@ -17,12 +17,16 @@ Returns the correctly formatted STRM CSV filename for a given focal/bridge/targe
 Use this **before** writing any output file.
 
 ### `strm_build_csv_header`
-Returns the first four rows of a STRM CSV (header block) ready to paste into the output file.
+Returns the single STRM CSV header row (Row 1) ready to use in the output file.
 Use this **when starting** a new CSV.
 
 ### `strm_validate_row`
 Checks a single mapping row against all quality rules. Returns errors and warnings.
 Use this **after completing each row** before moving to the next.
+
+### `strm_validate_csv`
+Validates the full STRM CSV for row-level and cross-row quality checks (including formula checks, duplicate pairs, and unresolved `<Target>` headers).
+Use this **after manual review** before completion.
 
 ### `strm_list_input_files`
 Lists all available framework/control files in the working-directory.
@@ -38,13 +42,13 @@ Use this **before starting** any new mapping to avoid duplication.
 
 1. Run `node scripts/bin/strm-list-input-files.mjs --dir working-directory` to see available framework files.
 2. Run `node scripts/bin/strm-check-existing-mapping.mjs --focal "<Focal>" --target "<Target>" --working-dir working-directory` to check for prior work.
-3. Copy the template (`TEMPLATE_Set Theory Relationship Mapping (STRM).csv`) — it contains the single header row. Data starts at Row 2.
+3. Run `node scripts/bin/strm-init-mapping.mjs --focal "<Focal>" --target "<Target>" [--bridge "<Bridge>"] [--working-dir working-directory]` to initialize the mapping CSV in the artifact folder.
 4. For each FDE → RDE pair:
    a. Determine relationship, confidence, and rationale type semantically.
    b. Run `node scripts/bin/strm-compute-strength.mjs` to get the strength score.
    c. Write the rationale narrative following the pattern below.
    d. Run `node scripts/bin/strm-validate-csv.mjs --file "<csv>"` to check quality.
-5. Run `node scripts/bin/strm-generate-filename.mjs` and save the completed file to `working-directory/`.
+5. Keep editing the initialized CSV path from Step 3, then run validation and gap analysis after manual review.
 
 ---
 

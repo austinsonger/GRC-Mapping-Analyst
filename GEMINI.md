@@ -155,6 +155,7 @@ For `intersects_with`: append "Both address <overlap>. <Source> additionally cov
 | subset_of | subset_of | subset_of |
 | superset_of | superset_of | superset_of |
 | not_related | anything | not_related |
+| anything | not_related | not_related |
 | intersects_with | anything | indeterminate — flag for manual review |
 
 ---
@@ -202,12 +203,19 @@ Activate when user says: "include risk data", "add threat context", "risk-to-con
 
 ## Template Reference
 
-Copy (do not modify) the blank template:
+Generate a new mapping CSV with:
+```bash
+node scripts/bin/strm-init-mapping.mjs --focal "<Focal>" --target "<Target>" [--bridge "<Bridge>"] [--working-dir working-directory]
+```
+
+The script creates the artifact folder and writes a CSV with the canonical single header row.
+
+Do not modify the blank template:
 ```
 TEMPLATE_Set Theory Relationship Mapping (STRM).csv
 ```
 
-Rename the copy per the file naming convention above.
+Use the template only as a schema/reference baseline.
 
 ---
 

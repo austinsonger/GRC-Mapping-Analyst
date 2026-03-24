@@ -9,7 +9,7 @@
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import { z } from 'zod';
-import { readdir, stat } from 'fs/promises';
+import { readdir, readFile, stat } from 'fs/promises';
 import { join, extname, basename } from 'path';
 
 // ---------------------------------------------------------------------------
@@ -152,7 +152,9 @@ function validateRow(params: {
   }
 
   // Strength score range
-  if (params.strengthScore < 1 || params.strengthScore > 10) {
+  if (!Number.isInteger(params.strengthScore)) {
+    errors.push(`Strength score ${params.strengthScore} is invalid. Must be an integer 1–10.`);
+  } else if (params.strengthScore < 1 || params.strengthScore > 10) {
     errors.push(`Strength score ${params.strengthScore} is out of range. Must be 1–10.`);
   }
 
@@ -192,6 +194,105 @@ function validateRow(params: {
   return { valid: errors.length === 0, errors, warnings };
 }
 
+function parseCsv(text: string): string[][] {
+  const rows: string[][] = [];
+  let row: string[] = [];
+  let cell = '';
+  let i = 0;
+  let inQuotes = false;
+
+  while (i < text.length) {
+    const ch = text[i];
+
+    if (inQuotes) {
+      if (ch === '"') {
+        if (text[i + 1] === '"') {
+          cell += '"';
+          i += 2;
+          continue;
+        }
+        inQuotes = false;
+        i += 1;
+        continue;
+      }
+      cell += ch;
+      i += 1;
+      continue;
+    }
+
+    if (ch === '"') {
+      inQuotes = true;
+      i += 1;
+      continue;
+    }
+
+    if (ch === ',') {
+      row.push(cell);
+      cell = '';
+      i += 1;
+      continue;
+    }
+
+    if (ch === '\n') {
+      row.push(cell);
+      rows.push(row);
+      row = [];
+      cell = '';
+      i += 1;
+      continue;
+    }
+
+    if (ch === '\r') {
+      i += 1;
+      continue;
+    }
+
+    cell += ch;
+    i += 1;
+  }
+
+  if (cell.length > 0 || row.length > 0) {
+    row.push(cell);
+    rows.push(row);
+  }
+
+  return rows;
+}
+
+function normalizeHeaderKey(value: string): string {
+  return String(value).trim().toLowerCase().replace(/\s+/g, ' ');
+}
+
+function findColumnIndexes(headerRow: string[]): Record<string, number | undefined> {
+  const map = new Map<string, number>();
+  headerRow.forEach((value, index) => {
+    map.set(normalizeHeaderKey(value), index);
+  });
+
+  const byExact = (key: string) => map.get(normalizeHeaderKey(key));
+
+  return {
+    relationship: byExact('STRM Relationship'),
+    confidence: byExact('Confidence Levels'),
+    rationaleType: byExact('NIST IR-8477 Rational'),
+    rationaleText: byExact('STRM Rationale'),
+    strength: byExact('Strength of Relationship'),
+    fdeNum: byExact('FDE#'),
+    targetId: byExact('Target ID #'),
+    notes: byExact('Notes'),
+  };
+}
+
+function focalIdIndex(headerRow: string[]): number {
+  const lower = headerRow.map((h) => String(h ?? '').trim().toLowerCase());
+  const candidates = ['controlid', 'fde#', 'id', 'control id'];
+  for (const name of candidates) {
+    const idx = lower.indexOf(name);
+    if (idx >= 0) return idx;
+  }
+  return 0;
+}
+
 // ---------------------------------------------------------------------------
 // File system helpers
 // ---------------------------------------------------------------------------
@@ -201,22 +302,29 @@ const INPUT_EXTENSIONS = new Set(['.csv', '.pdf', '.md', '.json', '.yml', '.toml
 async function listFrameworkFiles(directory: string): Promise<{ name: string; path: string; extension: string }[]> {
   const results: { name: string; path: string; extension: string }[] = [];
   try {
-    const entries = await readdir(directory, { withFileTypes: true });
-    for (const entry of entries) {
-      if (entry.isFile()) {
-        const ext = extname(entry.name).toLowerCase();
-        if (INPUT_EXTENSIONS.has(ext)) {
-          results.push({
-            name: basename(entry.name, ext),
-            path: join(directory, entry.name),
-            extension: ext,
-          });
+    async function scan(current: string): Promise<void> {
+      const entries = await readdir(current, { withFileTypes: true });
+      for (const entry of entries) {
+        const fullPath = join(current, entry.name);
+        if (entry.isDirectory()) {
+          await scan(fullPath);
+          continue;
         }
+        if (!entry.isFile()) continue;
+        const ext = extname(entry.name).toLowerCase();
+        if (!INPUT_EXTENSIONS.has(ext)) continue;
+        results.push({
+          name: basename(entry.name, ext),
+          path: fullPath,
+          extension: ext,
+        });
       }
     }
+    await scan(directory);
   } catch {
     // Directory not accessible or doesn't exist — return empty list
   }
+  results.sort((a, b) => a.path.localeCompare(b.path));
   return results;
 }
 
@@ -507,6 +615,159 @@ server.registerTool(
             null,
             2,
           ),
+        },
+      ],
+    };
+  },
+);
+
+// Tool 7: Validate full CSV
+server.registerTool(
+  'strm_validate_csv',
+  {
+    description:
+      'Validates a full STRM CSV file for row-level quality and cross-row consistency. ' +
+      'Includes formula checks, duplicate FDE# + Target ID# detection, unresolved <Target> header placeholders, ' +
+      'and optional focal coverage checks.',
+    inputSchema: z.object({
+      file_path: z
+        .string()
+        .describe('Path to the STRM CSV to validate.'),
+      focal_csv_path: z
+        .string()
+        .optional()
+        .describe('Optional focal controls CSV path (for unmapped focal coverage checks).'),
+      strict_coverage: z
+        .boolean()
+        .optional()
+        .default(false)
+        .describe('When true, unmapped focal controls are treated as errors instead of warnings.'),
+    }).shape,
+  },
+  async ({ file_path, focal_csv_path, strict_coverage }) => {
+    const text = await readFile(file_path, 'utf8');
+    const rows = parseCsv(text);
+
+    if (rows.length === 0) {
+      return {
+        content: [
+          {
+            type: 'text' as const,
+            text: JSON.stringify({
+              status: 'error',
+              file: file_path,
+              message: 'CSV is empty.',
+            }, null, 2),
+          },
+        ],
+      };
+    }
+
+    const header = rows[0];
+    const idx = findColumnIndexes(header);
+    const missing = Object.entries(idx)
+      .filter(([, v]) => typeof v !== 'number')
+      .map(([k]) => k);
+
+    const errors: string[] = [];
+    const warnings: string[] = [];
+
+    if (missing.length > 0) {
+      errors.push(`Missing required columns: ${missing.join(', ')}`);
+    }
+
+    const unresolvedTargetHeaders = header
+      .filter((h) => String(h ?? '').toLowerCase().includes('<target>'))
+      .map((h) => String(h ?? '').trim())
+      .filter(Boolean);
+
+    if (unresolvedTargetHeaders.length > 0) {
+      errors.push(
+        `Header contains unresolved <Target> placeholders: ${unresolvedTargetHeaders.join(', ')}. ` +
+        'Replace placeholders with the actual target framework name.'
+      );
+    }
+
+    const seenPairs = new Map<string, number>();
+    const mappedFdes = new Set<string>();
+    let dataRows = 0;
+
+    if (missing.length === 0) {
+      for (let i = 1; i < rows.length; i += 1) {
+        const row = rows[i];
+        const isBlank = row.every((v) => String(v ?? '').trim() === '');
+        if (isBlank) continue;
+
+        dataRows += 1;
+        const rowResult = validateRow({
+          fdeNum: String(row[idx.fdeNum as number] ?? ''),
+          relationship: String(row[idx.relationship as number] ?? ''),
+          confidence: String(row[idx.confidence as number] ?? ''),
+          rationaleType: String(row[idx.rationaleType as number] ?? ''),
+          rationaleText: String(row[idx.rationaleText as number] ?? ''),
+          strengthScore: Number.parseInt(String(row[idx.strength as number] ?? '').trim(), 10),
+          targetId: String(row[idx.targetId as number] ?? ''),
+          notes: String(row[idx.notes as number] ?? ''),
+        });
+
+        errors.push(...rowResult.errors.map((e) => `Row ${i + 1}: ${e}`));
+        warnings.push(...rowResult.warnings.map((w) => `Row ${i + 1}: ${w}`));
+
+        const fdeNum = String(row[idx.fdeNum as number] ?? '').trim();
+        const targetId = String(row[idx.targetId as number] ?? '').trim();
+        if (fdeNum) mappedFdes.add(fdeNum);
+        if (fdeNum && targetId) {
+          const key = `${fdeNum}|||${targetId}`;
+          if (seenPairs.has(key)) {
+            errors.push(
+              `Row ${i + 1}: duplicate mapping pair ${fdeNum} -> ${targetId}. ` +
+              `First seen at row ${seenPairs.get(key)}.`
+            );
+          } else {
+            seenPairs.set(key, i + 1);
+          }
+        }
+      }
+    }
+
+    if (focal_csv_path) {
+      const focalText = await readFile(focal_csv_path, 'utf8');
+      const focalRows = parseCsv(focalText);
+      if (focalRows.length > 0) {
+        const idIdx = focalIdIndex(focalRows[0]);
+        const expectedFdes = new Set<string>();
+        for (let i = 1; i < focalRows.length; i += 1) {
+          const id = String(focalRows[i][idIdx] ?? '').trim();
+          if (id) expectedFdes.add(id);
+        }
+        const unmapped = [...expectedFdes].filter((id) => !mappedFdes.has(id));
+        if (unmapped.length > 0) {
+          const msg =
+            `Coverage check: ${unmapped.length} focal control(s) have no mapped rows. ` +
+            `Examples: ${unmapped.slice(0, 10).join(', ')}${unmapped.length > 10 ? ' ...' : ''}`;
+          if (strict_coverage) errors.push(msg);
+          else warnings.push(msg);
+        }
+      } else {
+        warnings.push(`Coverage check skipped: focal CSV '${focal_csv_path}' is empty.`);
+      }
+    }
+
+    const payload = {
+      status: errors.length === 0 ? 'pass' : 'fail',
+      file: file_path,
+      totalRowsChecked: dataRows,
+      errorCount: errors.length,
+      warningCount: warnings.length,
+      errors,
+      warnings,
+    };
+
+    return {
+      content: [
+        {
+          type: 'text' as const,
+          text: JSON.stringify(payload, null, 2),
         },
       ],
     };
