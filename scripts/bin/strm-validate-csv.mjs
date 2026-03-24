@@ -53,6 +53,13 @@ const warnings = [];
 let dataRows = 0;
 const seenPairs = new Map();
 const mappedFdes = new Set();
+const relationCounts = {
+  equal: 0,
+  subset_of: 0,
+  superset_of: 0,
+  intersects_with: 0,
+  not_related: 0,
+};
 
 const unresolvedTargetHeaders = header
   .filter((h) => String(h ?? '').toLowerCase().includes('<target>'))
@@ -75,6 +82,9 @@ for (let i = 1; i < rows.length; i += 1) {
   const result = validateDataRow(row, idx, i + 1);
   errors.push(...result.errors);
   warnings.push(...result.warnings);
+  if (Object.hasOwn(relationCounts, result.relationship)) {
+    relationCounts[result.relationship] += 1;
+  }
 
   const fdeNum = String(row[idx.fdeNum] ?? '').trim();
   const targetId = String(row[idx.targetId] ?? '').trim();
@@ -89,6 +99,21 @@ for (let i = 1; i < rows.length; i += 1) {
     } else {
       seenPairs.set(key, i + 1);
     }
+  }
+}
+
+if (dataRows > 0) {
+  const subsetSuperset = relationCounts.subset_of + relationCounts.superset_of;
+  if (subsetSuperset === 0) {
+    warnings.push(
+      'Distribution self-check: subset_of + superset_of = 0. Review equal rows; containment may be underused.'
+    );
+  }
+  const equalPct = (relationCounts.equal / dataRows) * 100;
+  if (equalPct > 50) {
+    warnings.push(
+      `Distribution self-check: equal = ${equalPct.toFixed(2)}% (>50%). Reconfirm that scope and obligation are truly identical for equal rows.`
+    );
   }
 }
 
@@ -133,6 +158,7 @@ const payload = {
   totalRowsChecked: dataRows,
   errorCount: errors.length,
   warningCount: warnings.length,
+  relationshipCounts: relationCounts,
   errors,
   warnings,
 };

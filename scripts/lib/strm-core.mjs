@@ -254,11 +254,35 @@ export function validateDataRow(row, indexes, rowNumber) {
   if (relationship === 'not_related' && !notes) {
     warnings.push(`${prefix} not_related should include Notes context.`);
   }
+  if ((relationship === 'subset_of' || relationship === 'superset_of') && !notes) {
+    warnings.push(`${prefix} ${relationship} should include Notes explaining containment direction and scope difference.`);
+  }
   if (rationaleType === 'syntactic') {
     warnings.push(`${prefix} syntactic rationale is uncommon; verify intent.`);
   }
   if (confidence === 'low') {
     warnings.push(`${prefix} low confidence should be used only when significant inference is required.`);
+  }
+  if (rationaleText) {
+    const rationaleLower = rationaleText.toLowerCase();
+    if (fdeNum && !rationaleText.includes(fdeNum)) {
+      warnings.push(`${prefix} STRM Rationale should reference the FDE# (${fdeNum}) explicitly.`);
+    }
+    if (targetId && !rationaleText.includes(targetId)) {
+      warnings.push(`${prefix} STRM Rationale should reference the Target ID # (${targetId}) explicitly.`);
+    }
+    if (!/\bboth\b/i.test(rationaleText)) {
+      warnings.push(`${prefix} STRM Rationale should include an explicit shared objective statement (e.g., "Both ...").`);
+    }
+    if (
+      (relationship === 'subset_of' || relationship === 'superset_of') &&
+      !/(narrow|broad|contain|scope|within|includes?)/i.test(rationaleLower)
+    ) {
+      warnings.push(`${prefix} ${relationship} rationale should explain containment direction using explicit scope language.`);
+    }
+    if (relationship === 'equal' && /\bshall\b/i.test(rationaleText) && /\bshould\b/i.test(rationaleText)) {
+      warnings.push(`${prefix} equal rationale contains mixed obligation language (SHALL/SHOULD). Reconfirm this is not subset_of/superset_of.`);
+    }
   }
 
   return { errors, warnings, relationship };

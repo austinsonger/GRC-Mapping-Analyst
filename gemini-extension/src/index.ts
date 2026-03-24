@@ -181,6 +181,12 @@ function validateRow(params: {
   if (params.relationship === 'not_related' && !params.notes.trim()) {
     warnings.push('not_related mappings should include Notes explaining why there is zero overlap.');
   }
+  if (
+    (params.relationship === 'subset_of' || params.relationship === 'superset_of') &&
+    !params.notes.trim()
+  ) {
+    warnings.push(`${params.relationship} mappings should include Notes explaining containment direction and scope difference.`);
+  }
   if (params.rationaleType === 'syntactic') {
     warnings.push('syntactic rationale is rare (<1% of mappings). Confirm wording similarity is the primary — not supporting — justification.');
   }
@@ -189,6 +195,28 @@ function validateRow(params: {
   }
   if (params.rationaleText.length < 40) {
     warnings.push('Rationale text appears very short. Ensure it follows the pattern: "<Source> <FDE#> requires <X>. <Target> <RDE#> requires <Y>. Both <shared objective>."');
+  }
+  if (params.fdeNum.trim() && !params.rationaleText.includes(params.fdeNum.trim())) {
+    warnings.push(`Rationale should reference FDE# (${params.fdeNum.trim()}) explicitly.`);
+  }
+  if (params.targetId.trim() && !params.rationaleText.includes(params.targetId.trim())) {
+    warnings.push(`Rationale should reference Target ID # (${params.targetId.trim()}) explicitly.`);
+  }
+  if (!/\bboth\b/i.test(params.rationaleText)) {
+    warnings.push('Rationale should include an explicit shared objective statement (e.g., "Both ...").');
+  }
+  if (
+    (params.relationship === 'subset_of' || params.relationship === 'superset_of') &&
+    !/(narrow|broad|contain|scope|within|includes?)/i.test(params.rationaleText.toLowerCase())
+  ) {
+    warnings.push(`${params.relationship} rationale should explain containment direction with explicit scope language.`);
+  }
+  if (
+    params.relationship === 'equal' &&
+    /\bshall\b/i.test(params.rationaleText) &&
+    /\bshould\b/i.test(params.rationaleText)
+  ) {
+    warnings.push('equal rationale contains mixed obligation language (SHALL/SHOULD). Reconfirm this is not subset_of/superset_of.');
   }
 
   return { valid: errors.length === 0, errors, warnings };
@@ -690,6 +718,13 @@ server.registerTool(
 
     const seenPairs = new Map<string, number>();
     const mappedFdes = new Set<string>();
+    const relationshipCounts: Record<Relationship, number> = {
+      equal: 0,
+      subset_of: 0,
+      superset_of: 0,
+      intersects_with: 0,
+      not_related: 0,
+    };
     let dataRows = 0;
 
     if (missing.length === 0) {
@@ -712,6 +747,10 @@ server.registerTool(
 
         errors.push(...rowResult.errors.map((e) => `Row ${i + 1}: ${e}`));
         warnings.push(...rowResult.warnings.map((w) => `Row ${i + 1}: ${w}`));
+        const rel = String(row[idx.relationship as number] ?? '').trim() as Relationship;
+        if (Object.hasOwn(relationshipCounts, rel)) {
+          relationshipCounts[rel] += 1;
+        }
 
         const fdeNum = String(row[idx.fdeNum as number] ?? '').trim();
         const targetId = String(row[idx.targetId as number] ?? '').trim();
@@ -727,6 +766,21 @@ server.registerTool(
             seenPairs.set(key, i + 1);
           }
         }
+      }
+    }
+
+    if (dataRows > 0) {
+      const subsetSuperset = relationshipCounts.subset_of + relationshipCounts.superset_of;
+      if (subsetSuperset === 0) {
+        warnings.push(
+          'Distribution self-check: subset_of + superset_of = 0. Review equal rows; containment may be underused.'
+        );
+      }
+      const equalPct = (relationshipCounts.equal / dataRows) * 100;
+      if (equalPct > 50) {
+        warnings.push(
+          `Distribution self-check: equal = ${equalPct.toFixed(2)}% (>50%). Reconfirm that scope and obligation are truly identical for equal rows.`
+        );
       }
     }
 
@@ -759,6 +813,7 @@ server.registerTool(
       totalRowsChecked: dataRows,
       errorCount: errors.length,
       warningCount: warnings.length,
+      relationshipCounts,
       errors,
       warnings,
     };
