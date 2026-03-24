@@ -81,13 +81,13 @@ gemini   # run from repo root — Gemini activates the skill on demand
 
 **Level 2: Context file** (`GEMINI.md` at repo root) — always injected, no install needed.
 
-**Level 3: Extension** (adds 6 MCP tools + 3 slash commands)
+**Level 3: Extension** (adds 6 MCP tools + 4 slash commands)
 ```bash
 cd gemini-extension && npm install && npm run build && cd ..
 gemini extensions link gemini-extension
 # Restart Gemini CLI to activate
 ```
-Slash commands: `/strm:map`, `/strm:gap-analysis`, `/strm:validate`
+Slash commands: `/strm:init`, `/strm:map`, `/strm:gap-analysis`, `/strm:validate`
 
 #### GitHub Copilot
 
@@ -127,6 +127,22 @@ Or add to `.aider.conf.yml`:
 ```yaml
 read:
   - CONVENTIONS.md
+```
+
+---
+
+## Cross-Platform STRM Scripts
+
+Use deterministic Node scripts for STRM operations across all supported assistants.
+
+Reference: `scripts/README.md`
+
+Examples:
+```bash
+node scripts/bin/strm-list-input-files.mjs --dir working-directory
+node scripts/bin/strm-init-mapping.mjs --focal "NIST CSF 2.0" --target "ISO 27001"
+node scripts/bin/strm-validate-csv.mjs --file "working-directory/.../your-strm.csv"
+node scripts/bin/strm-gap-report.mjs --file "working-directory/.../your-strm.csv" --focal "NIST CSF 2.0" --target "ISO 27001"
 ```
 
 ---
@@ -220,7 +236,7 @@ working-directory/
 └── target-framework.csv   ← Your target document
 ```
 
-Supported input formats: `.csv`, `.pdf`, `.md`
+Supported input formats: `.csv`, `.pdf`, `.md`, `.json`, `.yml`, `.toml`
 
 ### Risk and Threat-Enriched Mappings
 

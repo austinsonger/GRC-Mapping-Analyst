@@ -196,7 +196,7 @@ function validateRow(params: {
 // File system helpers
 // ---------------------------------------------------------------------------
 
-const INPUT_EXTENSIONS = new Set(['.csv', '.pdf', '.md', '.txt', '.json']);
+const INPUT_EXTENSIONS = new Set(['.csv', '.pdf', '.md', '.json', '.yml', '.toml']);
 
 async function listFrameworkFiles(directory: string): Promise<{ name: string; path: string; extension: string }[]> {
   const results: { name: string; path: string; extension: string }[] = [];

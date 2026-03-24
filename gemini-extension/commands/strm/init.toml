@@ -1,0 +1,13 @@
+prompt = """
+Initialize a new STRM mapping artifact folder and CSV.
+
+Ask the user for:
+1. Focal framework name
+2. Target framework name
+3. Optional bridge framework name (if omitted, focal will be reused)
+
+Then run:
+- node scripts/bin/strm-init-mapping.mjs --focal "<Focal>" --target "<Target>" [--bridge "<Bridge>"]
+
+Show the generated CSV path and begin mapping row generation.
+"""

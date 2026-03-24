@@ -2,11 +2,10 @@ prompt = """
 Validate existing STRM CSV files in working-directory.
 
 Steps:
-1. Run strm_list_input_files to find CSV files in working-directory.
+1. Run node scripts/bin/strm-list-input-files.mjs --dir working-directory and identify STRM CSV files.
 2. For each STRM CSV found (files whose names contain "STRM"):
-   a. Read the file and parse each data row (Row 2 onwards).
-   b. For each data row (Row 2+), run strm_validate_row with the row's values.
-   c. Also run strm_compute_strength and verify it matches Column H.
+   a. Run node scripts/bin/strm-validate-csv.mjs --file "<csv path>".
+   b. Capture all errors and warnings.
 3. Produce a validation report listing:
    - Total rows checked
    - Rows with errors (list each error)

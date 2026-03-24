@@ -205,7 +205,7 @@ conditionally activated.
 
 #### Level 3: Extension (`gemini-extension/`)
 
-Full MCP server providing 6 callable tools and 3 slash commands.
+Full MCP server providing 6 callable tools and 4 slash commands.
 
 **Install:**
 ```bash
@@ -219,10 +219,27 @@ Stored at `~/.gemini/extensions/strm-mapping/` after linking.
 **MCP tools:** `strm_compute_strength`, `strm_generate_filename`, `strm_build_csv_header`,
 `strm_validate_row`, `strm_list_input_files`, `strm_check_existing_mapping`
 
-**Slash commands:** `/strm:map`, `/strm:gap-analysis`, `/strm:validate`
+**Slash commands:** `/strm:init`, `/strm:map`, `/strm:gap-analysis`, `/strm:validate`
 
 **Use for:** Deterministic operations (score computation, filename generation, validation)
 that should not rely on the LLM calculating or guessing values.
+
+### Cross-Platform Deterministic Script Layer
+
+For platforms without extension-style slash commands, this repository provides a shared
+CLI script layer in `scripts/bin/`:
+
+- `strm-compute-strength.mjs`
+- `strm-generate-filename.mjs`
+- `strm-build-header.mjs`
+- `strm-list-input-files.mjs`
+- `strm-check-existing-mapping.mjs`
+- `strm-init-mapping.mjs`
+- `strm-validate-csv.mjs`
+- `strm-gap-report.mjs`
+
+These scripts make deterministic STRM operations portable across Claude Code, Codex CLI,
+Cursor, Copilot, Qoder, and Aider.
 
 ---
 

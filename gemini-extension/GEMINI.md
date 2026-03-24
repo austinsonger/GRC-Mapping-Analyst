@@ -36,15 +36,15 @@ Use this **before starting** any new mapping to avoid duplication.
 
 ## Workflow
 
-1. Run `strm_list_input_files` to see available framework files.
-2. Run `strm_check_existing_mapping` to check for prior work.
+1. Run `node scripts/bin/strm-list-input-files.mjs --dir working-directory` to see available framework files.
+2. Run `node scripts/bin/strm-check-existing-mapping.mjs --focal "<Focal>" --target "<Target>" --working-dir working-directory` to check for prior work.
 3. Copy the template (`TEMPLATE_Set Theory Relationship Mapping (STRM).csv`) — it contains the single header row. Data starts at Row 2.
 4. For each FDE → RDE pair:
    a. Determine relationship, confidence, and rationale type semantically.
-   b. Run `strm_compute_strength` to get the strength score.
+   b. Run `node scripts/bin/strm-compute-strength.mjs` to get the strength score.
    c. Write the rationale narrative following the pattern below.
-   d. Run `strm_validate_row` to check quality before moving on.
-5. Run `strm_generate_filename` and save the completed file to `working-directory/`.
+   d. Run `node scripts/bin/strm-validate-csv.mjs --file "<csv>"` to check quality.
+5. Run `node scripts/bin/strm-generate-filename.mjs` and save the completed file to `working-directory/`.
 
 ---
 

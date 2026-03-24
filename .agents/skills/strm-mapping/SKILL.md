@@ -99,8 +99,8 @@ Locate and read the relevant input files before generating any output:
 
 ```
 knowledge/ir8477-strm-reference.md                    ← STRM methodology rules
-working-directory/<source-document>.csv/.pdf/.md      ← Focal document
-working-directory/<target-document>.csv/.pdf/.md      ← Reference document
+working-directory/<source-document>.csv/.pdf/.md/.json/.yml/.toml      ← Focal document
+working-directory/<target-document>.csv/.pdf/.md/.json/.yml/.toml      ← Reference document
 ```
 
 Search for input files in this order:

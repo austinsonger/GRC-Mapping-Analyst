@@ -1,13 +1,19 @@
 prompt = """
 Start a new STRM mapping session.
 
-First, run strm_list_input_files to show available framework files in working-directory.
-Then run strm_check_existing_mapping for the requested source→target pair.
+First, run:
+- node scripts/bin/strm-list-input-files.mjs --dir working-directory
+- node scripts/bin/strm-check-existing-mapping.mjs --focal "<Focal>" --target "<Target>" --working-dir working-directory
 
 Ask the user:
 1. Which framework are you mapping FROM (Focal Document)?
 2. Which framework are you mapping TO (Target Document)?
 3. Are the source and target files already in working-directory, or should we proceed with framework knowledge?
 
-Once confirmed, run strm_build_csv_header and begin the mapping workflow following the STRM methodology.
+Once confirmed, initialize the output artifact and CSV:
+- node scripts/bin/strm-init-mapping.mjs --focal "<Focal>" --target "<Target>"
+
+For each row:
+- run node scripts/bin/strm-compute-strength.mjs for Column H
+- run node scripts/bin/strm-validate-csv.mjs on the CSV before finalizing
 """
