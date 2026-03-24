@@ -1,0 +1,808 @@
+{
+  "source_documents": {
+    "nist_800_53_cm": "/Users/austinsonger/code/strm-Mapping/working-directory/frameworks/info/800-53/800-53/cm.md",
+    "nist_800_53a_cm": "/Users/austinsonger/code/strm-Mapping/working-directory/frameworks/info/800-53/800-53a/cm.md"
+  },
+  "generated_at": "2026-03-24T19:17:50.576Z",
+  "control_family": "CM",
+  "control_count": 14,
+  "controls": {
+    "CM-1": {
+      "control_id": "CM-1",
+      "control_title": "Policy and Procedures",
+      "base_control": {
+        "control_id": "CM-1",
+        "control_title": "Policy and Procedures",
+        "control_text": "Requires the organization to develop, document, disseminate, and periodically review and update configuration management policy and procedures addressing purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "PM-9",
+          "PS-8",
+          "SA-8",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to develop, document, disseminate, and periodically review and update configuration management policy and procedures addressing purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance.\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** PM-9, PS-8, SA-8, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization develops, documents, disseminates, reviews, and updates configuration management policy and procedures.",
+        "examine_procedures": "Configuration management policy; configuration management procedures; system security plan.",
+        "interview_procedures": "Organizational personnel responsible for configuration management policy.",
+        "test_procedures": "Organizational processes for managing configuration management policy.",
+        "determination_statements": [
+          "CM-01a. — A configuration management policy is developed, documented, and disseminated",
+          "CM-01b. — Configuration management procedures are developed, documented, and disseminated",
+          "CM-01c. — The policy and procedures are reviewed and updated at an organization-defined frequency"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization develops, documents, disseminates, reviews, and updates configuration management policy and procedures.\n\n**Examine:** Configuration management policy; configuration management procedures; system security plan.\n\n**Interview:** Organizational personnel responsible for configuration management policy.\n\n**Test:** Organizational processes for managing configuration management policy.\n\n**Determination Statements:**\n- CM-01a. — A configuration management policy is developed, documented, and disseminated\n- CM-01b. — Configuration management procedures are developed, documented, and disseminated\n- CM-01c. — The policy and procedures are reviewed and updated at an organization-defined frequency"
+      }
+    },
+    "CM-2": {
+      "control_id": "CM-2",
+      "control_title": "Baseline Configuration",
+      "base_control": {
+        "control_id": "CM-2",
+        "control_title": "Baseline Configuration",
+        "control_text": "Requires the organization to develop, document, and maintain under configuration control a current baseline configuration of the system, reviewing and updating it at an organization-defined frequency, when required due to system changes, and as an integral part of system component installations and upgrades.",
+        "key_enhancements": [
+          {
+            "id": "CM-2(1)",
+            "title": "Reviews and Updates"
+          },
+          {
+            "id": "CM-2(2)",
+            "title": "Automation Support for Accuracy and Currency"
+          },
+          {
+            "id": "CM-2(3)",
+            "title": "Retention of Previous Configurations"
+          },
+          {
+            "id": "CM-2(6)",
+            "title": "Development and Test Environments"
+          },
+          {
+            "id": "CM-2(7)",
+            "title": "Configure Systems and Components for High-Risk Areas"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CM-2(1) | Reviews and Updates |\n| CM-2(2) | Automation Support for Accuracy and Currency |\n| CM-2(3) | Retention of Previous Configurations |\n| CM-2(6) | Development and Test Environments |\n| CM-2(7) | Configure Systems and Components for High-Risk Areas |",
+        "related_controls": [
+          "AC-19",
+          "AU-6",
+          "CA-9",
+          "CM-1",
+          "CM-3",
+          "CM-5",
+          "CM-6",
+          "CM-8",
+          "CM-9",
+          "CP-9",
+          "CP-10",
+          "CP-12",
+          "MA-2",
+          "PL-8",
+          "PM-5",
+          "SA-8",
+          "SA-10",
+          "SA-15",
+          "SC-18"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to develop, document, and maintain under configuration control a current baseline configuration of the system, reviewing and updating it at an organization-defined frequency, when required due to system changes, and as an integral part of system component installations and upgrades.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CM-2(1) | Reviews and Updates |\n| CM-2(2) | Automation Support for Accuracy and Currency |\n| CM-2(3) | Retention of Previous Configurations |\n| CM-2(6) | Development and Test Environments |\n| CM-2(7) | Configure Systems and Components for High-Risk Areas |\n\n**Related Controls:** AC-19, AU-6, CA-9, CM-1, CM-3, CM-5, CM-6, CM-8, CM-9, CP-9, CP-10, CP-12, MA-2, PL-8, PM-5, SA-8, SA-10, SA-15, SC-18\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization develops, documents, and maintains a current baseline configuration of the system.",
+        "examine_procedures": "Configuration management policy; baseline configuration documentation; system security plan; system design documentation; system configuration settings; configuration management records.",
+        "interview_procedures": "System administrators; organizational personnel responsible for configuration management.",
+        "test_procedures": "Automated mechanisms supporting baseline configuration management; configuration comparison tools.",
+        "determination_statements": [
+          "CM-02a. — A current baseline configuration of the system is developed, documented, and maintained under configuration control",
+          "CM-02b. — The baseline configuration is reviewed and updated at an organization-defined frequency, when required due to organization-defined circumstances, and as part of system installations and upgrades"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization develops, documents, and maintains a current baseline configuration of the system.\n\n**Examine:** Configuration management policy; baseline configuration documentation; system security plan; system design documentation; system configuration settings; configuration management records.\n\n**Interview:** System administrators; organizational personnel responsible for configuration management.\n\n**Test:** Automated mechanisms supporting baseline configuration management; configuration comparison tools.\n\n**Determination Statements:**\n- CM-02a. — A current baseline configuration of the system is developed, documented, and maintained under configuration control\n- CM-02b. — The baseline configuration is reviewed and updated at an organization-defined frequency, when required due to organization-defined circumstances, and as part of system installations and upgrades"
+      }
+    },
+    "CM-3": {
+      "control_id": "CM-3",
+      "control_title": "Configuration Change Control",
+      "base_control": {
+        "control_id": "CM-3",
+        "control_title": "Configuration Change Control",
+        "control_text": "Requires the organization to determine and document the types of changes to the system that are configuration-controlled, review proposed changes and approve or disapprove with explicit consideration for security and privacy impact, document configuration change decisions, implement approved changes, retain records of changes, audit and review configuration change activities, and coordinate and provide oversight for changes.",
+        "key_enhancements": [
+          {
+            "id": "CM-3(1)",
+            "title": "Automated Documentation, Notification, and Prohibition of Changes"
+          },
+          {
+            "id": "CM-3(2)",
+            "title": "Testing, Validation, and Documentation of Changes"
+          },
+          {
+            "id": "CM-3(3)",
+            "title": "Automated Change Implementation"
+          },
+          {
+            "id": "CM-3(4)",
+            "title": "Security and Privacy Representatives"
+          },
+          {
+            "id": "CM-3(5)",
+            "title": "Automated Security Response"
+          },
+          {
+            "id": "CM-3(6)",
+            "title": "Cryptography Management"
+          },
+          {
+            "id": "CM-3(7)",
+            "title": "Review System Changes"
+          },
+          {
+            "id": "CM-3(8)",
+            "title": "Prevent or Restrict Configuration Changes"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CM-3(1) | Automated Documentation, Notification, and Prohibition of Changes |\n| CM-3(2) | Testing, Validation, and Documentation of Changes |\n| CM-3(3) | Automated Change Implementation |\n| CM-3(4) | Security and Privacy Representatives |\n| CM-3(5) | Automated Security Response |\n| CM-3(6) | Cryptography Management |\n| CM-3(7) | Review System Changes |\n| CM-3(8) | Prevent or Restrict Configuration Changes |",
+        "related_controls": [
+          "CA-7",
+          "CM-2",
+          "CM-4",
+          "CM-5",
+          "CM-6",
+          "CM-9",
+          "CM-11",
+          "IA-3",
+          "MA-2",
+          "PE-16",
+          "PT-6",
+          "RA-8",
+          "SA-8",
+          "SA-10",
+          "SC-28",
+          "SC-34",
+          "SC-37",
+          "SI-2",
+          "SI-3",
+          "SI-4",
+          "SI-7",
+          "SI-10",
+          "SR-11"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Requires the organization to determine and document the types of changes to the system that are configuration-controlled, review proposed changes and approve or disapprove with explicit consideration for security and privacy impact, document configuration change decisions, implement approved changes, retain records of changes, audit and review configuration change activities, and coordinate and provide oversight for changes.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CM-3(1) | Automated Documentation, Notification, and Prohibition of Changes |\n| CM-3(2) | Testing, Validation, and Documentation of Changes |\n| CM-3(3) | Automated Change Implementation |\n| CM-3(4) | Security and Privacy Representatives |\n| CM-3(5) | Automated Security Response |\n| CM-3(6) | Cryptography Management |\n| CM-3(7) | Review System Changes |\n| CM-3(8) | Prevent or Restrict Configuration Changes |\n\n**Related Controls:** CA-7, CM-2, CM-4, CM-5, CM-6, CM-9, CM-11, IA-3, MA-2, PE-16, PT-6, RA-8, SA-8, SA-10, SC-28, SC-34, SC-37, SI-2, SI-3, SI-4, SI-7, SI-10, SR-11\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization controls changes to the system using configuration change control.",
+        "examine_procedures": "Configuration management policy; configuration change control procedures; change requests; change control records; system security plan; system audit records.",
+        "interview_procedures": "System administrators; configuration change control board members; organizational personnel responsible for configuration change control.",
+        "test_procedures": "Configuration change control mechanisms; change control verification processes.",
+        "determination_statements": [
+          "CM-03a. — The types of changes to the system that are configuration-controlled are determined and documented",
+          "CM-03b. — Changes to the system are reviewed and approved or disapproved with explicit consideration for security and privacy impact",
+          "CM-03c. — Configuration change decisions are documented with the associated implementation rationale",
+          "CM-03d. — Approved configuration-controlled changes to the system are implemented",
+          "CM-03e. — Records of configuration-controlled changes to the system are retained for an organization-defined time period",
+          "CM-03f. — Configuration change control activities are monitored and reviewed"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization controls changes to the system using configuration change control.\n\n**Examine:** Configuration management policy; configuration change control procedures; change requests; change control records; system security plan; system audit records.\n\n**Interview:** System administrators; configuration change control board members; organizational personnel responsible for configuration change control.\n\n**Test:** Configuration change control mechanisms; change control verification processes.\n\n**Determination Statements:**\n- CM-03a. — The types of changes to the system that are configuration-controlled are determined and documented\n- CM-03b. — Changes to the system are reviewed and approved or disapproved with explicit consideration for security and privacy impact\n- CM-03c. — Configuration change decisions are documented with the associated implementation rationale\n- CM-03d. — Approved configuration-controlled changes to the system are implemented\n- CM-03e. — Records of configuration-controlled changes to the system are retained for an organization-defined time period\n- CM-03f. — Configuration change control activities are monitored and reviewed"
+      }
+    },
+    "CM-4": {
+      "control_id": "CM-4",
+      "control_title": "Impact Analyses",
+      "base_control": {
+        "control_id": "CM-4",
+        "control_title": "Impact Analyses",
+        "control_text": "Requires the organization to analyze changes to the system to determine potential security and privacy impacts prior to change implementation.",
+        "key_enhancements": [
+          {
+            "id": "CM-4(1)",
+            "title": "Separate Test Environments"
+          },
+          {
+            "id": "CM-4(2)",
+            "title": "Verification of Controls"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CM-4(1) | Separate Test Environments |\n| CM-4(2) | Verification of Controls |",
+        "related_controls": [
+          "CA-7",
+          "CM-3",
+          "CM-8",
+          "CM-9",
+          "MA-2",
+          "RA-3",
+          "RA-5",
+          "RA-8",
+          "SA-5",
+          "SA-8",
+          "SA-10",
+          "SI-2"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to analyze changes to the system to determine potential security and privacy impacts prior to change implementation.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CM-4(1) | Separate Test Environments |\n| CM-4(2) | Verification of Controls |\n\n**Related Controls:** CA-7, CM-3, CM-8, CM-9, MA-2, RA-3, RA-5, RA-8, SA-5, SA-8, SA-10, SI-2\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization analyzes changes to the system to determine potential security and privacy impacts.",
+        "examine_procedures": "Configuration management policy; security and privacy impact analysis documentation; change control records; system security plan; system audit records.",
+        "interview_procedures": "Organizational personnel responsible for conducting security impact analysis; system administrators; system developers.",
+        "test_procedures": "Processes for conducting security impact analyses of proposed changes.",
+        "determination_statements": [
+          "CM-04 — Changes to the system are analyzed to determine potential security and privacy impacts prior to change implementation"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization analyzes changes to the system to determine potential security and privacy impacts.\n\n**Examine:** Configuration management policy; security and privacy impact analysis documentation; change control records; system security plan; system audit records.\n\n**Interview:** Organizational personnel responsible for conducting security impact analysis; system administrators; system developers.\n\n**Test:** Processes for conducting security impact analyses of proposed changes.\n\n**Determination Statements:**\n- CM-04 — Changes to the system are analyzed to determine potential security and privacy impacts prior to change implementation"
+      }
+    },
+    "CM-5": {
+      "control_id": "CM-5",
+      "control_title": "Access Restrictions for Change",
+      "base_control": {
+        "control_id": "CM-5",
+        "control_title": "Access Restrictions for Change",
+        "control_text": "Requires the organization to define, document, approve, and enforce physical and logical access restrictions associated with changes to the system. Only qualified and authorized individuals may make changes to the system.",
+        "key_enhancements": [
+          {
+            "id": "CM-5(1)",
+            "title": "Automated Access Enforcement and Audit Records"
+          },
+          {
+            "id": "CM-5(5)",
+            "title": "Privilege Limitation for Production and Operation"
+          },
+          {
+            "id": "CM-5(6)",
+            "title": "Limit Library Privileges"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CM-5(1) | Automated Access Enforcement and Audit Records |\n| CM-5(5) | Privilege Limitation for Production and Operation |\n| CM-5(6) | Limit Library Privileges |",
+        "related_controls": [
+          "AC-3",
+          "AC-5",
+          "AC-6",
+          "CM-9",
+          "PE-3",
+          "SC-28",
+          "SC-34",
+          "SC-37",
+          "SI-2",
+          "SI-10"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to define, document, approve, and enforce physical and logical access restrictions associated with changes to the system. Only qualified and authorized individuals may make changes to the system.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CM-5(1) | Automated Access Enforcement and Audit Records |\n| CM-5(5) | Privilege Limitation for Production and Operation |\n| CM-5(6) | Limit Library Privileges |\n\n**Related Controls:** AC-3, AC-5, AC-6, CM-9, PE-3, SC-28, SC-34, SC-37, SI-2, SI-10\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization defines, documents, approves, and enforces physical and logical access restrictions associated with changes to the system.",
+        "examine_procedures": "Configuration management policy; system security plan; system design documentation; system configuration settings; access control lists; change control records; system audit records.",
+        "interview_procedures": "System administrators; organizational personnel responsible for access restrictions related to system changes.",
+        "test_procedures": "Access restriction mechanisms for change; configuration change control enforcement mechanisms.",
+        "determination_statements": [
+          "CM-05 — Physical and logical access restrictions associated with changes to the system are defined, documented, approved, and enforced"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization defines, documents, approves, and enforces physical and logical access restrictions associated with changes to the system.\n\n**Examine:** Configuration management policy; system security plan; system design documentation; system configuration settings; access control lists; change control records; system audit records.\n\n**Interview:** System administrators; organizational personnel responsible for access restrictions related to system changes.\n\n**Test:** Access restriction mechanisms for change; configuration change control enforcement mechanisms.\n\n**Determination Statements:**\n- CM-05 — Physical and logical access restrictions associated with changes to the system are defined, documented, approved, and enforced"
+      }
+    },
+    "CM-6": {
+      "control_id": "CM-6",
+      "control_title": "Configuration Settings",
+      "base_control": {
+        "control_id": "CM-6",
+        "control_title": "Configuration Settings",
+        "control_text": "Requires the organization to establish and document configuration settings for system components that reflect the most restrictive mode consistent with operational requirements, implement the settings, and identify, document, and approve any deviations from established settings.",
+        "key_enhancements": [
+          {
+            "id": "CM-6(1)",
+            "title": "Automated Management, Application, and Verification"
+          },
+          {
+            "id": "CM-6(2)",
+            "title": "Respond to Unauthorized Changes"
+          },
+          {
+            "id": "CM-6(3)",
+            "title": "Unauthorized Change Detection"
+          },
+          {
+            "id": "CM-6(4)",
+            "title": "Conformance Demonstration"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CM-6(1) | Automated Management, Application, and Verification |\n| CM-6(2) | Respond to Unauthorized Changes |\n| CM-6(3) | Unauthorized Change Detection |\n| CM-6(4) | Conformance Demonstration |",
+        "related_controls": [
+          "AC-3",
+          "AC-19",
+          "AU-2",
+          "AU-6",
+          "CA-9",
+          "CM-2",
+          "CM-3",
+          "CM-5",
+          "CM-7",
+          "CM-11",
+          "CP-7",
+          "CP-9",
+          "CP-10",
+          "IA-3",
+          "IA-5",
+          "PL-8",
+          "PL-9",
+          "RA-5",
+          "SA-4",
+          "SA-5",
+          "SA-8",
+          "SA-9",
+          "SC-18",
+          "SC-28",
+          "SC-43",
+          "SI-2",
+          "SI-4",
+          "SI-6"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to establish and document configuration settings for system components that reflect the most restrictive mode consistent with operational requirements, implement the settings, and identify, document, and approve any deviations from established settings.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CM-6(1) | Automated Management, Application, and Verification |\n| CM-6(2) | Respond to Unauthorized Changes |\n| CM-6(3) | Unauthorized Change Detection |\n| CM-6(4) | Conformance Demonstration |\n\n**Related Controls:** AC-3, AC-19, AU-2, AU-6, CA-9, CM-2, CM-3, CM-5, CM-7, CM-11, CP-7, CP-9, CP-10, IA-3, IA-5, PL-8, PL-9, RA-5, SA-4, SA-5, SA-8, SA-9, SC-18, SC-28, SC-43, SI-2, SI-4, SI-6\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization establishes and enforces security and privacy configuration settings.",
+        "examine_procedures": "Configuration management policy; system security plan; security configuration checklists; system configuration settings; configuration management records; system audit records; STIG/CIS benchmark compliance reports.",
+        "interview_procedures": "System administrators; organizational personnel responsible for configuration management.",
+        "test_procedures": "Configuration setting enforcement mechanisms; automated configuration monitoring tools.",
+        "determination_statements": [
+          "CM-06a. — Mandatory configuration settings for IT products employed within the system are established and documented using organization-defined security configuration checklists",
+          "CM-06b. — The configuration settings are implemented",
+          "CM-06c. — Deviations from established configuration settings are identified, documented, and approved",
+          "CM-06d. — Changes to the configuration settings are monitored and controlled in accordance with organizational policies and procedures"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization establishes and enforces security and privacy configuration settings.\n\n**Examine:** Configuration management policy; system security plan; security configuration checklists; system configuration settings; configuration management records; system audit records; STIG/CIS benchmark compliance reports.\n\n**Interview:** System administrators; organizational personnel responsible for configuration management.\n\n**Test:** Configuration setting enforcement mechanisms; automated configuration monitoring tools.\n\n**Determination Statements:**\n- CM-06a. — Mandatory configuration settings for IT products employed within the system are established and documented using organization-defined security configuration checklists\n- CM-06b. — The configuration settings are implemented\n- CM-06c. — Deviations from established configuration settings are identified, documented, and approved\n- CM-06d. — Changes to the configuration settings are monitored and controlled in accordance with organizational policies and procedures"
+      }
+    },
+    "CM-7": {
+      "control_id": "CM-7",
+      "control_title": "Least Functionality",
+      "base_control": {
+        "control_id": "CM-7",
+        "control_title": "Least Functionality",
+        "control_text": "Requires the organization to configure the system to provide only mission-essential capabilities and to prohibit or restrict the use of organization-defined functions, ports, protocols, software, and/or services.",
+        "key_enhancements": [
+          {
+            "id": "CM-7(1)",
+            "title": "Periodic Review"
+          },
+          {
+            "id": "CM-7(2)",
+            "title": "Prevent Program Execution"
+          },
+          {
+            "id": "CM-7(3)",
+            "title": "Registration Compliance"
+          },
+          {
+            "id": "CM-7(4)",
+            "title": "Unauthorized Software — Deny-by-Exception"
+          },
+          {
+            "id": "CM-7(5)",
+            "title": "Authorized Software — Allow-by-Exception"
+          },
+          {
+            "id": "CM-7(6)",
+            "title": "Confined Environments with Limited Privileges"
+          },
+          {
+            "id": "CM-7(7)",
+            "title": "Code Execution in Protected Environments"
+          },
+          {
+            "id": "CM-7(8)",
+            "title": "Binary or Machine Executable Code"
+          },
+          {
+            "id": "CM-7(9)",
+            "title": "Prohibiting the Use of Unauthorized Hardware"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CM-7(1) | Periodic Review |\n| CM-7(2) | Prevent Program Execution |\n| CM-7(3) | Registration Compliance |\n| CM-7(4) | Unauthorized Software — Deny-by-Exception |\n| CM-7(5) | Authorized Software — Allow-by-Exception |\n| CM-7(6) | Confined Environments with Limited Privileges |\n| CM-7(7) | Code Execution in Protected Environments |\n| CM-7(8) | Binary or Machine Executable Code |\n| CM-7(9) | Prohibiting the Use of Unauthorized Hardware |",
+        "related_controls": [
+          "AC-3",
+          "AC-4",
+          "CM-2",
+          "CM-5",
+          "CM-6",
+          "CM-11",
+          "RA-5",
+          "SA-4",
+          "SA-5",
+          "SA-8",
+          "SA-9",
+          "SA-15",
+          "SC-2",
+          "SC-3",
+          "SC-7",
+          "SC-37",
+          "SI-4"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to configure the system to provide only mission-essential capabilities and to prohibit or restrict the use of organization-defined functions, ports, protocols, software, and/or services.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CM-7(1) | Periodic Review |\n| CM-7(2) | Prevent Program Execution |\n| CM-7(3) | Registration Compliance |\n| CM-7(4) | Unauthorized Software — Deny-by-Exception |\n| CM-7(5) | Authorized Software — Allow-by-Exception |\n| CM-7(6) | Confined Environments with Limited Privileges |\n| CM-7(7) | Code Execution in Protected Environments |\n| CM-7(8) | Binary or Machine Executable Code |\n| CM-7(9) | Prohibiting the Use of Unauthorized Hardware |\n\n**Related Controls:** AC-3, AC-4, CM-2, CM-5, CM-6, CM-11, RA-5, SA-4, SA-5, SA-8, SA-9, SA-15, SC-2, SC-3, SC-7, SC-37, SI-4\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization configures the system to provide only essential capabilities and restricts non-essential capabilities.",
+        "examine_procedures": "Configuration management policy; system security plan; system design documentation; system configuration settings; list of essential capabilities; list of prohibited or restricted functions/ports/protocols/services; system audit records.",
+        "interview_procedures": "System administrators; organizational personnel responsible for system hardening.",
+        "test_procedures": "System configuration verification; port and service scanning; function restriction mechanisms.",
+        "determination_statements": [
+          "CM-07a. — The system is configured to provide only organization-defined essential capabilities",
+          "CM-07b. — The use of organization-defined prohibited or restricted functions, ports, protocols, connections, and services is restricted and/or disabled"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization configures the system to provide only essential capabilities and restricts non-essential capabilities.\n\n**Examine:** Configuration management policy; system security plan; system design documentation; system configuration settings; list of essential capabilities; list of prohibited or restricted functions/ports/protocols/services; system audit records.\n\n**Interview:** System administrators; organizational personnel responsible for system hardening.\n\n**Test:** System configuration verification; port and service scanning; function restriction mechanisms.\n\n**Determination Statements:**\n- CM-07a. — The system is configured to provide only organization-defined essential capabilities\n- CM-07b. — The use of organization-defined prohibited or restricted functions, ports, protocols, connections, and services is restricted and/or disabled"
+      }
+    },
+    "CM-8": {
+      "control_id": "CM-8",
+      "control_title": "System Component Inventory",
+      "base_control": {
+        "control_id": "CM-8",
+        "control_title": "System Component Inventory",
+        "control_text": "Requires the organization to develop and document an inventory of system components that accurately reflects the system, is at a level of granularity deemed necessary for tracking and reporting, and includes organization-defined information deemed necessary to achieve effective property accountability. Review and update the component inventory at an organization-defined frequency.",
+        "key_enhancements": [
+          {
+            "id": "CM-8(1)",
+            "title": "Updates During Installation and Removal"
+          },
+          {
+            "id": "CM-8(2)",
+            "title": "Automated Maintenance"
+          },
+          {
+            "id": "CM-8(3)",
+            "title": "Automated Unauthorized Component Detection"
+          },
+          {
+            "id": "CM-8(4)",
+            "title": "Accountability Information"
+          },
+          {
+            "id": "CM-8(5)",
+            "title": "No Duplicate Accounting of Components"
+          },
+          {
+            "id": "CM-8(6)",
+            "title": "Assessed Configurations and Approved Deviations"
+          },
+          {
+            "id": "CM-8(7)",
+            "title": "Centralized Repository"
+          },
+          {
+            "id": "CM-8(8)",
+            "title": "Automated Location Tracking"
+          },
+          {
+            "id": "CM-8(9)",
+            "title": "Assignment of Components to Systems"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CM-8(1) | Updates During Installation and Removal |\n| CM-8(2) | Automated Maintenance |\n| CM-8(3) | Automated Unauthorized Component Detection |\n| CM-8(4) | Accountability Information |\n| CM-8(5) | No Duplicate Accounting of Components |\n| CM-8(6) | Assessed Configurations and Approved Deviations |\n| CM-8(7) | Centralized Repository |\n| CM-8(8) | Automated Location Tracking |\n| CM-8(9) | Assignment of Components to Systems |",
+        "related_controls": [
+          "CM-2",
+          "CM-7",
+          "CM-9",
+          "CM-10",
+          "CM-11",
+          "CM-13",
+          "CP-2",
+          "CP-9",
+          "MA-2",
+          "MA-6",
+          "PE-20",
+          "PL-9",
+          "PM-5",
+          "SA-4",
+          "SA-5",
+          "SI-2",
+          "SR-4"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to develop and document an inventory of system components that accurately reflects the system, is at a level of granularity deemed necessary for tracking and reporting, and includes organization-defined information deemed necessary to achieve effective property accountability. Review and update the component inventory at an organization-defined frequency.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CM-8(1) | Updates During Installation and Removal |\n| CM-8(2) | Automated Maintenance |\n| CM-8(3) | Automated Unauthorized Component Detection |\n| CM-8(4) | Accountability Information |\n| CM-8(5) | No Duplicate Accounting of Components |\n| CM-8(6) | Assessed Configurations and Approved Deviations |\n| CM-8(7) | Centralized Repository |\n| CM-8(8) | Automated Location Tracking |\n| CM-8(9) | Assignment of Components to Systems |\n\n**Related Controls:** CM-2, CM-7, CM-9, CM-10, CM-11, CM-13, CP-2, CP-9, MA-2, MA-6, PE-20, PL-9, PM-5, SA-4, SA-5, SI-2, SR-4\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization develops, documents, and maintains an inventory of system components.",
+        "examine_procedures": "Configuration management policy; system component inventory; system security plan; system design documentation; system configuration settings.",
+        "interview_procedures": "System administrators; organizational personnel responsible for component inventory management.",
+        "test_procedures": "Automated mechanisms for maintaining component inventory; inventory accuracy verification.",
+        "determination_statements": [
+          "CM-08a. — An inventory of system components is developed and documented that accurately reflects the system, includes all components within the system boundary, and is at the level of granularity deemed necessary for tracking and reporting",
+          "CM-08b. — The system component inventory is reviewed and updated at an organization-defined frequency"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization develops, documents, and maintains an inventory of system components.\n\n**Examine:** Configuration management policy; system component inventory; system security plan; system design documentation; system configuration settings.\n\n**Interview:** System administrators; organizational personnel responsible for component inventory management.\n\n**Test:** Automated mechanisms for maintaining component inventory; inventory accuracy verification.\n\n**Determination Statements:**\n- CM-08a. — An inventory of system components is developed and documented that accurately reflects the system, includes all components within the system boundary, and is at the level of granularity deemed necessary for tracking and reporting\n- CM-08b. — The system component inventory is reviewed and updated at an organization-defined frequency"
+      }
+    },
+    "CM-9": {
+      "control_id": "CM-9",
+      "control_title": "Configuration Management Plan",
+      "base_control": {
+        "control_id": "CM-9",
+        "control_title": "Configuration Management Plan",
+        "control_text": "Requires the organization to develop, document, and implement a configuration management plan that addresses roles, responsibilities, and processes and procedures; establishes a process for identifying configuration items; defines where and when configuration items are placed under configuration management; and defines the configuration items for the system.",
+        "key_enhancements": [
+          {
+            "id": "CM-9(1)",
+            "title": "Assignment of Responsibility"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CM-9(1) | Assignment of Responsibility |",
+        "related_controls": [
+          "CM-2",
+          "CM-3",
+          "CM-4",
+          "CM-5",
+          "CM-8",
+          "PL-2",
+          "RA-8",
+          "SA-10",
+          "SI-12"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Requires the organization to develop, document, and implement a configuration management plan that addresses roles, responsibilities, and processes and procedures; establishes a process for identifying configuration items; defines where and when configuration items are placed under configuration management; and defines the configuration items for the system.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CM-9(1) | Assignment of Responsibility |\n\n**Related Controls:** CM-2, CM-3, CM-4, CM-5, CM-8, PL-2, RA-8, SA-10, SI-12\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "CM-10": {
+      "control_id": "CM-10",
+      "control_title": "Software Usage Restrictions",
+      "base_control": {
+        "control_id": "CM-10",
+        "control_title": "Software Usage Restrictions",
+        "control_text": "Requires the organization to use software and associated documentation in accordance with contract agreements and copyright laws, track the use of software and documentation protected by quantity licenses, and control and document the use of peer-to-peer file sharing technology.",
+        "key_enhancements": [
+          {
+            "id": "CM-10(1)",
+            "title": "Open-Source Software"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CM-10(1) | Open-Source Software |",
+        "related_controls": [
+          "AC-17",
+          "AU-6",
+          "CM-7",
+          "CM-8",
+          "PM-30",
+          "SC-7"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to use software and associated documentation in accordance with contract agreements and copyright laws, track the use of software and documentation protected by quantity licenses, and control and document the use of peer-to-peer file sharing technology.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CM-10(1) | Open-Source Software |\n\n**Related Controls:** AC-17, AU-6, CM-7, CM-8, PM-30, SC-7\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "CM-11": {
+      "control_id": "CM-11",
+      "control_title": "User-Installed Software",
+      "base_control": {
+        "control_id": "CM-11",
+        "control_title": "User-Installed Software",
+        "control_text": "Requires the organization to establish policies governing the installation of software by users, enforce installation policies through automated or manual methods, and monitor policy compliance.",
+        "key_enhancements": [
+          {
+            "id": "CM-11(1)",
+            "title": "Alerts for Unauthorized Installations"
+          },
+          {
+            "id": "CM-11(2)",
+            "title": "Software Installation with Privileged Status"
+          },
+          {
+            "id": "CM-11(3)",
+            "title": "Automated Enforcement and Monitoring"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CM-11(1) | Alerts for Unauthorized Installations |\n| CM-11(2) | Software Installation with Privileged Status |\n| CM-11(3) | Automated Enforcement and Monitoring |",
+        "related_controls": [
+          "AC-3",
+          "AU-6",
+          "CM-2",
+          "CM-3",
+          "CM-5",
+          "CM-6",
+          "CM-7",
+          "CM-8",
+          "PL-4",
+          "SI-4",
+          "SI-7"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to establish policies governing the installation of software by users, enforce installation policies through automated or manual methods, and monitor policy compliance.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CM-11(1) | Alerts for Unauthorized Installations |\n| CM-11(2) | Software Installation with Privileged Status |\n| CM-11(3) | Automated Enforcement and Monitoring |\n\n**Related Controls:** AC-3, AU-6, CM-2, CM-3, CM-5, CM-6, CM-7, CM-8, PL-4, SI-4, SI-7\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization establishes and enforces policies governing the installation of software by users.",
+        "examine_procedures": "Configuration management policy; software installation policies; system configuration settings; system audit records; list of approved software.",
+        "interview_procedures": "System administrators; organizational personnel responsible for software installation management.",
+        "test_procedures": "Software installation restriction mechanisms; application whitelisting controls.",
+        "determination_statements": [
+          "CM-11a. — A policy governing the installation of software by users is established",
+          "CM-11b. — User software installation is enforced through organization-defined methods",
+          "CM-11c. — User-installed software is monitored for compliance with established policies",
+          "NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final",
+          "[SP 800-53 CM Family](../800-53/cm.md)",
+          "[SP 800-171 CM Requirements](../800-171/cm.md)"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization establishes and enforces policies governing the installation of software by users.\n\n**Examine:** Configuration management policy; software installation policies; system configuration settings; system audit records; list of approved software.\n\n**Interview:** System administrators; organizational personnel responsible for software installation management.\n\n**Test:** Software installation restriction mechanisms; application whitelisting controls.\n\n**Determination Statements:**\n- CM-11a. — A policy governing the installation of software by users is established\n- CM-11b. — User software installation is enforced through organization-defined methods\n- CM-11c. — User-installed software is monitored for compliance with established policies\n\n## References\n\n- NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final\n- [SP 800-53 CM Family](../800-53/cm.md)\n- [SP 800-171 CM Requirements](../800-171/cm.md)"
+      }
+    },
+    "CM-12": {
+      "control_id": "CM-12",
+      "control_title": "Information Location",
+      "base_control": {
+        "control_id": "CM-12",
+        "control_title": "Information Location",
+        "control_text": "Requires the organization to identify and document the location of organization-defined information and the system components on which the information is processed and stored.",
+        "key_enhancements": [
+          {
+            "id": "CM-12(1)",
+            "title": "Automated Tools to Support Information Location"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CM-12(1) | Automated Tools to Support Information Location |",
+        "related_controls": [
+          "AC-2",
+          "AC-3",
+          "AC-4",
+          "AC-6",
+          "AC-23",
+          "CM-8",
+          "PM-5",
+          "RA-2",
+          "SA-4",
+          "SA-8",
+          "SA-17",
+          "SC-4",
+          "SC-16",
+          "SC-28",
+          "SI-4",
+          "SI-7"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Requires the organization to identify and document the location of organization-defined information and the system components on which the information is processed and stored.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CM-12(1) | Automated Tools to Support Information Location |\n\n**Related Controls:** AC-2, AC-3, AC-4, AC-6, AC-23, CM-8, PM-5, RA-2, SA-4, SA-8, SA-17, SC-4, SC-16, SC-28, SI-4, SI-7\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "CM-13": {
+      "control_id": "CM-13",
+      "control_title": "Data Action Mapping",
+      "base_control": {
+        "control_id": "CM-13",
+        "control_title": "Data Action Mapping",
+        "control_text": "Requires the organization to develop and document a map of system data actions. The map identifies the system components that process personally identifiable information (PII), the types of PII processed, and the processing purposes, supporting privacy impact assessment and data protection.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "AC-3",
+          "CM-4",
+          "CM-12",
+          "PM-5",
+          "PM-27",
+          "PT-2",
+          "PT-3",
+          "RA-3",
+          "RA-8"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Requires the organization to develop and document a map of system data actions. The map identifies the system components that process personally identifiable information (PII), the types of PII processed, and the processing purposes, supporting privacy impact assessment and data protection.\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** AC-3, CM-4, CM-12, PM-5, PM-27, PT-2, PT-3, RA-3, RA-8\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "CM-14": {
+      "control_id": "CM-14",
+      "control_title": "Signed Components",
+      "base_control": {
+        "control_id": "CM-14",
+        "control_title": "Signed Components",
+        "control_text": "Requires the organization to prevent the installation of organization-defined software and firmware components without verification that the component has been digitally signed using a certificate that is recognized and approved by the organization.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "CM-7",
+          "SC-12",
+          "SC-13",
+          "SI-7"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Requires the organization to prevent the installation of organization-defined software and firmware components without verification that the component has been digitally signed using a certificate that is recognized and approved by the organization.\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** CM-7, SC-12, SC-13, SI-7\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    }
+  }
+}

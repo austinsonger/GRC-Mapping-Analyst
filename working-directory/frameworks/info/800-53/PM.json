@@ -1,0 +1,1056 @@
+{
+  "source_documents": {
+    "nist_800_53_pm": "/Users/austinsonger/code/strm-Mapping/working-directory/frameworks/info/800-53/800-53/pm.md",
+    "nist_800_53a_pm": "/Users/austinsonger/code/strm-Mapping/working-directory/frameworks/info/800-53/800-53a/pm.md"
+  },
+  "generated_at": "2026-03-24T19:35:24.007Z",
+  "control_family": "PM",
+  "control_count": 32,
+  "controls": {
+    "PM-1": {
+      "control_id": "PM-1",
+      "control_title": "Information Security Program Plan",
+      "base_control": {
+        "control_id": "PM-1",
+        "control_title": "Information Security Program Plan",
+        "control_text": "Develop and disseminate an organization-wide information security program plan that provides an overview of the requirements for the security program and a description of the security program management controls and common controls in place or planned for meeting those requirements. Include the identification and assignment of roles, responsibilities, management commitment, coordination among organizational entities, and compliance. Approve and review the plan at an organization-defined frequency and revise the plan to address organizational changes and problems identified during plan implementation or control assessments.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-1.",
+        "related_controls": [
+          "PL-2",
+          "PM-18",
+          "PM-30",
+          "RA-9",
+          "SI-12",
+          "SR-2"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Develop and disseminate an organization-wide information security program plan that provides an overview of the requirements for the security program and a description of the security program management controls and common controls in place or planned for meeting those requirements. Include the identification and assignment of roles, responsibilities, management commitment, coordination among organizational entities, and compliance. Approve and review the plan at an organization-defined frequency and revise the plan to address organizational changes and problems identified during plan implementation or control assessments.\n\n**Key Enhancements:** None defined for PM-1.\n\n**Related Controls:** PL-2, PM-18, PM-30, RA-9, SI-12, SR-2\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization develops, disseminates, and reviews/updates an organization-wide information security program plan.",
+        "examine_procedures": "Information security program plan; risk management strategy; system security plans across the organization.",
+        "interview_procedures": "Senior agency information security officer; organizational personnel responsible for information security program planning.",
+        "test_procedures": "Program plan distribution mechanisms; plan review and update processes.",
+        "determination_statements": [
+          "PM-01a. — An organization-wide information security program plan is developed and disseminated that provides an overview of requirements for the security program and a description of the management controls and common controls in place or planned",
+          "PM-01b. — The information security program plan is reviewed at an organization-defined frequency",
+          "PM-01c. — The plan is updated to address organizational changes and problems identified during plan implementation or control assessments"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization develops, disseminates, and reviews/updates an organization-wide information security program plan.\n\n**Examine:** Information security program plan; risk management strategy; system security plans across the organization.\n\n**Interview:** Senior agency information security officer; organizational personnel responsible for information security program planning.\n\n**Test:** Program plan distribution mechanisms; plan review and update processes.\n\n**Determination Statements:**\n- PM-01a. — An organization-wide information security program plan is developed and disseminated that provides an overview of requirements for the security program and a description of the management controls and common controls in place or planned\n- PM-01b. — The information security program plan is reviewed at an organization-defined frequency\n- PM-01c. — The plan is updated to address organizational changes and problems identified during plan implementation or control assessments"
+      }
+    },
+    "PM-2": {
+      "control_id": "PM-2",
+      "control_title": "Information Security Program Leadership Role",
+      "base_control": {
+        "control_id": "PM-2",
+        "control_title": "Information Security Program Leadership Role",
+        "control_text": "Appoint a senior agency information security officer with the mission and resources to coordinate, develop, implement, and maintain an organization-wide information security program.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-2.",
+        "related_controls": [
+          "None"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Appoint a senior agency information security officer with the mission and resources to coordinate, develop, implement, and maintain an organization-wide information security program.\n\n**Key Enhancements:** None defined for PM-2.\n\n**Related Controls:** None\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization appoints a senior agency information security officer with the mission and resources to manage the security program.",
+        "examine_procedures": "Information security program plan; organizational charts; role descriptions for senior information security officer.",
+        "interview_procedures": "Senior agency information security officer; organizational leadership.",
+        "test_procedures": "N/A (primarily examine and interview).",
+        "determination_statements": [
+          "PM-02 — A senior agency information security officer is appointed with the mission and resources to coordinate, develop, implement, and maintain an organization-wide information security program"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization appoints a senior agency information security officer with the mission and resources to manage the security program.\n\n**Examine:** Information security program plan; organizational charts; role descriptions for senior information security officer.\n\n**Interview:** Senior agency information security officer; organizational leadership.\n\n**Test:** N/A (primarily examine and interview).\n\n**Determination Statements:**\n- PM-02 — A senior agency information security officer is appointed with the mission and resources to coordinate, develop, implement, and maintain an organization-wide information security program"
+      }
+    },
+    "PM-3": {
+      "control_id": "PM-3",
+      "control_title": "Information Security and Privacy Resources",
+      "base_control": {
+        "control_id": "PM-3",
+        "control_title": "Information Security and Privacy Resources",
+        "control_text": "Include the resources needed to implement the information security and privacy programs in capital planning and investment requests and document all exceptions to this requirement. Prepare documentation required for addressing information security and privacy programs in capital planning and investment requests in accordance with applicable laws, executive orders, directives, policies, regulations, standards, and guidelines. Make available for expenditure the planned information security and privacy resources.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-3.",
+        "related_controls": [
+          "PM-4",
+          "SA-2"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Include the resources needed to implement the information security and privacy programs in capital planning and investment requests and document all exceptions to this requirement. Prepare documentation required for addressing information security and privacy programs in capital planning and investment requests in accordance with applicable laws, executive orders, directives, policies, regulations, standards, and guidelines. Make available for expenditure the planned information security and privacy resources.\n\n**Key Enhancements:** None defined for PM-3.\n\n**Related Controls:** PM-4, SA-2\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-4": {
+      "control_id": "PM-4",
+      "control_title": "Plan of Action and Milestones Process",
+      "base_control": {
+        "control_id": "PM-4",
+        "control_title": "Plan of Action and Milestones Process",
+        "control_text": "Implement a process to ensure that plans of action and milestones for the information security, privacy, and supply chain risk management programs and associated organizational systems are maintained and document the remedial information security, privacy, and supply chain risk management actions to adequately respond to risk to organizational operations and assets, individuals, other organizations, and the Nation. Review plans of action and milestones for consistency with the organizational risk management strategy and organization-wide priorities for risk response actions.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-4.",
+        "related_controls": [
+          "CA-5",
+          "CA-7",
+          "PM-3",
+          "RA-7",
+          "SI-12"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Implement a process to ensure that plans of action and milestones for the information security, privacy, and supply chain risk management programs and associated organizational systems are maintained and document the remedial information security, privacy, and supply chain risk management actions to adequately respond to risk to organizational operations and assets, individuals, other organizations, and the Nation. Review plans of action and milestones for consistency with the organizational risk management strategy and organization-wide priorities for risk response actions.\n\n**Key Enhancements:** None defined for PM-4.\n\n**Related Controls:** CA-5, CA-7, PM-3, RA-7, SI-12\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-5": {
+      "control_id": "PM-5",
+      "control_title": "System Inventory",
+      "base_control": {
+        "control_id": "PM-5",
+        "control_title": "System Inventory",
+        "control_text": "Develop and maintain an inventory of organizational systems.",
+        "key_enhancements": [
+          {
+            "id": "PM-5(1)",
+            "title": "Inventory of Personally Identifiable Information"
+          }
+        ],
+        "key_enhancements_text": "- **PM-5(1):** Inventory of Personally Identifiable Information — Establish, maintain, and update at an organization-defined frequency an inventory of all systems, applications, and projects that process personally identifiable information.",
+        "related_controls": [
+          "None"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Develop and maintain an inventory of organizational systems.\n\n**Key Enhancements:**\n- **PM-5(1):** Inventory of Personally Identifiable Information — Establish, maintain, and update at an organization-defined frequency an inventory of all systems, applications, and projects that process personally identifiable information.\n\n**Related Controls:** None\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-6": {
+      "control_id": "PM-6",
+      "control_title": "Measures of Performance",
+      "base_control": {
+        "control_id": "PM-6",
+        "control_title": "Measures of Performance",
+        "control_text": "Develop, monitor, and report on the results of information security and privacy measures of performance.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-6.",
+        "related_controls": [
+          "CA-7",
+          "PM-9"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Develop, monitor, and report on the results of information security and privacy measures of performance.\n\n**Key Enhancements:** None defined for PM-6.\n\n**Related Controls:** CA-7, PM-9\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-7": {
+      "control_id": "PM-7",
+      "control_title": "Enterprise Architecture",
+      "base_control": {
+        "control_id": "PM-7",
+        "control_title": "Enterprise Architecture",
+        "control_text": "Develop and maintain an enterprise architecture with consideration for information security, privacy, and the resulting risk to organizational operations and assets, individuals, other organizations, and the Nation.",
+        "key_enhancements": [
+          {
+            "id": "PM-7(1)",
+            "title": "Offloading"
+          }
+        ],
+        "key_enhancements_text": "- **PM-7(1):** Offloading — Offload organization-defined non-essential functions or services to other systems, system components, or an external provider.",
+        "related_controls": [
+          "AU-6",
+          "PL-2",
+          "PL-8",
+          "PM-11",
+          "RA-2",
+          "SA-3",
+          "SA-8",
+          "SA-17"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Develop and maintain an enterprise architecture with consideration for information security, privacy, and the resulting risk to organizational operations and assets, individuals, other organizations, and the Nation.\n\n**Key Enhancements:**\n- **PM-7(1):** Offloading — Offload organization-defined non-essential functions or services to other systems, system components, or an external provider.\n\n**Related Controls:** AU-6, PL-2, PL-8, PM-11, RA-2, SA-3, SA-8, SA-17\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-8": {
+      "control_id": "PM-8",
+      "control_title": "Critical Infrastructure Plan",
+      "base_control": {
+        "control_id": "PM-8",
+        "control_title": "Critical Infrastructure Plan",
+        "control_text": "Address information security and privacy issues in the development, documentation, and updating of a critical infrastructure and key resources protection plan.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-8.",
+        "related_controls": [
+          "CP-2",
+          "CP-4",
+          "PE-18",
+          "PL-2",
+          "PM-9",
+          "PM-11",
+          "PM-18",
+          "RA-3",
+          "SI-12"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Address information security and privacy issues in the development, documentation, and updating of a critical infrastructure and key resources protection plan.\n\n**Key Enhancements:** None defined for PM-8.\n\n**Related Controls:** CP-2, CP-4, PE-18, PL-2, PM-9, PM-11, PM-18, RA-3, SI-12\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-9": {
+      "control_id": "PM-9",
+      "control_title": "Risk Management Strategy",
+      "base_control": {
+        "control_id": "PM-9",
+        "control_title": "Risk Management Strategy",
+        "control_text": "Develop a comprehensive strategy to manage risk to organizational operations and assets, individuals, other organizations, and the Nation associated with the operation and use of organizational systems. Implement the risk management strategy consistently across the organization. Review and update the risk management strategy at an organization-defined frequency or as required, to address organizational changes.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-9.",
+        "related_controls": [
+          "AC-1",
+          "AU-1",
+          "AT-1",
+          "CA-1",
+          "CA-2",
+          "CA-5",
+          "CA-6",
+          "CA-7",
+          "CM-1",
+          "CP-1",
+          "IA-1",
+          "IR-1",
+          "MA-1",
+          "MP-1",
+          "PE-1",
+          "PL-1",
+          "PL-2",
+          "PM-2",
+          "PM-8",
+          "PM-18",
+          "PM-28",
+          "PM-30",
+          "PS-1",
+          "PT-1",
+          "PT-2",
+          "PT-3",
+          "RA-1",
+          "RA-3",
+          "RA-9",
+          "SA-1",
+          "SA-4",
+          "SC-1",
+          "SC-38",
+          "SI-1",
+          "SI-12",
+          "SR-1",
+          "SR-2"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Develop a comprehensive strategy to manage risk to organizational operations and assets, individuals, other organizations, and the Nation associated with the operation and use of organizational systems. Implement the risk management strategy consistently across the organization. Review and update the risk management strategy at an organization-defined frequency or as required, to address organizational changes.\n\n**Key Enhancements:** None defined for PM-9.\n\n**Related Controls:** AC-1, AU-1, AT-1, CA-1, CA-2, CA-5, CA-6, CA-7, CM-1, CP-1, IA-1, IR-1, MA-1, MP-1, PE-1, PL-1, PL-2, PM-2, PM-8, PM-18, PM-28, PM-30, PS-1, PT-1, PT-2, PT-3, RA-1, RA-3, RA-9, SA-1, SA-4, SC-1, SC-38, SI-1, SI-12, SR-1, SR-2\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization develops a comprehensive strategy to manage risk to organizational operations and assets, individuals, and other organizations.",
+        "examine_procedures": "Risk management strategy; organizational risk assessments; system security plans; risk tolerance documentation.",
+        "interview_procedures": "Organizational personnel responsible for risk management; senior leadership.",
+        "test_procedures": "Risk management processes and workflows.",
+        "determination_statements": [
+          "PM-09a. — A comprehensive risk management strategy for the organization is developed that addresses security and privacy risk",
+          "PM-09b. — The risk management strategy is implemented consistently across the organization",
+          "PM-09c. — The risk management strategy is reviewed and updated at an organization-defined frequency or as required"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization develops a comprehensive strategy to manage risk to organizational operations and assets, individuals, and other organizations.\n\n**Examine:** Risk management strategy; organizational risk assessments; system security plans; risk tolerance documentation.\n\n**Interview:** Organizational personnel responsible for risk management; senior leadership.\n\n**Test:** Risk management processes and workflows.\n\n**Determination Statements:**\n- PM-09a. — A comprehensive risk management strategy for the organization is developed that addresses security and privacy risk\n- PM-09b. — The risk management strategy is implemented consistently across the organization\n- PM-09c. — The risk management strategy is reviewed and updated at an organization-defined frequency or as required"
+      }
+    },
+    "PM-10": {
+      "control_id": "PM-10",
+      "control_title": "Authorization Process",
+      "base_control": {
+        "control_id": "PM-10",
+        "control_title": "Authorization Process",
+        "control_text": "Manage the security and privacy state of organizational systems and the environments in which those systems operate through authorization processes. Designate individuals to fulfill specific roles and responsibilities within the organizational risk management process. Integrate the authorization processes into an organization-wide risk management program.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-10.",
+        "related_controls": [
+          "CA-6",
+          "CA-7",
+          "PL-2"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Manage the security and privacy state of organizational systems and the environments in which those systems operate through authorization processes. Designate individuals to fulfill specific roles and responsibilities within the organizational risk management process. Integrate the authorization processes into an organization-wide risk management program.\n\n**Key Enhancements:** None defined for PM-10.\n\n**Related Controls:** CA-6, CA-7, PL-2\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization manages the authorization process for systems.",
+        "examine_procedures": "Authorization process documentation; system authorization records; risk acceptance documentation.",
+        "interview_procedures": "Authorizing officials; information system security officers; organizational personnel responsible for authorization process.",
+        "test_procedures": "Authorization process workflows.",
+        "determination_statements": [
+          "PM-10a. — A security and privacy authorization process is managed for organizational systems",
+          "PM-10b. — An organization-defined frequency for reauthorization is established"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization manages the authorization process for systems.\n\n**Examine:** Authorization process documentation; system authorization records; risk acceptance documentation.\n\n**Interview:** Authorizing officials; information system security officers; organizational personnel responsible for authorization process.\n\n**Test:** Authorization process workflows.\n\n**Determination Statements:**\n- PM-10a. — A security and privacy authorization process is managed for organizational systems\n- PM-10b. — An organization-defined frequency for reauthorization is established"
+      }
+    },
+    "PM-11": {
+      "control_id": "PM-11",
+      "control_title": "Mission and Business Process Definition",
+      "base_control": {
+        "control_id": "PM-11",
+        "control_title": "Mission and Business Process Definition",
+        "control_text": "Define organizational mission and business processes with consideration for information security and privacy and the resulting risk to organizational operations, organizational assets, individuals, other organizations, and the Nation. Determine information protection and personally identifiable information processing needs arising from the defined mission and business processes. Review and revise the mission and business processes at an organization-defined frequency.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-11.",
+        "related_controls": [
+          "CP-2",
+          "PL-2",
+          "PM-7",
+          "PM-8",
+          "RA-2",
+          "RA-3",
+          "RA-9",
+          "SA-2"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Define organizational mission and business processes with consideration for information security and privacy and the resulting risk to organizational operations, organizational assets, individuals, other organizations, and the Nation. Determine information protection and personally identifiable information processing needs arising from the defined mission and business processes. Review and revise the mission and business processes at an organization-defined frequency.\n\n**Key Enhancements:** None defined for PM-11.\n\n**Related Controls:** CP-2, PL-2, PM-7, PM-8, RA-2, RA-3, RA-9, SA-2\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization defines mission and business processes with consideration for information security and privacy.",
+        "examine_procedures": "Mission/business process documentation; risk management strategy; system security plans.",
+        "interview_procedures": "Mission/business owners; organizational personnel responsible for risk management.",
+        "test_procedures": "Processes for incorporating security into mission/business process definition.",
+        "determination_statements": [
+          "PM-11a. — Mission and business processes are defined with consideration for information security and the resulting risk to organizational operations, assets, individuals, and other organizations",
+          "PM-11b. — Information protection needs arising from the defined mission and business processes are determined and included in security plans",
+          "NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final",
+          "[SP 800-53 PM Family](../800-53/pm.md)"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization defines mission and business processes with consideration for information security and privacy.\n\n**Examine:** Mission/business process documentation; risk management strategy; system security plans.\n\n**Interview:** Mission/business owners; organizational personnel responsible for risk management.\n\n**Test:** Processes for incorporating security into mission/business process definition.\n\n**Determination Statements:**\n- PM-11a. — Mission and business processes are defined with consideration for information security and the resulting risk to organizational operations, assets, individuals, and other organizations\n- PM-11b. — Information protection needs arising from the defined mission and business processes are determined and included in security plans\n\n## References\n\n- NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final\n- [SP 800-53 PM Family](../800-53/pm.md)"
+      }
+    },
+    "PM-12": {
+      "control_id": "PM-12",
+      "control_title": "Insider Threat Program",
+      "base_control": {
+        "control_id": "PM-12",
+        "control_title": "Insider Threat Program",
+        "control_text": "Implement an insider threat program that includes a cross-discipline insider threat incident handling team.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-12.",
+        "related_controls": [
+          "AC-6",
+          "AT-2",
+          "AU-6",
+          "AU-7",
+          "AU-10",
+          "AU-12",
+          "AU-13",
+          "CA-7",
+          "IA-4",
+          "IR-4",
+          "MP-7",
+          "PE-2",
+          "PM-16",
+          "PS-3",
+          "PS-4",
+          "PS-5",
+          "PS-7",
+          "PS-8",
+          "SC-7",
+          "SC-38",
+          "SI-4",
+          "PM-14"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Implement an insider threat program that includes a cross-discipline insider threat incident handling team.\n\n**Key Enhancements:** None defined for PM-12.\n\n**Related Controls:** AC-6, AT-2, AU-6, AU-7, AU-10, AU-12, AU-13, CA-7, IA-4, IR-4, MP-7, PE-2, PM-16, PS-3, PS-4, PS-5, PS-7, PS-8, SC-7, SC-38, SI-4, PM-14\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-13": {
+      "control_id": "PM-13",
+      "control_title": "Security and Privacy Workforce",
+      "base_control": {
+        "control_id": "PM-13",
+        "control_title": "Security and Privacy Workforce",
+        "control_text": "Establish a security and privacy workforce development and improvement program.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-13.",
+        "related_controls": [
+          "AT-2",
+          "AT-3"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Establish a security and privacy workforce development and improvement program.\n\n**Key Enhancements:** None defined for PM-13.\n\n**Related Controls:** AT-2, AT-3\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-14": {
+      "control_id": "PM-14",
+      "control_title": "Testing, Training, and Monitoring",
+      "base_control": {
+        "control_id": "PM-14",
+        "control_title": "Testing, Training, and Monitoring",
+        "control_text": "Implement a process for ensuring that organizational plans for conducting security and privacy testing, training, and monitoring activities associated with organizational systems are developed and maintained. Review testing, training, and monitoring plans for consistency with the organizational risk management strategy and organization-wide priorities for risk response actions.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-14.",
+        "related_controls": [
+          "AT-2",
+          "AT-3",
+          "CA-7",
+          "CP-4",
+          "IR-3",
+          "PM-12",
+          "SI-4"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Implement a process for ensuring that organizational plans for conducting security and privacy testing, training, and monitoring activities associated with organizational systems are developed and maintained. Review testing, training, and monitoring plans for consistency with the organizational risk management strategy and organization-wide priorities for risk response actions.\n\n**Key Enhancements:** None defined for PM-14.\n\n**Related Controls:** AT-2, AT-3, CA-7, CP-4, IR-3, PM-12, SI-4\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-15": {
+      "control_id": "PM-15",
+      "control_title": "Security and Privacy Groups and Associations",
+      "base_control": {
+        "control_id": "PM-15",
+        "control_title": "Security and Privacy Groups and Associations",
+        "control_text": "Establish and institutionalize contact with selected groups and associations within the security and privacy communities to facilitate ongoing security and privacy education and training for organizational personnel, to maintain currency with recommended security and privacy practices, techniques, and technologies, and to share current security and privacy information including threats, vulnerabilities, and incidents.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-15.",
+        "related_controls": [
+          "SA-11",
+          "SI-5"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Establish and institutionalize contact with selected groups and associations within the security and privacy communities to facilitate ongoing security and privacy education and training for organizational personnel, to maintain currency with recommended security and privacy practices, techniques, and technologies, and to share current security and privacy information including threats, vulnerabilities, and incidents.\n\n**Key Enhancements:** None defined for PM-15.\n\n**Related Controls:** SA-11, SI-5\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-16": {
+      "control_id": "PM-16",
+      "control_title": "Threat Awareness Program",
+      "base_control": {
+        "control_id": "PM-16",
+        "control_title": "Threat Awareness Program",
+        "control_text": "Implement a threat awareness program that includes a cross-organization information-sharing capability for threat intelligence.",
+        "key_enhancements": [
+          {
+            "id": "PM-16(1)",
+            "title": "Automated Means for Sharing Threat Intelligence"
+          }
+        ],
+        "key_enhancements_text": "- **PM-16(1):** Automated Means for Sharing Threat Intelligence — Employ automated mechanisms to maximize the effectiveness of the threat awareness program.",
+        "related_controls": [
+          "IR-4",
+          "PM-12"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Implement a threat awareness program that includes a cross-organization information-sharing capability for threat intelligence.\n\n**Key Enhancements:**\n- **PM-16(1):** Automated Means for Sharing Threat Intelligence — Employ automated mechanisms to maximize the effectiveness of the threat awareness program.\n\n**Related Controls:** IR-4, PM-12\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-17": {
+      "control_id": "PM-17",
+      "control_title": "Protecting Controlled Unclassified Information on External Systems",
+      "base_control": {
+        "control_id": "PM-17",
+        "control_title": "Protecting Controlled Unclassified Information on External Systems",
+        "control_text": "Establish policy and procedures to ensure that requirements for the protection of controlled unclassified information that is processed, stored, or transmitted on external systems are implemented in accordance with applicable laws, executive orders, directives, policies, regulations, and standards.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-17.",
+        "related_controls": [
+          "CA-6",
+          "PM-10"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Establish policy and procedures to ensure that requirements for the protection of controlled unclassified information that is processed, stored, or transmitted on external systems are implemented in accordance with applicable laws, executive orders, directives, policies, regulations, and standards.\n\n**Key Enhancements:** None defined for PM-17.\n\n**Related Controls:** CA-6, PM-10\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-18": {
+      "control_id": "PM-18",
+      "control_title": "Privacy Program Plan",
+      "base_control": {
+        "control_id": "PM-18",
+        "control_title": "Privacy Program Plan",
+        "control_text": "Develop and disseminate an organization-wide privacy program plan that provides an overview of the agency's privacy program, including a description of the structure of the privacy program, the resources dedicated to the privacy program, the role of the senior agency official for privacy and other privacy officials and staff, the strategic goals and objectives of the privacy program, and privacy-related requirements. The plan is updated at an organization-defined frequency and to address changes in federal privacy laws, policies, and requirements.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-18.",
+        "related_controls": [
+          "PM-8",
+          "PM-9",
+          "PM-19"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Develop and disseminate an organization-wide privacy program plan that provides an overview of the agency's privacy program, including a description of the structure of the privacy program, the resources dedicated to the privacy program, the role of the senior agency official for privacy and other privacy officials and staff, the strategic goals and objectives of the privacy program, and privacy-related requirements. The plan is updated at an organization-defined frequency and to address changes in federal privacy laws, policies, and requirements.\n\n**Key Enhancements:** None defined for PM-18.\n\n**Related Controls:** PM-8, PM-9, PM-19\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-19": {
+      "control_id": "PM-19",
+      "control_title": "Privacy Program Leadership Role",
+      "base_control": {
+        "control_id": "PM-19",
+        "control_title": "Privacy Program Leadership Role",
+        "control_text": "Appoint a senior agency official for privacy with the authority, mission, accountability, and resources to coordinate, develop, and implement applicable privacy requirements and manage privacy risks through the organization-wide privacy program.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-19.",
+        "related_controls": [
+          "PM-18",
+          "PM-20",
+          "PM-23",
+          "PM-24",
+          "PM-27"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Appoint a senior agency official for privacy with the authority, mission, accountability, and resources to coordinate, develop, and implement applicable privacy requirements and manage privacy risks through the organization-wide privacy program.\n\n**Key Enhancements:** None defined for PM-19.\n\n**Related Controls:** PM-18, PM-20, PM-23, PM-24, PM-27\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-20": {
+      "control_id": "PM-20",
+      "control_title": "Dissemination of Privacy Program Information",
+      "base_control": {
+        "control_id": "PM-20",
+        "control_title": "Dissemination of Privacy Program Information",
+        "control_text": "Maintain a central resource page on the organization's principal public website that serves as a central source of information about the organization's privacy program and makes publicly available organization-defined privacy information.",
+        "key_enhancements": [
+          {
+            "id": "PM-20(1)",
+            "title": "Privacy Policies on Websites, Applications, and Digital Services"
+          }
+        ],
+        "key_enhancements_text": "- **PM-20(1):** Privacy Policies on Websites, Applications, and Digital Services — Develop and post privacy policies on all external-facing websites, mobile applications, and other digital services, that are clear, easy-to-understand, and provide contact information for questions and complaints.",
+        "related_controls": [
+          "AC-3",
+          "PM-19",
+          "PT-5",
+          "PT-6",
+          "PT-7",
+          "RA-8"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Maintain a central resource page on the organization's principal public website that serves as a central source of information about the organization's privacy program and makes publicly available organization-defined privacy information.\n\n**Key Enhancements:**\n- **PM-20(1):** Privacy Policies on Websites, Applications, and Digital Services — Develop and post privacy policies on all external-facing websites, mobile applications, and other digital services, that are clear, easy-to-understand, and provide contact information for questions and complaints.\n\n**Related Controls:** AC-3, PM-19, PT-5, PT-6, PT-7, RA-8\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-21": {
+      "control_id": "PM-21",
+      "control_title": "Accounting of Disclosures",
+      "base_control": {
+        "control_id": "PM-21",
+        "control_title": "Accounting of Disclosures",
+        "control_text": "Develop and maintain an accurate accounting of disclosures of personally identifiable information, including the date, nature, and purpose of each disclosure and the name and address of the person or organization to whom the disclosure was made. Retain the accounting of disclosures for the length of the time the personally identifiable information is maintained or five years after the disclosure is made, whichever is longer. Make the accounting of disclosures available to the person named in the record upon request.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-21.",
+        "related_controls": [
+          "AC-3",
+          "AU-2",
+          "PT-2"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Develop and maintain an accurate accounting of disclosures of personally identifiable information, including the date, nature, and purpose of each disclosure and the name and address of the person or organization to whom the disclosure was made. Retain the accounting of disclosures for the length of the time the personally identifiable information is maintained or five years after the disclosure is made, whichever is longer. Make the accounting of disclosures available to the person named in the record upon request.\n\n**Key Enhancements:** None defined for PM-21.\n\n**Related Controls:** AC-3, AU-2, PT-2\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-22": {
+      "control_id": "PM-22",
+      "control_title": "Personally Identifiable Information Quality Management",
+      "base_control": {
+        "control_id": "PM-22",
+        "control_title": "Personally Identifiable Information Quality Management",
+        "control_text": "Develop and document organization-wide policies and procedures for ensuring that personally identifiable information that is collected, maintained, and used is accurate, relevant, timely, and complete for the purpose for which it is to be used, and reducing personally identifiable information to the minimum necessary for that purpose.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-22.",
+        "related_controls": [
+          "PM-23",
+          "SI-18"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Develop and document organization-wide policies and procedures for ensuring that personally identifiable information that is collected, maintained, and used is accurate, relevant, timely, and complete for the purpose for which it is to be used, and reducing personally identifiable information to the minimum necessary for that purpose.\n\n**Key Enhancements:** None defined for PM-22.\n\n**Related Controls:** PM-23, SI-18\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-23": {
+      "control_id": "PM-23",
+      "control_title": "Data Governance Body",
+      "base_control": {
+        "control_id": "PM-23",
+        "control_title": "Data Governance Body",
+        "control_text": "Establish a Data Governance Body consisting of organization-defined roles with organization-defined responsibilities.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-23.",
+        "related_controls": [
+          "AT-2",
+          "AT-3",
+          "PM-19",
+          "PM-22",
+          "PM-24",
+          "PT-7",
+          "SI-4",
+          "SI-19"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Establish a Data Governance Body consisting of organization-defined roles with organization-defined responsibilities.\n\n**Key Enhancements:** None defined for PM-23.\n\n**Related Controls:** AT-2, AT-3, PM-19, PM-22, PM-24, PT-7, SI-4, SI-19\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-24": {
+      "control_id": "PM-24",
+      "control_title": "Data Integrity Board",
+      "base_control": {
+        "control_id": "PM-24",
+        "control_title": "Data Integrity Board",
+        "control_text": "Establish a Data Integrity Board to review proposals to conduct or participate in a matching program and conduct an annual review of all matching programs in which the agency has participated.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-24.",
+        "related_controls": [
+          "AC-4",
+          "PM-19",
+          "PM-23",
+          "PT-2",
+          "PT-8"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Establish a Data Integrity Board to review proposals to conduct or participate in a matching program and conduct an annual review of all matching programs in which the agency has participated.\n\n**Key Enhancements:** None defined for PM-24.\n\n**Related Controls:** AC-4, PM-19, PM-23, PT-2, PT-8\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-25": {
+      "control_id": "PM-25",
+      "control_title": "Minimization of Personally Identifiable Information Used in Testing, Training, and Research",
+      "base_control": {
+        "control_id": "PM-25",
+        "control_title": "Minimization of Personally Identifiable Information Used in Testing, Training, and Research",
+        "control_text": "Develop, document, and implement policies and procedures that address the use of personally identifiable information for internal testing, training, and research. Limit or minimize the amount of personally identifiable information used for internal testing, training, and research purposes. Authorize the use of personally identifiable information when such information is required for internal testing, training, and research.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-25.",
+        "related_controls": [
+          "PM-23",
+          "PT-3",
+          "SA-3",
+          "SA-8",
+          "SI-12"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Develop, document, and implement policies and procedures that address the use of personally identifiable information for internal testing, training, and research. Limit or minimize the amount of personally identifiable information used for internal testing, training, and research purposes. Authorize the use of personally identifiable information when such information is required for internal testing, training, and research.\n\n**Key Enhancements:** None defined for PM-25.\n\n**Related Controls:** PM-23, PT-3, SA-3, SA-8, SI-12\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-26": {
+      "control_id": "PM-26",
+      "control_title": "Complaint Management",
+      "base_control": {
+        "control_id": "PM-26",
+        "control_title": "Complaint Management",
+        "control_text": "Implement a process for receiving and responding to complaints, concerns, or questions from individuals about the organizational security and privacy practices that includes a complaint tracking mechanism and acknowledges receipt of complaints, concerns, or questions within an organization-defined time period. Each complaint is reviewed; the complaint is responded to within an organization-defined time period; and the appropriate measures are taken in response.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-26.",
+        "related_controls": [
+          "IR-7",
+          "IR-9",
+          "PM-22",
+          "SI-18"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Implement a process for receiving and responding to complaints, concerns, or questions from individuals about the organizational security and privacy practices that includes a complaint tracking mechanism and acknowledges receipt of complaints, concerns, or questions within an organization-defined time period. Each complaint is reviewed; the complaint is responded to within an organization-defined time period; and the appropriate measures are taken in response.\n\n**Key Enhancements:** None defined for PM-26.\n\n**Related Controls:** IR-7, IR-9, PM-22, SI-18\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-27": {
+      "control_id": "PM-27",
+      "control_title": "Privacy Reporting",
+      "base_control": {
+        "control_id": "PM-27",
+        "control_title": "Privacy Reporting",
+        "control_text": "Develop, disseminate, and update reports to the Office of Management and Budget, Congress, and other oversight bodies, as appropriate, to demonstrate accountability with specific statutory and regulatory privacy program mandates and to manage privacy risks within the organization.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-27.",
+        "related_controls": [
+          "IR-9",
+          "PM-19"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Develop, disseminate, and update reports to the Office of Management and Budget, Congress, and other oversight bodies, as appropriate, to demonstrate accountability with specific statutory and regulatory privacy program mandates and to manage privacy risks within the organization.\n\n**Key Enhancements:** None defined for PM-27.\n\n**Related Controls:** IR-9, PM-19\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-28": {
+      "control_id": "PM-28",
+      "control_title": "Risk Framing",
+      "base_control": {
+        "control_id": "PM-28",
+        "control_title": "Risk Framing",
+        "control_text": "Identify the assumptions, constraints, risk tolerances, and priorities/trade-offs for the organization. These inform the organization's risk management strategy and risk assessment approach.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-28.",
+        "related_controls": [
+          "CA-7",
+          "PM-9",
+          "RA-3",
+          "RA-7"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Identify the assumptions, constraints, risk tolerances, and priorities/trade-offs for the organization. These inform the organization's risk management strategy and risk assessment approach.\n\n**Key Enhancements:** None defined for PM-28.\n\n**Related Controls:** CA-7, PM-9, RA-3, RA-7\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-29": {
+      "control_id": "PM-29",
+      "control_title": "Risk Management Program Leadership Roles",
+      "base_control": {
+        "control_id": "PM-29",
+        "control_title": "Risk Management Program Leadership Roles",
+        "control_text": "Appoint a Senior Accountable Official for Risk Management to align information security and privacy management processes with strategic, operational, and budgetary planning processes. Establish a Risk Executive (function) that has organization-wide authority and responsibility for ensuring the implementation of an effective enterprise risk management strategy.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-29.",
+        "related_controls": [
+          "PM-2",
+          "PM-19"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Appoint a Senior Accountable Official for Risk Management to align information security and privacy management processes with strategic, operational, and budgetary planning processes. Establish a Risk Executive (function) that has organization-wide authority and responsibility for ensuring the implementation of an effective enterprise risk management strategy.\n\n**Key Enhancements:** None defined for PM-29.\n\n**Related Controls:** PM-2, PM-19\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-30": {
+      "control_id": "PM-30",
+      "control_title": "Supply Chain Risk Management Strategy",
+      "base_control": {
+        "control_id": "PM-30",
+        "control_title": "Supply Chain Risk Management Strategy",
+        "control_text": "Develop an organization-wide strategy for managing supply chain risks associated with the development, acquisition, maintenance, and disposal of systems, system components, and system services. Implement the supply chain risk management strategy consistently across the organization. Review and update the supply chain risk management strategy on an organization-defined frequency or as required to address organizational changes.",
+        "key_enhancements": [
+          {
+            "id": "PM-30(1)",
+            "title": "Suppliers of Critical or Mission-Essential Items"
+          }
+        ],
+        "key_enhancements_text": "- **PM-30(1):** Suppliers of Critical or Mission-Essential Items — Identify, prioritize, and assess suppliers of critical or mission-essential technologies, products, and services.",
+        "related_controls": [
+          "CM-10",
+          "PM-9",
+          "SR-1",
+          "SR-2",
+          "SR-3",
+          "SR-4",
+          "SR-5",
+          "SR-6",
+          "SR-7",
+          "SR-8",
+          "SR-9",
+          "SR-11"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Develop an organization-wide strategy for managing supply chain risks associated with the development, acquisition, maintenance, and disposal of systems, system components, and system services. Implement the supply chain risk management strategy consistently across the organization. Review and update the supply chain risk management strategy on an organization-defined frequency or as required to address organizational changes.\n\n**Key Enhancements:**\n- **PM-30(1):** Suppliers of Critical or Mission-Essential Items — Identify, prioritize, and assess suppliers of critical or mission-essential technologies, products, and services.\n\n**Related Controls:** CM-10, PM-9, SR-1, SR-2, SR-3, SR-4, SR-5, SR-6, SR-7, SR-8, SR-9, SR-11\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-31": {
+      "control_id": "PM-31",
+      "control_title": "Continuous Monitoring Strategy",
+      "base_control": {
+        "control_id": "PM-31",
+        "control_title": "Continuous Monitoring Strategy",
+        "control_text": "Develop an organization-wide continuous monitoring strategy and implement continuous monitoring programs that include establishing organization-defined metrics to be monitored, establishing monitoring frequencies, ongoing assessment of controls, correlation and analysis of security and privacy-related information, response actions to address analysis results, and reporting the security and privacy status of organizational systems to appropriate personnel at an organization-defined frequency.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-31.",
+        "related_controls": [
+          "AC-2",
+          "AC-6",
+          "AC-17",
+          "AT-4",
+          "AU-6",
+          "AU-13",
+          "CA-2",
+          "CA-5",
+          "CA-6",
+          "CA-7",
+          "CM-3",
+          "CM-4",
+          "CM-6",
+          "CM-11",
+          "IA-5",
+          "IR-5",
+          "MA-2",
+          "MA-3",
+          "MA-4",
+          "PE-3",
+          "PE-6",
+          "PE-14",
+          "PE-16",
+          "PE-20",
+          "PL-2",
+          "PM-4",
+          "PM-6",
+          "PM-9",
+          "PM-10",
+          "PM-12",
+          "PM-14",
+          "PM-23",
+          "PM-28",
+          "PS-7",
+          "PT-7",
+          "RA-3",
+          "RA-5",
+          "RA-7",
+          "SA-9",
+          "SA-11",
+          "SC-5",
+          "SC-7",
+          "SC-18",
+          "SC-38",
+          "SC-43",
+          "SI-3",
+          "SI-4",
+          "SI-12",
+          "SR-2",
+          "SR-4"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Develop an organization-wide continuous monitoring strategy and implement continuous monitoring programs that include establishing organization-defined metrics to be monitored, establishing monitoring frequencies, ongoing assessment of controls, correlation and analysis of security and privacy-related information, response actions to address analysis results, and reporting the security and privacy status of organizational systems to appropriate personnel at an organization-defined frequency.\n\n**Key Enhancements:** None defined for PM-31.\n\n**Related Controls:** AC-2, AC-6, AC-17, AT-4, AU-6, AU-13, CA-2, CA-5, CA-6, CA-7, CM-3, CM-4, CM-6, CM-11, IA-5, IR-5, MA-2, MA-3, MA-4, PE-3, PE-6, PE-14, PE-16, PE-20, PL-2, PM-4, PM-6, PM-9, PM-10, PM-12, PM-14, PM-23, PM-28, PS-7, PT-7, RA-3, RA-5, RA-7, SA-9, SA-11, SC-5, SC-7, SC-18, SC-38, SC-43, SI-3, SI-4, SI-12, SR-2, SR-4\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PM-32": {
+      "control_id": "PM-32",
+      "control_title": "Purposing",
+      "base_control": {
+        "control_id": "PM-32",
+        "control_title": "Purposing",
+        "control_text": "Analyze organization-defined systems or system components supporting organization-defined missions or business functions to determine if they are suitable, optimal, and can be repurposed to support other organizational missions or business functions. Reassign organization-defined systems or system components to other missions or business functions when the systems or components are no longer needed to support the originally assigned mission or business function.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PM-32.",
+        "related_controls": [
+          "CA-7",
+          "PL-2",
+          "RA-3",
+          "RA-9"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Analyze organization-defined systems or system components supporting organization-defined missions or business functions to determine if they are suitable, optimal, and can be repurposed to support other organizational missions or business functions. Reassign organization-defined systems or system components to other missions or business functions when the systems or components are no longer needed to support the originally assigned mission or business function.\n\n**Key Enhancements:** None defined for PM-32.\n\n**Related Controls:** CA-7, PL-2, RA-3, RA-9\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    }
+  }
+}

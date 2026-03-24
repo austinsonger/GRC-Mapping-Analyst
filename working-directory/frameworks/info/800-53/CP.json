@@ -1,0 +1,648 @@
+{
+  "generated_at": "2026-03-24T19:19:12.949Z",
+  "control_family": "CP",
+  "control_count": 13,
+  "controls": {
+    "CP-1": {
+      "control_id": "CP-1",
+      "control_title": "Policy and Procedures",
+      "base_control": {
+        "control_id": "CP-1",
+        "control_title": "Policy and Procedures",
+        "control_text": "Requires the organization to develop, document, disseminate, and periodically review and update contingency planning policy and procedures addressing purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "PM-9",
+          "PS-8",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to develop, document, disseminate, and periodically review and update contingency planning policy and procedures addressing purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance.\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** PM-9, PS-8, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization develops, documents, disseminates, reviews, and updates contingency planning policy and procedures.",
+        "examine_procedures": "Contingency planning policy; contingency planning procedures; system security plan.",
+        "interview_procedures": "Organizational personnel responsible for contingency planning policy.",
+        "test_procedures": "Organizational processes for managing contingency planning policy.",
+        "determination_statements": [
+          "CP-01a. — A contingency planning policy is developed, documented, and disseminated",
+          "CP-01b. — Contingency planning procedures are developed, documented, and disseminated",
+          "CP-01c. — The policy and procedures are reviewed and updated at an organization-defined frequency"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization develops, documents, disseminates, reviews, and updates contingency planning policy and procedures.\n\n**Examine:** Contingency planning policy; contingency planning procedures; system security plan.\n\n**Interview:** Organizational personnel responsible for contingency planning policy.\n\n**Test:** Organizational processes for managing contingency planning policy.\n\n**Determination Statements:**\n- CP-01a. — A contingency planning policy is developed, documented, and disseminated\n- CP-01b. — Contingency planning procedures are developed, documented, and disseminated\n- CP-01c. — The policy and procedures are reviewed and updated at an organization-defined frequency"
+      }
+    },
+    "CP-2": {
+      "control_id": "CP-2",
+      "control_title": "Contingency Plan",
+      "base_control": {
+        "control_id": "CP-2",
+        "control_title": "Contingency Plan",
+        "control_text": "Requires the organization to develop a contingency plan that identifies essential mission and business functions, provides recovery objectives, restoration priorities, and metrics, addresses roles, responsibilities, and assigned individuals with contact information, addresses maintaining mission and business functions despite disruption, compromise, or failure, addresses full system restoration without deterioration of security safeguards, and is reviewed and approved by designated officials.",
+        "key_enhancements": [
+          {
+            "id": "CP-2(1)",
+            "title": "Coordinate with Related Plans"
+          },
+          {
+            "id": "CP-2(2)",
+            "title": "Capacity Planning"
+          },
+          {
+            "id": "CP-2(3)",
+            "title": "Resume Mission and Business Functions"
+          },
+          {
+            "id": "CP-2(4)",
+            "title": "Resume All Mission and Business Functions"
+          },
+          {
+            "id": "CP-2(5)",
+            "title": "Continue Mission and Business Functions"
+          },
+          {
+            "id": "CP-2(6)",
+            "title": "Alternate Processing and Storage Site"
+          },
+          {
+            "id": "CP-2(7)",
+            "title": "Coordinate with External Service Providers"
+          },
+          {
+            "id": "CP-2(8)",
+            "title": "Identify Critical Assets"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CP-2(1) | Coordinate with Related Plans |\n| CP-2(2) | Capacity Planning |\n| CP-2(3) | Resume Mission and Business Functions |\n| CP-2(4) | Resume All Mission and Business Functions |\n| CP-2(5) | Continue Mission and Business Functions |\n| CP-2(6) | Alternate Processing and Storage Site |\n| CP-2(7) | Coordinate with External Service Providers |\n| CP-2(8) | Identify Critical Assets |",
+        "related_controls": [
+          "CP-3",
+          "CP-4",
+          "CP-6",
+          "CP-7",
+          "CP-8",
+          "CP-9",
+          "CP-10",
+          "CP-11",
+          "CP-13",
+          "IR-4",
+          "IR-6",
+          "IR-8",
+          "IR-9",
+          "MA-6",
+          "MP-2",
+          "MP-4",
+          "MP-5",
+          "PL-2",
+          "PM-8",
+          "PM-11",
+          "SA-15",
+          "SA-20",
+          "SC-7",
+          "SC-23",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to develop a contingency plan that identifies essential mission and business functions, provides recovery objectives, restoration priorities, and metrics, addresses roles, responsibilities, and assigned individuals with contact information, addresses maintaining mission and business functions despite disruption, compromise, or failure, addresses full system restoration without deterioration of security safeguards, and is reviewed and approved by designated officials.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CP-2(1) | Coordinate with Related Plans |\n| CP-2(2) | Capacity Planning |\n| CP-2(3) | Resume Mission and Business Functions |\n| CP-2(4) | Resume All Mission and Business Functions |\n| CP-2(5) | Continue Mission and Business Functions |\n| CP-2(6) | Alternate Processing and Storage Site |\n| CP-2(7) | Coordinate with External Service Providers |\n| CP-2(8) | Identify Critical Assets |\n\n**Related Controls:** CP-3, CP-4, CP-6, CP-7, CP-8, CP-9, CP-10, CP-11, CP-13, IR-4, IR-6, IR-8, IR-9, MA-6, MP-2, MP-4, MP-5, PL-2, PM-8, PM-11, SA-15, SA-20, SC-7, SC-23, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization develops, maintains, and distributes a contingency plan for the system.",
+        "examine_procedures": "Contingency planning policy; contingency plan; system security plan; business impact analysis; system recovery documentation.",
+        "interview_procedures": "Organizational personnel responsible for contingency planning; system administrators; contingency plan coordinators.",
+        "test_procedures": "Contingency plan distribution mechanisms; plan notification processes.",
+        "determination_statements": [
+          "CP-02a.[01] — A contingency plan is developed that identifies essential mission and business functions and associated contingency requirements",
+          "CP-02a.[02] — The contingency plan provides recovery objectives, restoration priorities, and metrics",
+          "CP-02a.[03] — The contingency plan addresses contingency roles, responsibilities, and assigned individuals with contact information",
+          "CP-02a.[04] — The contingency plan addresses maintaining essential mission and business functions despite system disruption, compromise, or failure",
+          "CP-02a.[05] — The contingency plan addresses eventual full system restoration without deterioration of security safeguards",
+          "CP-02b. — The contingency plan is distributed to organization-defined key contingency personnel and organizational elements",
+          "CP-02c. — Contingency planning activities are coordinated with incident handling activities",
+          "CP-02d. — The contingency plan is reviewed at an organization-defined frequency",
+          "CP-02e. — The contingency plan is updated to address changes to the organization, system, or environment",
+          "CP-02f. — The contingency plan is communicated to organization-defined key contingency personnel and organizational elements",
+          "CP-02g. — The contingency plan is protected from unauthorized disclosure and modification"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization develops, maintains, and distributes a contingency plan for the system.\n\n**Examine:** Contingency planning policy; contingency plan; system security plan; business impact analysis; system recovery documentation.\n\n**Interview:** Organizational personnel responsible for contingency planning; system administrators; contingency plan coordinators.\n\n**Test:** Contingency plan distribution mechanisms; plan notification processes.\n\n**Determination Statements:**\n- CP-02a.[01] — A contingency plan is developed that identifies essential mission and business functions and associated contingency requirements\n- CP-02a.[02] — The contingency plan provides recovery objectives, restoration priorities, and metrics\n- CP-02a.[03] — The contingency plan addresses contingency roles, responsibilities, and assigned individuals with contact information\n- CP-02a.[04] — The contingency plan addresses maintaining essential mission and business functions despite system disruption, compromise, or failure\n- CP-02a.[05] — The contingency plan addresses eventual full system restoration without deterioration of security safeguards\n- CP-02b. — The contingency plan is distributed to organization-defined key contingency personnel and organizational elements\n- CP-02c. — Contingency planning activities are coordinated with incident handling activities\n- CP-02d. — The contingency plan is reviewed at an organization-defined frequency\n- CP-02e. — The contingency plan is updated to address changes to the organization, system, or environment\n- CP-02f. — The contingency plan is communicated to organization-defined key contingency personnel and organizational elements\n- CP-02g. — The contingency plan is protected from unauthorized disclosure and modification"
+      }
+    },
+    "CP-3": {
+      "control_id": "CP-3",
+      "control_title": "Contingency Training",
+      "base_control": {
+        "control_id": "CP-3",
+        "control_title": "Contingency Training",
+        "control_text": "Requires the organization to provide contingency training to system users consistent with assigned roles and responsibilities within an organization-defined time period of assuming a role, when required by system changes, and at an organization-defined frequency thereafter.",
+        "key_enhancements": [
+          {
+            "id": "CP-3(1)",
+            "title": "Simulated Events"
+          },
+          {
+            "id": "CP-3(2)",
+            "title": "Mechanisms Used in Training Environments"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CP-3(1) | Simulated Events |\n| CP-3(2) | Mechanisms Used in Training Environments |",
+        "related_controls": [
+          "AT-2",
+          "AT-3",
+          "AT-4",
+          "CP-2",
+          "CP-4",
+          "CP-8",
+          "IR-2",
+          "IR-4",
+          "IR-9"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to provide contingency training to system users consistent with assigned roles and responsibilities within an organization-defined time period of assuming a role, when required by system changes, and at an organization-defined frequency thereafter.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CP-3(1) | Simulated Events |\n| CP-3(2) | Mechanisms Used in Training Environments |\n\n**Related Controls:** AT-2, AT-3, AT-4, CP-2, CP-4, CP-8, IR-2, IR-4, IR-9\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization provides contingency training to system users.",
+        "examine_procedures": "Contingency planning policy; contingency training materials; training records; contingency plan.",
+        "interview_procedures": "Organizational personnel with contingency planning responsibilities; personnel who have received contingency training.",
+        "test_procedures": "Contingency training mechanisms; training record management systems.",
+        "determination_statements": [
+          "CP-03a. — Contingency training is provided to system users consistent with assigned roles and responsibilities within an organization-defined time period of assuming a contingency role or responsibility",
+          "CP-03b. — Contingency training is provided when required by system changes",
+          "CP-03c. — Contingency training is provided at an organization-defined frequency thereafter"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization provides contingency training to system users.\n\n**Examine:** Contingency planning policy; contingency training materials; training records; contingency plan.\n\n**Interview:** Organizational personnel with contingency planning responsibilities; personnel who have received contingency training.\n\n**Test:** Contingency training mechanisms; training record management systems.\n\n**Determination Statements:**\n- CP-03a. — Contingency training is provided to system users consistent with assigned roles and responsibilities within an organization-defined time period of assuming a contingency role or responsibility\n- CP-03b. — Contingency training is provided when required by system changes\n- CP-03c. — Contingency training is provided at an organization-defined frequency thereafter"
+      }
+    },
+    "CP-4": {
+      "control_id": "CP-4",
+      "control_title": "Contingency Plan Testing",
+      "base_control": {
+        "control_id": "CP-4",
+        "control_title": "Contingency Plan Testing",
+        "control_text": "Requires the organization to test the contingency plan at an organization-defined frequency using organization-defined tests to determine the effectiveness of the plan and the readiness to execute the plan. Review the test results and initiate corrective actions if needed.",
+        "key_enhancements": [
+          {
+            "id": "CP-4(1)",
+            "title": "Coordinate with Related Plans"
+          },
+          {
+            "id": "CP-4(2)",
+            "title": "Alternate Processing Site"
+          },
+          {
+            "id": "CP-4(3)",
+            "title": "Automated Testing"
+          },
+          {
+            "id": "CP-4(4)",
+            "title": "Full Recovery and Reconstitution"
+          },
+          {
+            "id": "CP-4(5)",
+            "title": "Self-Challenge"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CP-4(1) | Coordinate with Related Plans |\n| CP-4(2) | Alternate Processing Site |\n| CP-4(3) | Automated Testing |\n| CP-4(4) | Full Recovery and Reconstitution |\n| CP-4(5) | Self-Challenge |",
+        "related_controls": [
+          "AT-3",
+          "CP-2",
+          "CP-3",
+          "CP-8",
+          "CP-9",
+          "IR-3",
+          "IR-4",
+          "PL-2",
+          "PM-14",
+          "SR-2"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to test the contingency plan at an organization-defined frequency using organization-defined tests to determine the effectiveness of the plan and the readiness to execute the plan. Review the test results and initiate corrective actions if needed.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CP-4(1) | Coordinate with Related Plans |\n| CP-4(2) | Alternate Processing Site |\n| CP-4(3) | Automated Testing |\n| CP-4(4) | Full Recovery and Reconstitution |\n| CP-4(5) | Self-Challenge |\n\n**Related Controls:** AT-3, CP-2, CP-3, CP-8, CP-9, IR-3, IR-4, PL-2, PM-14, SR-2\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization tests the contingency plan at an organization-defined frequency using organization-defined tests.",
+        "examine_procedures": "Contingency planning policy; contingency plan; contingency plan test results; contingency plan test documentation; after-action reports.",
+        "interview_procedures": "Organizational personnel responsible for contingency plan testing; system administrators.",
+        "test_procedures": "Contingency plan testing mechanisms; system recovery processes.",
+        "determination_statements": [
+          "CP-04a. — The contingency plan is tested at an organization-defined frequency using organization-defined tests to determine its effectiveness and the organization's readiness to execute the plan",
+          "CP-04b. — The contingency plan test results are reviewed",
+          "CP-04c. — Corrective actions are initiated, if needed"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization tests the contingency plan at an organization-defined frequency using organization-defined tests.\n\n**Examine:** Contingency planning policy; contingency plan; contingency plan test results; contingency plan test documentation; after-action reports.\n\n**Interview:** Organizational personnel responsible for contingency plan testing; system administrators.\n\n**Test:** Contingency plan testing mechanisms; system recovery processes.\n\n**Determination Statements:**\n- CP-04a. — The contingency plan is tested at an organization-defined frequency using organization-defined tests to determine its effectiveness and the organization's readiness to execute the plan\n- CP-04b. — The contingency plan test results are reviewed\n- CP-04c. — Corrective actions are initiated, if needed"
+      }
+    },
+    "CP-5": {
+      "control_id": "CP-5",
+      "control_title": "Contingency Plan Update",
+      "base_control": {
+        "control_id": "CP-5",
+        "control_title": "Contingency Plan Update",
+        "control_text": "*Withdrawn.* Incorporated into CP-2.",
+        "key_enhancements": [],
+        "key_enhancements_text": null,
+        "related_controls": [],
+        "baselines": [],
+        "baselines_text": null,
+        "source_markdown": "*Withdrawn.* Incorporated into CP-2."
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "CP-6": {
+      "control_id": "CP-6",
+      "control_title": "Alternate Storage Site",
+      "base_control": {
+        "control_id": "CP-6",
+        "control_title": "Alternate Storage Site",
+        "control_text": "Requires the organization to establish an alternate storage site, including necessary agreements to permit the storage and retrieval of system backup information, and ensure that the alternate storage site provides equivalent security safeguards to those of the primary site.",
+        "key_enhancements": [
+          {
+            "id": "CP-6(1)",
+            "title": "Separation from Primary Site"
+          },
+          {
+            "id": "CP-6(2)",
+            "title": "Recovery Time and Recovery Point Objectives"
+          },
+          {
+            "id": "CP-6(3)",
+            "title": "Accessibility"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CP-6(1) | Separation from Primary Site |\n| CP-6(2) | Recovery Time and Recovery Point Objectives |\n| CP-6(3) | Accessibility |",
+        "related_controls": [
+          "CP-2",
+          "CP-7",
+          "CP-8",
+          "CP-9",
+          "CP-10",
+          "MP-4",
+          "MP-5",
+          "PE-3",
+          "SC-36",
+          "SI-13"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Requires the organization to establish an alternate storage site, including necessary agreements to permit the storage and retrieval of system backup information, and ensure that the alternate storage site provides equivalent security safeguards to those of the primary site.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CP-6(1) | Separation from Primary Site |\n| CP-6(2) | Recovery Time and Recovery Point Objectives |\n| CP-6(3) | Accessibility |\n\n**Related Controls:** CP-2, CP-7, CP-8, CP-9, CP-10, MP-4, MP-5, PE-3, SC-36, SI-13\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "CP-7": {
+      "control_id": "CP-7",
+      "control_title": "Alternate Processing Site",
+      "base_control": {
+        "control_id": "CP-7",
+        "control_title": "Alternate Processing Site",
+        "control_text": "Requires the organization to establish an alternate processing site, including necessary agreements to permit the transfer and resumption of organization-defined system operations within an organization-defined time period when the primary processing capabilities are unavailable.",
+        "key_enhancements": [
+          {
+            "id": "CP-7(1)",
+            "title": "Separation from Primary Site"
+          },
+          {
+            "id": "CP-7(2)",
+            "title": "Accessibility"
+          },
+          {
+            "id": "CP-7(3)",
+            "title": "Priority of Service"
+          },
+          {
+            "id": "CP-7(4)",
+            "title": "Preparation for Use"
+          },
+          {
+            "id": "CP-7(5)",
+            "title": "Equivalent Information Security Safeguards"
+          },
+          {
+            "id": "CP-7(6)",
+            "title": "Inability to Return to Primary Site"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CP-7(1) | Separation from Primary Site |\n| CP-7(2) | Accessibility |\n| CP-7(3) | Priority of Service |\n| CP-7(4) | Preparation for Use |\n| CP-7(5) | Equivalent Information Security Safeguards |\n| CP-7(6) | Inability to Return to Primary Site |",
+        "related_controls": [
+          "CP-2",
+          "CP-6",
+          "CP-8",
+          "CP-9",
+          "CP-10",
+          "MA-6",
+          "PE-3",
+          "PE-11",
+          "PE-12",
+          "PE-17",
+          "SC-36",
+          "SI-13"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Requires the organization to establish an alternate processing site, including necessary agreements to permit the transfer and resumption of organization-defined system operations within an organization-defined time period when the primary processing capabilities are unavailable.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CP-7(1) | Separation from Primary Site |\n| CP-7(2) | Accessibility |\n| CP-7(3) | Priority of Service |\n| CP-7(4) | Preparation for Use |\n| CP-7(5) | Equivalent Information Security Safeguards |\n| CP-7(6) | Inability to Return to Primary Site |\n\n**Related Controls:** CP-2, CP-6, CP-8, CP-9, CP-10, MA-6, PE-3, PE-11, PE-12, PE-17, SC-36, SI-13\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "CP-8": {
+      "control_id": "CP-8",
+      "control_title": "Telecommunications Services",
+      "base_control": {
+        "control_id": "CP-8",
+        "control_title": "Telecommunications Services",
+        "control_text": "Requires the organization to establish alternate telecommunications services, including necessary agreements to permit the resumption of system operations for essential mission and business functions within an organization-defined time period when the primary telecommunications capabilities are unavailable.",
+        "key_enhancements": [
+          {
+            "id": "CP-8(1)",
+            "title": "Priority of Service Provisions"
+          },
+          {
+            "id": "CP-8(2)",
+            "title": "Single Points of Failure"
+          },
+          {
+            "id": "CP-8(3)",
+            "title": "Separation of Primary and Alternate Providers"
+          },
+          {
+            "id": "CP-8(4)",
+            "title": "Provider Contingency Plan"
+          },
+          {
+            "id": "CP-8(5)",
+            "title": "Alternate Telecommunication Service Testing"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CP-8(1) | Priority of Service Provisions |\n| CP-8(2) | Single Points of Failure |\n| CP-8(3) | Separation of Primary and Alternate Providers |\n| CP-8(4) | Provider Contingency Plan |\n| CP-8(5) | Alternate Telecommunication Service Testing |",
+        "related_controls": [
+          "CP-2",
+          "CP-6",
+          "CP-7",
+          "CP-11",
+          "SC-7"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Requires the organization to establish alternate telecommunications services, including necessary agreements to permit the resumption of system operations for essential mission and business functions within an organization-defined time period when the primary telecommunications capabilities are unavailable.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CP-8(1) | Priority of Service Provisions |\n| CP-8(2) | Single Points of Failure |\n| CP-8(3) | Separation of Primary and Alternate Providers |\n| CP-8(4) | Provider Contingency Plan |\n| CP-8(5) | Alternate Telecommunication Service Testing |\n\n**Related Controls:** CP-2, CP-6, CP-7, CP-11, SC-7\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "CP-9": {
+      "control_id": "CP-9",
+      "control_title": "System Backup",
+      "base_control": {
+        "control_id": "CP-9",
+        "control_title": "System Backup",
+        "control_text": "Requires the organization to conduct backups of user-level information, system-level information, and system documentation at an organization-defined frequency, and protect the confidentiality, integrity, and availability of backup information.",
+        "key_enhancements": [
+          {
+            "id": "CP-9(1)",
+            "title": "Testing for Reliability and Integrity"
+          },
+          {
+            "id": "CP-9(2)",
+            "title": "Test Restoration Using Sampling"
+          },
+          {
+            "id": "CP-9(3)",
+            "title": "Separate Storage for Critical Information"
+          },
+          {
+            "id": "CP-9(5)",
+            "title": "Transfer to Alternate Storage Site"
+          },
+          {
+            "id": "CP-9(6)",
+            "title": "Redundant Secondary System"
+          },
+          {
+            "id": "CP-9(7)",
+            "title": "Dual Authorization for Deletion or Destruction"
+          },
+          {
+            "id": "CP-9(8)",
+            "title": "Cryptographic Protection"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CP-9(1) | Testing for Reliability and Integrity |\n| CP-9(2) | Test Restoration Using Sampling |\n| CP-9(3) | Separate Storage for Critical Information |\n| CP-9(5) | Transfer to Alternate Storage Site |\n| CP-9(6) | Redundant Secondary System |\n| CP-9(7) | Dual Authorization for Deletion or Destruction |\n| CP-9(8) | Cryptographic Protection |",
+        "related_controls": [
+          "CP-2",
+          "CP-6",
+          "CP-10",
+          "MP-4",
+          "MP-5",
+          "SC-8",
+          "SC-12",
+          "SC-13",
+          "SI-4",
+          "SI-13"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to conduct backups of user-level information, system-level information, and system documentation at an organization-defined frequency, and protect the confidentiality, integrity, and availability of backup information.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CP-9(1) | Testing for Reliability and Integrity |\n| CP-9(2) | Test Restoration Using Sampling |\n| CP-9(3) | Separate Storage for Critical Information |\n| CP-9(5) | Transfer to Alternate Storage Site |\n| CP-9(6) | Redundant Secondary System |\n| CP-9(7) | Dual Authorization for Deletion or Destruction |\n| CP-9(8) | Cryptographic Protection |\n\n**Related Controls:** CP-2, CP-6, CP-10, MP-4, MP-5, SC-8, SC-12, SC-13, SI-4, SI-13\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization conducts backups of user-level and system-level information.",
+        "examine_procedures": "Contingency planning policy; system backup procedures; system security plan; backup schedules; backup storage locations; backup logs.",
+        "interview_procedures": "System administrators; organizational personnel responsible for backup and recovery.",
+        "test_procedures": "System backup mechanisms; backup integrity verification processes; restoration capabilities.",
+        "determination_statements": [
+          "CP-09a. — User-level information is backed up at an organization-defined frequency consistent with recovery time and recovery point objectives",
+          "CP-09b. — System-level information is backed up at an organization-defined frequency consistent with recovery time and recovery point objectives",
+          "CP-09c. — System documentation including security and privacy-related documentation is backed up at an organization-defined frequency",
+          "CP-09d. — The confidentiality, integrity, and availability of backup information is protected"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization conducts backups of user-level and system-level information.\n\n**Examine:** Contingency planning policy; system backup procedures; system security plan; backup schedules; backup storage locations; backup logs.\n\n**Interview:** System administrators; organizational personnel responsible for backup and recovery.\n\n**Test:** System backup mechanisms; backup integrity verification processes; restoration capabilities.\n\n**Determination Statements:**\n- CP-09a. — User-level information is backed up at an organization-defined frequency consistent with recovery time and recovery point objectives\n- CP-09b. — System-level information is backed up at an organization-defined frequency consistent with recovery time and recovery point objectives\n- CP-09c. — System documentation including security and privacy-related documentation is backed up at an organization-defined frequency\n- CP-09d. — The confidentiality, integrity, and availability of backup information is protected"
+      }
+    },
+    "CP-10": {
+      "control_id": "CP-10",
+      "control_title": "System Recovery and Reconstitution",
+      "base_control": {
+        "control_id": "CP-10",
+        "control_title": "System Recovery and Reconstitution",
+        "control_text": "Requires the organization to provide for the recovery and reconstitution of the system to a known state within an organization-defined time period after disruption, compromise, or failure. This includes restoring the system to operational readiness, validating integrity, and activating any necessary compensating controls.",
+        "key_enhancements": [
+          {
+            "id": "CP-10(2)",
+            "title": "Transaction Recovery"
+          },
+          {
+            "id": "CP-10(4)",
+            "title": "Restore Within Time Period"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CP-10(2) | Transaction Recovery |\n| CP-10(4) | Restore Within Time Period |",
+        "related_controls": [
+          "CP-2",
+          "CP-4",
+          "CP-6",
+          "CP-7",
+          "CP-9",
+          "IR-4",
+          "SA-8",
+          "SC-24",
+          "SI-13"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to provide for the recovery and reconstitution of the system to a known state within an organization-defined time period after disruption, compromise, or failure. This includes restoring the system to operational readiness, validating integrity, and activating any necessary compensating controls.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CP-10(2) | Transaction Recovery |\n| CP-10(4) | Restore Within Time Period |\n\n**Related Controls:** CP-2, CP-4, CP-6, CP-7, CP-9, IR-4, SA-8, SC-24, SI-13\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization provides for the recovery and reconstitution of the system to a known state within organization-defined time periods.",
+        "examine_procedures": "Contingency planning policy; contingency plan; system recovery procedures; system reconstitution procedures; system security plan; system configuration settings.",
+        "interview_procedures": "System administrators; organizational personnel responsible for system recovery; contingency plan coordinators.",
+        "test_procedures": "System recovery mechanisms; reconstitution processes.",
+        "determination_statements": [
+          "CP-10 — The system is recovered and reconstituted to a known state within organization-defined time periods consistent with recovery time and recovery point objectives after a disruption, compromise, or failure",
+          "NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final",
+          "[SP 800-53 CP Family](../800-53/cp.md)"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization provides for the recovery and reconstitution of the system to a known state within organization-defined time periods.\n\n**Examine:** Contingency planning policy; contingency plan; system recovery procedures; system reconstitution procedures; system security plan; system configuration settings.\n\n**Interview:** System administrators; organizational personnel responsible for system recovery; contingency plan coordinators.\n\n**Test:** System recovery mechanisms; reconstitution processes.\n\n**Determination Statements:**\n- CP-10 — The system is recovered and reconstituted to a known state within organization-defined time periods consistent with recovery time and recovery point objectives after a disruption, compromise, or failure\n\n## References\n\n- NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final\n- [SP 800-53 CP Family](../800-53/cp.md)"
+      }
+    },
+    "CP-11": {
+      "control_id": "CP-11",
+      "control_title": "Alternate Communications Protocols",
+      "base_control": {
+        "control_id": "CP-11",
+        "control_title": "Alternate Communications Protocols",
+        "control_text": "Requires the system to provide the capability to employ organization-defined alternative communications protocols in support of maintaining continuity of operations.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "CP-2",
+          "CP-8",
+          "CP-13"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Requires the system to provide the capability to employ organization-defined alternative communications protocols in support of maintaining continuity of operations.\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** CP-2, CP-8, CP-13\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "CP-12": {
+      "control_id": "CP-12",
+      "control_title": "Safe Mode",
+      "base_control": {
+        "control_id": "CP-12",
+        "control_title": "Safe Mode",
+        "control_text": "Requires the system to enter a safe mode of operation with organization-defined restrictions when organization-defined conditions are detected. This mode limits system functions to only those essential for continued secure operations during adverse conditions.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "CM-2",
+          "SA-8",
+          "SC-24",
+          "SI-13",
+          "SI-17"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Requires the system to enter a safe mode of operation with organization-defined restrictions when organization-defined conditions are detected. This mode limits system functions to only those essential for continued secure operations during adverse conditions.\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** CM-2, SA-8, SC-24, SI-13, SI-17\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "CP-13": {
+      "control_id": "CP-13",
+      "control_title": "Alternative Security Mechanisms",
+      "base_control": {
+        "control_id": "CP-13",
+        "control_title": "Alternative Security Mechanisms",
+        "control_text": "Requires the organization to employ organization-defined alternative or supplemental security mechanisms for satisfying organization-defined security functions when the primary means of implementing the security function is unavailable or compromised.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "CP-2",
+          "CP-11",
+          "SI-13"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Requires the organization to employ organization-defined alternative or supplemental security mechanisms for satisfying organization-defined security functions when the primary means of implementing the security function is unavailable or compromised.\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** CP-2, CP-11, SI-13\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    }
+  }
+}

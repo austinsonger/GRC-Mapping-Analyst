@@ -1,0 +1,847 @@
+{
+  "generated_at": "2026-03-24T19:14:38.266Z",
+  "control_family": "AU",
+  "control_count": 16,
+  "controls": {
+    "AU-1": {
+      "control_id": "AU-1",
+      "control_title": "Policy and Procedures",
+      "base_control": {
+        "control_id": "AU-1",
+        "control_title": "Policy and Procedures",
+        "control_text": "Requires the organization to develop, document, disseminate, and periodically review and update audit and accountability policy and procedures addressing purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "PM-9",
+          "PS-8",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to develop, document, disseminate, and periodically review and update audit and accountability policy and procedures addressing purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance.\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** PM-9, PS-8, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization develops, documents, disseminates, reviews, and updates audit and accountability policy and procedures.",
+        "examine_procedures": "Audit and accountability policy; audit and accountability procedures; system security plan.",
+        "interview_procedures": "Organizational personnel responsible for audit and accountability policy.",
+        "test_procedures": "Organizational processes for managing audit and accountability policy and procedures.",
+        "determination_statements": [
+          "AU-01a. — An audit and accountability policy is developed, documented, and disseminated",
+          "AU-01b. — Audit and accountability procedures are developed, documented, and disseminated",
+          "AU-01c. — The audit and accountability policy and procedures are reviewed and updated at an organization-defined frequency"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization develops, documents, disseminates, reviews, and updates audit and accountability policy and procedures.\n\n**Examine:** Audit and accountability policy; audit and accountability procedures; system security plan.\n\n**Interview:** Organizational personnel responsible for audit and accountability policy.\n\n**Test:** Organizational processes for managing audit and accountability policy and procedures.\n\n**Determination Statements:**\n- AU-01a. — An audit and accountability policy is developed, documented, and disseminated\n- AU-01b. — Audit and accountability procedures are developed, documented, and disseminated\n- AU-01c. — The audit and accountability policy and procedures are reviewed and updated at an organization-defined frequency"
+      }
+    },
+    "AU-2": {
+      "control_id": "AU-2",
+      "control_title": "Event Logging",
+      "base_control": {
+        "control_id": "AU-2",
+        "control_title": "Event Logging",
+        "control_text": "Requires the organization to identify the types of events that the system must be capable of logging in support of the audit function, and to coordinate the event logging function with other organizational entities requiring audit-related information. The organization must specify which events require logging on the system.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined. (Former enhancements withdrawn and incorporated into base control.)",
+        "related_controls": [
+          "AC-2",
+          "AC-3",
+          "AC-6",
+          "AC-7",
+          "AC-8",
+          "AC-16",
+          "AC-17",
+          "AU-3",
+          "AU-4",
+          "AU-5",
+          "AU-6",
+          "AU-7",
+          "AU-11",
+          "AU-12",
+          "CM-3",
+          "CM-5",
+          "CM-6",
+          "CM-13",
+          "IA-3",
+          "MA-4",
+          "MP-4",
+          "PE-3",
+          "PM-21",
+          "PT-2",
+          "PT-7",
+          "RA-8",
+          "SA-8",
+          "SC-7",
+          "SC-18",
+          "SI-3",
+          "SI-4",
+          "SI-7",
+          "SI-10",
+          "SI-11"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to identify the types of events that the system must be capable of logging in support of the audit function, and to coordinate the event logging function with other organizational entities requiring audit-related information. The organization must specify which events require logging on the system.\n\n**Key Enhancements:** None defined. (Former enhancements withdrawn and incorporated into base control.)\n\n**Related Controls:** AC-2, AC-3, AC-6, AC-7, AC-8, AC-16, AC-17, AU-3, AU-4, AU-5, AU-6, AU-7, AU-11, AU-12, CM-3, CM-5, CM-6, CM-13, IA-3, MA-4, MP-4, PE-3, PM-21, PT-2, PT-7, RA-8, SA-8, SC-7, SC-18, SI-3, SI-4, SI-7, SI-10, SI-11\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization identifies events that the system must be capable of logging and coordinates the event logging function with other organizational entities.",
+        "examine_procedures": "Audit and accountability policy; system security plan; system design documentation; system configuration settings; list of organization-defined auditable events; audit records.",
+        "interview_procedures": "System administrators; organizational personnel responsible for defining auditable events; information system security officers.",
+        "test_procedures": "System audit logging configuration; mechanisms for selecting auditable events.",
+        "determination_statements": [
+          "AU-02a. — The types of events that the system is capable of logging in support of the audit function are identified",
+          "AU-02b. — The event logging function is coordinated with other organizational entities requiring audit-related information",
+          "AU-02c. — The organization-defined event types that the system logs within the system are specified along with the frequency of or situation requiring logging for each event type",
+          "AU-02d. — The types of logged events and logging frequencies are reviewed and updated"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization identifies events that the system must be capable of logging and coordinates the event logging function with other organizational entities.\n\n**Examine:** Audit and accountability policy; system security plan; system design documentation; system configuration settings; list of organization-defined auditable events; audit records.\n\n**Interview:** System administrators; organizational personnel responsible for defining auditable events; information system security officers.\n\n**Test:** System audit logging configuration; mechanisms for selecting auditable events.\n\n**Determination Statements:**\n- AU-02a. — The types of events that the system is capable of logging in support of the audit function are identified\n- AU-02b. — The event logging function is coordinated with other organizational entities requiring audit-related information\n- AU-02c. — The organization-defined event types that the system logs within the system are specified along with the frequency of or situation requiring logging for each event type\n- AU-02d. — The types of logged events and logging frequencies are reviewed and updated"
+      }
+    },
+    "AU-3": {
+      "control_id": "AU-3",
+      "control_title": "Content of Audit Records",
+      "base_control": {
+        "control_id": "AU-3",
+        "control_title": "Content of Audit Records",
+        "control_text": "Requires audit records to contain sufficient information to establish what type of event occurred, when it occurred, where it occurred, the source of the event, the outcome of the event, and the identity of any individuals, subjects, or objects associated with the event.",
+        "key_enhancements": [
+          {
+            "id": "AU-3(1)",
+            "title": "Additional Audit Information"
+          },
+          {
+            "id": "AU-3(2)",
+            "title": "Centralized Management of Planned Audit Record Content"
+          },
+          {
+            "id": "AU-3(3)",
+            "title": "Limit Personally Identifiable Information Elements"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AU-3(1) | Additional Audit Information |\n| AU-3(2) | Centralized Management of Planned Audit Record Content |\n| AU-3(3) | Limit Personally Identifiable Information Elements |",
+        "related_controls": [
+          "AU-2",
+          "AU-8",
+          "AU-12",
+          "AU-14",
+          "MA-4",
+          "PL-9",
+          "SA-8",
+          "SI-7",
+          "SI-11"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires audit records to contain sufficient information to establish what type of event occurred, when it occurred, where it occurred, the source of the event, the outcome of the event, and the identity of any individuals, subjects, or objects associated with the event.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AU-3(1) | Additional Audit Information |\n| AU-3(2) | Centralized Management of Planned Audit Record Content |\n| AU-3(3) | Limit Personally Identifiable Information Elements |\n\n**Related Controls:** AU-2, AU-8, AU-12, AU-14, MA-4, PL-9, SA-8, SI-7, SI-11\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if audit records contain the required information to establish what, when, where, source, outcome, and identity.",
+        "examine_procedures": "Audit and accountability policy; system security plan; system design documentation; system configuration settings; audit records; audit record content documentation.",
+        "interview_procedures": "System administrators; system developers.",
+        "test_procedures": "Audit record generation mechanisms; audit record content verification.",
+        "determination_statements": [
+          "AU-03a. — Audit records contain what type of event occurred",
+          "AU-03b. — Audit records contain when the event occurred",
+          "AU-03c. — Audit records contain where the event occurred",
+          "AU-03d. — Audit records contain the source of the event",
+          "AU-03e. — Audit records contain the outcome of the event",
+          "AU-03f. — Audit records contain the identity of individuals, subjects, or objects/entities associated with the event"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if audit records contain the required information to establish what, when, where, source, outcome, and identity.\n\n**Examine:** Audit and accountability policy; system security plan; system design documentation; system configuration settings; audit records; audit record content documentation.\n\n**Interview:** System administrators; system developers.\n\n**Test:** Audit record generation mechanisms; audit record content verification.\n\n**Determination Statements:**\n- AU-03a. — Audit records contain what type of event occurred\n- AU-03b. — Audit records contain when the event occurred\n- AU-03c. — Audit records contain where the event occurred\n- AU-03d. — Audit records contain the source of the event\n- AU-03e. — Audit records contain the outcome of the event\n- AU-03f. — Audit records contain the identity of individuals, subjects, or objects/entities associated with the event"
+      }
+    },
+    "AU-4": {
+      "control_id": "AU-4",
+      "control_title": "Audit Log Storage Capacity",
+      "base_control": {
+        "control_id": "AU-4",
+        "control_title": "Audit Log Storage Capacity",
+        "control_text": "Requires the organization to allocate audit log storage capacity in accordance with organization-defined requirements, to reduce the likelihood of storage capacity being exceeded.",
+        "key_enhancements": [
+          {
+            "id": "AU-4(1)",
+            "title": "Transfer to Alternate Storage"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AU-4(1) | Transfer to Alternate Storage |",
+        "related_controls": [
+          "AU-2",
+          "AU-5",
+          "AU-6",
+          "AU-7",
+          "AU-9",
+          "AU-11",
+          "AU-12",
+          "AU-14",
+          "SI-4"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to allocate audit log storage capacity in accordance with organization-defined requirements, to reduce the likelihood of storage capacity being exceeded.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AU-4(1) | Transfer to Alternate Storage |\n\n**Related Controls:** AU-2, AU-5, AU-6, AU-7, AU-9, AU-11, AU-12, AU-14, SI-4\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "AU-5": {
+      "control_id": "AU-5",
+      "control_title": "Response to Audit Logging Process Failures",
+      "base_control": {
+        "control_id": "AU-5",
+        "control_title": "Response to Audit Logging Process Failures",
+        "control_text": "Requires the system to alert designated personnel in the event of an audit logging process failure and take organization-defined additional actions (e.g., shut down the system, overwrite oldest audit records, stop generating audit records).",
+        "key_enhancements": [
+          {
+            "id": "AU-5(1)",
+            "title": "Storage Capacity Warning"
+          },
+          {
+            "id": "AU-5(2)",
+            "title": "Real-Time Alerts"
+          },
+          {
+            "id": "AU-5(3)",
+            "title": "Configurable Traffic Volume Thresholds"
+          },
+          {
+            "id": "AU-5(4)",
+            "title": "Shutdown on Failure"
+          },
+          {
+            "id": "AU-5(5)",
+            "title": "Alternate Audit Logging Capability"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AU-5(1) | Storage Capacity Warning |\n| AU-5(2) | Real-Time Alerts |\n| AU-5(3) | Configurable Traffic Volume Thresholds |\n| AU-5(4) | Shutdown on Failure |\n| AU-5(5) | Alternate Audit Logging Capability |",
+        "related_controls": [
+          "AU-2",
+          "AU-4",
+          "AU-7",
+          "AU-9",
+          "AU-11",
+          "AU-12",
+          "AU-14",
+          "SI-4",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the system to alert designated personnel in the event of an audit logging process failure and take organization-defined additional actions (e.g., shut down the system, overwrite oldest audit records, stop generating audit records).\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AU-5(1) | Storage Capacity Warning |\n| AU-5(2) | Real-Time Alerts |\n| AU-5(3) | Configurable Traffic Volume Thresholds |\n| AU-5(4) | Shutdown on Failure |\n| AU-5(5) | Alternate Audit Logging Capability |\n\n**Related Controls:** AU-2, AU-4, AU-7, AU-9, AU-11, AU-12, AU-14, SI-4, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "AU-6": {
+      "control_id": "AU-6",
+      "control_title": "Audit Record Review, Analysis, and Reporting",
+      "base_control": {
+        "control_id": "AU-6",
+        "control_title": "Audit Record Review, Analysis, and Reporting",
+        "control_text": "Requires the organization to review and analyze system audit records at an organization-defined frequency for indications of inappropriate or unusual activity, and report findings to designated personnel or roles. Integrate audit review, analysis, and reporting with processes for investigation and response to suspicious activities.",
+        "key_enhancements": [
+          {
+            "id": "AU-6(1)",
+            "title": "Automated Process Integration"
+          },
+          {
+            "id": "AU-6(3)",
+            "title": "Correlate Audit Record Repositories"
+          },
+          {
+            "id": "AU-6(4)",
+            "title": "Central Review and Analysis"
+          },
+          {
+            "id": "AU-6(5)",
+            "title": "Integrated Analysis of Audit Records"
+          },
+          {
+            "id": "AU-6(6)",
+            "title": "Correlation with Physical Monitoring"
+          },
+          {
+            "id": "AU-6(7)",
+            "title": "Permitted Actions"
+          },
+          {
+            "id": "AU-6(8)",
+            "title": "Full Text Analysis of Privileged Commands"
+          },
+          {
+            "id": "AU-6(9)",
+            "title": "Correlation with Information from Nontechnical Sources"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AU-6(1) | Automated Process Integration |\n| AU-6(3) | Correlate Audit Record Repositories |\n| AU-6(4) | Central Review and Analysis |\n| AU-6(5) | Integrated Analysis of Audit Records |\n| AU-6(6) | Correlation with Physical Monitoring |\n| AU-6(7) | Permitted Actions |\n| AU-6(8) | Full Text Analysis of Privileged Commands |\n| AU-6(9) | Correlation with Information from Nontechnical Sources |",
+        "related_controls": [
+          "AC-2",
+          "AC-3",
+          "AC-5",
+          "AC-6",
+          "AC-7",
+          "AC-17",
+          "AU-7",
+          "AU-16",
+          "CA-2",
+          "CA-7",
+          "CM-2",
+          "CM-5",
+          "CM-6",
+          "CM-10",
+          "CM-11",
+          "IA-2",
+          "IA-3",
+          "IA-5",
+          "IA-8",
+          "IR-5",
+          "MA-4",
+          "MP-4",
+          "PE-3",
+          "PE-6",
+          "RA-5",
+          "SA-8",
+          "SC-7",
+          "SI-3",
+          "SI-4",
+          "SI-7"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to review and analyze system audit records at an organization-defined frequency for indications of inappropriate or unusual activity, and report findings to designated personnel or roles. Integrate audit review, analysis, and reporting with processes for investigation and response to suspicious activities.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AU-6(1) | Automated Process Integration |\n| AU-6(3) | Correlate Audit Record Repositories |\n| AU-6(4) | Central Review and Analysis |\n| AU-6(5) | Integrated Analysis of Audit Records |\n| AU-6(6) | Correlation with Physical Monitoring |\n| AU-6(7) | Permitted Actions |\n| AU-6(8) | Full Text Analysis of Privileged Commands |\n| AU-6(9) | Correlation with Information from Nontechnical Sources |\n\n**Related Controls:** AC-2, AC-3, AC-5, AC-6, AC-7, AC-17, AU-7, AU-16, CA-2, CA-7, CM-2, CM-5, CM-6, CM-10, CM-11, IA-2, IA-3, IA-5, IA-8, IR-5, MA-4, MP-4, PE-3, PE-6, RA-5, SA-8, SC-7, SI-3, SI-4, SI-7\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization reviews and analyzes audit records for indications of inappropriate or unusual activity and reports findings.",
+        "examine_procedures": "Audit and accountability policy; audit review and analysis procedures; audit records; audit analysis reports; incident reports; system security plan.",
+        "interview_procedures": "Organizational personnel responsible for audit review, analysis, and reporting; information system security officers.",
+        "test_procedures": "Audit review and analysis mechanisms; automated audit analysis tools; reporting mechanisms.",
+        "determination_statements": [
+          "AU-06a. — System audit records are reviewed and analyzed at an organization-defined frequency for indications of organization-defined inappropriate or unusual activity",
+          "AU-06b. — Findings are reported to organization-defined personnel or roles"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization reviews and analyzes audit records for indications of inappropriate or unusual activity and reports findings.\n\n**Examine:** Audit and accountability policy; audit review and analysis procedures; audit records; audit analysis reports; incident reports; system security plan.\n\n**Interview:** Organizational personnel responsible for audit review, analysis, and reporting; information system security officers.\n\n**Test:** Audit review and analysis mechanisms; automated audit analysis tools; reporting mechanisms.\n\n**Determination Statements:**\n- AU-06a. — System audit records are reviewed and analyzed at an organization-defined frequency for indications of organization-defined inappropriate or unusual activity\n- AU-06b. — Findings are reported to organization-defined personnel or roles"
+      }
+    },
+    "AU-7": {
+      "control_id": "AU-7",
+      "control_title": "Audit Record Reduction and Report Generation",
+      "base_control": {
+        "control_id": "AU-7",
+        "control_title": "Audit Record Reduction and Report Generation",
+        "control_text": "Requires the system to provide an audit record reduction and report generation capability that supports on-demand audit review, analysis, and reporting requirements and after-the-fact investigations of incidents.",
+        "key_enhancements": [
+          {
+            "id": "AU-7(1)",
+            "title": "Automatic Processing"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AU-7(1) | Automatic Processing |",
+        "related_controls": [
+          "AC-2",
+          "AU-2",
+          "AU-3",
+          "AU-4",
+          "AU-5",
+          "AU-6",
+          "AU-12",
+          "AU-16",
+          "CM-5",
+          "IA-5",
+          "IR-4",
+          "PM-12",
+          "SI-4"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Requires the system to provide an audit record reduction and report generation capability that supports on-demand audit review, analysis, and reporting requirements and after-the-fact investigations of incidents.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AU-7(1) | Automatic Processing |\n\n**Related Controls:** AC-2, AU-2, AU-3, AU-4, AU-5, AU-6, AU-12, AU-16, CM-5, IA-5, IR-4, PM-12, SI-4\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the system provides an audit record reduction and report generation capability.",
+        "examine_procedures": "Audit and accountability policy; system security plan; system design documentation; system configuration settings; audit record reduction capabilities; report generation tools.",
+        "interview_procedures": "System administrators; organizational personnel responsible for audit analysis.",
+        "test_procedures": "Audit record reduction mechanisms; report generation capabilities.",
+        "determination_statements": [
+          "AU-07a. — The system provides an audit record reduction and report generation capability that supports on-demand audit review, analysis, and reporting requirements",
+          "AU-07b. — The system provides an audit record reduction and report generation capability that supports after-the-fact investigations of incidents"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the system provides an audit record reduction and report generation capability.\n\n**Examine:** Audit and accountability policy; system security plan; system design documentation; system configuration settings; audit record reduction capabilities; report generation tools.\n\n**Interview:** System administrators; organizational personnel responsible for audit analysis.\n\n**Test:** Audit record reduction mechanisms; report generation capabilities.\n\n**Determination Statements:**\n- AU-07a. — The system provides an audit record reduction and report generation capability that supports on-demand audit review, analysis, and reporting requirements\n- AU-07b. — The system provides an audit record reduction and report generation capability that supports after-the-fact investigations of incidents"
+      }
+    },
+    "AU-8": {
+      "control_id": "AU-8",
+      "control_title": "Time Stamps",
+      "base_control": {
+        "control_id": "AU-8",
+        "control_title": "Time Stamps",
+        "control_text": "Requires the system to use internal system clocks to generate time stamps for audit records, and record time stamps that can be mapped to Coordinated Universal Time (UTC) or Greenwich Mean Time (GMT).",
+        "key_enhancements": [
+          {
+            "id": "AU-8(1)",
+            "title": "Synchronization with Authoritative Time Source"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AU-8(1) | Synchronization with Authoritative Time Source |",
+        "related_controls": [
+          "AU-3",
+          "AU-12",
+          "AU-14",
+          "SC-45"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the system to use internal system clocks to generate time stamps for audit records, and record time stamps that can be mapped to Coordinated Universal Time (UTC) or Greenwich Mean Time (GMT).\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AU-8(1) | Synchronization with Authoritative Time Source |\n\n**Related Controls:** AU-3, AU-12, AU-14, SC-45\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the system uses internal system clocks to generate time stamps for audit records.",
+        "examine_procedures": "Audit and accountability policy; system security plan; system design documentation; system configuration settings; time synchronization configuration.",
+        "interview_procedures": "System administrators.",
+        "test_procedures": "System clock synchronization mechanisms; time stamp generation in audit records.",
+        "determination_statements": [
+          "AU-08a. — The system uses internal system clocks to generate time stamps for audit records",
+          "AU-08b. — Time stamps use Coordinated Universal Time (UTC) or local time with an offset from UTC and meet organization-defined granularity of time measurement"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the system uses internal system clocks to generate time stamps for audit records.\n\n**Examine:** Audit and accountability policy; system security plan; system design documentation; system configuration settings; time synchronization configuration.\n\n**Interview:** System administrators.\n\n**Test:** System clock synchronization mechanisms; time stamp generation in audit records.\n\n**Determination Statements:**\n- AU-08a. — The system uses internal system clocks to generate time stamps for audit records\n- AU-08b. — Time stamps use Coordinated Universal Time (UTC) or local time with an offset from UTC and meet organization-defined granularity of time measurement"
+      }
+    },
+    "AU-9": {
+      "control_id": "AU-9",
+      "control_title": "Protection of Audit Information",
+      "base_control": {
+        "control_id": "AU-9",
+        "control_title": "Protection of Audit Information",
+        "control_text": "Requires the system to protect audit information and audit logging tools from unauthorized access, modification, and deletion.",
+        "key_enhancements": [
+          {
+            "id": "AU-9(1)",
+            "title": "Hardware Write-Once Media"
+          },
+          {
+            "id": "AU-9(2)",
+            "title": "Store on Separate Physical Systems or Components"
+          },
+          {
+            "id": "AU-9(3)",
+            "title": "Cryptographic Protection"
+          },
+          {
+            "id": "AU-9(4)",
+            "title": "Access by Subset of Privileged Users"
+          },
+          {
+            "id": "AU-9(5)",
+            "title": "Dual Authorization"
+          },
+          {
+            "id": "AU-9(6)",
+            "title": "Read-Only Access"
+          },
+          {
+            "id": "AU-9(7)",
+            "title": "Store on Component with Different Operating System"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AU-9(1) | Hardware Write-Once Media |\n| AU-9(2) | Store on Separate Physical Systems or Components |\n| AU-9(3) | Cryptographic Protection |\n| AU-9(4) | Access by Subset of Privileged Users |\n| AU-9(5) | Dual Authorization |\n| AU-9(6) | Read-Only Access |\n| AU-9(7) | Store on Component with Different Operating System |",
+        "related_controls": [
+          "AC-3",
+          "AC-6",
+          "AU-6",
+          "AU-11",
+          "AU-14",
+          "AU-15",
+          "MP-2",
+          "MP-4",
+          "PE-2",
+          "PE-3",
+          "PE-6",
+          "SA-8",
+          "SC-8",
+          "SI-4"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the system to protect audit information and audit logging tools from unauthorized access, modification, and deletion.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AU-9(1) | Hardware Write-Once Media |\n| AU-9(2) | Store on Separate Physical Systems or Components |\n| AU-9(3) | Cryptographic Protection |\n| AU-9(4) | Access by Subset of Privileged Users |\n| AU-9(5) | Dual Authorization |\n| AU-9(6) | Read-Only Access |\n| AU-9(7) | Store on Component with Different Operating System |\n\n**Related Controls:** AC-3, AC-6, AU-6, AU-11, AU-14, AU-15, MP-2, MP-4, PE-2, PE-3, PE-6, SA-8, SC-8, SI-4\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the system protects audit information and audit logging tools from unauthorized access, modification, and deletion.",
+        "examine_procedures": "Audit and accountability policy; system security plan; system design documentation; system configuration settings; access control lists for audit information; audit storage configurations.",
+        "interview_procedures": "System administrators; organizational personnel responsible for audit data protection.",
+        "test_procedures": "Access controls for audit information; integrity protection mechanisms for audit records; audit logging tool protections.",
+        "determination_statements": [
+          "AU-09 — Audit information and audit logging tools are protected from unauthorized access, modification, and deletion"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the system protects audit information and audit logging tools from unauthorized access, modification, and deletion.\n\n**Examine:** Audit and accountability policy; system security plan; system design documentation; system configuration settings; access control lists for audit information; audit storage configurations.\n\n**Interview:** System administrators; organizational personnel responsible for audit data protection.\n\n**Test:** Access controls for audit information; integrity protection mechanisms for audit records; audit logging tool protections.\n\n**Determination Statements:**\n- AU-09 — Audit information and audit logging tools are protected from unauthorized access, modification, and deletion"
+      }
+    },
+    "AU-10": {
+      "control_id": "AU-10",
+      "control_title": "Non-Repudiation",
+      "base_control": {
+        "control_id": "AU-10",
+        "control_title": "Non-Repudiation",
+        "control_text": "Requires the system to provide irrefutable evidence that a specific action was performed by a specific individual, protecting against claims by the author of an action that they did not perform it.",
+        "key_enhancements": [
+          {
+            "id": "AU-10(1)",
+            "title": "Association of Identities"
+          },
+          {
+            "id": "AU-10(2)",
+            "title": "Validate Binding of Information Producer Identity"
+          },
+          {
+            "id": "AU-10(3)",
+            "title": "Chain of Custody"
+          },
+          {
+            "id": "AU-10(4)",
+            "title": "Validate Binding of Information Reviewer Identity"
+          },
+          {
+            "id": "AU-10(5)",
+            "title": "Digital Signatures"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AU-10(1) | Association of Identities |\n| AU-10(2) | Validate Binding of Information Producer Identity |\n| AU-10(3) | Chain of Custody |\n| AU-10(4) | Validate Binding of Information Reviewer Identity |\n| AU-10(5) | Digital Signatures |",
+        "related_controls": [
+          "AU-9",
+          "PM-12",
+          "SA-8",
+          "SC-8",
+          "SC-12",
+          "SC-13",
+          "SC-16",
+          "SC-17",
+          "SC-23"
+        ],
+        "baselines": [
+          "High"
+        ],
+        "baselines_text": "High",
+        "source_markdown": "Requires the system to provide irrefutable evidence that a specific action was performed by a specific individual, protecting against claims by the author of an action that they did not perform it.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AU-10(1) | Association of Identities |\n| AU-10(2) | Validate Binding of Information Producer Identity |\n| AU-10(3) | Chain of Custody |\n| AU-10(4) | Validate Binding of Information Reviewer Identity |\n| AU-10(5) | Digital Signatures |\n\n**Related Controls:** AU-9, PM-12, SA-8, SC-8, SC-12, SC-13, SC-16, SC-17, SC-23\n\n**Baselines:** High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "AU-11": {
+      "control_id": "AU-11",
+      "control_title": "Audit Record Retention",
+      "base_control": {
+        "control_id": "AU-11",
+        "control_title": "Audit Record Retention",
+        "control_text": "Requires the organization to retain audit records for an organization-defined time period consistent with records retention policies, to provide support for after-the-fact investigations of incidents and to meet regulatory and organizational information retention requirements.",
+        "key_enhancements": [
+          {
+            "id": "AU-11(1)",
+            "title": "Long-Term Retrieval Capability"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AU-11(1) | Long-Term Retrieval Capability |",
+        "related_controls": [
+          "AU-2",
+          "AU-4",
+          "AU-5",
+          "AU-6",
+          "AU-9",
+          "AU-14",
+          "MP-6",
+          "RA-5",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to retain audit records for an organization-defined time period consistent with records retention policies, to provide support for after-the-fact investigations of incidents and to meet regulatory and organizational information retention requirements.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AU-11(1) | Long-Term Retrieval Capability |\n\n**Related Controls:** AU-2, AU-4, AU-5, AU-6, AU-9, AU-14, MP-6, RA-5, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization retains audit records for an organization-defined time period.",
+        "examine_procedures": "Audit and accountability policy; audit record retention procedures; system security plan; system configuration settings; audit record storage; records retention schedules.",
+        "interview_procedures": "Organizational personnel responsible for audit record retention; system administrators.",
+        "test_procedures": "Audit record retention mechanisms; audit record archival processes.",
+        "determination_statements": [
+          "AU-11 — Audit records are retained for an organization-defined time period to provide support for after-the-fact investigations and to meet regulatory and organizational information retention requirements"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization retains audit records for an organization-defined time period.\n\n**Examine:** Audit and accountability policy; audit record retention procedures; system security plan; system configuration settings; audit record storage; records retention schedules.\n\n**Interview:** Organizational personnel responsible for audit record retention; system administrators.\n\n**Test:** Audit record retention mechanisms; audit record archival processes.\n\n**Determination Statements:**\n- AU-11 — Audit records are retained for an organization-defined time period to provide support for after-the-fact investigations and to meet regulatory and organizational information retention requirements"
+      }
+    },
+    "AU-12": {
+      "control_id": "AU-12",
+      "control_title": "Audit Record Generation",
+      "base_control": {
+        "control_id": "AU-12",
+        "control_title": "Audit Record Generation",
+        "control_text": "Requires the system to provide audit record generation capability for the events identified in AU-2 at all system components where audit capability is needed, allow designated personnel to select the events to be logged, and generate audit records with the content defined in AU-3.",
+        "key_enhancements": [
+          {
+            "id": "AU-12(1)",
+            "title": "System-Wide and Time-Correlated Audit Trail"
+          },
+          {
+            "id": "AU-12(2)",
+            "title": "Standardized Formats"
+          },
+          {
+            "id": "AU-12(3)",
+            "title": "Changes by Authorized Individuals"
+          },
+          {
+            "id": "AU-12(4)",
+            "title": "Query Parameter Audits of Personally Identifiable Information"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AU-12(1) | System-Wide and Time-Correlated Audit Trail |\n| AU-12(2) | Standardized Formats |\n| AU-12(3) | Changes by Authorized Individuals |\n| AU-12(4) | Query Parameter Audits of Personally Identifiable Information |",
+        "related_controls": [
+          "AC-6",
+          "AC-17",
+          "AU-2",
+          "AU-3",
+          "AU-4",
+          "AU-5",
+          "AU-6",
+          "AU-7",
+          "AU-14",
+          "CM-5",
+          "MA-4",
+          "MP-4",
+          "PM-12",
+          "SA-8",
+          "SC-18",
+          "SI-3",
+          "SI-4",
+          "SI-7",
+          "SI-10"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the system to provide audit record generation capability for the events identified in AU-2 at all system components where audit capability is needed, allow designated personnel to select the events to be logged, and generate audit records with the content defined in AU-3.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AU-12(1) | System-Wide and Time-Correlated Audit Trail |\n| AU-12(2) | Standardized Formats |\n| AU-12(3) | Changes by Authorized Individuals |\n| AU-12(4) | Query Parameter Audits of Personally Identifiable Information |\n\n**Related Controls:** AC-6, AC-17, AU-2, AU-3, AU-4, AU-5, AU-6, AU-7, AU-14, CM-5, MA-4, MP-4, PM-12, SA-8, SC-18, SI-3, SI-4, SI-7, SI-10\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the system provides audit record generation capability for the events defined in AU-2 and allows designated personnel to select events for logging.",
+        "examine_procedures": "Audit and accountability policy; system security plan; system design documentation; system configuration settings; auditable events list; audit records.",
+        "interview_procedures": "System administrators; system developers.",
+        "test_procedures": "Audit record generation mechanisms; audit event selection capabilities.",
+        "determination_statements": [
+          "AU-12a. — The system provides audit record generation capability for the event types the system is capable of auditing as defined in AU-2a on all system components",
+          "AU-12b. — Designated organizational personnel are allowed to select the event types to be logged by specific components of the system",
+          "AU-12c. — Audit records are generated for the event types defined in AU-2c that include the audit record content defined in AU-3",
+          "NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final",
+          "[SP 800-53 AU Family](../800-53/au.md)",
+          "[SP 800-171 AU Requirements](../800-171/au.md)"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the system provides audit record generation capability for the events defined in AU-2 and allows designated personnel to select events for logging.\n\n**Examine:** Audit and accountability policy; system security plan; system design documentation; system configuration settings; auditable events list; audit records.\n\n**Interview:** System administrators; system developers.\n\n**Test:** Audit record generation mechanisms; audit event selection capabilities.\n\n**Determination Statements:**\n- AU-12a. — The system provides audit record generation capability for the event types the system is capable of auditing as defined in AU-2a on all system components\n- AU-12b. — Designated organizational personnel are allowed to select the event types to be logged by specific components of the system\n- AU-12c. — Audit records are generated for the event types defined in AU-2c that include the audit record content defined in AU-3\n\n## References\n\n- NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final\n- [SP 800-53 AU Family](../800-53/au.md)\n- [SP 800-171 AU Requirements](../800-171/au.md)"
+      }
+    },
+    "AU-13": {
+      "control_id": "AU-13",
+      "control_title": "Monitoring for Information Disclosure",
+      "base_control": {
+        "control_id": "AU-13",
+        "control_title": "Monitoring for Information Disclosure",
+        "control_text": "Requires the organization to monitor designated open-source information and/or information sites at an organization-defined frequency for evidence of unauthorized disclosure of organizational information.",
+        "key_enhancements": [
+          {
+            "id": "AU-13(1)",
+            "title": "Use of Automated Tools"
+          },
+          {
+            "id": "AU-13(2)",
+            "title": "Review of Monitored Sites"
+          },
+          {
+            "id": "AU-13(3)",
+            "title": "Unauthorized Replication of Information"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AU-13(1) | Use of Automated Tools |\n| AU-13(2) | Review of Monitored Sites |\n| AU-13(3) | Unauthorized Replication of Information |",
+        "related_controls": [
+          "AC-22",
+          "PE-3",
+          "PM-12",
+          "RA-5",
+          "SC-7",
+          "SI-20"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Requires the organization to monitor designated open-source information and/or information sites at an organization-defined frequency for evidence of unauthorized disclosure of organizational information.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AU-13(1) | Use of Automated Tools |\n| AU-13(2) | Review of Monitored Sites |\n| AU-13(3) | Unauthorized Replication of Information |\n\n**Related Controls:** AC-22, PE-3, PM-12, RA-5, SC-7, SI-20\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "AU-14": {
+      "control_id": "AU-14",
+      "control_title": "Session Audit",
+      "base_control": {
+        "control_id": "AU-14",
+        "control_title": "Session Audit",
+        "control_text": "Requires the system to provide and implement the capability for authorized users to select a user session to capture and record, or view and hear content related to a session in real time.",
+        "key_enhancements": [
+          {
+            "id": "AU-14(1)",
+            "title": "System Start-Up"
+          },
+          {
+            "id": "AU-14(2)",
+            "title": "Capture and Record Content"
+          },
+          {
+            "id": "AU-14(3)",
+            "title": "Remote Viewing and Listening"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AU-14(1) | System Start-Up |\n| AU-14(2) | Capture and Record Content |\n| AU-14(3) | Remote Viewing and Listening |",
+        "related_controls": [
+          "AC-3",
+          "AC-8",
+          "AU-2",
+          "AU-3",
+          "AU-4",
+          "AU-5",
+          "AU-8",
+          "AU-9",
+          "AU-11",
+          "AU-12"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Requires the system to provide and implement the capability for authorized users to select a user session to capture and record, or view and hear content related to a session in real time.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AU-14(1) | System Start-Up |\n| AU-14(2) | Capture and Record Content |\n| AU-14(3) | Remote Viewing and Listening |\n\n**Related Controls:** AC-3, AC-8, AU-2, AU-3, AU-4, AU-5, AU-8, AU-9, AU-11, AU-12\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "AU-15": {
+      "control_id": "AU-15",
+      "control_title": "Alternate Audit Logging Capability",
+      "base_control": {
+        "control_id": "AU-15",
+        "control_title": "Alternate Audit Logging Capability",
+        "control_text": "*Withdrawn.* Incorporated into AU-5(5).",
+        "key_enhancements": [],
+        "key_enhancements_text": null,
+        "related_controls": [],
+        "baselines": [],
+        "baselines_text": null,
+        "source_markdown": "*Withdrawn.* Incorporated into AU-5(5)."
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "AU-16": {
+      "control_id": "AU-16",
+      "control_title": "Cross-Organizational Audit Logging",
+      "base_control": {
+        "control_id": "AU-16",
+        "control_title": "Cross-Organizational Audit Logging",
+        "control_text": "Requires the organization to employ organization-defined methods for coordinating audit logging information among external organizations when audit information is transmitted across organizational boundaries. Ensures end-to-end audit trail coverage.",
+        "key_enhancements": [
+          {
+            "id": "AU-16(1)",
+            "title": "Identity Preservation"
+          },
+          {
+            "id": "AU-16(2)",
+            "title": "Sharing of Audit Information"
+          },
+          {
+            "id": "AU-16(3)",
+            "title": "Disassociability"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AU-16(1) | Identity Preservation |\n| AU-16(2) | Sharing of Audit Information |\n| AU-16(3) | Disassociability |",
+        "related_controls": [
+          "AU-3",
+          "AU-6",
+          "AU-7",
+          "CA-3",
+          "PT-7"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Requires the organization to employ organization-defined methods for coordinating audit logging information among external organizations when audit information is transmitted across organizational boundaries. Ensures end-to-end audit trail coverage.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AU-16(1) | Identity Preservation |\n| AU-16(2) | Sharing of Audit Information |\n| AU-16(3) | Disassociability |\n\n**Related Controls:** AU-3, AU-6, AU-7, CA-3, PT-7\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    }
+  }
+}

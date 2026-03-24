@@ -1,0 +1,531 @@
+{
+  "generated_at": "2026-03-24T19:21:16.046Z",
+  "control_family": "IR",
+  "control_count": 10,
+  "controls": {
+    "IR-1": {
+      "control_id": "IR-1",
+      "control_title": "Policy and Procedures",
+      "base_control": {
+        "control_id": "IR-1",
+        "control_title": "Policy and Procedures",
+        "control_text": "Develop, document, and disseminate an incident response policy and procedures that address purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance. Review and update the policy and procedures at organization-defined frequencies.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for IR-1.",
+        "related_controls": [
+          "PM-9",
+          "PS-8",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Develop, document, and disseminate an incident response policy and procedures that address purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance. Review and update the policy and procedures at organization-defined frequencies.\n\n**Key Enhancements:** None defined for IR-1.\n\n**Related Controls:** PM-9, PS-8, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization develops, documents, disseminates, reviews, and updates incident response policy and procedures.",
+        "examine_procedures": "Incident response policy; incident response procedures; system security plan.",
+        "interview_procedures": "Organizational personnel responsible for incident response policy.",
+        "test_procedures": "Organizational processes for managing incident response policy.",
+        "determination_statements": [
+          "IR-01a. — An incident response policy is developed, documented, and disseminated",
+          "IR-01b. — Incident response procedures are developed, documented, and disseminated",
+          "IR-01c. — The policy and procedures are reviewed and updated at an organization-defined frequency"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization develops, documents, disseminates, reviews, and updates incident response policy and procedures.\n\n**Examine:** Incident response policy; incident response procedures; system security plan.\n\n**Interview:** Organizational personnel responsible for incident response policy.\n\n**Test:** Organizational processes for managing incident response policy.\n\n**Determination Statements:**\n- IR-01a. — An incident response policy is developed, documented, and disseminated\n- IR-01b. — Incident response procedures are developed, documented, and disseminated\n- IR-01c. — The policy and procedures are reviewed and updated at an organization-defined frequency"
+      }
+    },
+    "IR-2": {
+      "control_id": "IR-2",
+      "control_title": "Incident Response Training",
+      "base_control": {
+        "control_id": "IR-2",
+        "control_title": "Incident Response Training",
+        "control_text": "Provide incident response training to system users consistent with assigned roles and responsibilities within an organization-defined time period of assuming an incident response role or responsibility, when required by system changes, and at an organization-defined frequency thereafter.",
+        "key_enhancements": [
+          {
+            "id": "IR-2(1)",
+            "title": "Simulated Events"
+          },
+          {
+            "id": "IR-2(2)",
+            "title": "Automated Training Environments"
+          },
+          {
+            "id": "IR-2(3)",
+            "title": "Breach"
+          }
+        ],
+        "key_enhancements_text": "- **IR-2(1):** Simulated Events — Incorporate simulated events into incident response training to facilitate effective response by personnel in crisis situations.\n- **IR-2(2):** Automated Training Environments — Provide an incident response training environment using automated mechanisms.\n- **IR-2(3):** Breach — Provide incident response training on how to identify and respond to a breach, including the organization's process for reporting a breach.",
+        "related_controls": [
+          "AT-2",
+          "AT-3",
+          "AT-4",
+          "CP-3",
+          "IR-3",
+          "IR-4",
+          "IR-8",
+          "IR-9"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Provide incident response training to system users consistent with assigned roles and responsibilities within an organization-defined time period of assuming an incident response role or responsibility, when required by system changes, and at an organization-defined frequency thereafter.\n\n**Key Enhancements:**\n- **IR-2(1):** Simulated Events — Incorporate simulated events into incident response training to facilitate effective response by personnel in crisis situations.\n- **IR-2(2):** Automated Training Environments — Provide an incident response training environment using automated mechanisms.\n- **IR-2(3):** Breach — Provide incident response training on how to identify and respond to a breach, including the organization's process for reporting a breach.\n\n**Related Controls:** AT-2, AT-3, AT-4, CP-3, IR-3, IR-4, IR-8, IR-9\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization provides incident response training to system users consistent with assigned roles and responsibilities.",
+        "examine_procedures": "Incident response policy; incident response training materials; training records; incident response plan.",
+        "interview_procedures": "Organizational personnel with incident response roles; personnel who have received incident response training.",
+        "test_procedures": "Incident response training mechanisms; training delivery systems.",
+        "determination_statements": [
+          "IR-02a. — Incident response training is provided to system users consistent with assigned roles and responsibilities within an organization-defined time period of assuming an incident response role",
+          "IR-02b. — Incident response training is provided when required by system changes",
+          "IR-02c. — Incident response training is provided at an organization-defined frequency thereafter"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization provides incident response training to system users consistent with assigned roles and responsibilities.\n\n**Examine:** Incident response policy; incident response training materials; training records; incident response plan.\n\n**Interview:** Organizational personnel with incident response roles; personnel who have received incident response training.\n\n**Test:** Incident response training mechanisms; training delivery systems.\n\n**Determination Statements:**\n- IR-02a. — Incident response training is provided to system users consistent with assigned roles and responsibilities within an organization-defined time period of assuming an incident response role\n- IR-02b. — Incident response training is provided when required by system changes\n- IR-02c. — Incident response training is provided at an organization-defined frequency thereafter"
+      }
+    },
+    "IR-3": {
+      "control_id": "IR-3",
+      "control_title": "Incident Response Testing",
+      "base_control": {
+        "control_id": "IR-3",
+        "control_title": "Incident Response Testing",
+        "control_text": "Test the effectiveness of the incident response capability for the system at an organization-defined frequency using organization-defined tests.",
+        "key_enhancements": [
+          {
+            "id": "IR-3(1)",
+            "title": "Automated Testing"
+          },
+          {
+            "id": "IR-3(2)",
+            "title": "Coordination with Related Plans"
+          },
+          {
+            "id": "IR-3(3)",
+            "title": "Continuous Improvement"
+          }
+        ],
+        "key_enhancements_text": "- **IR-3(1):** Automated Testing — Employ automated mechanisms to more thoroughly and effectively test the incident response capability.\n- **IR-3(2):** Coordination with Related Plans — Coordinate incident response testing with organizational elements responsible for related plans (e.g., business continuity, disaster recovery, continuity of operations).\n- **IR-3(3):** Continuous Improvement — Use qualitative and quantitative data from testing to improve incident response processes, training, and organizational resilience.",
+        "related_controls": [
+          "CP-3",
+          "CP-4",
+          "IR-2",
+          "IR-4",
+          "IR-8",
+          "PM-14"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Test the effectiveness of the incident response capability for the system at an organization-defined frequency using organization-defined tests.\n\n**Key Enhancements:**\n- **IR-3(1):** Automated Testing — Employ automated mechanisms to more thoroughly and effectively test the incident response capability.\n- **IR-3(2):** Coordination with Related Plans — Coordinate incident response testing with organizational elements responsible for related plans (e.g., business continuity, disaster recovery, continuity of operations).\n- **IR-3(3):** Continuous Improvement — Use qualitative and quantitative data from testing to improve incident response processes, training, and organizational resilience.\n\n**Related Controls:** CP-3, CP-4, IR-2, IR-4, IR-8, PM-14\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization tests the incident response capability at an organization-defined frequency.",
+        "examine_procedures": "Incident response policy; incident response testing procedures; incident response test results; incident response plan; after-action reports.",
+        "interview_procedures": "Organizational personnel responsible for incident response testing; incident response team members.",
+        "test_procedures": "Incident response testing mechanisms; tabletop exercise results; simulated incident exercises.",
+        "determination_statements": [
+          "IR-03a. — The incident response capability is tested at an organization-defined frequency using organization-defined tests",
+          "IR-03b. — Incident response test results are reviewed and documented"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization tests the incident response capability at an organization-defined frequency.\n\n**Examine:** Incident response policy; incident response testing procedures; incident response test results; incident response plan; after-action reports.\n\n**Interview:** Organizational personnel responsible for incident response testing; incident response team members.\n\n**Test:** Incident response testing mechanisms; tabletop exercise results; simulated incident exercises.\n\n**Determination Statements:**\n- IR-03a. — The incident response capability is tested at an organization-defined frequency using organization-defined tests\n- IR-03b. — Incident response test results are reviewed and documented"
+      }
+    },
+    "IR-4": {
+      "control_id": "IR-4",
+      "control_title": "Incident Handling",
+      "base_control": {
+        "control_id": "IR-4",
+        "control_title": "Incident Handling",
+        "control_text": "Implement an incident handling capability for incidents that includes preparation, detection and analysis, containment, eradication, and recovery. Coordinate incident handling activities with contingency planning activities. Incorporate lessons learned from ongoing incident handling activities into incident response procedures, training, and testing, and implement the resulting changes accordingly.",
+        "key_enhancements": [
+          {
+            "id": "IR-4(1)",
+            "title": "Automated Incident Handling Processes"
+          },
+          {
+            "id": "IR-4(2)",
+            "title": "Dynamic Reconfiguration"
+          },
+          {
+            "id": "IR-4(3)",
+            "title": "Continuity of Operations"
+          },
+          {
+            "id": "IR-4(4)",
+            "title": "Information Correlation"
+          },
+          {
+            "id": "IR-4(5)",
+            "title": "Automatic Disabling of System"
+          },
+          {
+            "id": "IR-4(6)",
+            "title": "Insider Threats"
+          },
+          {
+            "id": "IR-4(7)",
+            "title": "Insider Threats"
+          },
+          {
+            "id": "IR-4(8)",
+            "title": "Correlation with External Organizations"
+          },
+          {
+            "id": "IR-4(9)",
+            "title": "Dynamic Response Capability"
+          },
+          {
+            "id": "IR-4(10)",
+            "title": "Supply Chain Coordination"
+          },
+          {
+            "id": "IR-4(11)",
+            "title": "Integrated Incident Response Team"
+          },
+          {
+            "id": "IR-4(12)",
+            "title": "Malicious Code and Forensic Analysis"
+          },
+          {
+            "id": "IR-4(13)",
+            "title": "Behavior Analysis"
+          },
+          {
+            "id": "IR-4(14)",
+            "title": "Security Operations Center"
+          },
+          {
+            "id": "IR-4(15)",
+            "title": "Public Relations and Reputation Repair"
+          }
+        ],
+        "key_enhancements_text": "- **IR-4(1):** Automated Incident Handling Processes — Support the incident handling process using automated mechanisms.\n- **IR-4(2):** Dynamic Reconfiguration — Include dynamic reconfiguration of the system as part of the incident response capability.\n- **IR-4(3):** Continuity of Operations — Identify classes of incidents and associated actions to take to ensure continuation of organizational mission and business functions.\n- **IR-4(4):** Information Correlation — Correlate incident information and individual incident responses to achieve an organization-wide perspective on incident awareness and response.\n- **IR-4(5):** Automatic Disabling of System — Implement a configurable capability to automatically disable the system if organization-defined security violations are detected.\n- **IR-4(6):** Insider Threats — Implement an incident handling capability for incidents involving insider threats.\n- **IR-4(7):** Insider Threats — Intra-Organization Coordination — Coordinate incident handling capability for insider threats across organizational components.\n- **IR-4(8):** Correlation with External Organizations — Coordinate with external organizations to correlate and share incident information to achieve a cross-organization perspective on incident awareness.\n- **IR-4(9):** Dynamic Response Capability — Employ organization-defined dynamic response capabilities to respond to incidents.\n- **IR-4(10):** Supply Chain Coordination — Coordinate incident handling activities involving supply chain events with other organizations involved in the supply chain.\n- **IR-4(11):** Integrated Incident Response Team — Establish and maintain an integrated incident response team that can be deployed to any location identified by the organization within an organization-defined time period.\n- **IR-4(12):** Malicious Code and Forensic Analysis — Analyze malicious code and/or other residual artifacts remaining in the system after the incident.\n- **IR-4(13):** Behavior Analysis — Analyze anomalous or suspected adversarial behavior in or related to the system.\n- **IR-4(14):** Security Operations Center — Establish and maintain a security operations center.\n- **IR-4(15):** Public Relations and Reputation Repair — manage public relations associated with an incident and repair organizational reputation.",
+        "related_controls": [
+          "AC-19",
+          "AU-6",
+          "AU-7",
+          "CM-6",
+          "CP-2",
+          "CP-3",
+          "CP-4",
+          "IR-2",
+          "IR-3",
+          "IR-5",
+          "IR-6",
+          "IR-8",
+          "PE-6",
+          "PL-2",
+          "PM-12",
+          "SA-8",
+          "SC-5",
+          "SC-7",
+          "SI-3",
+          "SI-4",
+          "SI-7"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Implement an incident handling capability for incidents that includes preparation, detection and analysis, containment, eradication, and recovery. Coordinate incident handling activities with contingency planning activities. Incorporate lessons learned from ongoing incident handling activities into incident response procedures, training, and testing, and implement the resulting changes accordingly.\n\n**Key Enhancements:**\n- **IR-4(1):** Automated Incident Handling Processes — Support the incident handling process using automated mechanisms.\n- **IR-4(2):** Dynamic Reconfiguration — Include dynamic reconfiguration of the system as part of the incident response capability.\n- **IR-4(3):** Continuity of Operations — Identify classes of incidents and associated actions to take to ensure continuation of organizational mission and business functions.\n- **IR-4(4):** Information Correlation — Correlate incident information and individual incident responses to achieve an organization-wide perspective on incident awareness and response.\n- **IR-4(5):** Automatic Disabling of System — Implement a configurable capability to automatically disable the system if organization-defined security violations are detected.\n- **IR-4(6):** Insider Threats — Implement an incident handling capability for incidents involving insider threats.\n- **IR-4(7):** Insider Threats — Intra-Organization Coordination — Coordinate incident handling capability for insider threats across organizational components.\n- **IR-4(8):** Correlation with External Organizations — Coordinate with external organizations to correlate and share incident information to achieve a cross-organization perspective on incident awareness.\n- **IR-4(9):** Dynamic Response Capability — Employ organization-defined dynamic response capabilities to respond to incidents.\n- **IR-4(10):** Supply Chain Coordination — Coordinate incident handling activities involving supply chain events with other organizations involved in the supply chain.\n- **IR-4(11):** Integrated Incident Response Team — Establish and maintain an integrated incident response team that can be deployed to any location identified by the organization within an organization-defined time period.\n- **IR-4(12):** Malicious Code and Forensic Analysis — Analyze malicious code and/or other residual artifacts remaining in the system after the incident.\n- **IR-4(13):** Behavior Analysis — Analyze anomalous or suspected adversarial behavior in or related to the system.\n- **IR-4(14):** Security Operations Center — Establish and maintain a security operations center.\n- **IR-4(15):** Public Relations and Reputation Repair — manage public relations associated with an incident and repair organizational reputation.\n\n**Related Controls:** AC-19, AU-6, AU-7, CM-6, CP-2, CP-3, CP-4, IR-2, IR-3, IR-5, IR-6, IR-8, PE-6, PL-2, PM-12, SA-8, SC-5, SC-7, SI-3, SI-4, SI-7\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization implements an incident handling capability including preparation, detection and analysis, containment, eradication, and recovery.",
+        "examine_procedures": "Incident response policy; incident response plan; incident reports; incident response records; lessons learned documentation; system security plan.",
+        "interview_procedures": "Incident response team members; organizational personnel responsible for incident handling; system administrators.",
+        "test_procedures": "Incident handling processes; automated incident handling mechanisms; evidence collection procedures.",
+        "determination_statements": [
+          "IR-04a. — An incident handling capability for incidents is implemented that includes preparation, detection and analysis, containment, eradication, and recovery",
+          "IR-04b. — Incident handling activities are coordinated with contingency planning activities",
+          "IR-04c. — Lessons learned from ongoing incident handling activities are incorporated into incident response procedures, training, and testing"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization implements an incident handling capability including preparation, detection and analysis, containment, eradication, and recovery.\n\n**Examine:** Incident response policy; incident response plan; incident reports; incident response records; lessons learned documentation; system security plan.\n\n**Interview:** Incident response team members; organizational personnel responsible for incident handling; system administrators.\n\n**Test:** Incident handling processes; automated incident handling mechanisms; evidence collection procedures.\n\n**Determination Statements:**\n- IR-04a. — An incident handling capability for incidents is implemented that includes preparation, detection and analysis, containment, eradication, and recovery\n- IR-04b. — Incident handling activities are coordinated with contingency planning activities\n- IR-04c. — Lessons learned from ongoing incident handling activities are incorporated into incident response procedures, training, and testing"
+      }
+    },
+    "IR-5": {
+      "control_id": "IR-5",
+      "control_title": "Incident Monitoring",
+      "base_control": {
+        "control_id": "IR-5",
+        "control_title": "Incident Monitoring",
+        "control_text": "Track and document incidents on an ongoing basis.",
+        "key_enhancements": [
+          {
+            "id": "IR-5(1)",
+            "title": "Automated Tracking, Data Collection, and Analysis"
+          }
+        ],
+        "key_enhancements_text": "- **IR-5(1):** Automated Tracking, Data Collection, and Analysis — Track incidents and collect and analyze incident information using automated mechanisms.",
+        "related_controls": [
+          "AU-6",
+          "AU-7",
+          "IR-4",
+          "IR-6",
+          "IR-8",
+          "PE-6",
+          "PM-5",
+          "SC-5",
+          "SC-7",
+          "SI-3",
+          "SI-4",
+          "SI-7"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Track and document incidents on an ongoing basis.\n\n**Key Enhancements:**\n- **IR-5(1):** Automated Tracking, Data Collection, and Analysis — Track incidents and collect and analyze incident information using automated mechanisms.\n\n**Related Controls:** AU-6, AU-7, IR-4, IR-6, IR-8, PE-6, PM-5, SC-5, SC-7, SI-3, SI-4, SI-7\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization tracks and documents incidents on an ongoing basis.",
+        "examine_procedures": "Incident response policy; incident monitoring records; incident tracking system; incident reports.",
+        "interview_procedures": "Organizational personnel responsible for incident monitoring; incident response team members.",
+        "test_procedures": "Incident monitoring and tracking mechanisms; automated incident tracking tools.",
+        "determination_statements": [
+          "IR-05 — Incidents are tracked and documented on an ongoing basis"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization tracks and documents incidents on an ongoing basis.\n\n**Examine:** Incident response policy; incident monitoring records; incident tracking system; incident reports.\n\n**Interview:** Organizational personnel responsible for incident monitoring; incident response team members.\n\n**Test:** Incident monitoring and tracking mechanisms; automated incident tracking tools.\n\n**Determination Statements:**\n- IR-05 — Incidents are tracked and documented on an ongoing basis"
+      }
+    },
+    "IR-6": {
+      "control_id": "IR-6",
+      "control_title": "Incident Reporting",
+      "base_control": {
+        "control_id": "IR-6",
+        "control_title": "Incident Reporting",
+        "control_text": "Require personnel to report suspected incidents to the organizational incident response capability within an organization-defined time period. Report incident information to organization-defined authorities.",
+        "key_enhancements": [
+          {
+            "id": "IR-6(1)",
+            "title": "Automated Reporting"
+          },
+          {
+            "id": "IR-6(2)",
+            "title": "Vulnerabilities Related to Incidents"
+          },
+          {
+            "id": "IR-6(3)",
+            "title": "Supply Chain Coordination"
+          }
+        ],
+        "key_enhancements_text": "- **IR-6(1):** Automated Reporting — Report incidents using automated mechanisms.\n- **IR-6(2):** Vulnerabilities Related to Incidents — Report system vulnerabilities associated with reported incidents to organization-defined personnel or roles.\n- **IR-6(3):** Supply Chain Coordination — Provide incident information to the provider of the product or service and other organizations involved in the supply chain for systems or system components related to the incident.",
+        "related_controls": [
+          "CM-6",
+          "CP-2",
+          "IR-4",
+          "IR-5",
+          "IR-8",
+          "IR-9"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Require personnel to report suspected incidents to the organizational incident response capability within an organization-defined time period. Report incident information to organization-defined authorities.\n\n**Key Enhancements:**\n- **IR-6(1):** Automated Reporting — Report incidents using automated mechanisms.\n- **IR-6(2):** Vulnerabilities Related to Incidents — Report system vulnerabilities associated with reported incidents to organization-defined personnel or roles.\n- **IR-6(3):** Supply Chain Coordination — Provide incident information to the provider of the product or service and other organizations involved in the supply chain for systems or system components related to the incident.\n\n**Related Controls:** CM-6, CP-2, IR-4, IR-5, IR-8, IR-9\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization requires personnel to report suspected incidents and reports incident information to appropriate authorities.",
+        "examine_procedures": "Incident response policy; incident reporting procedures; incident reports; reporting communications; system security plan.",
+        "interview_procedures": "Organizational personnel responsible for incident reporting; incident response team members.",
+        "test_procedures": "Incident reporting mechanisms; automated reporting tools.",
+        "determination_statements": [
+          "IR-06a. — Personnel are required to report suspected incidents to the organizational incident response capability within an organization-defined time period",
+          "IR-06b. — Incident information is reported to organization-defined authorities"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization requires personnel to report suspected incidents and reports incident information to appropriate authorities.\n\n**Examine:** Incident response policy; incident reporting procedures; incident reports; reporting communications; system security plan.\n\n**Interview:** Organizational personnel responsible for incident reporting; incident response team members.\n\n**Test:** Incident reporting mechanisms; automated reporting tools.\n\n**Determination Statements:**\n- IR-06a. — Personnel are required to report suspected incidents to the organizational incident response capability within an organization-defined time period\n- IR-06b. — Incident information is reported to organization-defined authorities"
+      }
+    },
+    "IR-7": {
+      "control_id": "IR-7",
+      "control_title": "Incident Response Assistance",
+      "base_control": {
+        "control_id": "IR-7",
+        "control_title": "Incident Response Assistance",
+        "control_text": "Provide an incident response support resource, integral to the organizational incident response capability, that offers advice and assistance to users of the system for the handling and reporting of incidents.",
+        "key_enhancements": [
+          {
+            "id": "IR-7(1)",
+            "title": "Automation Support for Availability"
+          },
+          {
+            "id": "IR-7(2)",
+            "title": "Coordination with External Providers"
+          }
+        ],
+        "key_enhancements_text": "- **IR-7(1):** Automation Support for Availability — Increase the availability of incident response information and support using automated mechanisms.\n- **IR-7(2):** Coordination with External Providers — Establish a direct, cooperative relationship between the incident response capability and external providers of system protection capability.",
+        "related_controls": [
+          "AT-2",
+          "AT-3",
+          "IR-4",
+          "IR-6",
+          "IR-8",
+          "PM-22",
+          "PM-26",
+          "SA-9",
+          "SI-18"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Provide an incident response support resource, integral to the organizational incident response capability, that offers advice and assistance to users of the system for the handling and reporting of incidents.\n\n**Key Enhancements:**\n- **IR-7(1):** Automation Support for Availability — Increase the availability of incident response information and support using automated mechanisms.\n- **IR-7(2):** Coordination with External Providers — Establish a direct, cooperative relationship between the incident response capability and external providers of system protection capability.\n\n**Related Controls:** AT-2, AT-3, IR-4, IR-6, IR-8, PM-22, PM-26, SA-9, SI-18\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization provides an incident response support resource.",
+        "examine_procedures": "Incident response policy; incident response plan; help desk procedures; incident response support resources documentation.",
+        "interview_procedures": "Organizational personnel responsible for incident response assistance; help desk personnel.",
+        "test_procedures": "Incident response support mechanisms; help desk integration with incident response capability.",
+        "determination_statements": [
+          "IR-07 — An incident response support resource integral to the organizational incident response capability is provided that offers advice and assistance to users for the handling and reporting of incidents"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization provides an incident response support resource.\n\n**Examine:** Incident response policy; incident response plan; help desk procedures; incident response support resources documentation.\n\n**Interview:** Organizational personnel responsible for incident response assistance; help desk personnel.\n\n**Test:** Incident response support mechanisms; help desk integration with incident response capability.\n\n**Determination Statements:**\n- IR-07 — An incident response support resource integral to the organizational incident response capability is provided that offers advice and assistance to users for the handling and reporting of incidents"
+      }
+    },
+    "IR-8": {
+      "control_id": "IR-8",
+      "control_title": "Incident Response Plan",
+      "base_control": {
+        "control_id": "IR-8",
+        "control_title": "Incident Response Plan",
+        "control_text": "Develop an incident response plan that provides the organization with a roadmap for implementing its incident response capability. The plan addresses roles, responsibilities, and communication/coordination structures. It defines reportable incidents, provides metrics for measuring incident response capability, and defines the resources and management support needed. The plan is reviewed and approved by organization-defined personnel or roles, distributed to incident response personnel, and reviewed/updated at an organization-defined frequency or following changes.",
+        "key_enhancements": [
+          {
+            "id": "IR-8(1)",
+            "title": "Breaches"
+          }
+        ],
+        "key_enhancements_text": "- **IR-8(1):** Breaches — Include processes for responding to breaches in the incident response plan.",
+        "related_controls": [
+          "AC-2",
+          "CP-2",
+          "CP-4",
+          "IR-4",
+          "IR-7",
+          "IR-9",
+          "PE-6",
+          "PL-2",
+          "SA-15",
+          "SI-12",
+          "SR-8"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Develop an incident response plan that provides the organization with a roadmap for implementing its incident response capability. The plan addresses roles, responsibilities, and communication/coordination structures. It defines reportable incidents, provides metrics for measuring incident response capability, and defines the resources and management support needed. The plan is reviewed and approved by organization-defined personnel or roles, distributed to incident response personnel, and reviewed/updated at an organization-defined frequency or following changes.\n\n**Key Enhancements:**\n- **IR-8(1):** Breaches — Include processes for responding to breaches in the incident response plan.\n\n**Related Controls:** AC-2, CP-2, CP-4, IR-4, IR-7, IR-9, PE-6, PL-2, SA-15, SI-12, SR-8\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization develops an incident response plan that provides the organization with a roadmap for implementing its incident response capability.",
+        "examine_procedures": "Incident response plan; system security plan; incident response policy; plan distribution records.",
+        "interview_procedures": "Organizational personnel responsible for the incident response plan; incident response team members; authorizing officials.",
+        "test_procedures": "Incident response plan distribution mechanisms; plan review processes.",
+        "determination_statements": [
+          "IR-08a.[01] — An incident response plan is developed that provides the organization with a roadmap for implementing its incident response capability",
+          "IR-08a.[02] — The plan defines the structure and organization of the incident response capability",
+          "IR-08a.[03] — The plan provides a high-level approach for how the incident response capability fits into the overall organization",
+          "IR-08a.[04] — The plan defines reportable incidents",
+          "IR-08a.[05] — The plan provides metrics for measuring the incident response capability",
+          "IR-08b. — The incident response plan is distributed to organization-defined incident response personnel and organizational elements",
+          "IR-08c. — The incident response plan is reviewed at an organization-defined frequency",
+          "IR-08d. — The incident response plan is updated to address system and organizational changes or problems encountered during plan implementation, execution, or testing",
+          "NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final",
+          "[SP 800-53 IR Family](../800-53/ir.md)",
+          "[SP 800-171 IR Requirements](../800-171/ir.md)"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization develops an incident response plan that provides the organization with a roadmap for implementing its incident response capability.\n\n**Examine:** Incident response plan; system security plan; incident response policy; plan distribution records.\n\n**Interview:** Organizational personnel responsible for the incident response plan; incident response team members; authorizing officials.\n\n**Test:** Incident response plan distribution mechanisms; plan review processes.\n\n**Determination Statements:**\n- IR-08a.[01] — An incident response plan is developed that provides the organization with a roadmap for implementing its incident response capability\n- IR-08a.[02] — The plan defines the structure and organization of the incident response capability\n- IR-08a.[03] — The plan provides a high-level approach for how the incident response capability fits into the overall organization\n- IR-08a.[04] — The plan defines reportable incidents\n- IR-08a.[05] — The plan provides metrics for measuring the incident response capability\n- IR-08b. — The incident response plan is distributed to organization-defined incident response personnel and organizational elements\n- IR-08c. — The incident response plan is reviewed at an organization-defined frequency\n- IR-08d. — The incident response plan is updated to address system and organizational changes or problems encountered during plan implementation, execution, or testing\n\n## References\n\n- NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final\n- [SP 800-53 IR Family](../800-53/ir.md)\n- [SP 800-171 IR Requirements](../800-171/ir.md)"
+      }
+    },
+    "IR-9": {
+      "control_id": "IR-9",
+      "control_title": "Information Spillage Response",
+      "base_control": {
+        "control_id": "IR-9",
+        "control_title": "Information Spillage Response",
+        "control_text": "Respond to information spills by identifying the specific information involved in the system contamination, alerting organization-defined personnel or roles using a method of communication not associated with the spill, isolating the contaminated system or system component, eradicating the information from the contaminated system or component, identifying other systems or system components that may have been subsequently contaminated, and performing other organization-defined actions.",
+        "key_enhancements": [
+          {
+            "id": "IR-9(1)",
+            "title": "Responsible Personnel"
+          },
+          {
+            "id": "IR-9(2)",
+            "title": "Training"
+          },
+          {
+            "id": "IR-9(3)",
+            "title": "Post-Spill Operations"
+          },
+          {
+            "id": "IR-9(4)",
+            "title": "Exposure to Unauthorized Personnel"
+          }
+        ],
+        "key_enhancements_text": "- **IR-9(1):** Responsible Personnel — Assign organization-defined personnel or roles with responsibility for responding to information spills.\n- **IR-9(2):** Training — Provide information spillage response training at an organization-defined frequency.\n- **IR-9(3):** Post-Spill Operations — Implement organization-defined procedures to ensure that organizational personnel impacted by information spills can continue to carry out assigned tasks while contaminated systems are undergoing corrective actions.\n- **IR-9(4):** Exposure to Unauthorized Personnel — Employ organization-defined controls for personnel exposed to information not within assigned access authorizations.",
+        "related_controls": [
+          "CP-2",
+          "IR-6",
+          "PM-26",
+          "PM-27",
+          "PT-2",
+          "PT-3",
+          "PT-7",
+          "RA-7"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Respond to information spills by identifying the specific information involved in the system contamination, alerting organization-defined personnel or roles using a method of communication not associated with the spill, isolating the contaminated system or system component, eradicating the information from the contaminated system or component, identifying other systems or system components that may have been subsequently contaminated, and performing other organization-defined actions.\n\n**Key Enhancements:**\n- **IR-9(1):** Responsible Personnel — Assign organization-defined personnel or roles with responsibility for responding to information spills.\n- **IR-9(2):** Training — Provide information spillage response training at an organization-defined frequency.\n- **IR-9(3):** Post-Spill Operations — Implement organization-defined procedures to ensure that organizational personnel impacted by information spills can continue to carry out assigned tasks while contaminated systems are undergoing corrective actions.\n- **IR-9(4):** Exposure to Unauthorized Personnel — Employ organization-defined controls for personnel exposed to information not within assigned access authorizations.\n\n**Related Controls:** CP-2, IR-6, PM-26, PM-27, PT-2, PT-3, PT-7, RA-7\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "IR-10": {
+      "control_id": "IR-10",
+      "control_title": "Integrated Information Security Analysis Team",
+      "base_control": {
+        "control_id": "IR-10",
+        "control_title": "Integrated Information Security Analysis Team",
+        "control_text": "Establish an integrated team of forensic/malicious code analysts, tool developers, and real-time operations personnel.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for IR-10.\n\n**Baselines:** None (not in any baseline)",
+        "related_controls": [],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Establish an integrated team of forensic/malicious code analysts, tool developers, and real-time operations personnel.\n\n**Key Enhancements:** None defined for IR-10.\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    }
+  }
+}

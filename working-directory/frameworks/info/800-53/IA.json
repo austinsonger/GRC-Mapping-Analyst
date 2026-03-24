@@ -1,0 +1,681 @@
+{
+  "generated_at": "2026-03-24T19:20:16.730Z",
+  "control_family": "IA",
+  "control_count": 13,
+  "controls": {
+    "IA-1": {
+      "control_id": "IA-1",
+      "control_title": "Policy and Procedures",
+      "base_control": {
+        "control_id": "IA-1",
+        "control_title": "Policy and Procedures",
+        "control_text": "Requires the organization to develop, document, disseminate, and periodically review and update identification and authentication policy and procedures addressing purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "AC-1",
+          "PM-9",
+          "PS-8",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to develop, document, disseminate, and periodically review and update identification and authentication policy and procedures addressing purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance.\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** AC-1, PM-9, PS-8, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization develops, documents, disseminates, reviews, and updates identification and authentication policy and procedures.",
+        "examine_procedures": "Identification and authentication policy; identification and authentication procedures; system security plan.",
+        "interview_procedures": "Organizational personnel responsible for identification and authentication policy.",
+        "test_procedures": "Organizational processes for managing identification and authentication policy.",
+        "determination_statements": [
+          "IA-01a. — An identification and authentication policy is developed, documented, and disseminated",
+          "IA-01b. — Identification and authentication procedures are developed, documented, and disseminated",
+          "IA-01c. — The policy and procedures are reviewed and updated at an organization-defined frequency"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization develops, documents, disseminates, reviews, and updates identification and authentication policy and procedures.\n\n**Examine:** Identification and authentication policy; identification and authentication procedures; system security plan.\n\n**Interview:** Organizational personnel responsible for identification and authentication policy.\n\n**Test:** Organizational processes for managing identification and authentication policy.\n\n**Determination Statements:**\n- IA-01a. — An identification and authentication policy is developed, documented, and disseminated\n- IA-01b. — Identification and authentication procedures are developed, documented, and disseminated\n- IA-01c. — The policy and procedures are reviewed and updated at an organization-defined frequency"
+      }
+    },
+    "IA-2": {
+      "control_id": "IA-2",
+      "control_title": "Identification and Authentication (Organizational Users)",
+      "base_control": {
+        "control_id": "IA-2",
+        "control_title": "Identification and Authentication (Organizational Users)",
+        "control_text": "Requires the system to uniquely identify and authenticate organizational users or processes acting on behalf of organizational users.",
+        "key_enhancements": [
+          {
+            "id": "IA-2(1)",
+            "title": "Multi-Factor Authentication to Privileged Accounts"
+          },
+          {
+            "id": "IA-2(2)",
+            "title": "Multi-Factor Authentication to Non-Privileged Accounts"
+          },
+          {
+            "id": "IA-2(5)",
+            "title": "Individual Authentication with Group Authentication"
+          },
+          {
+            "id": "IA-2(6)",
+            "title": "Access to Accounts — Separate Device"
+          },
+          {
+            "id": "IA-2(8)",
+            "title": "Access to Accounts — Replay Resistant"
+          },
+          {
+            "id": "IA-2(10)",
+            "title": "Single Sign-On"
+          },
+          {
+            "id": "IA-2(12)",
+            "title": "Acceptance of PIV Credentials"
+          },
+          {
+            "id": "IA-2(13)",
+            "title": "Out-of-Band Authentication"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| IA-2(1) | Multi-Factor Authentication to Privileged Accounts |\n| IA-2(2) | Multi-Factor Authentication to Non-Privileged Accounts |\n| IA-2(5) | Individual Authentication with Group Authentication |\n| IA-2(6) | Access to Accounts — Separate Device |\n| IA-2(8) | Access to Accounts — Replay Resistant |\n| IA-2(10) | Single Sign-On |\n| IA-2(12) | Acceptance of PIV Credentials |\n| IA-2(13) | Out-of-Band Authentication |",
+        "related_controls": [
+          "AC-2",
+          "AC-3",
+          "AC-4",
+          "AC-14",
+          "AC-17",
+          "AC-18",
+          "AU-1",
+          "AU-6",
+          "IA-4",
+          "IA-5",
+          "IA-8",
+          "IA-13",
+          "MA-4",
+          "MA-5",
+          "PE-2",
+          "PL-4",
+          "SA-4",
+          "SA-8"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the system to uniquely identify and authenticate organizational users or processes acting on behalf of organizational users.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| IA-2(1) | Multi-Factor Authentication to Privileged Accounts |\n| IA-2(2) | Multi-Factor Authentication to Non-Privileged Accounts |\n| IA-2(5) | Individual Authentication with Group Authentication |\n| IA-2(6) | Access to Accounts — Separate Device |\n| IA-2(8) | Access to Accounts — Replay Resistant |\n| IA-2(10) | Single Sign-On |\n| IA-2(12) | Acceptance of PIV Credentials |\n| IA-2(13) | Out-of-Band Authentication |\n\n**Related Controls:** AC-2, AC-3, AC-4, AC-14, AC-17, AC-18, AU-1, AU-6, IA-4, IA-5, IA-8, IA-13, MA-4, MA-5, PE-2, PL-4, SA-4, SA-8\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the system uniquely identifies and authenticates organizational users and associates that unique identification with processes acting on behalf of those users.",
+        "examine_procedures": "Identification and authentication policy; system security plan; system design documentation; system configuration settings; system audit records; authentication mechanisms.",
+        "interview_procedures": "System administrators; organizational personnel responsible for user identification and authentication.",
+        "test_procedures": "Identification and authentication mechanisms; multifactor authentication mechanisms; replay-resistant authentication mechanisms.",
+        "determination_statements": [
+          "IA-02 — Organizational users are uniquely identified and authenticated for system access"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the system uniquely identifies and authenticates organizational users and associates that unique identification with processes acting on behalf of those users.\n\n**Examine:** Identification and authentication policy; system security plan; system design documentation; system configuration settings; system audit records; authentication mechanisms.\n\n**Interview:** System administrators; organizational personnel responsible for user identification and authentication.\n\n**Test:** Identification and authentication mechanisms; multifactor authentication mechanisms; replay-resistant authentication mechanisms.\n\n**Determination Statements:**\n- IA-02 — Organizational users are uniquely identified and authenticated for system access"
+      }
+    },
+    "IA-3": {
+      "control_id": "IA-3",
+      "control_title": "Device Identification and Authentication",
+      "base_control": {
+        "control_id": "IA-3",
+        "control_title": "Device Identification and Authentication",
+        "control_text": "Requires the system to uniquely identify and authenticate organization-defined devices and/or types of devices before establishing a local, remote, or network connection.",
+        "key_enhancements": [
+          {
+            "id": "IA-3(1)",
+            "title": "Cryptographic Bidirectional Authentication"
+          },
+          {
+            "id": "IA-3(3)",
+            "title": "Dynamic Address Allocation"
+          },
+          {
+            "id": "IA-3(4)",
+            "title": "Device Attestation"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| IA-3(1) | Cryptographic Bidirectional Authentication |\n| IA-3(3) | Dynamic Address Allocation |\n| IA-3(4) | Device Attestation |",
+        "related_controls": [
+          "AC-17",
+          "AC-18",
+          "AC-19",
+          "AU-6",
+          "CA-3",
+          "CA-9",
+          "IA-4",
+          "IA-5",
+          "IA-9",
+          "IA-11",
+          "IA-13",
+          "SI-4"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Requires the system to uniquely identify and authenticate organization-defined devices and/or types of devices before establishing a local, remote, or network connection.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| IA-3(1) | Cryptographic Bidirectional Authentication |\n| IA-3(3) | Dynamic Address Allocation |\n| IA-3(4) | Device Attestation |\n\n**Related Controls:** AC-17, AC-18, AC-19, AU-6, CA-3, CA-9, IA-4, IA-5, IA-9, IA-11, IA-13, SI-4\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the system uniquely identifies and authenticates devices before establishing a connection.",
+        "examine_procedures": "Identification and authentication policy; system security plan; system design documentation; device identification and authentication mechanisms; system configuration settings.",
+        "interview_procedures": "System administrators; network engineers.",
+        "test_procedures": "Device identification and authentication mechanisms; 802.1X configurations; certificate-based device authentication.",
+        "determination_statements": [
+          "IA-03 — Organization-defined devices and/or types of devices are uniquely identified and authenticated before establishing a system connection"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the system uniquely identifies and authenticates devices before establishing a connection.\n\n**Examine:** Identification and authentication policy; system security plan; system design documentation; device identification and authentication mechanisms; system configuration settings.\n\n**Interview:** System administrators; network engineers.\n\n**Test:** Device identification and authentication mechanisms; 802.1X configurations; certificate-based device authentication.\n\n**Determination Statements:**\n- IA-03 — Organization-defined devices and/or types of devices are uniquely identified and authenticated before establishing a system connection"
+      }
+    },
+    "IA-4": {
+      "control_id": "IA-4",
+      "control_title": "Identifier Management",
+      "base_control": {
+        "control_id": "IA-4",
+        "control_title": "Identifier Management",
+        "control_text": "Requires the organization to manage system identifiers by receiving authorization from designated personnel to assign an individual, group, role, service, or device identifier; selecting an identifier that identifies an individual, group, role, service, or device; assigning the identifier to the intended individual, group, role, service, or device; and preventing reuse of identifiers for an organization-defined time period.",
+        "key_enhancements": [
+          {
+            "id": "IA-4(1)",
+            "title": "Prohibit Account Identifiers as Public Identifiers"
+          },
+          {
+            "id": "IA-4(4)",
+            "title": "Identify User Status"
+          },
+          {
+            "id": "IA-4(5)",
+            "title": "Dynamic Management"
+          },
+          {
+            "id": "IA-4(6)",
+            "title": "Cross-Organization Management"
+          },
+          {
+            "id": "IA-4(8)",
+            "title": "Pairwise Pseudonymous Identifiers"
+          },
+          {
+            "id": "IA-4(9)",
+            "title": "Attribute Maintenance and Protection"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| IA-4(1) | Prohibit Account Identifiers as Public Identifiers |\n| IA-4(4) | Identify User Status |\n| IA-4(5) | Dynamic Management |\n| IA-4(6) | Cross-Organization Management |\n| IA-4(8) | Pairwise Pseudonymous Identifiers |\n| IA-4(9) | Attribute Maintenance and Protection |",
+        "related_controls": [
+          "AC-5",
+          "IA-2",
+          "IA-3",
+          "IA-5",
+          "IA-8",
+          "IA-9",
+          "IA-12",
+          "MA-4",
+          "PE-2",
+          "PE-3",
+          "PE-4",
+          "PL-4",
+          "PM-12",
+          "PS-3",
+          "PS-4",
+          "PS-5",
+          "SC-37"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to manage system identifiers by receiving authorization from designated personnel to assign an individual, group, role, service, or device identifier; selecting an identifier that identifies an individual, group, role, service, or device; assigning the identifier to the intended individual, group, role, service, or device; and preventing reuse of identifiers for an organization-defined time period.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| IA-4(1) | Prohibit Account Identifiers as Public Identifiers |\n| IA-4(4) | Identify User Status |\n| IA-4(5) | Dynamic Management |\n| IA-4(6) | Cross-Organization Management |\n| IA-4(8) | Pairwise Pseudonymous Identifiers |\n| IA-4(9) | Attribute Maintenance and Protection |\n\n**Related Controls:** AC-5, IA-2, IA-3, IA-5, IA-8, IA-9, IA-12, MA-4, PE-2, PE-3, PE-4, PL-4, PM-12, PS-3, PS-4, PS-5, SC-37\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization manages system identifiers by receiving authorization, selecting, assigning, preventing reuse, and disabling identifiers.",
+        "examine_procedures": "Identification and authentication policy; identifier management procedures; system security plan; list of system identifiers; system configuration settings.",
+        "interview_procedures": "Organizational personnel responsible for identifier management; system administrators.",
+        "test_procedures": "Identifier management mechanisms; identifier lifecycle processes.",
+        "determination_statements": [
+          "IA-04a. — Authorization is received from organization-defined personnel or roles to assign an individual, group, role, service, or device identifier",
+          "IA-04b. — An identifier that identifies an individual, group, role, service, or device is selected",
+          "IA-04c. — The identifier is assigned to the intended individual, group, role, service, or device",
+          "IA-04d. — Reuse of identifiers is prevented for an organization-defined time period",
+          "IA-04e. — The identifier is disabled after an organization-defined time period of inactivity"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization manages system identifiers by receiving authorization, selecting, assigning, preventing reuse, and disabling identifiers.\n\n**Examine:** Identification and authentication policy; identifier management procedures; system security plan; list of system identifiers; system configuration settings.\n\n**Interview:** Organizational personnel responsible for identifier management; system administrators.\n\n**Test:** Identifier management mechanisms; identifier lifecycle processes.\n\n**Determination Statements:**\n- IA-04a. — Authorization is received from organization-defined personnel or roles to assign an individual, group, role, service, or device identifier\n- IA-04b. — An identifier that identifies an individual, group, role, service, or device is selected\n- IA-04c. — The identifier is assigned to the intended individual, group, role, service, or device\n- IA-04d. — Reuse of identifiers is prevented for an organization-defined time period\n- IA-04e. — The identifier is disabled after an organization-defined time period of inactivity"
+      }
+    },
+    "IA-5": {
+      "control_id": "IA-5",
+      "control_title": "Authenticator Management",
+      "base_control": {
+        "control_id": "IA-5",
+        "control_title": "Authenticator Management",
+        "control_text": "Requires the organization to manage system authenticators by verifying the identity of the individual, group, role, service, or device receiving the authenticator as part of initial distribution; establishing initial authenticator content; ensuring authenticators have sufficient strength of mechanism; establishing and implementing administrative procedures for initial authenticator distribution, lost or compromised authenticators, and revoking authenticators; changing default authenticators prior to first use; and refreshing authenticators at an organization-defined frequency.",
+        "key_enhancements": [
+          {
+            "id": "IA-5(1)",
+            "title": "Password-Based Authentication"
+          },
+          {
+            "id": "IA-5(2)",
+            "title": "Public Key-Based Authentication"
+          },
+          {
+            "id": "IA-5(5)",
+            "title": "Change Authenticators Prior to Delivery"
+          },
+          {
+            "id": "IA-5(6)",
+            "title": "Protection of Authenticators"
+          },
+          {
+            "id": "IA-5(7)",
+            "title": "No Embedded Unencrypted Static Authenticators"
+          },
+          {
+            "id": "IA-5(8)",
+            "title": "Multiple System Accounts"
+          },
+          {
+            "id": "IA-5(9)",
+            "title": "Federated Credential Management"
+          },
+          {
+            "id": "IA-5(10)",
+            "title": "Dynamic Credential Binding"
+          },
+          {
+            "id": "IA-5(12)",
+            "title": "Biometric Authentication Performance"
+          },
+          {
+            "id": "IA-5(13)",
+            "title": "Expiration of Cached Authenticators"
+          },
+          {
+            "id": "IA-5(14)",
+            "title": "Managing Content of PKI Trust Stores"
+          },
+          {
+            "id": "IA-5(15)",
+            "title": "GSA-Approved Products and Services"
+          },
+          {
+            "id": "IA-5(16)",
+            "title": "In-Person or Trusted External Party Authenticator Issuance"
+          },
+          {
+            "id": "IA-5(17)",
+            "title": "Presentation Attack Detection for Biometric Authenticators"
+          },
+          {
+            "id": "IA-5(18)",
+            "title": "Password Managers"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| IA-5(1) | Password-Based Authentication |\n| IA-5(2) | Public Key-Based Authentication |\n| IA-5(5) | Change Authenticators Prior to Delivery |\n| IA-5(6) | Protection of Authenticators |\n| IA-5(7) | No Embedded Unencrypted Static Authenticators |\n| IA-5(8) | Multiple System Accounts |\n| IA-5(9) | Federated Credential Management |\n| IA-5(10) | Dynamic Credential Binding |\n| IA-5(12) | Biometric Authentication Performance |\n| IA-5(13) | Expiration of Cached Authenticators |\n| IA-5(14) | Managing Content of PKI Trust Stores |\n| IA-5(15) | GSA-Approved Products and Services |\n| IA-5(16) | In-Person or Trusted External Party Authenticator Issuance |\n| IA-5(17) | Presentation Attack Detection for Biometric Authenticators |\n| IA-5(18) | Password Managers |",
+        "related_controls": [
+          "AC-3",
+          "AC-6",
+          "CM-6",
+          "IA-2",
+          "IA-4",
+          "IA-7",
+          "IA-8",
+          "IA-9",
+          "MA-4",
+          "PE-2",
+          "PL-4",
+          "SC-12",
+          "SC-13"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to manage system authenticators by verifying the identity of the individual, group, role, service, or device receiving the authenticator as part of initial distribution; establishing initial authenticator content; ensuring authenticators have sufficient strength of mechanism; establishing and implementing administrative procedures for initial authenticator distribution, lost or compromised authenticators, and revoking authenticators; changing default authenticators prior to first use; and refreshing authenticators at an organization-defined frequency.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| IA-5(1) | Password-Based Authentication |\n| IA-5(2) | Public Key-Based Authentication |\n| IA-5(5) | Change Authenticators Prior to Delivery |\n| IA-5(6) | Protection of Authenticators |\n| IA-5(7) | No Embedded Unencrypted Static Authenticators |\n| IA-5(8) | Multiple System Accounts |\n| IA-5(9) | Federated Credential Management |\n| IA-5(10) | Dynamic Credential Binding |\n| IA-5(12) | Biometric Authentication Performance |\n| IA-5(13) | Expiration of Cached Authenticators |\n| IA-5(14) | Managing Content of PKI Trust Stores |\n| IA-5(15) | GSA-Approved Products and Services |\n| IA-5(16) | In-Person or Trusted External Party Authenticator Issuance |\n| IA-5(17) | Presentation Attack Detection for Biometric Authenticators |\n| IA-5(18) | Password Managers |\n\n**Related Controls:** AC-3, AC-6, CM-6, IA-2, IA-4, IA-7, IA-8, IA-9, MA-4, PE-2, PL-4, SC-12, SC-13\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization manages system authenticators through initial distribution, lost/compromised procedures, and periodic changes.",
+        "examine_procedures": "Identification and authentication policy; authenticator management procedures; system security plan; system configuration settings; password policies; PKI documentation; token management procedures.",
+        "interview_procedures": "System administrators; organizational personnel responsible for authenticator management.",
+        "test_procedures": "Authenticator management mechanisms; password enforcement mechanisms; certificate management systems.",
+        "determination_statements": [
+          "IA-05a. — The identity of the individual, group, role, service, or device receiving the authenticator is verified as part of the initial authenticator distribution",
+          "IA-05b. — Initial authenticator content is established for authenticators defined by the organization",
+          "IA-05c. — Authenticators have sufficient strength of mechanism for their intended use",
+          "IA-05d. — Administrative procedures for initial authenticator distribution, for lost/compromised/damaged authenticators, and for revoking authenticators are established and implemented",
+          "IA-05e. — Default content of authenticators is changed prior to system installation",
+          "IA-05f. — Authenticators are changed/refreshed at an organization-defined frequency or when organization-defined events occur",
+          "IA-05g. — Authenticator content is protected from unauthorized disclosure and modification",
+          "IA-05h. — Individuals take specific controls to protect authenticators"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization manages system authenticators through initial distribution, lost/compromised procedures, and periodic changes.\n\n**Examine:** Identification and authentication policy; authenticator management procedures; system security plan; system configuration settings; password policies; PKI documentation; token management procedures.\n\n**Interview:** System administrators; organizational personnel responsible for authenticator management.\n\n**Test:** Authenticator management mechanisms; password enforcement mechanisms; certificate management systems.\n\n**Determination Statements:**\n- IA-05a. — The identity of the individual, group, role, service, or device receiving the authenticator is verified as part of the initial authenticator distribution\n- IA-05b. — Initial authenticator content is established for authenticators defined by the organization\n- IA-05c. — Authenticators have sufficient strength of mechanism for their intended use\n- IA-05d. — Administrative procedures for initial authenticator distribution, for lost/compromised/damaged authenticators, and for revoking authenticators are established and implemented\n- IA-05e. — Default content of authenticators is changed prior to system installation\n- IA-05f. — Authenticators are changed/refreshed at an organization-defined frequency or when organization-defined events occur\n- IA-05g. — Authenticator content is protected from unauthorized disclosure and modification\n- IA-05h. — Individuals take specific controls to protect authenticators"
+      }
+    },
+    "IA-6": {
+      "control_id": "IA-6",
+      "control_title": "Authentication Feedback",
+      "base_control": {
+        "control_id": "IA-6",
+        "control_title": "Authentication Feedback",
+        "control_text": "Requires the system to obscure feedback of authentication information during the authentication process to protect the information from possible exploitation or use by unauthorized individuals (e.g., displaying asterisks instead of password characters).",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "AC-3"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the system to obscure feedback of authentication information during the authentication process to protect the information from possible exploitation or use by unauthorized individuals (e.g., displaying asterisks instead of password characters).\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** AC-3\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the system obscures feedback of authentication information during the authentication process.",
+        "examine_procedures": "Identification and authentication policy; system security plan; system design documentation; system configuration settings.",
+        "interview_procedures": "System administrators; system developers.",
+        "test_procedures": "Authentication feedback mechanisms; password masking verification.",
+        "determination_statements": [
+          "IA-06 — The system obscures feedback of authentication information during the authentication process to protect the information from possible exploitation/use by unauthorized individuals"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the system obscures feedback of authentication information during the authentication process.\n\n**Examine:** Identification and authentication policy; system security plan; system design documentation; system configuration settings.\n\n**Interview:** System administrators; system developers.\n\n**Test:** Authentication feedback mechanisms; password masking verification.\n\n**Determination Statements:**\n- IA-06 — The system obscures feedback of authentication information during the authentication process to protect the information from possible exploitation/use by unauthorized individuals"
+      }
+    },
+    "IA-7": {
+      "control_id": "IA-7",
+      "control_title": "Cryptographic Module Authentication",
+      "base_control": {
+        "control_id": "IA-7",
+        "control_title": "Cryptographic Module Authentication",
+        "control_text": "Requires the system to implement mechanisms for authentication to a cryptographic module that meet the requirements of applicable laws, executive orders, directives, policies, regulations, standards, and guidelines for such authentication.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "AC-3",
+          "IA-5",
+          "SA-4",
+          "SC-12",
+          "SC-13"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the system to implement mechanisms for authentication to a cryptographic module that meet the requirements of applicable laws, executive orders, directives, policies, regulations, standards, and guidelines for such authentication.\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** AC-3, IA-5, SA-4, SC-12, SC-13\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the system implements mechanisms for authentication to a cryptographic module that comply with applicable requirements.",
+        "examine_procedures": "Identification and authentication policy; system security plan; system design documentation; cryptographic module validation certificates; FIPS 140 documentation.",
+        "interview_procedures": "System administrators; system developers; information system security officers.",
+        "test_procedures": "Cryptographic module authentication mechanisms; FIPS 140 compliance verification.",
+        "determination_statements": [
+          "IA-07 — The system implements mechanisms for authentication to a cryptographic module that meet the requirements of applicable laws, executive orders, directives, policies, regulations, standards, and guidelines for such authentication"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the system implements mechanisms for authentication to a cryptographic module that comply with applicable requirements.\n\n**Examine:** Identification and authentication policy; system security plan; system design documentation; cryptographic module validation certificates; FIPS 140 documentation.\n\n**Interview:** System administrators; system developers; information system security officers.\n\n**Test:** Cryptographic module authentication mechanisms; FIPS 140 compliance verification.\n\n**Determination Statements:**\n- IA-07 — The system implements mechanisms for authentication to a cryptographic module that meet the requirements of applicable laws, executive orders, directives, policies, regulations, standards, and guidelines for such authentication"
+      }
+    },
+    "IA-8": {
+      "control_id": "IA-8",
+      "control_title": "Identification and Authentication (Non-Organizational Users)",
+      "base_control": {
+        "control_id": "IA-8",
+        "control_title": "Identification and Authentication (Non-Organizational Users)",
+        "control_text": "Requires the system to uniquely identify and authenticate non-organizational users or processes acting on behalf of non-organizational users.",
+        "key_enhancements": [
+          {
+            "id": "IA-8(1)",
+            "title": "Acceptance of PIV Credentials from Other Agencies"
+          },
+          {
+            "id": "IA-8(2)",
+            "title": "Acceptance of External Authenticators"
+          },
+          {
+            "id": "IA-8(4)",
+            "title": "Use of Defined Profiles"
+          },
+          {
+            "id": "IA-8(5)",
+            "title": "Acceptance of PIV-I Credentials"
+          },
+          {
+            "id": "IA-8(6)",
+            "title": "Disassociability"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| IA-8(1) | Acceptance of PIV Credentials from Other Agencies |\n| IA-8(2) | Acceptance of External Authenticators |\n| IA-8(4) | Use of Defined Profiles |\n| IA-8(5) | Acceptance of PIV-I Credentials |\n| IA-8(6) | Disassociability |",
+        "related_controls": [
+          "AC-2",
+          "AC-6",
+          "AC-14",
+          "AC-17",
+          "AC-18",
+          "AU-6",
+          "IA-2",
+          "IA-4",
+          "IA-5",
+          "IA-10",
+          "IA-11",
+          "IA-13",
+          "MA-4",
+          "RA-3",
+          "SA-4",
+          "SC-8"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the system to uniquely identify and authenticate non-organizational users or processes acting on behalf of non-organizational users.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| IA-8(1) | Acceptance of PIV Credentials from Other Agencies |\n| IA-8(2) | Acceptance of External Authenticators |\n| IA-8(4) | Use of Defined Profiles |\n| IA-8(5) | Acceptance of PIV-I Credentials |\n| IA-8(6) | Disassociability |\n\n**Related Controls:** AC-2, AC-6, AC-14, AC-17, AC-18, AU-6, IA-2, IA-4, IA-5, IA-10, IA-11, IA-13, MA-4, RA-3, SA-4, SC-8\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the system uniquely identifies and authenticates non-organizational users or processes acting on behalf of non-organizational users.",
+        "examine_procedures": "Identification and authentication policy; system security plan; system design documentation; system configuration settings; system audit records.",
+        "interview_procedures": "System administrators; organizational personnel responsible for managing non-organizational user access.",
+        "test_procedures": "Non-organizational user identification and authentication mechanisms.",
+        "determination_statements": [
+          "IA-08 — Non-organizational users or processes acting on behalf of non-organizational users are uniquely identified and authenticated",
+          "NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final",
+          "[SP 800-53 IA Family](../800-53/ia.md)",
+          "[SP 800-171 IA Requirements](../800-171/ia.md)"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the system uniquely identifies and authenticates non-organizational users or processes acting on behalf of non-organizational users.\n\n**Examine:** Identification and authentication policy; system security plan; system design documentation; system configuration settings; system audit records.\n\n**Interview:** System administrators; organizational personnel responsible for managing non-organizational user access.\n\n**Test:** Non-organizational user identification and authentication mechanisms.\n\n**Determination Statements:**\n- IA-08 — Non-organizational users or processes acting on behalf of non-organizational users are uniquely identified and authenticated\n\n## References\n\n- NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final\n- [SP 800-53 IA Family](../800-53/ia.md)\n- [SP 800-171 IA Requirements](../800-171/ia.md)"
+      }
+    },
+    "IA-9": {
+      "control_id": "IA-9",
+      "control_title": "Service Identification and Authentication",
+      "base_control": {
+        "control_id": "IA-9",
+        "control_title": "Service Identification and Authentication",
+        "control_text": "Requires the organization to uniquely identify and authenticate organization-defined system services and applications using organization-defined security safeguards before establishing communications with the service or application.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "IA-3",
+          "IA-4",
+          "IA-5",
+          "IA-13",
+          "SC-8"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Requires the organization to uniquely identify and authenticate organization-defined system services and applications using organization-defined security safeguards before establishing communications with the service or application.\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** IA-3, IA-4, IA-5, IA-13, SC-8\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "IA-10": {
+      "control_id": "IA-10",
+      "control_title": "Adaptive Authentication",
+      "base_control": {
+        "control_id": "IA-10",
+        "control_title": "Adaptive Authentication",
+        "control_text": "Requires the organization to require users to employ organization-defined supplemental authentication techniques or mechanisms when accessing the system under organization-defined circumstances or situations (e.g., accessing sensitive data, elevated risk sessions, or after-hours access).",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "IA-2",
+          "IA-8"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Requires the organization to require users to employ organization-defined supplemental authentication techniques or mechanisms when accessing the system under organization-defined circumstances or situations (e.g., accessing sensitive data, elevated risk sessions, or after-hours access).\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** IA-2, IA-8\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "IA-11": {
+      "control_id": "IA-11",
+      "control_title": "Re-Authentication",
+      "base_control": {
+        "control_id": "IA-11",
+        "control_title": "Re-Authentication",
+        "control_text": "Requires the system to require users to re-authenticate when organization-defined circumstances or situations require re-authentication (e.g., change in role, session timeout, or access to high-value transactions).",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "AC-3",
+          "AC-11",
+          "IA-2",
+          "IA-3",
+          "IA-4",
+          "IA-8"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the system to require users to re-authenticate when organization-defined circumstances or situations require re-authentication (e.g., change in role, session timeout, or access to high-value transactions).\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** AC-3, AC-11, IA-2, IA-3, IA-4, IA-8\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "IA-12": {
+      "control_id": "IA-12",
+      "control_title": "Identity Proofing",
+      "base_control": {
+        "control_id": "IA-12",
+        "control_title": "Identity Proofing",
+        "control_text": "Requires the organization to identity-proof users that require accounts for logical access to systems based on appropriate identity assurance level requirements. This includes collecting and verifying identity evidence, validating and verifying the identity, and resolving identities across systems.",
+        "key_enhancements": [
+          {
+            "id": "IA-12(1)",
+            "title": "Supervisor Authorization"
+          },
+          {
+            "id": "IA-12(2)",
+            "title": "Identity Evidence"
+          },
+          {
+            "id": "IA-12(3)",
+            "title": "Identity Evidence Validation and Verification"
+          },
+          {
+            "id": "IA-12(4)",
+            "title": "In-Person Validation and Verification"
+          },
+          {
+            "id": "IA-12(5)",
+            "title": "Address Confirmation"
+          },
+          {
+            "id": "IA-12(6)",
+            "title": "Accept Externally-Proofed Identities"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| IA-12(1) | Supervisor Authorization |\n| IA-12(2) | Identity Evidence |\n| IA-12(3) | Identity Evidence Validation and Verification |\n| IA-12(4) | In-Person Validation and Verification |\n| IA-12(5) | Address Confirmation |\n| IA-12(6) | Accept Externally-Proofed Identities |",
+        "related_controls": [
+          "AC-5",
+          "IA-1",
+          "IA-2",
+          "IA-3",
+          "IA-4",
+          "IA-5",
+          "IA-6",
+          "IA-8",
+          "IA-13"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Requires the organization to identity-proof users that require accounts for logical access to systems based on appropriate identity assurance level requirements. This includes collecting and verifying identity evidence, validating and verifying the identity, and resolving identities across systems.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| IA-12(1) | Supervisor Authorization |\n| IA-12(2) | Identity Evidence |\n| IA-12(3) | Identity Evidence Validation and Verification |\n| IA-12(4) | In-Person Validation and Verification |\n| IA-12(5) | Address Confirmation |\n| IA-12(6) | Accept Externally-Proofed Identities |\n\n**Related Controls:** AC-5, IA-1, IA-2, IA-3, IA-4, IA-5, IA-6, IA-8, IA-13\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "IA-13": {
+      "control_id": "IA-13",
+      "control_title": "Identity Providers and Authorization Servers",
+      "base_control": {
+        "control_id": "IA-13",
+        "control_title": "Identity Providers and Authorization Servers",
+        "control_text": "Requires the organization to employ identity providers and authorization servers to manage user identities and access authorizations. This control supports the use of modern federated identity architectures and OAuth/OpenID Connect protocols.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "AC-3",
+          "IA-2",
+          "IA-3",
+          "IA-8",
+          "IA-9",
+          "IA-12"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Requires the organization to employ identity providers and authorization servers to manage user identities and access authorizations. This control supports the use of modern federated identity architectures and OAuth/OpenID Connect protocols.\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** AC-3, IA-2, IA-3, IA-8, IA-9, IA-12\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    }
+  }
+}

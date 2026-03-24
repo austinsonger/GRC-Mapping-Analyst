@@ -25,3 +25,6 @@ fast startup, and shared logic with existing Gemini tooling).
 - Scripts are deterministic and enforce the NIST IR 8477 formula where applicable.
 - Output artifacts are created under `working-directory/mapping-artifacts/`.
 - The validator checks required columns, required row fields, and formula correctness.
+- `strm-map-extracted.mjs` output is **draft mapping only**. A manual row-by-row adjudication pass is required before declaring completion.
+- Run `strm-validate-csv.mjs` and `strm-gap-report.mjs` only **after** manual review edits are complete.
+- Manual review logs (`Manual_Review_*.md`) must include a reason for each changed row (not just the row id and relationship delta).

@@ -1,0 +1,415 @@
+{
+  "source_documents": {
+    "nist_800_53_mp": "/Users/austinsonger/code/strm-Mapping/working-directory/frameworks/info/800-53/800-53/mp.md",
+    "nist_800_53a_mp": "/Users/austinsonger/code/strm-Mapping/working-directory/frameworks/info/800-53/800-53a/mp.md"
+  },
+  "generated_at": "2026-03-24T19:25:06.588Z",
+  "control_family": "MP",
+  "control_count": 8,
+  "controls": {
+    "MP-1": {
+      "control_id": "MP-1",
+      "control_title": "Policy and Procedures",
+      "base_control": {
+        "control_id": "MP-1",
+        "control_title": "Policy and Procedures",
+        "control_text": "Develop, document, and disseminate a media protection policy and procedures that address purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance. Review and update the policy and procedures at organization-defined frequencies.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for MP-1.",
+        "related_controls": [
+          "PM-9",
+          "PS-8",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Develop, document, and disseminate a media protection policy and procedures that address purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance. Review and update the policy and procedures at organization-defined frequencies.\n\n**Key Enhancements:** None defined for MP-1.\n\n**Related Controls:** PM-9, PS-8, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization develops, documents, disseminates, reviews, and updates media protection policy and procedures.",
+        "examine_procedures": "Media protection policy; media protection procedures; system security plan.",
+        "interview_procedures": "Organizational personnel responsible for media protection policy.",
+        "test_procedures": "Organizational processes for managing media protection policy.",
+        "determination_statements": [
+          "MP-01a. — A media protection policy is developed, documented, and disseminated",
+          "MP-01b. — Media protection procedures are developed, documented, and disseminated",
+          "MP-01c. — The policy and procedures are reviewed and updated at an organization-defined frequency"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization develops, documents, disseminates, reviews, and updates media protection policy and procedures.\n\n**Examine:** Media protection policy; media protection procedures; system security plan.\n\n**Interview:** Organizational personnel responsible for media protection policy.\n\n**Test:** Organizational processes for managing media protection policy.\n\n**Determination Statements:**\n- MP-01a. — A media protection policy is developed, documented, and disseminated\n- MP-01b. — Media protection procedures are developed, documented, and disseminated\n- MP-01c. — The policy and procedures are reviewed and updated at an organization-defined frequency"
+      }
+    },
+    "MP-2": {
+      "control_id": "MP-2",
+      "control_title": "Media Access",
+      "base_control": {
+        "control_id": "MP-2",
+        "control_title": "Media Access",
+        "control_text": "Restrict access to organization-defined types of digital and/or non-digital media to organization-defined personnel or roles.",
+        "key_enhancements": [
+          {
+            "id": "MP-2(1)",
+            "title": "Automated Restricted Access"
+          },
+          {
+            "id": "MP-2(2)",
+            "title": "Cryptographic Protection"
+          }
+        ],
+        "key_enhancements_text": "- **MP-2(1):** Automated Restricted Access — [Withdrawn: Incorporated into MP-4(2).]\n- **MP-2(2):** Cryptographic Protection — [Withdrawn: Incorporated into SC-28(1).]",
+        "related_controls": [
+          "AC-19",
+          "AU-9",
+          "CP-2",
+          "CP-9",
+          "CP-10",
+          "MA-5",
+          "MP-4",
+          "MP-6",
+          "PE-2",
+          "PE-3",
+          "SC-12",
+          "SC-13",
+          "SC-34",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Restrict access to organization-defined types of digital and/or non-digital media to organization-defined personnel or roles.\n\n**Key Enhancements:**\n- **MP-2(1):** Automated Restricted Access — [Withdrawn: Incorporated into MP-4(2).]\n- **MP-2(2):** Cryptographic Protection — [Withdrawn: Incorporated into SC-28(1).]\n\n**Related Controls:** AC-19, AU-9, CP-2, CP-9, CP-10, MA-5, MP-4, MP-6, PE-2, PE-3, SC-12, SC-13, SC-34, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization restricts access to organization-defined types of digital and/or non-digital media to organization-defined personnel or roles.",
+        "examine_procedures": "Media protection policy; media access procedures; system security plan; access control records for media; media inventory.",
+        "interview_procedures": "Organizational personnel responsible for media access control; system administrators.",
+        "test_procedures": "Media access control mechanisms; physical access controls for media storage areas.",
+        "determination_statements": [
+          "MP-02 — Access to organization-defined types of digital and/or non-digital media is restricted to organization-defined personnel or roles"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization restricts access to organization-defined types of digital and/or non-digital media to organization-defined personnel or roles.\n\n**Examine:** Media protection policy; media access procedures; system security plan; access control records for media; media inventory.\n\n**Interview:** Organizational personnel responsible for media access control; system administrators.\n\n**Test:** Media access control mechanisms; physical access controls for media storage areas.\n\n**Determination Statements:**\n- MP-02 — Access to organization-defined types of digital and/or non-digital media is restricted to organization-defined personnel or roles"
+      }
+    },
+    "MP-3": {
+      "control_id": "MP-3",
+      "control_title": "Media Marking",
+      "base_control": {
+        "control_id": "MP-3",
+        "control_title": "Media Marking",
+        "control_text": "Mark system media indicating the distribution limitations, handling caveats, and applicable security markings (if any) of the information. Exempt organization-defined types of system media from marking if the media remain within organization-defined controlled areas.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for MP-3.",
+        "related_controls": [
+          "AC-16",
+          "CP-9",
+          "MP-5",
+          "PE-22",
+          "SI-12"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Mark system media indicating the distribution limitations, handling caveats, and applicable security markings (if any) of the information. Exempt organization-defined types of system media from marking if the media remain within organization-defined controlled areas.\n\n**Key Enhancements:** None defined for MP-3.\n\n**Related Controls:** AC-16, CP-9, MP-5, PE-22, SI-12\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization marks system media indicating distribution limitations, handling caveats, and applicable security markings.",
+        "examine_procedures": "Media protection policy; media marking procedures; system security plan; marked media examples.",
+        "interview_procedures": "Organizational personnel responsible for media marking.",
+        "test_procedures": "Media marking implementation verification.",
+        "determination_statements": [
+          "MP-03a. — Organization-defined types of system media are marked indicating the distribution limitations, handling caveats, and applicable security markings of the information",
+          "MP-03b. — Organization-defined types of system media are exempted from marking if the media remain within organization-defined controlled areas"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization marks system media indicating distribution limitations, handling caveats, and applicable security markings.\n\n**Examine:** Media protection policy; media marking procedures; system security plan; marked media examples.\n\n**Interview:** Organizational personnel responsible for media marking.\n\n**Test:** Media marking implementation verification.\n\n**Determination Statements:**\n- MP-03a. — Organization-defined types of system media are marked indicating the distribution limitations, handling caveats, and applicable security markings of the information\n- MP-03b. — Organization-defined types of system media are exempted from marking if the media remain within organization-defined controlled areas"
+      }
+    },
+    "MP-4": {
+      "control_id": "MP-4",
+      "control_title": "Media Storage",
+      "base_control": {
+        "control_id": "MP-4",
+        "control_title": "Media Storage",
+        "control_text": "Physically control and securely store organization-defined types of digital and/or non-digital media within organization-defined controlled areas. Protect system media types defined by the organization until the media are destroyed or sanitized using approved equipment, techniques, and procedures.",
+        "key_enhancements": [
+          {
+            "id": "MP-4(1)",
+            "title": "Cryptographic Protection"
+          },
+          {
+            "id": "MP-4(2)",
+            "title": "Automated Restricted Access"
+          }
+        ],
+        "key_enhancements_text": "- **MP-4(1):** Cryptographic Protection — [Withdrawn: Incorporated into SC-28(1).]\n- **MP-4(2):** Automated Restricted Access — Restrict access to media storage areas and log access attempts and access granted using automated mechanisms.",
+        "related_controls": [
+          "AC-19",
+          "CP-2",
+          "CP-6",
+          "CP-9",
+          "CP-10",
+          "MP-2",
+          "MP-7",
+          "PE-3",
+          "PL-2",
+          "SC-12",
+          "SC-13",
+          "SC-28",
+          "SC-34",
+          "SI-12"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Physically control and securely store organization-defined types of digital and/or non-digital media within organization-defined controlled areas. Protect system media types defined by the organization until the media are destroyed or sanitized using approved equipment, techniques, and procedures.\n\n**Key Enhancements:**\n- **MP-4(1):** Cryptographic Protection — [Withdrawn: Incorporated into SC-28(1).]\n- **MP-4(2):** Automated Restricted Access — Restrict access to media storage areas and log access attempts and access granted using automated mechanisms.\n\n**Related Controls:** AC-19, CP-2, CP-6, CP-9, CP-10, MP-2, MP-7, PE-3, PL-2, SC-12, SC-13, SC-28, SC-34, SI-12\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization physically controls and securely stores system media within controlled areas.",
+        "examine_procedures": "Media protection policy; media storage procedures; system security plan; physical access controls for media storage; media inventory.",
+        "interview_procedures": "Organizational personnel responsible for media storage; facility security personnel.",
+        "test_procedures": "Physical access controls for media storage areas; media storage security mechanisms.",
+        "determination_statements": [
+          "MP-04a. — Organization-defined types of digital and/or non-digital media are physically controlled and securely stored within organization-defined controlled areas",
+          "MP-04b. — System media are protected until destroyed or sanitized using approved methods"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization physically controls and securely stores system media within controlled areas.\n\n**Examine:** Media protection policy; media storage procedures; system security plan; physical access controls for media storage; media inventory.\n\n**Interview:** Organizational personnel responsible for media storage; facility security personnel.\n\n**Test:** Physical access controls for media storage areas; media storage security mechanisms.\n\n**Determination Statements:**\n- MP-04a. — Organization-defined types of digital and/or non-digital media are physically controlled and securely stored within organization-defined controlled areas\n- MP-04b. — System media are protected until destroyed or sanitized using approved methods"
+      }
+    },
+    "MP-5": {
+      "control_id": "MP-5",
+      "control_title": "Media Transport",
+      "base_control": {
+        "control_id": "MP-5",
+        "control_title": "Media Transport",
+        "control_text": "Protect and control organization-defined types of system media during transport outside of controlled areas using organization-defined controls. Maintain accountability for system media during transport outside of controlled areas. Document activities associated with the transport of system media. Restrict the activities associated with the transport of system media to authorized personnel.",
+        "key_enhancements": [
+          {
+            "id": "MP-5(1)",
+            "title": "Protection Outside of Controlled Areas"
+          },
+          {
+            "id": "MP-5(2)",
+            "title": "Documentation of Activities"
+          },
+          {
+            "id": "MP-5(3)",
+            "title": "Custodians"
+          },
+          {
+            "id": "MP-5(4)",
+            "title": "Cryptographic Protection"
+          }
+        ],
+        "key_enhancements_text": "- **MP-5(1):** Protection Outside of Controlled Areas — [Withdrawn: Incorporated into MP-5.]\n- **MP-5(2):** Documentation of Activities — [Withdrawn: Incorporated into MP-5.]\n- **MP-5(3):** Custodians — Employ an identified custodian throughout the transport of system media outside of controlled areas.\n- **MP-5(4):** Cryptographic Protection — Implement cryptographic mechanisms to protect the confidentiality and integrity of information stored on digital media during transport outside of controlled areas.",
+        "related_controls": [
+          "AC-7",
+          "AC-19",
+          "CP-2",
+          "CP-9",
+          "MP-3",
+          "MP-4",
+          "PE-16",
+          "PL-2",
+          "SC-12",
+          "SC-13",
+          "SC-28",
+          "SC-34"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Protect and control organization-defined types of system media during transport outside of controlled areas using organization-defined controls. Maintain accountability for system media during transport outside of controlled areas. Document activities associated with the transport of system media. Restrict the activities associated with the transport of system media to authorized personnel.\n\n**Key Enhancements:**\n- **MP-5(1):** Protection Outside of Controlled Areas — [Withdrawn: Incorporated into MP-5.]\n- **MP-5(2):** Documentation of Activities — [Withdrawn: Incorporated into MP-5.]\n- **MP-5(3):** Custodians — Employ an identified custodian throughout the transport of system media outside of controlled areas.\n- **MP-5(4):** Cryptographic Protection — Implement cryptographic mechanisms to protect the confidentiality and integrity of information stored on digital media during transport outside of controlled areas.\n\n**Related Controls:** AC-7, AC-19, CP-2, CP-9, MP-3, MP-4, PE-16, PL-2, SC-12, SC-13, SC-28, SC-34\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization protects and controls system media during transport outside of controlled areas.",
+        "examine_procedures": "Media protection policy; media transport procedures; system security plan; media transport records; encryption documentation.",
+        "interview_procedures": "Organizational personnel responsible for media transport; information system security officers.",
+        "test_procedures": "Media transport protection mechanisms; cryptographic mechanisms for digital media protection during transport.",
+        "determination_statements": [
+          "MP-05a. — Organization-defined types of system media are protected and controlled during transport outside of controlled areas using organization-defined controls",
+          "MP-05b. — The activities associated with the transport of system media are documented",
+          "MP-05c. — Personnel engaged in the transport of system media are identified",
+          "MP-05d. — System media transport activities are restricted to authorized personnel"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization protects and controls system media during transport outside of controlled areas.\n\n**Examine:** Media protection policy; media transport procedures; system security plan; media transport records; encryption documentation.\n\n**Interview:** Organizational personnel responsible for media transport; information system security officers.\n\n**Test:** Media transport protection mechanisms; cryptographic mechanisms for digital media protection during transport.\n\n**Determination Statements:**\n- MP-05a. — Organization-defined types of system media are protected and controlled during transport outside of controlled areas using organization-defined controls\n- MP-05b. — The activities associated with the transport of system media are documented\n- MP-05c. — Personnel engaged in the transport of system media are identified\n- MP-05d. — System media transport activities are restricted to authorized personnel"
+      }
+    },
+    "MP-6": {
+      "control_id": "MP-6",
+      "control_title": "Media Sanitization",
+      "base_control": {
+        "control_id": "MP-6",
+        "control_title": "Media Sanitization",
+        "control_text": "Sanitize organization-defined system media prior to disposal, release out of organizational control, or release for reuse using organization-defined sanitization techniques and procedures. Employ sanitization mechanisms with the strength and integrity commensurate with the security category or classification of the information.",
+        "key_enhancements": [
+          {
+            "id": "MP-6(1)",
+            "title": "Review, Approve, Track, Document, and Verify"
+          },
+          {
+            "id": "MP-6(2)",
+            "title": "Equipment Testing"
+          },
+          {
+            "id": "MP-6(3)",
+            "title": "Nondestructive Techniques"
+          },
+          {
+            "id": "MP-6(4)",
+            "title": "Controlled Unclassified Information"
+          },
+          {
+            "id": "MP-6(5)",
+            "title": "Classified Information"
+          },
+          {
+            "id": "MP-6(6)",
+            "title": "Media Destruction"
+          },
+          {
+            "id": "MP-6(7)",
+            "title": "Dual Authorization"
+          },
+          {
+            "id": "MP-6(8)",
+            "title": "Remote Purging or Wiping of Information"
+          }
+        ],
+        "key_enhancements_text": "- **MP-6(1):** Review, Approve, Track, Document, and Verify — Review, approve, track, document, and verify media sanitization and disposal actions.\n- **MP-6(2):** Equipment Testing — Test sanitization equipment and procedures at an organization-defined frequency to ensure correct performance.\n- **MP-6(3):** Nondestructive Techniques — Apply nondestructive sanitization techniques to portable storage devices prior to connecting such devices to the system under organization-defined circumstances.\n- **MP-6(4):** Controlled Unclassified Information — [Withdrawn: Incorporated into MP-6.]\n- **MP-6(5):** Classified Information — [Withdrawn: Incorporated into MP-6.]\n- **MP-6(6):** Media Destruction — [Withdrawn: Incorporated into MP-6.]\n- **MP-6(7):** Dual Authorization — Enforce dual authorization for the sanitization of organization-defined system media.\n- **MP-6(8):** Remote Purging or Wiping of Information — Provide the capability to purge or wipe information from organization-defined systems or system components remotely.",
+        "related_controls": [
+          "AC-3",
+          "AC-7",
+          "AU-11",
+          "MA-2",
+          "MA-3",
+          "MA-4",
+          "MA-5",
+          "PM-22",
+          "SI-12",
+          "SI-18",
+          "SI-19",
+          "SR-11"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Sanitize organization-defined system media prior to disposal, release out of organizational control, or release for reuse using organization-defined sanitization techniques and procedures. Employ sanitization mechanisms with the strength and integrity commensurate with the security category or classification of the information.\n\n**Key Enhancements:**\n- **MP-6(1):** Review, Approve, Track, Document, and Verify — Review, approve, track, document, and verify media sanitization and disposal actions.\n- **MP-6(2):** Equipment Testing — Test sanitization equipment and procedures at an organization-defined frequency to ensure correct performance.\n- **MP-6(3):** Nondestructive Techniques — Apply nondestructive sanitization techniques to portable storage devices prior to connecting such devices to the system under organization-defined circumstances.\n- **MP-6(4):** Controlled Unclassified Information — [Withdrawn: Incorporated into MP-6.]\n- **MP-6(5):** Classified Information — [Withdrawn: Incorporated into MP-6.]\n- **MP-6(6):** Media Destruction — [Withdrawn: Incorporated into MP-6.]\n- **MP-6(7):** Dual Authorization — Enforce dual authorization for the sanitization of organization-defined system media.\n- **MP-6(8):** Remote Purging or Wiping of Information — Provide the capability to purge or wipe information from organization-defined systems or system components remotely.\n\n**Related Controls:** AC-3, AC-7, AU-11, MA-2, MA-3, MA-4, MA-5, PM-22, SI-12, SI-18, SI-19, SR-11\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization sanitizes system media prior to disposal, release, or reuse using applicable standards and policies.",
+        "examine_procedures": "Media protection policy; media sanitization procedures; system security plan; media sanitization records; system component inventory; NIST SP 800-88 compliance documentation.",
+        "interview_procedures": "Organizational personnel responsible for media sanitization; system administrators.",
+        "test_procedures": "Media sanitization tools and mechanisms; sanitization verification processes.",
+        "determination_statements": [
+          "MP-06a. — Organization-defined system media is sanitized using organization-defined sanitization techniques and procedures prior to disposal, release out of organizational control, or release for reuse",
+          "MP-06b. — Sanitization mechanisms with strength and integrity commensurate with the security category or classification of the information are employed"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization sanitizes system media prior to disposal, release, or reuse using applicable standards and policies.\n\n**Examine:** Media protection policy; media sanitization procedures; system security plan; media sanitization records; system component inventory; NIST SP 800-88 compliance documentation.\n\n**Interview:** Organizational personnel responsible for media sanitization; system administrators.\n\n**Test:** Media sanitization tools and mechanisms; sanitization verification processes.\n\n**Determination Statements:**\n- MP-06a. — Organization-defined system media is sanitized using organization-defined sanitization techniques and procedures prior to disposal, release out of organizational control, or release for reuse\n- MP-06b. — Sanitization mechanisms with strength and integrity commensurate with the security category or classification of the information are employed"
+      }
+    },
+    "MP-7": {
+      "control_id": "MP-7",
+      "control_title": "Media Use",
+      "base_control": {
+        "control_id": "MP-7",
+        "control_title": "Media Use",
+        "control_text": "Restrict or prohibit the use of organization-defined types of system media on organization-defined systems or system components using organization-defined controls.",
+        "key_enhancements": [
+          {
+            "id": "MP-7(1)",
+            "title": "Prohibit Use Without Owner"
+          },
+          {
+            "id": "MP-7(2)",
+            "title": "Prohibit Use of Sanitization-Resistant Media"
+          }
+        ],
+        "key_enhancements_text": "- **MP-7(1):** Prohibit Use Without Owner — Prohibit the use of portable storage devices in organizational systems when such devices have no identifiable owner.\n- **MP-7(2):** Prohibit Use of Sanitization-Resistant Media — Prohibit the use of sanitization-resistant media in organizational systems.",
+        "related_controls": [
+          "AC-19",
+          "AC-20",
+          "PL-4",
+          "PM-12",
+          "SC-34",
+          "SC-41"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Restrict or prohibit the use of organization-defined types of system media on organization-defined systems or system components using organization-defined controls.\n\n**Key Enhancements:**\n- **MP-7(1):** Prohibit Use Without Owner — Prohibit the use of portable storage devices in organizational systems when such devices have no identifiable owner.\n- **MP-7(2):** Prohibit Use of Sanitization-Resistant Media — Prohibit the use of sanitization-resistant media in organizational systems.\n\n**Related Controls:** AC-19, AC-20, PL-4, PM-12, SC-34, SC-41\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization restricts the use of organization-defined types of system media on organization-defined systems or system components.",
+        "examine_procedures": "Media protection policy; media use procedures; system security plan; system configuration settings; media use restrictions.",
+        "interview_procedures": "System administrators; organizational personnel responsible for media use restrictions.",
+        "test_procedures": "Media use restriction mechanisms; portable storage device controls.",
+        "determination_statements": [
+          "MP-07a. — The use of organization-defined types of system media is restricted or prohibited on organization-defined systems or system components using organization-defined controls",
+          "MP-07b. — The use of portable storage devices in organizational systems is restricted or prohibited when such devices have no identifiable owner",
+          "NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final",
+          "[SP 800-53 MP Family](../800-53/mp.md)",
+          "[SP 800-171 MP Requirements](../800-171/mp.md)"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization restricts the use of organization-defined types of system media on organization-defined systems or system components.\n\n**Examine:** Media protection policy; media use procedures; system security plan; system configuration settings; media use restrictions.\n\n**Interview:** System administrators; organizational personnel responsible for media use restrictions.\n\n**Test:** Media use restriction mechanisms; portable storage device controls.\n\n**Determination Statements:**\n- MP-07a. — The use of organization-defined types of system media is restricted or prohibited on organization-defined systems or system components using organization-defined controls\n- MP-07b. — The use of portable storage devices in organizational systems is restricted or prohibited when such devices have no identifiable owner\n\n## References\n\n- NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final\n- [SP 800-53 MP Family](../800-53/mp.md)\n- [SP 800-171 MP Requirements](../800-171/mp.md)"
+      }
+    },
+    "MP-8": {
+      "control_id": "MP-8",
+      "control_title": "Media Downgrading",
+      "base_control": {
+        "control_id": "MP-8",
+        "control_title": "Media Downgrading",
+        "control_text": "Establish an organization-defined system media downgrading process that includes employing downgrading mechanisms with organization-defined strength and integrity. Verify that the system media downgrading process is commensurate with the security category and/or classification level of the information to be removed and the access authorizations of the potential recipients of the downgraded information. Identify organization-defined system media requiring downgrading. Downgrade the identified system media using the established process.",
+        "key_enhancements": [
+          {
+            "id": "MP-8(1)",
+            "title": "Documentation of Process"
+          },
+          {
+            "id": "MP-8(2)",
+            "title": "Equipment Testing"
+          },
+          {
+            "id": "MP-8(3)",
+            "title": "Controlled Unclassified Information"
+          },
+          {
+            "id": "MP-8(4)",
+            "title": "Classified Information"
+          }
+        ],
+        "key_enhancements_text": "- **MP-8(1):** Documentation of Process — Document system media downgrading actions.\n- **MP-8(2):** Equipment Testing — Test downgrading equipment and procedures at an organization-defined frequency to ensure correct performance.\n- **MP-8(3):** Controlled Unclassified Information — Downgrade system media containing controlled unclassified information prior to public release.\n- **MP-8(4):** Classified Information — Downgrade system media containing classified information prior to release to individuals without required access authorizations.",
+        "related_controls": [
+          "None"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Establish an organization-defined system media downgrading process that includes employing downgrading mechanisms with organization-defined strength and integrity. Verify that the system media downgrading process is commensurate with the security category and/or classification level of the information to be removed and the access authorizations of the potential recipients of the downgraded information. Identify organization-defined system media requiring downgrading. Downgrade the identified system media using the established process.\n\n**Key Enhancements:**\n- **MP-8(1):** Documentation of Process — Document system media downgrading actions.\n- **MP-8(2):** Equipment Testing — Test downgrading equipment and procedures at an organization-defined frequency to ensure correct performance.\n- **MP-8(3):** Controlled Unclassified Information — Downgrade system media containing controlled unclassified information prior to public release.\n- **MP-8(4):** Classified Information — Downgrade system media containing classified information prior to release to individuals without required access authorizations.\n\n**Related Controls:** None\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    }
+  }
+}

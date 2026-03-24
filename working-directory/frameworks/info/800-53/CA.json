@@ -1,0 +1,484 @@
+{
+  "generated_at": "2026-03-24T19:16:27.616Z",
+  "control_family": "CA",
+  "control_count": 9,
+  "controls": {
+    "CA-1": {
+      "control_id": "CA-1",
+      "control_title": "Policy and Procedures",
+      "base_control": {
+        "control_id": "CA-1",
+        "control_title": "Policy and Procedures",
+        "control_text": "Requires the organization to develop, document, disseminate, and periodically review and update assessment, authorization, and monitoring policy and procedures addressing purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "PM-9",
+          "PS-8",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to develop, document, disseminate, and periodically review and update assessment, authorization, and monitoring policy and procedures addressing purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance.\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** PM-9, PS-8, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization develops, documents, disseminates, reviews, and updates assessment, authorization, and monitoring policy and procedures.",
+        "examine_procedures": "Assessment, authorization, and monitoring policy; procedures; system security plan.",
+        "interview_procedures": "Organizational personnel responsible for assessment and authorization policy.",
+        "test_procedures": "Organizational processes for managing assessment and authorization policy.",
+        "determination_statements": [
+          "CA-01a. — An assessment, authorization, and monitoring policy is developed, documented, and disseminated",
+          "CA-01b. — Assessment, authorization, and monitoring procedures are developed, documented, and disseminated",
+          "CA-01c. — The policy and procedures are reviewed and updated at an organization-defined frequency"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization develops, documents, disseminates, reviews, and updates assessment, authorization, and monitoring policy and procedures.\n\n**Examine:** Assessment, authorization, and monitoring policy; procedures; system security plan.\n\n**Interview:** Organizational personnel responsible for assessment and authorization policy.\n\n**Test:** Organizational processes for managing assessment and authorization policy.\n\n**Determination Statements:**\n- CA-01a. — An assessment, authorization, and monitoring policy is developed, documented, and disseminated\n- CA-01b. — Assessment, authorization, and monitoring procedures are developed, documented, and disseminated\n- CA-01c. — The policy and procedures are reviewed and updated at an organization-defined frequency"
+      }
+    },
+    "CA-2": {
+      "control_id": "CA-2",
+      "control_title": "Control Assessments",
+      "base_control": {
+        "control_id": "CA-2",
+        "control_title": "Control Assessments",
+        "control_text": "Requires the organization to develop a control assessment plan that describes the scope of the assessment, including controls and enhancements under assessment, assessment procedures, assessment environment, assessment team, and assessment roles and responsibilities. Assess the controls at an organization-defined frequency to determine the extent to which the controls are implemented correctly, operating as intended, and producing the desired outcome. Produce a security and privacy assessment report and provide results to designated personnel.",
+        "key_enhancements": [
+          {
+            "id": "CA-2(1)",
+            "title": "Independent Assessors"
+          },
+          {
+            "id": "CA-2(2)",
+            "title": "Specialized Assessments"
+          },
+          {
+            "id": "CA-2(3)",
+            "title": "Leveraging Results from External Organizations"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CA-2(1) | Independent Assessors |\n| CA-2(2) | Specialized Assessments |\n| CA-2(3) | Leveraging Results from External Organizations |",
+        "related_controls": [
+          "AC-20",
+          "CA-5",
+          "CA-6",
+          "CA-7",
+          "PM-9",
+          "RA-5",
+          "RA-10",
+          "SA-11",
+          "SC-38",
+          "SI-3",
+          "SI-12",
+          "SR-2",
+          "SR-3"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to develop a control assessment plan that describes the scope of the assessment, including controls and enhancements under assessment, assessment procedures, assessment environment, assessment team, and assessment roles and responsibilities. Assess the controls at an organization-defined frequency to determine the extent to which the controls are implemented correctly, operating as intended, and producing the desired outcome. Produce a security and privacy assessment report and provide results to designated personnel.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CA-2(1) | Independent Assessors |\n| CA-2(2) | Specialized Assessments |\n| CA-2(3) | Leveraging Results from External Organizations |\n\n**Related Controls:** AC-20, CA-5, CA-6, CA-7, PM-9, RA-5, RA-10, SA-11, SC-38, SI-3, SI-12, SR-2, SR-3\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization assesses the controls in the system and its environment of operation to determine the extent to which the controls are implemented correctly, operating as intended, and producing the desired outcome.",
+        "examine_procedures": "Assessment, authorization, and monitoring policy; security assessment plan; security assessment report; system security plan; assessment evidence; plan of action and milestones.",
+        "interview_procedures": "Organizational personnel responsible for control assessments; assessors; authorizing officials.",
+        "test_procedures": "Assessment tools and techniques; automated assessment mechanisms.",
+        "determination_statements": [
+          "CA-02a.[01] — A security and privacy assessment plan is developed that describes the scope of the assessment",
+          "CA-02a.[02] — The assessment plan describes the assessment procedures to be used",
+          "CA-02a.[03] — The assessment plan describes the assessment environment, team, and roles",
+          "CA-02b. — Controls are assessed at an organization-defined frequency to determine the extent to which they are implemented correctly, operating as intended, and producing the desired outcome",
+          "CA-02c. — A security and privacy assessment report is produced documenting the results of the assessment",
+          "CA-02d. — The results of control assessments are provided to organization-defined individuals or roles"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization assesses the controls in the system and its environment of operation to determine the extent to which the controls are implemented correctly, operating as intended, and producing the desired outcome.\n\n**Examine:** Assessment, authorization, and monitoring policy; security assessment plan; security assessment report; system security plan; assessment evidence; plan of action and milestones.\n\n**Interview:** Organizational personnel responsible for control assessments; assessors; authorizing officials.\n\n**Test:** Assessment tools and techniques; automated assessment mechanisms.\n\n**Determination Statements:**\n- CA-02a.[01] — A security and privacy assessment plan is developed that describes the scope of the assessment\n- CA-02a.[02] — The assessment plan describes the assessment procedures to be used\n- CA-02a.[03] — The assessment plan describes the assessment environment, team, and roles\n- CA-02b. — Controls are assessed at an organization-defined frequency to determine the extent to which they are implemented correctly, operating as intended, and producing the desired outcome\n- CA-02c. — A security and privacy assessment report is produced documenting the results of the assessment\n- CA-02d. — The results of control assessments are provided to organization-defined individuals or roles"
+      }
+    },
+    "CA-3": {
+      "control_id": "CA-3",
+      "control_title": "Information Exchange",
+      "base_control": {
+        "control_id": "CA-3",
+        "control_title": "Information Exchange",
+        "control_text": "Requires the organization to approve and manage the exchange of information between the system and other systems using interconnection security agreements (ISAs), memoranda of understanding/agreement, or other exchange agreements. Document the interface characteristics, security and privacy requirements, controls, and responsibilities for each connection.",
+        "key_enhancements": [
+          {
+            "id": "CA-3(1)",
+            "title": "Unclassified National Security System Connections"
+          },
+          {
+            "id": "CA-3(2)",
+            "title": "Classified National Security System Connections"
+          },
+          {
+            "id": "CA-3(3)",
+            "title": "Unclassified Non-National Security System Connections"
+          },
+          {
+            "id": "CA-3(4)",
+            "title": "Connections to Public Networks"
+          },
+          {
+            "id": "CA-3(5)",
+            "title": "Restrictions on External System Connections"
+          },
+          {
+            "id": "CA-3(6)",
+            "title": "Transfer Authorizations"
+          },
+          {
+            "id": "CA-3(7)",
+            "title": "Transitive Information Exchanges"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CA-3(1) | Unclassified National Security System Connections |\n| CA-3(2) | Classified National Security System Connections |\n| CA-3(3) | Unclassified Non-National Security System Connections |\n| CA-3(4) | Connections to Public Networks |\n| CA-3(5) | Restrictions on External System Connections |\n| CA-3(6) | Transfer Authorizations |\n| CA-3(7) | Transitive Information Exchanges |",
+        "related_controls": [
+          "AC-4",
+          "AC-20",
+          "AU-16",
+          "CA-6",
+          "IA-3",
+          "IR-4",
+          "PL-2",
+          "PT-7",
+          "RA-3",
+          "SA-9",
+          "SC-7",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to approve and manage the exchange of information between the system and other systems using interconnection security agreements (ISAs), memoranda of understanding/agreement, or other exchange agreements. Document the interface characteristics, security and privacy requirements, controls, and responsibilities for each connection.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CA-3(1) | Unclassified National Security System Connections |\n| CA-3(2) | Classified National Security System Connections |\n| CA-3(3) | Unclassified Non-National Security System Connections |\n| CA-3(4) | Connections to Public Networks |\n| CA-3(5) | Restrictions on External System Connections |\n| CA-3(6) | Transfer Authorizations |\n| CA-3(7) | Transitive Information Exchanges |\n\n**Related Controls:** AC-4, AC-20, AU-16, CA-6, IA-3, IR-4, PL-2, PT-7, RA-3, SA-9, SC-7, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization authorizes and monitors information exchange between the system and other systems.",
+        "examine_procedures": "System interconnection agreements; memoranda of understanding; system security plans; information exchange policies; interconnection security agreements.",
+        "interview_procedures": "Organizational personnel responsible for managing system interconnections; authorizing officials.",
+        "test_procedures": "Information exchange authorization mechanisms; monitoring mechanisms for interconnections.",
+        "determination_statements": [
+          "CA-03a. — Connections to other systems are approved and managed through organization-defined authorization process",
+          "CA-03b. — Information exchange requirements are documented for each interconnection",
+          "CA-03c. — System interconnections are reviewed and updated at an organization-defined frequency"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization authorizes and monitors information exchange between the system and other systems.\n\n**Examine:** System interconnection agreements; memoranda of understanding; system security plans; information exchange policies; interconnection security agreements.\n\n**Interview:** Organizational personnel responsible for managing system interconnections; authorizing officials.\n\n**Test:** Information exchange authorization mechanisms; monitoring mechanisms for interconnections.\n\n**Determination Statements:**\n- CA-03a. — Connections to other systems are approved and managed through organization-defined authorization process\n- CA-03b. — Information exchange requirements are documented for each interconnection\n- CA-03c. — System interconnections are reviewed and updated at an organization-defined frequency"
+      }
+    },
+    "CA-4": {
+      "control_id": "CA-4",
+      "control_title": "Security Certification",
+      "base_control": {
+        "control_id": "CA-4",
+        "control_title": "Security Certification",
+        "control_text": "*Withdrawn.* Incorporated into CA-2.",
+        "key_enhancements": [],
+        "key_enhancements_text": null,
+        "related_controls": [],
+        "baselines": [],
+        "baselines_text": null,
+        "source_markdown": "*Withdrawn.* Incorporated into CA-2."
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "CA-5": {
+      "control_id": "CA-5",
+      "control_title": "Plan of Action and Milestones",
+      "base_control": {
+        "control_id": "CA-5",
+        "control_title": "Plan of Action and Milestones",
+        "control_text": "Requires the organization to develop a plan of action and milestones (POA&M) for the system to document the planned remediation actions of the organization to correct weaknesses or deficiencies identified during control assessments, and to reduce or eliminate known vulnerabilities. Update the POA&M at an organization-defined frequency based on findings from control assessments, audits, and continuous monitoring.",
+        "key_enhancements": [
+          {
+            "id": "CA-5(1)",
+            "title": "Automation Support for Accuracy and Currency"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CA-5(1) | Automation Support for Accuracy and Currency |",
+        "related_controls": [
+          "CA-2",
+          "CA-7",
+          "PM-4",
+          "PM-9",
+          "RA-7",
+          "SI-2",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to develop a plan of action and milestones (POA&M) for the system to document the planned remediation actions of the organization to correct weaknesses or deficiencies identified during control assessments, and to reduce or eliminate known vulnerabilities. Update the POA&M at an organization-defined frequency based on findings from control assessments, audits, and continuous monitoring.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CA-5(1) | Automation Support for Accuracy and Currency |\n\n**Related Controls:** CA-2, CA-7, PM-4, PM-9, RA-7, SI-2, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization develops and updates a plan of action and milestones to document planned remediation actions.",
+        "examine_procedures": "Plan of action and milestones; security assessment reports; risk assessment results; system security plan.",
+        "interview_procedures": "Organizational personnel responsible for POA&M management; authorizing officials; information system security officers.",
+        "test_procedures": "POA&M management processes; tracking tools; remediation verification processes.",
+        "determination_statements": [
+          "CA-05a. — A plan of action and milestones is developed for the system to document planned remediation actions to correct weaknesses or deficiencies found during control assessments",
+          "CA-05b. — The plan of action and milestones is updated at an organization-defined frequency based on findings from control assessments, audits, and continuous monitoring"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization develops and updates a plan of action and milestones to document planned remediation actions.\n\n**Examine:** Plan of action and milestones; security assessment reports; risk assessment results; system security plan.\n\n**Interview:** Organizational personnel responsible for POA&M management; authorizing officials; information system security officers.\n\n**Test:** POA&M management processes; tracking tools; remediation verification processes.\n\n**Determination Statements:**\n- CA-05a. — A plan of action and milestones is developed for the system to document planned remediation actions to correct weaknesses or deficiencies found during control assessments\n- CA-05b. — The plan of action and milestones is updated at an organization-defined frequency based on findings from control assessments, audits, and continuous monitoring"
+      }
+    },
+    "CA-6": {
+      "control_id": "CA-6",
+      "control_title": "Authorization",
+      "base_control": {
+        "control_id": "CA-6",
+        "control_title": "Authorization",
+        "control_text": "Requires the organization to assign a senior official (authorizing official) to authorize the system for processing before commencing operations, and to update the authorization at an organization-defined frequency. The authorizing official accepts the security and privacy risk to organizational operations, assets, individuals, other organizations, and the Nation associated with operation of the system.",
+        "key_enhancements": [
+          {
+            "id": "CA-6(1)",
+            "title": "Joint Authorization — Intra-Organization"
+          },
+          {
+            "id": "CA-6(2)",
+            "title": "Joint Authorization — Inter-Organization"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CA-6(1) | Joint Authorization — Intra-Organization |\n| CA-6(2) | Joint Authorization — Inter-Organization |",
+        "related_controls": [
+          "CA-2",
+          "CA-3",
+          "CA-7",
+          "PM-9",
+          "PM-10",
+          "RA-3",
+          "SA-10",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to assign a senior official (authorizing official) to authorize the system for processing before commencing operations, and to update the authorization at an organization-defined frequency. The authorizing official accepts the security and privacy risk to organizational operations, assets, individuals, other organizations, and the Nation associated with operation of the system.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CA-6(1) | Joint Authorization — Intra-Organization |\n| CA-6(2) | Joint Authorization — Inter-Organization |\n\n**Related Controls:** CA-2, CA-3, CA-7, PM-9, PM-10, RA-3, SA-10, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "CA-7": {
+      "control_id": "CA-7",
+      "control_title": "Continuous Monitoring",
+      "base_control": {
+        "control_id": "CA-7",
+        "control_title": "Continuous Monitoring",
+        "control_text": "Requires the organization to develop a continuous monitoring strategy and implement a continuous monitoring program that includes establishing organization-defined metrics to be monitored, monitoring control effectiveness at an organization-defined frequency, conducting ongoing assessments per the continuous monitoring strategy, correlating and analyzing information generated by assessments and monitoring, taking response actions to address results, and reporting security and privacy status to designated personnel.",
+        "key_enhancements": [
+          {
+            "id": "CA-7(1)",
+            "title": "Independent Assessment"
+          },
+          {
+            "id": "CA-7(3)",
+            "title": "Trend Analyses"
+          },
+          {
+            "id": "CA-7(4)",
+            "title": "Risk Monitoring"
+          },
+          {
+            "id": "CA-7(5)",
+            "title": "Consistency Analysis"
+          },
+          {
+            "id": "CA-7(6)",
+            "title": "Automation Support for Monitoring"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CA-7(1) | Independent Assessment |\n| CA-7(3) | Trend Analyses |\n| CA-7(4) | Risk Monitoring |\n| CA-7(5) | Consistency Analysis |\n| CA-7(6) | Automation Support for Monitoring |",
+        "related_controls": [
+          "AC-2",
+          "AC-6",
+          "AC-17",
+          "AT-4",
+          "AU-6",
+          "AU-13",
+          "CA-2",
+          "CA-5",
+          "CA-6",
+          "CM-3",
+          "CM-4",
+          "CM-6",
+          "CM-11",
+          "IA-5",
+          "IR-5",
+          "MA-2",
+          "MA-3",
+          "MA-4",
+          "PE-3",
+          "PE-6",
+          "PE-14",
+          "PE-16",
+          "PE-20",
+          "PL-2",
+          "PM-4",
+          "PM-6",
+          "PM-9",
+          "PM-10",
+          "PM-12",
+          "PM-14",
+          "PM-23",
+          "PM-28",
+          "PM-31",
+          "PS-7",
+          "PT-7",
+          "RA-3",
+          "RA-5",
+          "RA-7",
+          "RA-10",
+          "SA-8",
+          "SA-9",
+          "SA-11",
+          "SC-5",
+          "SC-7",
+          "SC-18",
+          "SC-38",
+          "SC-43",
+          "SI-3",
+          "SI-4",
+          "SI-12",
+          "SR-6"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to develop a continuous monitoring strategy and implement a continuous monitoring program that includes establishing organization-defined metrics to be monitored, monitoring control effectiveness at an organization-defined frequency, conducting ongoing assessments per the continuous monitoring strategy, correlating and analyzing information generated by assessments and monitoring, taking response actions to address results, and reporting security and privacy status to designated personnel.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CA-7(1) | Independent Assessment |\n| CA-7(3) | Trend Analyses |\n| CA-7(4) | Risk Monitoring |\n| CA-7(5) | Consistency Analysis |\n| CA-7(6) | Automation Support for Monitoring |\n\n**Related Controls:** AC-2, AC-6, AC-17, AT-4, AU-6, AU-13, CA-2, CA-5, CA-6, CM-3, CM-4, CM-6, CM-11, IA-5, IR-5, MA-2, MA-3, MA-4, PE-3, PE-6, PE-14, PE-16, PE-20, PL-2, PM-4, PM-6, PM-9, PM-10, PM-12, PM-14, PM-23, PM-28, PM-31, PS-7, PT-7, RA-3, RA-5, RA-7, RA-10, SA-8, SA-9, SA-11, SC-5, SC-7, SC-18, SC-38, SC-43, SI-3, SI-4, SI-12, SR-6\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization develops and implements a continuous monitoring strategy and program.",
+        "examine_procedures": "Continuous monitoring strategy; continuous monitoring program documentation; system security plan; security assessment reports; configuration management records; status reports.",
+        "interview_procedures": "Organizational personnel responsible for continuous monitoring; information system security officers; system administrators.",
+        "test_procedures": "Continuous monitoring tools and mechanisms; automated monitoring processes; reporting mechanisms.",
+        "determination_statements": [
+          "CA-07a. — A system-level continuous monitoring strategy is developed and a program is implemented that includes establishing organization-defined metrics to be monitored",
+          "CA-07b. — Organization-defined frequencies for monitoring and assessments supporting monitoring are established",
+          "CA-07c. — Ongoing control assessments are conducted in accordance with the continuous monitoring strategy",
+          "CA-07d. — The security and privacy status of the system is reported to organization-defined personnel at an organization-defined frequency",
+          "CA-07e. — Organization-defined actions are taken to address results of analysis of monitoring data"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization develops and implements a continuous monitoring strategy and program.\n\n**Examine:** Continuous monitoring strategy; continuous monitoring program documentation; system security plan; security assessment reports; configuration management records; status reports.\n\n**Interview:** Organizational personnel responsible for continuous monitoring; information system security officers; system administrators.\n\n**Test:** Continuous monitoring tools and mechanisms; automated monitoring processes; reporting mechanisms.\n\n**Determination Statements:**\n- CA-07a. — A system-level continuous monitoring strategy is developed and a program is implemented that includes establishing organization-defined metrics to be monitored\n- CA-07b. — Organization-defined frequencies for monitoring and assessments supporting monitoring are established\n- CA-07c. — Ongoing control assessments are conducted in accordance with the continuous monitoring strategy\n- CA-07d. — The security and privacy status of the system is reported to organization-defined personnel at an organization-defined frequency\n- CA-07e. — Organization-defined actions are taken to address results of analysis of monitoring data"
+      }
+    },
+    "CA-8": {
+      "control_id": "CA-8",
+      "control_title": "Penetration Testing",
+      "base_control": {
+        "control_id": "CA-8",
+        "control_title": "Penetration Testing",
+        "control_text": "Requires the organization to conduct penetration testing at an organization-defined frequency on organization-defined systems or system components. Penetration testing attempts to circumvent or defeat the security of a system using the same tools and techniques employed by adversaries.",
+        "key_enhancements": [
+          {
+            "id": "CA-8(1)",
+            "title": "Independent Penetration Testing Agent or Team"
+          },
+          {
+            "id": "CA-8(2)",
+            "title": "Red Team Exercises"
+          },
+          {
+            "id": "CA-8(3)",
+            "title": "Facility Penetration Testing"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CA-8(1) | Independent Penetration Testing Agent or Team |\n| CA-8(2) | Red Team Exercises |\n| CA-8(3) | Facility Penetration Testing |",
+        "related_controls": [
+          "RA-5",
+          "RA-10",
+          "SA-11",
+          "SR-5",
+          "SR-6"
+        ],
+        "baselines": [
+          "High"
+        ],
+        "baselines_text": "High",
+        "source_markdown": "Requires the organization to conduct penetration testing at an organization-defined frequency on organization-defined systems or system components. Penetration testing attempts to circumvent or defeat the security of a system using the same tools and techniques employed by adversaries.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CA-8(1) | Independent Penetration Testing Agent or Team |\n| CA-8(2) | Red Team Exercises |\n| CA-8(3) | Facility Penetration Testing |\n\n**Related Controls:** RA-5, RA-10, SA-11, SR-5, SR-6\n\n**Baselines:** High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "CA-9": {
+      "control_id": "CA-9",
+      "control_title": "Internal System Connections",
+      "base_control": {
+        "control_id": "CA-9",
+        "control_title": "Internal System Connections",
+        "control_text": "Requires the organization to authorize internal connections of organization-defined system components or classes of components to the system, document the interface characteristics, security and privacy requirements, and the nature of the information communicated for each internal connection. Review and update the connections and associated documentation at an organization-defined frequency.",
+        "key_enhancements": [
+          {
+            "id": "CA-9(1)",
+            "title": "Compliance Checks"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| CA-9(1) | Compliance Checks |",
+        "related_controls": [
+          "AC-3",
+          "AC-4",
+          "AC-18",
+          "AC-19",
+          "CM-2",
+          "IA-3",
+          "SC-7",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to authorize internal connections of organization-defined system components or classes of components to the system, document the interface characteristics, security and privacy requirements, and the nature of the information communicated for each internal connection. Review and update the connections and associated documentation at an organization-defined frequency.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| CA-9(1) | Compliance Checks |\n\n**Related Controls:** AC-3, AC-4, AC-18, AC-19, CM-2, IA-3, SC-7, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization authorizes and monitors internal connections of system components.",
+        "examine_procedures": "System security plan; system design documentation; internal connection authorization records; system component inventory; network diagrams.",
+        "interview_procedures": "System administrators; organizational personnel responsible for managing internal connections; information system security officers.",
+        "test_procedures": "Internal system connection authorization mechanisms; internal connection monitoring mechanisms.",
+        "determination_statements": [
+          "CA-09a. — Internal connections of organization-defined system components or classes of components are authorized",
+          "CA-09b. — The security and privacy characteristics of internal connections are documented for each internal connection",
+          "NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final",
+          "[SP 800-53 CA Family](../800-53/ca.md)",
+          "[SP 800-171 CA Requirements](../800-171/ca.md)"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization authorizes and monitors internal connections of system components.\n\n**Examine:** System security plan; system design documentation; internal connection authorization records; system component inventory; network diagrams.\n\n**Interview:** System administrators; organizational personnel responsible for managing internal connections; information system security officers.\n\n**Test:** Internal system connection authorization mechanisms; internal connection monitoring mechanisms.\n\n**Determination Statements:**\n- CA-09a. — Internal connections of organization-defined system components or classes of components are authorized\n- CA-09b. — The security and privacy characteristics of internal connections are documented for each internal connection\n\n## References\n\n- NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final\n- [SP 800-53 CA Family](../800-53/ca.md)\n- [SP 800-171 CA Requirements](../800-171/ca.md)"
+      }
+    }
+  }
+}

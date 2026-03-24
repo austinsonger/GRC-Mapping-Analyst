@@ -1,0 +1,1161 @@
+{
+  "source_documents": {
+    "nist_800_53_sa": "/Users/austinsonger/code/strm-Mapping/working-directory/frameworks/info/800-53/800-53/sa.md",
+    "nist_800_53a_sa": "/Users/austinsonger/code/strm-Mapping/working-directory/frameworks/info/800-53/800-53a/sa.md"
+  },
+  "generated_at": "2026-03-24T19:46:14.571Z",
+  "control_family": "SA",
+  "control_count": 23,
+  "controls": {
+    "SA-1": {
+      "control_id": "SA-1",
+      "control_title": "Policy and Procedures",
+      "base_control": {
+        "control_id": "SA-1",
+        "control_title": "Policy and Procedures",
+        "control_text": "Develop, document, and disseminate a system and services acquisition policy and procedures that address purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance. Review and update the policy and procedures at organization-defined frequencies.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for SA-1.",
+        "related_controls": [
+          "PM-9",
+          "PS-8",
+          "SA-8",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Develop, document, and disseminate a system and services acquisition policy and procedures that address purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance. Review and update the policy and procedures at organization-defined frequencies.\n\n**Key Enhancements:** None defined for SA-1.\n\n**Related Controls:** PM-9, PS-8, SA-8, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization develops, documents, disseminates, reviews, and updates system and services acquisition policy and procedures.",
+        "examine_procedures": "System and services acquisition policy; system and services acquisition procedures; system security plan.",
+        "interview_procedures": "Organizational personnel responsible for system and services acquisition policy.",
+        "test_procedures": "Organizational processes for managing system and services acquisition policy.",
+        "determination_statements": [
+          "SA-01a. — A system and services acquisition policy is developed, documented, and disseminated",
+          "SA-01b. — System and services acquisition procedures are developed, documented, and disseminated",
+          "SA-01c. — The policy and procedures are reviewed and updated at an organization-defined frequency"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization develops, documents, disseminates, reviews, and updates system and services acquisition policy and procedures.\n\n**Examine:** System and services acquisition policy; system and services acquisition procedures; system security plan.\n\n**Interview:** Organizational personnel responsible for system and services acquisition policy.\n\n**Test:** Organizational processes for managing system and services acquisition policy.\n\n**Determination Statements:**\n- SA-01a. — A system and services acquisition policy is developed, documented, and disseminated\n- SA-01b. — System and services acquisition procedures are developed, documented, and disseminated\n- SA-01c. — The policy and procedures are reviewed and updated at an organization-defined frequency"
+      }
+    },
+    "SA-2": {
+      "control_id": "SA-2",
+      "control_title": "Allocation of Resources",
+      "base_control": {
+        "control_id": "SA-2",
+        "control_title": "Allocation of Resources",
+        "control_text": "Determine the high-level information security and privacy requirements for the system or system service in mission and business process planning. Determine, document, and allocate the resources required to protect the system or system service as part of the organizational capital planning and investment control process. Establish a discrete line item for information security and privacy in organizational programming and budgeting documentation.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for SA-2.",
+        "related_controls": [
+          "PL-7",
+          "PM-3",
+          "PM-11",
+          "SA-9",
+          "SR-3",
+          "SR-5"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Determine the high-level information security and privacy requirements for the system or system service in mission and business process planning. Determine, document, and allocate the resources required to protect the system or system service as part of the organizational capital planning and investment control process. Establish a discrete line item for information security and privacy in organizational programming and budgeting documentation.\n\n**Key Enhancements:** None defined for SA-2.\n\n**Related Controls:** PL-7, PM-3, PM-11, SA-9, SR-3, SR-5\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization determines, documents, and allocates resources required to protect the system as part of capital planning.",
+        "examine_procedures": "System and services acquisition policy; capital planning documentation; organizational programming and budgeting documentation; system security plan.",
+        "interview_procedures": "Organizational personnel responsible for resource allocation for security.",
+        "test_procedures": "Resource allocation processes for information security.",
+        "determination_statements": [
+          "SA-02a. — The high-level information security and privacy requirements for the system or system service are determined in mission/business process planning",
+          "SA-02b. — The resources required to protect the system or system service are determined and documented as part of organizational capital planning and investment control process",
+          "SA-02c. — A discrete line item for information security and privacy is established in organizational programming and budgeting documentation"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization determines, documents, and allocates resources required to protect the system as part of capital planning.\n\n**Examine:** System and services acquisition policy; capital planning documentation; organizational programming and budgeting documentation; system security plan.\n\n**Interview:** Organizational personnel responsible for resource allocation for security.\n\n**Test:** Resource allocation processes for information security.\n\n**Determination Statements:**\n- SA-02a. — The high-level information security and privacy requirements for the system or system service are determined in mission/business process planning\n- SA-02b. — The resources required to protect the system or system service are determined and documented as part of organizational capital planning and investment control process\n- SA-02c. — A discrete line item for information security and privacy is established in organizational programming and budgeting documentation"
+      }
+    },
+    "SA-3": {
+      "control_id": "SA-3",
+      "control_title": "System Development Life Cycle",
+      "base_control": {
+        "control_id": "SA-3",
+        "control_title": "System Development Life Cycle",
+        "control_text": "Acquire, develop, and manage the system using an organization-defined system development life cycle that incorporates information security and privacy considerations. Define and document information security and privacy roles and responsibilities throughout the system development life cycle. Identify individuals having information security and privacy roles and responsibilities. Integrate the organizational information security and privacy risk management process into system development life cycle activities.",
+        "key_enhancements": [
+          {
+            "id": "SA-3(1)",
+            "title": "Manage Preproduction Environment"
+          },
+          {
+            "id": "SA-3(2)",
+            "title": "Use of Live or Operational Data"
+          },
+          {
+            "id": "SA-3(3)",
+            "title": "Technology Refresh"
+          }
+        ],
+        "key_enhancements_text": "- **SA-3(1):** Manage Preproduction Environment — Protect the preproduction environment commensurate with risk throughout the system development life cycle for the system, system component, or system service.\n- **SA-3(2):** Use of Live or Operational Data — Protect the preproduction environment by not using live data or operational data in testing, training, and research.\n- **SA-3(3):** Technology Refresh — Plan for and implement a technology refresh schedule for the system throughout the system development life cycle.",
+        "related_controls": [
+          "AT-3",
+          "PL-8",
+          "PM-7",
+          "SA-4",
+          "SA-5",
+          "SA-8",
+          "SA-11",
+          "SA-15",
+          "SA-17",
+          "SA-22",
+          "SR-3",
+          "SR-4",
+          "SR-5",
+          "SR-9"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Acquire, develop, and manage the system using an organization-defined system development life cycle that incorporates information security and privacy considerations. Define and document information security and privacy roles and responsibilities throughout the system development life cycle. Identify individuals having information security and privacy roles and responsibilities. Integrate the organizational information security and privacy risk management process into system development life cycle activities.\n\n**Key Enhancements:**\n- **SA-3(1):** Manage Preproduction Environment — Protect the preproduction environment commensurate with risk throughout the system development life cycle for the system, system component, or system service.\n- **SA-3(2):** Use of Live or Operational Data — Protect the preproduction environment by not using live data or operational data in testing, training, and research.\n- **SA-3(3):** Technology Refresh — Plan for and implement a technology refresh schedule for the system throughout the system development life cycle.\n\n**Related Controls:** AT-3, PL-8, PM-7, SA-4, SA-5, SA-8, SA-11, SA-15, SA-17, SA-22, SR-3, SR-4, SR-5, SR-9\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SA-4": {
+      "control_id": "SA-4",
+      "control_title": "Acquisition Process",
+      "base_control": {
+        "control_id": "SA-4",
+        "control_title": "Acquisition Process",
+        "control_text": "Include the following requirements, descriptions, and criteria, explicitly or by reference, using organization-defined acquisition documents for the system, system component, or system service: security and privacy functional requirements; strength of mechanism requirements; security and privacy assurance requirements; controls needed to satisfy the security and privacy requirements; security and privacy documentation requirements; requirements for protecting security and privacy documentation; description of the system development environment and environment in which the system is intended to operate; and allocation of responsibility or identification of parties responsible for information security, privacy, and supply chain risk management.",
+        "key_enhancements": [
+          {
+            "id": "SA-4(1)",
+            "title": "Functional Properties of Controls"
+          },
+          {
+            "id": "SA-4(2)",
+            "title": "Design and Implementation Information for Controls"
+          },
+          {
+            "id": "SA-4(3)",
+            "title": "Development Methods, Techniques, and Practices"
+          },
+          {
+            "id": "SA-4(4)",
+            "title": "Assignment of Components to Systems"
+          },
+          {
+            "id": "SA-4(5)",
+            "title": "System, Component, and Service Configurations"
+          },
+          {
+            "id": "SA-4(6)",
+            "title": "Use of Information Assurance Products"
+          },
+          {
+            "id": "SA-4(7)",
+            "title": "NIAP-Approved Protection Profiles"
+          },
+          {
+            "id": "SA-4(8)",
+            "title": "Continuous Monitoring Plan for Controls"
+          },
+          {
+            "id": "SA-4(9)",
+            "title": "Functions, Ports, Protocols, and Services in Use"
+          },
+          {
+            "id": "SA-4(10)",
+            "title": "Use of Approved PIV Products"
+          },
+          {
+            "id": "SA-4(11)",
+            "title": "System of Records"
+          },
+          {
+            "id": "SA-4(12)",
+            "title": "Data Ownership"
+          }
+        ],
+        "key_enhancements_text": "- **SA-4(1):** Functional Properties of Controls — Require the developer of the system, system component, or system service to provide a description of the functional properties of the controls to be employed.\n- **SA-4(2):** Design and Implementation Information for Controls — Require the developer of the system, system component, or system service to provide design and implementation information for the controls that includes security-relevant external system interfaces, high-level design, low-level design, source code or hardware schematics, and organization-defined design and implementation information at an organization-defined level of detail.\n- **SA-4(3):** Development Methods, Techniques, and Practices — Require the developer of the system, system component, or system service to demonstrate the use of a system development life cycle process that includes organization-defined state-of-the-practice systems and software engineering methods, development tools, quality assurance techniques, and process standards.\n- **SA-4(4):** Assignment of Components to Systems — [Withdrawn: Incorporated into CM-8(9).]\n- **SA-4(5):** System, Component, and Service Configurations — Require the developer of the system, system component, or system service to identify the functions, ports, protocols, and services intended for organizational use, and deliver and implement the system, component, or service with organization-defined configurations.\n- **SA-4(6):** Use of Information Assurance Products — Employ only government off-the-shelf or commercial off-the-shelf information assurance and information assurance-enabled information technology products that compose an NSA-approved solution.\n- **SA-4(7):** NIAP-Approved Protection Profiles — Limit the use of commercially provided information technology products to those products that have been successfully evaluated against a National Information Assurance Partnership (NIAP)-approved Protection Profile.\n- **SA-4(8):** Continuous Monitoring Plan for Controls — Require the developer of the system, system component, or system service to produce a plan for continuous monitoring of control effectiveness.\n- **SA-4(9):** Functions, Ports, Protocols, and Services in Use — Require the developer of the system, system component, or system service to identify the functions, ports, protocols, and services intended for organizational use.\n- **SA-4(10):** Use of Approved PIV Products — Employ only information technology products on the FIPS 201-approved products list for PIV capability.\n- **SA-4(11):** System of Records — Include Federal Acquisition Regulation clause C.204-21 and other applicable clauses in contracts for PII processing.\n- **SA-4(12):** Data Ownership — Include organization-defined data ownership requirements in the acquisition contract; require all data to be returned to the organization at the end of the contract and require the contractor to delete all organization data from contractor systems upon contract completion.",
+        "related_controls": [
+          "CM-6",
+          "CM-8",
+          "PS-7",
+          "SA-3",
+          "SA-5",
+          "SA-8",
+          "SA-11",
+          "SA-15",
+          "SA-16",
+          "SA-17",
+          "SA-21",
+          "SR-3",
+          "SR-5"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Include the following requirements, descriptions, and criteria, explicitly or by reference, using organization-defined acquisition documents for the system, system component, or system service: security and privacy functional requirements; strength of mechanism requirements; security and privacy assurance requirements; controls needed to satisfy the security and privacy requirements; security and privacy documentation requirements; requirements for protecting security and privacy documentation; description of the system development environment and environment in which the system is intended to operate; and allocation of responsibility or identification of parties responsible for information security, privacy, and supply chain risk management.\n\n**Key Enhancements:**\n- **SA-4(1):** Functional Properties of Controls — Require the developer of the system, system component, or system service to provide a description of the functional properties of the controls to be employed.\n- **SA-4(2):** Design and Implementation Information for Controls — Require the developer of the system, system component, or system service to provide design and implementation information for the controls that includes security-relevant external system interfaces, high-level design, low-level design, source code or hardware schematics, and organization-defined design and implementation information at an organization-defined level of detail.\n- **SA-4(3):** Development Methods, Techniques, and Practices — Require the developer of the system, system component, or system service to demonstrate the use of a system development life cycle process that includes organization-defined state-of-the-practice systems and software engineering methods, development tools, quality assurance techniques, and process standards.\n- **SA-4(4):** Assignment of Components to Systems — [Withdrawn: Incorporated into CM-8(9).]\n- **SA-4(5):** System, Component, and Service Configurations — Require the developer of the system, system component, or system service to identify the functions, ports, protocols, and services intended for organizational use, and deliver and implement the system, component, or service with organization-defined configurations.\n- **SA-4(6):** Use of Information Assurance Products — Employ only government off-the-shelf or commercial off-the-shelf information assurance and information assurance-enabled information technology products that compose an NSA-approved solution.\n- **SA-4(7):** NIAP-Approved Protection Profiles — Limit the use of commercially provided information technology products to those products that have been successfully evaluated against a National Information Assurance Partnership (NIAP)-approved Protection Profile.\n- **SA-4(8):** Continuous Monitoring Plan for Controls — Require the developer of the system, system component, or system service to produce a plan for continuous monitoring of control effectiveness.\n- **SA-4(9):** Functions, Ports, Protocols, and Services in Use — Require the developer of the system, system component, or system service to identify the functions, ports, protocols, and services intended for organizational use.\n- **SA-4(10):** Use of Approved PIV Products — Employ only information technology products on the FIPS 201-approved products list for PIV capability.\n- **SA-4(11):** System of Records — Include Federal Acquisition Regulation clause C.204-21 and other applicable clauses in contracts for PII processing.\n- **SA-4(12):** Data Ownership — Include organization-defined data ownership requirements in the acquisition contract; require all data to be returned to the organization at the end of the contract and require the contractor to delete all organization data from contractor systems upon contract completion.\n\n**Related Controls:** CM-6, CM-8, PS-7, SA-3, SA-5, SA-8, SA-11, SA-15, SA-16, SA-17, SA-21, SR-3, SR-5\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization includes security and privacy requirements in the acquisition process for systems and services.",
+        "examine_procedures": "System and services acquisition policy; acquisition contracts; solicitation documents; system security plan; security requirements documentation.",
+        "interview_procedures": "Organizational personnel responsible for acquisitions; contracting officers; information system security officers.",
+        "test_procedures": "Acquisition processes; contract security requirement verification.",
+        "determination_statements": [
+          "SA-04a. — Security and privacy functional requirements are included in the acquisition contract for the system, system component, or system service",
+          "SA-04b. — Security and privacy strength requirements are included",
+          "SA-04c. — Security and privacy assurance requirements are included",
+          "SA-04d. — Security and privacy-related documentation requirements are included",
+          "SA-04e. — Requirements for protecting security and privacy-related documentation are included",
+          "SA-04f. — Description of the system development environment and environment in which the system is intended to operate is included",
+          "SA-04g. — Acceptance criteria are included"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization includes security and privacy requirements in the acquisition process for systems and services.\n\n**Examine:** System and services acquisition policy; acquisition contracts; solicitation documents; system security plan; security requirements documentation.\n\n**Interview:** Organizational personnel responsible for acquisitions; contracting officers; information system security officers.\n\n**Test:** Acquisition processes; contract security requirement verification.\n\n**Determination Statements:**\n- SA-04a. — Security and privacy functional requirements are included in the acquisition contract for the system, system component, or system service\n- SA-04b. — Security and privacy strength requirements are included\n- SA-04c. — Security and privacy assurance requirements are included\n- SA-04d. — Security and privacy-related documentation requirements are included\n- SA-04e. — Requirements for protecting security and privacy-related documentation are included\n- SA-04f. — Description of the system development environment and environment in which the system is intended to operate is included\n- SA-04g. — Acceptance criteria are included"
+      }
+    },
+    "SA-5": {
+      "control_id": "SA-5",
+      "control_title": "System Documentation",
+      "base_control": {
+        "control_id": "SA-5",
+        "control_title": "System Documentation",
+        "control_text": "Obtain or develop administrator documentation for the system, system component, or system service that describes secure configuration, installation, and operation of the system; effective use and maintenance of security and privacy functions and mechanisms; known vulnerabilities regarding configuration and use of administrative or privileged functions; user-accessible security and privacy functions/mechanisms and how to use them effectively; methods for user interaction; user responsibilities in maintaining system security and privacy; and procedures for restarting the system.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for SA-5.",
+        "related_controls": [
+          "CM-4",
+          "CM-6",
+          "CM-7",
+          "CM-8",
+          "PL-2",
+          "PL-4",
+          "PL-8",
+          "PS-2",
+          "SA-3",
+          "SA-4",
+          "SA-8",
+          "SA-9",
+          "SA-10",
+          "SA-11",
+          "SA-15",
+          "SA-16",
+          "SA-17",
+          "SI-12",
+          "SR-3"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Obtain or develop administrator documentation for the system, system component, or system service that describes secure configuration, installation, and operation of the system; effective use and maintenance of security and privacy functions and mechanisms; known vulnerabilities regarding configuration and use of administrative or privileged functions; user-accessible security and privacy functions/mechanisms and how to use them effectively; methods for user interaction; user responsibilities in maintaining system security and privacy; and procedures for restarting the system.\n\n**Key Enhancements:** None defined for SA-5.\n\n**Related Controls:** CM-4, CM-6, CM-7, CM-8, PL-2, PL-4, PL-8, PS-2, SA-3, SA-4, SA-8, SA-9, SA-10, SA-11, SA-15, SA-16, SA-17, SI-12, SR-3\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SA-6": {
+      "control_id": "SA-6",
+      "control_title": "Software Usage Restrictions",
+      "base_control": {
+        "control_id": "SA-6",
+        "control_title": "Software Usage Restrictions",
+        "control_text": "[Withdrawn: Incorporated into CM-10 and SI-7.]\n\n**Baselines:** None (not in any baseline)",
+        "key_enhancements": [],
+        "key_enhancements_text": null,
+        "related_controls": [],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "[Withdrawn: Incorporated into CM-10 and SI-7.]\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SA-7": {
+      "control_id": "SA-7",
+      "control_title": "User-Installed Software",
+      "base_control": {
+        "control_id": "SA-7",
+        "control_title": "User-Installed Software",
+        "control_text": "[Withdrawn: Incorporated into CM-11 and SI-7.]\n\n**Baselines:** None (not in any baseline)",
+        "key_enhancements": [],
+        "key_enhancements_text": null,
+        "related_controls": [],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "[Withdrawn: Incorporated into CM-11 and SI-7.]\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SA-8": {
+      "control_id": "SA-8",
+      "control_title": "Security and Privacy Engineering Principles",
+      "base_control": {
+        "control_id": "SA-8",
+        "control_title": "Security and Privacy Engineering Principles",
+        "control_text": "Apply organization-defined systems security and privacy engineering principles in the specification, design, development, implementation, and modification of the system and system components.",
+        "key_enhancements": [
+          {
+            "id": "SA-8(1)",
+            "title": "Clear Abstractions"
+          },
+          {
+            "id": "SA-8(2)",
+            "title": "Least Common Mechanism"
+          },
+          {
+            "id": "SA-8(3)",
+            "title": "Modularity and Layering"
+          },
+          {
+            "id": "SA-8(4)",
+            "title": "Partially Ordered Dependencies"
+          },
+          {
+            "id": "SA-8(5)",
+            "title": "Efficiently Mediated Access"
+          },
+          {
+            "id": "SA-8(6)",
+            "title": "Minimized Sharing"
+          },
+          {
+            "id": "SA-8(7)",
+            "title": "Reduced Complexity"
+          },
+          {
+            "id": "SA-8(8)",
+            "title": "Secure Evolvability"
+          },
+          {
+            "id": "SA-8(9)",
+            "title": "Trusted Components"
+          },
+          {
+            "id": "SA-8(10)",
+            "title": "Hierarchical Trust"
+          },
+          {
+            "id": "SA-8(11)",
+            "title": "Inverse Modification Threshold"
+          },
+          {
+            "id": "SA-8(12)",
+            "title": "Hierarchical Protection"
+          },
+          {
+            "id": "SA-8(13)",
+            "title": "Minimized Security Elements"
+          },
+          {
+            "id": "SA-8(14)",
+            "title": "Least Privilege"
+          },
+          {
+            "id": "SA-8(15)",
+            "title": "Predicate Permission"
+          },
+          {
+            "id": "SA-8(16)",
+            "title": "Self-Reliant Trustworthiness"
+          },
+          {
+            "id": "SA-8(17)",
+            "title": "Secure Distributed Composition"
+          },
+          {
+            "id": "SA-8(18)",
+            "title": "Trusted Communications"
+          },
+          {
+            "id": "SA-8(19)",
+            "title": "Continuous Protection"
+          },
+          {
+            "id": "SA-8(20)",
+            "title": "Secure Metadata Management"
+          },
+          {
+            "id": "SA-8(21)",
+            "title": "Self-Analysis"
+          },
+          {
+            "id": "SA-8(22)",
+            "title": "Accountability and Traceability"
+          },
+          {
+            "id": "SA-8(23)",
+            "title": "Secure Defaults"
+          },
+          {
+            "id": "SA-8(24)",
+            "title": "Secure Failure and Recovery"
+          },
+          {
+            "id": "SA-8(25)",
+            "title": "Economic Security"
+          },
+          {
+            "id": "SA-8(26)",
+            "title": "Performance Security"
+          },
+          {
+            "id": "SA-8(27)",
+            "title": "Human Factored Security"
+          },
+          {
+            "id": "SA-8(28)",
+            "title": "Acceptable Security"
+          },
+          {
+            "id": "SA-8(29)",
+            "title": "Repeatable and Documented Procedures"
+          },
+          {
+            "id": "SA-8(30)",
+            "title": "Procedural Rigor"
+          },
+          {
+            "id": "SA-8(31)",
+            "title": "Secure System Modification"
+          },
+          {
+            "id": "SA-8(32)",
+            "title": "Sufficient Documentation"
+          },
+          {
+            "id": "SA-8(33)",
+            "title": "Minimization"
+          }
+        ],
+        "key_enhancements_text": "- **SA-8(1):** Clear Abstractions — Implement the security design principle of clear abstractions.\n- **SA-8(2):** Least Common Mechanism — Implement the security design principle of least common mechanism.\n- **SA-8(3):** Modularity and Layering — Implement the security design principle of modularity and layering.\n- **SA-8(4):** Partially Ordered Dependencies — Implement the security design principle of partially ordered dependencies.\n- **SA-8(5):** Efficiently Mediated Access — Implement the security design principle of efficiently mediated access.\n- **SA-8(6):** Minimized Sharing — Implement the security design principle of minimized sharing.\n- **SA-8(7):** Reduced Complexity — Implement the security design principle of reduced complexity.\n- **SA-8(8):** Secure Evolvability — Implement the security design principle of secure evolvability.\n- **SA-8(9):** Trusted Components — Implement the security design principle of trusted components.\n- **SA-8(10):** Hierarchical Trust — Implement the security design principle of hierarchical trust.\n- **SA-8(11):** Inverse Modification Threshold — Implement the security design principle of inverse modification threshold.\n- **SA-8(12):** Hierarchical Protection — Implement the security design principle of hierarchical protection.\n- **SA-8(13):** Minimized Security Elements — Implement the security design principle of minimized security elements.\n- **SA-8(14):** Least Privilege — Implement the security design principle of least privilege.\n- **SA-8(15):** Predicate Permission — Implement the security design principle of predicate permission.\n- **SA-8(16):** Self-Reliant Trustworthiness — Implement the security design principle of self-reliant trustworthiness.\n- **SA-8(17):** Secure Distributed Composition — Implement the security design principle of secure distributed composition.\n- **SA-8(18):** Trusted Communications — Implement the security design principle of trusted communications.\n- **SA-8(19):** Continuous Protection — Implement the security design principle of continuous protection.\n- **SA-8(20):** Secure Metadata Management — Implement the security design principle of secure metadata management.\n- **SA-8(21):** Self-Analysis — Implement the security design principle of self-analysis.\n- **SA-8(22):** Accountability and Traceability — Implement the security design principle of accountability and traceability.\n- **SA-8(23):** Secure Defaults — Implement the security design principle of secure defaults.\n- **SA-8(24):** Secure Failure and Recovery — Implement the security design principle of secure failure and recovery.\n- **SA-8(25):** Economic Security — Implement the security design principle of economic security.\n- **SA-8(26):** Performance Security — Implement the security design principle of performance security.\n- **SA-8(27):** Human Factored Security — Implement the security design principle of human factored security.\n- **SA-8(28):** Acceptable Security — Implement the security design principle of acceptable security.\n- **SA-8(29):** Repeatable and Documented Procedures — Implement the security design principle of repeatable and documented procedures.\n- **SA-8(30):** Procedural Rigor — Implement the security design principle of procedural rigor.\n- **SA-8(31):** Secure System Modification — Implement the security design principle of secure system modification.\n- **SA-8(32):** Sufficient Documentation — Implement the security design principle of sufficient documentation.\n- **SA-8(33):** Minimization — Implement the privacy design principle of minimization.",
+        "related_controls": [
+          "PL-8",
+          "PM-7",
+          "RA-2",
+          "RA-3",
+          "RA-9",
+          "SA-3",
+          "SA-4",
+          "SA-15",
+          "SA-17",
+          "SA-20",
+          "SC-2",
+          "SC-3",
+          "SC-32",
+          "SC-39",
+          "SR-2",
+          "SR-3",
+          "SR-4",
+          "SR-5"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Apply organization-defined systems security and privacy engineering principles in the specification, design, development, implementation, and modification of the system and system components.\n\n**Key Enhancements:**\n- **SA-8(1):** Clear Abstractions — Implement the security design principle of clear abstractions.\n- **SA-8(2):** Least Common Mechanism — Implement the security design principle of least common mechanism.\n- **SA-8(3):** Modularity and Layering — Implement the security design principle of modularity and layering.\n- **SA-8(4):** Partially Ordered Dependencies — Implement the security design principle of partially ordered dependencies.\n- **SA-8(5):** Efficiently Mediated Access — Implement the security design principle of efficiently mediated access.\n- **SA-8(6):** Minimized Sharing — Implement the security design principle of minimized sharing.\n- **SA-8(7):** Reduced Complexity — Implement the security design principle of reduced complexity.\n- **SA-8(8):** Secure Evolvability — Implement the security design principle of secure evolvability.\n- **SA-8(9):** Trusted Components — Implement the security design principle of trusted components.\n- **SA-8(10):** Hierarchical Trust — Implement the security design principle of hierarchical trust.\n- **SA-8(11):** Inverse Modification Threshold — Implement the security design principle of inverse modification threshold.\n- **SA-8(12):** Hierarchical Protection — Implement the security design principle of hierarchical protection.\n- **SA-8(13):** Minimized Security Elements — Implement the security design principle of minimized security elements.\n- **SA-8(14):** Least Privilege — Implement the security design principle of least privilege.\n- **SA-8(15):** Predicate Permission — Implement the security design principle of predicate permission.\n- **SA-8(16):** Self-Reliant Trustworthiness — Implement the security design principle of self-reliant trustworthiness.\n- **SA-8(17):** Secure Distributed Composition — Implement the security design principle of secure distributed composition.\n- **SA-8(18):** Trusted Communications — Implement the security design principle of trusted communications.\n- **SA-8(19):** Continuous Protection — Implement the security design principle of continuous protection.\n- **SA-8(20):** Secure Metadata Management — Implement the security design principle of secure metadata management.\n- **SA-8(21):** Self-Analysis — Implement the security design principle of self-analysis.\n- **SA-8(22):** Accountability and Traceability — Implement the security design principle of accountability and traceability.\n- **SA-8(23):** Secure Defaults — Implement the security design principle of secure defaults.\n- **SA-8(24):** Secure Failure and Recovery — Implement the security design principle of secure failure and recovery.\n- **SA-8(25):** Economic Security — Implement the security design principle of economic security.\n- **SA-8(26):** Performance Security — Implement the security design principle of performance security.\n- **SA-8(27):** Human Factored Security — Implement the security design principle of human factored security.\n- **SA-8(28):** Acceptable Security — Implement the security design principle of acceptable security.\n- **SA-8(29):** Repeatable and Documented Procedures — Implement the security design principle of repeatable and documented procedures.\n- **SA-8(30):** Procedural Rigor — Implement the security design principle of procedural rigor.\n- **SA-8(31):** Secure System Modification — Implement the security design principle of secure system modification.\n- **SA-8(32):** Sufficient Documentation — Implement the security design principle of sufficient documentation.\n- **SA-8(33):** Minimization — Implement the privacy design principle of minimization.\n\n**Related Controls:** PL-8, PM-7, RA-2, RA-3, RA-9, SA-3, SA-4, SA-15, SA-17, SA-20, SC-2, SC-3, SC-32, SC-39, SR-2, SR-3, SR-4, SR-5\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization applies security and privacy engineering principles in the specification, design, development, implementation, and modification of the system.",
+        "examine_procedures": "System and services acquisition policy; security engineering principles documentation; system design documentation; system security plan.",
+        "interview_procedures": "System developers; system architects; information system security officers.",
+        "test_procedures": "Application of security engineering principles in system design and implementation.",
+        "determination_statements": [
+          "SA-08 — Security and privacy engineering principles are applied in the specification, design, development, implementation, and modification of the system and system components"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization applies security and privacy engineering principles in the specification, design, development, implementation, and modification of the system.\n\n**Examine:** System and services acquisition policy; security engineering principles documentation; system design documentation; system security plan.\n\n**Interview:** System developers; system architects; information system security officers.\n\n**Test:** Application of security engineering principles in system design and implementation.\n\n**Determination Statements:**\n- SA-08 — Security and privacy engineering principles are applied in the specification, design, development, implementation, and modification of the system and system components"
+      }
+    },
+    "SA-9": {
+      "control_id": "SA-9",
+      "control_title": "External System Services",
+      "base_control": {
+        "control_id": "SA-9",
+        "control_title": "External System Services",
+        "control_text": "Require that providers of external system services comply with organizational security and privacy requirements and employ organization-defined controls in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines. Define and document organizational oversight and user roles and responsibilities with regard to external system services. Employ organization-defined processes, methods, and techniques to monitor control compliance by external service providers on an ongoing basis.",
+        "key_enhancements": [
+          {
+            "id": "SA-9(1)",
+            "title": "Risk Assessments and Organizational Approvals"
+          },
+          {
+            "id": "SA-9(2)",
+            "title": "Identification of Functions, Ports, Protocols, and Services"
+          },
+          {
+            "id": "SA-9(3)",
+            "title": "Establish and Maintain Trust Relationship with Providers"
+          },
+          {
+            "id": "SA-9(4)",
+            "title": "Consistent Interests of Consumers and Providers"
+          },
+          {
+            "id": "SA-9(5)",
+            "title": "Processing, Storage, and Service Location"
+          },
+          {
+            "id": "SA-9(6)",
+            "title": "Organization-Controlled Cryptographic Keys"
+          },
+          {
+            "id": "SA-9(7)",
+            "title": "Organization-Controlled Integrity Checking"
+          },
+          {
+            "id": "SA-9(8)",
+            "title": "Processing and Storage Location"
+          }
+        ],
+        "key_enhancements_text": "- **SA-9(1):** Risk Assessments and Organizational Approvals — Assess supply chain risk, conduct an organizational assessment of risk prior to the acquisition or outsourcing of information security services, and verify that the acquisition or outsourcing is approved by organization-defined personnel or roles.\n- **SA-9(2):** Identification of Functions, Ports, Protocols, and Services — Require providers of organization-defined external system services to identify the functions, ports, protocols, and other services required for the use of such services.\n- **SA-9(3):** Establish and Maintain Trust Relationship with Providers — Establish, document, and maintain trust relationships with external service providers.\n- **SA-9(4):** Consistent Interests of Consumers and Providers — Take organization-defined actions to ensure that the interests of organization-defined external service providers are consistent with and reflect organizational interests.\n- **SA-9(5):** Processing, Storage, and Service Location — Restrict the location of information processing, information/data storage, or information services to organization-defined locations based on organization-defined requirements or conditions.\n- **SA-9(6):** Organization-Controlled Cryptographic Keys — Maintain exclusive control of cryptographic keys for encrypted material stored or transmitted through an external system.\n- **SA-9(7):** Organization-Controlled Integrity Checking — Provide the capability to check the integrity of information while it resides in the external system.\n- **SA-9(8):** Processing and Storage Location — U.S. Jurisdiction — Restrict the geographic location of information processing and data storage to facilities located within in the legal jurisdictional boundary of the United States.",
+        "related_controls": [
+          "AC-20",
+          "CA-3",
+          "CP-2",
+          "IR-4",
+          "IR-7",
+          "PL-10",
+          "PL-11",
+          "PS-7",
+          "SA-2",
+          "SA-4",
+          "SR-3",
+          "SR-5"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Require that providers of external system services comply with organizational security and privacy requirements and employ organization-defined controls in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines. Define and document organizational oversight and user roles and responsibilities with regard to external system services. Employ organization-defined processes, methods, and techniques to monitor control compliance by external service providers on an ongoing basis.\n\n**Key Enhancements:**\n- **SA-9(1):** Risk Assessments and Organizational Approvals — Assess supply chain risk, conduct an organizational assessment of risk prior to the acquisition or outsourcing of information security services, and verify that the acquisition or outsourcing is approved by organization-defined personnel or roles.\n- **SA-9(2):** Identification of Functions, Ports, Protocols, and Services — Require providers of organization-defined external system services to identify the functions, ports, protocols, and other services required for the use of such services.\n- **SA-9(3):** Establish and Maintain Trust Relationship with Providers — Establish, document, and maintain trust relationships with external service providers.\n- **SA-9(4):** Consistent Interests of Consumers and Providers — Take organization-defined actions to ensure that the interests of organization-defined external service providers are consistent with and reflect organizational interests.\n- **SA-9(5):** Processing, Storage, and Service Location — Restrict the location of information processing, information/data storage, or information services to organization-defined locations based on organization-defined requirements or conditions.\n- **SA-9(6):** Organization-Controlled Cryptographic Keys — Maintain exclusive control of cryptographic keys for encrypted material stored or transmitted through an external system.\n- **SA-9(7):** Organization-Controlled Integrity Checking — Provide the capability to check the integrity of information while it resides in the external system.\n- **SA-9(8):** Processing and Storage Location — U.S. Jurisdiction — Restrict the geographic location of information processing and data storage to facilities located within in the legal jurisdictional boundary of the United States.\n\n**Related Controls:** AC-20, CA-3, CP-2, IR-4, IR-7, PL-10, PL-11, PS-7, SA-2, SA-4, SR-3, SR-5\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization requires external system service providers to comply with organizational security requirements.",
+        "examine_procedures": "System and services acquisition policy; external system service agreements; service-level agreements; system security plan; continuous monitoring records for external services.",
+        "interview_procedures": "Organizational personnel responsible for external service management; information system security officers; contracting officers.",
+        "test_procedures": "External service provider compliance monitoring mechanisms.",
+        "determination_statements": [
+          "SA-09a. — External system service providers comply with organizational security and privacy requirements and employ organization-defined controls",
+          "SA-09b. — Organizational oversight and user roles and responsibilities with regard to external system services are defined and documented",
+          "SA-09c. — Processes, methods, and techniques are employed to monitor security and privacy control compliance by external service providers on an ongoing basis"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization requires external system service providers to comply with organizational security requirements.\n\n**Examine:** System and services acquisition policy; external system service agreements; service-level agreements; system security plan; continuous monitoring records for external services.\n\n**Interview:** Organizational personnel responsible for external service management; information system security officers; contracting officers.\n\n**Test:** External service provider compliance monitoring mechanisms.\n\n**Determination Statements:**\n- SA-09a. — External system service providers comply with organizational security and privacy requirements and employ organization-defined controls\n- SA-09b. — Organizational oversight and user roles and responsibilities with regard to external system services are defined and documented\n- SA-09c. — Processes, methods, and techniques are employed to monitor security and privacy control compliance by external service providers on an ongoing basis"
+      }
+    },
+    "SA-10": {
+      "control_id": "SA-10",
+      "control_title": "Developer Configuration Management",
+      "base_control": {
+        "control_id": "SA-10",
+        "control_title": "Developer Configuration Management",
+        "control_text": "Require the developer of the system, system component, or system service to perform configuration management during system, component, or service development, integration, and implementation. Document, manage, and control the integrity of changes to organization-defined configuration items under configuration management. Implement only organization-approved changes to the system, component, or service. Document approved changes and the potential security and privacy impacts of such changes. Track security flaws and flaw resolution within the system, component, or service and report findings to organization-defined personnel.",
+        "key_enhancements": [
+          {
+            "id": "SA-10(1)",
+            "title": "Software and Firmware Integrity Verification"
+          },
+          {
+            "id": "SA-10(2)",
+            "title": "Alternative Configuration Management Processes"
+          },
+          {
+            "id": "SA-10(3)",
+            "title": "Hardware Integrity Verification"
+          },
+          {
+            "id": "SA-10(4)",
+            "title": "Trusted Generation"
+          },
+          {
+            "id": "SA-10(5)",
+            "title": "Mapping Integrity for Version Control"
+          },
+          {
+            "id": "SA-10(6)",
+            "title": "Trusted Distribution"
+          },
+          {
+            "id": "SA-10(7)",
+            "title": "Security and Privacy Representatives"
+          }
+        ],
+        "key_enhancements_text": "- **SA-10(1):** Software and Firmware Integrity Verification — Require the developer of the system, system component, or system service to enable integrity verification of software and firmware components.\n- **SA-10(2):** Alternative Configuration Management Processes — Provide an alternate configuration management process using organizational personnel in the absence of a dedicated developer configuration management team.\n- **SA-10(3):** Hardware Integrity Verification — Require the developer of the system, system component, or system service to enable integrity verification of hardware components.\n- **SA-10(4):** Trusted Generation — Require the developer of the system, system component, or system service to employ tools for comparing newly generated versions of security-relevant hardware descriptions, source code, and object code with previous versions.\n- **SA-10(5):** Mapping Integrity for Version Control — Require the developer of the system, system component, or system service to maintain the integrity of the mapping between the master build data describing the current version of security-relevant hardware, software, and firmware and the on-site master copy of the data for the current version.\n- **SA-10(6):** Trusted Distribution — Require the developer of the system, system component, or system service to execute procedures for ensuring that security-relevant hardware, software, and firmware updates distributed to the organization are exactly as specified by the master copies.\n- **SA-10(7):** Security and Privacy Representatives — Require that an organization-defined security or privacy representative be included in the developer configuration management and change control process.",
+        "related_controls": [
+          "CM-2",
+          "CM-3",
+          "CM-4",
+          "CM-7",
+          "CM-9",
+          "SA-4",
+          "SA-5",
+          "SA-8",
+          "SA-15",
+          "SI-2",
+          "SR-3",
+          "SR-4",
+          "SR-5",
+          "SR-6"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Require the developer of the system, system component, or system service to perform configuration management during system, component, or service development, integration, and implementation. Document, manage, and control the integrity of changes to organization-defined configuration items under configuration management. Implement only organization-approved changes to the system, component, or service. Document approved changes and the potential security and privacy impacts of such changes. Track security flaws and flaw resolution within the system, component, or service and report findings to organization-defined personnel.\n\n**Key Enhancements:**\n- **SA-10(1):** Software and Firmware Integrity Verification — Require the developer of the system, system component, or system service to enable integrity verification of software and firmware components.\n- **SA-10(2):** Alternative Configuration Management Processes — Provide an alternate configuration management process using organizational personnel in the absence of a dedicated developer configuration management team.\n- **SA-10(3):** Hardware Integrity Verification — Require the developer of the system, system component, or system service to enable integrity verification of hardware components.\n- **SA-10(4):** Trusted Generation — Require the developer of the system, system component, or system service to employ tools for comparing newly generated versions of security-relevant hardware descriptions, source code, and object code with previous versions.\n- **SA-10(5):** Mapping Integrity for Version Control — Require the developer of the system, system component, or system service to maintain the integrity of the mapping between the master build data describing the current version of security-relevant hardware, software, and firmware and the on-site master copy of the data for the current version.\n- **SA-10(6):** Trusted Distribution — Require the developer of the system, system component, or system service to execute procedures for ensuring that security-relevant hardware, software, and firmware updates distributed to the organization are exactly as specified by the master copies.\n- **SA-10(7):** Security and Privacy Representatives — Require that an organization-defined security or privacy representative be included in the developer configuration management and change control process.\n\n**Related Controls:** CM-2, CM-3, CM-4, CM-7, CM-9, SA-4, SA-5, SA-8, SA-15, SI-2, SR-3, SR-4, SR-5, SR-6\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization requires the developer to perform configuration management during system development.",
+        "examine_procedures": "System and services acquisition policy; configuration management plans; system design documentation; change control records; system security plan.",
+        "interview_procedures": "System developers; organizational personnel responsible for developer oversight; configuration management personnel.",
+        "test_procedures": "Developer configuration management processes; change tracking mechanisms.",
+        "determination_statements": [
+          "SA-10a. — The developer of the system, system component, or system service performs configuration management during system design, development, implementation, and operation",
+          "SA-10b. — Changes to the system are documented, managed, and controlled",
+          "SA-10c. — The integrity of changes is tracked",
+          "SA-10d. — Only organization-approved changes are implemented"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization requires the developer to perform configuration management during system development.\n\n**Examine:** System and services acquisition policy; configuration management plans; system design documentation; change control records; system security plan.\n\n**Interview:** System developers; organizational personnel responsible for developer oversight; configuration management personnel.\n\n**Test:** Developer configuration management processes; change tracking mechanisms.\n\n**Determination Statements:**\n- SA-10a. — The developer of the system, system component, or system service performs configuration management during system design, development, implementation, and operation\n- SA-10b. — Changes to the system are documented, managed, and controlled\n- SA-10c. — The integrity of changes is tracked\n- SA-10d. — Only organization-approved changes are implemented"
+      }
+    },
+    "SA-11": {
+      "control_id": "SA-11",
+      "control_title": "Developer Testing and Evaluation",
+      "base_control": {
+        "control_id": "SA-11",
+        "control_title": "Developer Testing and Evaluation",
+        "control_text": "Require the developer of the system, system component, or system service at all post-design stages of the system development life cycle to develop and implement a plan for ongoing security and privacy assessments. Perform organization-defined depth and coverage testing and evaluation. Produce evidence of the execution of the assessment plan and the results of the testing and evaluation. Implement a verifiable flaw remediation process. Correct flaws identified during testing and evaluation.",
+        "key_enhancements": [
+          {
+            "id": "SA-11(1)",
+            "title": "Static Code Analysis"
+          },
+          {
+            "id": "SA-11(2)",
+            "title": "Threat Modeling and Vulnerability Analyses"
+          },
+          {
+            "id": "SA-11(3)",
+            "title": "Independent Verification of Assessment Plans and Evidence"
+          },
+          {
+            "id": "SA-11(4)",
+            "title": "Manual Code Reviews"
+          },
+          {
+            "id": "SA-11(5)",
+            "title": "Penetration Testing"
+          },
+          {
+            "id": "SA-11(6)",
+            "title": "Attack Surface Reviews"
+          },
+          {
+            "id": "SA-11(7)",
+            "title": "Verify Scope of Testing and Evaluation"
+          },
+          {
+            "id": "SA-11(8)",
+            "title": "Dynamic Code Analysis"
+          },
+          {
+            "id": "SA-11(9)",
+            "title": "Interactive Application Security Testing"
+          }
+        ],
+        "key_enhancements_text": "- **SA-11(1):** Static Code Analysis — Require the developer of the system, system component, or system service to employ static code analysis tools to identify common flaws and document the results of the analysis.\n- **SA-11(2):** Threat Modeling and Vulnerability Analyses — Require the developer of the system, system component, or system service to perform threat modeling and vulnerability analyses during development and the subsequent testing/evaluation of the system, component, or service.\n- **SA-11(3):** Independent Verification of Assessment Plans and Evidence — Require an independent agent to verify the implementation of the developer security and privacy assessment plan and evidence produced.\n- **SA-11(4):** Manual Code Reviews — Require the developer of the system, system component, or system service to perform a manual code review of organization-defined specific code.\n- **SA-11(5):** Penetration Testing — Require the developer of the system, system component, or system service to perform penetration testing at an organization-defined breadth and depth and with organization-defined constraints.\n- **SA-11(6):** Attack Surface Reviews — Require the developer of the system, system component, or system service to review attack surfaces.\n- **SA-11(7):** Verify Scope of Testing and Evaluation — Require the developer of the system, system component, or system service to verify that the scope of testing and evaluation provides complete coverage of required controls at an organization-defined depth of testing.\n- **SA-11(8):** Dynamic Code Analysis — Require the developer of the system, system component, or system service to employ dynamic code analysis tools to identify common flaws and document the results.\n- **SA-11(9):** Interactive Application Security Testing — Require the developer of the system, system component, or system service to employ interactive application security testing tools to identify flaws and document the results.",
+        "related_controls": [
+          "CA-2",
+          "CA-7",
+          "CM-4",
+          "SA-3",
+          "SA-4",
+          "SA-5",
+          "SA-8",
+          "SA-15",
+          "SA-17",
+          "SI-2",
+          "SR-5",
+          "SR-6",
+          "SR-7"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Require the developer of the system, system component, or system service at all post-design stages of the system development life cycle to develop and implement a plan for ongoing security and privacy assessments. Perform organization-defined depth and coverage testing and evaluation. Produce evidence of the execution of the assessment plan and the results of the testing and evaluation. Implement a verifiable flaw remediation process. Correct flaws identified during testing and evaluation.\n\n**Key Enhancements:**\n- **SA-11(1):** Static Code Analysis — Require the developer of the system, system component, or system service to employ static code analysis tools to identify common flaws and document the results of the analysis.\n- **SA-11(2):** Threat Modeling and Vulnerability Analyses — Require the developer of the system, system component, or system service to perform threat modeling and vulnerability analyses during development and the subsequent testing/evaluation of the system, component, or service.\n- **SA-11(3):** Independent Verification of Assessment Plans and Evidence — Require an independent agent to verify the implementation of the developer security and privacy assessment plan and evidence produced.\n- **SA-11(4):** Manual Code Reviews — Require the developer of the system, system component, or system service to perform a manual code review of organization-defined specific code.\n- **SA-11(5):** Penetration Testing — Require the developer of the system, system component, or system service to perform penetration testing at an organization-defined breadth and depth and with organization-defined constraints.\n- **SA-11(6):** Attack Surface Reviews — Require the developer of the system, system component, or system service to review attack surfaces.\n- **SA-11(7):** Verify Scope of Testing and Evaluation — Require the developer of the system, system component, or system service to verify that the scope of testing and evaluation provides complete coverage of required controls at an organization-defined depth of testing.\n- **SA-11(8):** Dynamic Code Analysis — Require the developer of the system, system component, or system service to employ dynamic code analysis tools to identify common flaws and document the results.\n- **SA-11(9):** Interactive Application Security Testing — Require the developer of the system, system component, or system service to employ interactive application security testing tools to identify flaws and document the results.\n\n**Related Controls:** CA-2, CA-7, CM-4, SA-3, SA-4, SA-5, SA-8, SA-15, SA-17, SI-2, SR-5, SR-6, SR-7\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization requires the developer to create and implement a security assessment plan.",
+        "examine_procedures": "System and services acquisition policy; security assessment plan; developer testing results; flaw remediation records; system security plan.",
+        "interview_procedures": "System developers; organizational personnel responsible for developer testing oversight.",
+        "test_procedures": "Developer security testing processes; flaw remediation verification.",
+        "determination_statements": [
+          "SA-11a. — The developer of the system, system component, or system service creates and implements a security and privacy assessment plan at organization-defined depth of testing/evaluation",
+          "SA-11b. — Evidence of the execution of the assessment plan and the results of the testing and evaluation are produced",
+          "SA-11c. — A verifiable flaw remediation process is implemented",
+          "SA-11d. — Flaw remediation results are documented",
+          "NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final",
+          "[SP 800-53 SA Family](../800-53/sa.md)",
+          "[SP 800-171 SA Requirements](../800-171/sa.md)"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization requires the developer to create and implement a security assessment plan.\n\n**Examine:** System and services acquisition policy; security assessment plan; developer testing results; flaw remediation records; system security plan.\n\n**Interview:** System developers; organizational personnel responsible for developer testing oversight.\n\n**Test:** Developer security testing processes; flaw remediation verification.\n\n**Determination Statements:**\n- SA-11a. — The developer of the system, system component, or system service creates and implements a security and privacy assessment plan at organization-defined depth of testing/evaluation\n- SA-11b. — Evidence of the execution of the assessment plan and the results of the testing and evaluation are produced\n- SA-11c. — A verifiable flaw remediation process is implemented\n- SA-11d. — Flaw remediation results are documented\n\n## References\n\n- NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final\n- [SP 800-53 SA Family](../800-53/sa.md)\n- [SP 800-171 SA Requirements](../800-171/sa.md)"
+      }
+    },
+    "SA-12": {
+      "control_id": "SA-12",
+      "control_title": "Supply Chain Protection",
+      "base_control": {
+        "control_id": "SA-12",
+        "control_title": "Supply Chain Protection",
+        "control_text": "[Withdrawn: Incorporated into SR-1 through SR-11.]\n\n**Baselines:** None (not in any baseline)",
+        "key_enhancements": [],
+        "key_enhancements_text": null,
+        "related_controls": [],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "[Withdrawn: Incorporated into SR-1 through SR-11.]\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SA-13": {
+      "control_id": "SA-13",
+      "control_title": "Trustworthiness",
+      "base_control": {
+        "control_id": "SA-13",
+        "control_title": "Trustworthiness",
+        "control_text": "[Withdrawn: Incorporated into SA-8.]\n\n**Baselines:** None (not in any baseline)",
+        "key_enhancements": [],
+        "key_enhancements_text": null,
+        "related_controls": [],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "[Withdrawn: Incorporated into SA-8.]\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SA-14": {
+      "control_id": "SA-14",
+      "control_title": "Criticality Analysis",
+      "base_control": {
+        "control_id": "SA-14",
+        "control_title": "Criticality Analysis",
+        "control_text": "[Withdrawn: Incorporated into RA-9.]\n\n**Baselines:** None (not in any baseline)",
+        "key_enhancements": [],
+        "key_enhancements_text": null,
+        "related_controls": [],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "[Withdrawn: Incorporated into RA-9.]\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SA-15": {
+      "control_id": "SA-15",
+      "control_title": "Development Process, Standards, and Tools",
+      "base_control": {
+        "control_id": "SA-15",
+        "control_title": "Development Process, Standards, and Tools",
+        "control_text": "Require the developer of the system, system component, or system service to follow a documented development process that explicitly addresses security and privacy requirements; identifies the standards and tools used in the development process; documents the specific tool options and tool configurations used in the development process; and documents, manages, and ensures the integrity of changes to the process and/or tools used in development. Review the development process, standards, tools, tool options, and tool configurations at an organization-defined frequency to determine if the process, standards, tools, tool options, and tool configurations selected and employed can satisfy organization-defined security and privacy requirements.",
+        "key_enhancements": [
+          {
+            "id": "SA-15(1)",
+            "title": "Quality Metrics"
+          },
+          {
+            "id": "SA-15(2)",
+            "title": "Security and Privacy Tracking Tools"
+          },
+          {
+            "id": "SA-15(3)",
+            "title": "Criticality Analysis"
+          },
+          {
+            "id": "SA-15(4)",
+            "title": "Threat Modeling and Vulnerability Analysis"
+          },
+          {
+            "id": "SA-15(5)",
+            "title": "Attack Surface Reduction"
+          },
+          {
+            "id": "SA-15(6)",
+            "title": "Continuous Improvement"
+          },
+          {
+            "id": "SA-15(7)",
+            "title": "Automated Vulnerability Analysis"
+          },
+          {
+            "id": "SA-15(8)",
+            "title": "Reuse of Threat and Vulnerability Information"
+          }
+        ],
+        "key_enhancements_text": "- **SA-15(1):** Quality Metrics — Require the developer of the system, system component, or system service to define quality metrics at the beginning of the development process, and provide evidence of meeting the quality metrics.\n- **SA-15(2):** Security and Privacy Tracking Tools — Require the developer of the system, system component, or system service to select and employ security and privacy tracking tools for use during the development process.\n- **SA-15(3):** Criticality Analysis — Require the developer of the system, system component, or system service to perform a criticality analysis at organization-defined breadth and depth and at organization-defined decision points in the system development life cycle.\n- **SA-15(4):** Threat Modeling and Vulnerability Analysis — [Withdrawn: Incorporated into SA-11(2).]\n- **SA-15(5):** Attack Surface Reduction — Require the developer of the system, system component, or system service to reduce attack surfaces to organization-defined thresholds.\n- **SA-15(6):** Continuous Improvement — Require the developer of the system, system component, or system service to implement an explicit process to continuously improve the development process.\n- **SA-15(7):** Automated Vulnerability Analysis — Require the developer of the system, system component, or system service to use automated tools to support the analysis of vulnerabilities.\n- **SA-15(8):** Reuse of Threat and Vulnerability Information — Require the developer of the system, system component, or system service to use threat modeling and vulnerability analyses from similar systems, components, or services to inform the current development process.",
+        "related_controls": [
+          "MA-6",
+          "SA-3",
+          "SA-4",
+          "SA-8",
+          "SA-10",
+          "SA-11",
+          "SR-3",
+          "SR-4",
+          "SR-5",
+          "SR-6",
+          "SR-9"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Require the developer of the system, system component, or system service to follow a documented development process that explicitly addresses security and privacy requirements; identifies the standards and tools used in the development process; documents the specific tool options and tool configurations used in the development process; and documents, manages, and ensures the integrity of changes to the process and/or tools used in development. Review the development process, standards, tools, tool options, and tool configurations at an organization-defined frequency to determine if the process, standards, tools, tool options, and tool configurations selected and employed can satisfy organization-defined security and privacy requirements.\n\n**Key Enhancements:**\n- **SA-15(1):** Quality Metrics — Require the developer of the system, system component, or system service to define quality metrics at the beginning of the development process, and provide evidence of meeting the quality metrics.\n- **SA-15(2):** Security and Privacy Tracking Tools — Require the developer of the system, system component, or system service to select and employ security and privacy tracking tools for use during the development process.\n- **SA-15(3):** Criticality Analysis — Require the developer of the system, system component, or system service to perform a criticality analysis at organization-defined breadth and depth and at organization-defined decision points in the system development life cycle.\n- **SA-15(4):** Threat Modeling and Vulnerability Analysis — [Withdrawn: Incorporated into SA-11(2).]\n- **SA-15(5):** Attack Surface Reduction — Require the developer of the system, system component, or system service to reduce attack surfaces to organization-defined thresholds.\n- **SA-15(6):** Continuous Improvement — Require the developer of the system, system component, or system service to implement an explicit process to continuously improve the development process.\n- **SA-15(7):** Automated Vulnerability Analysis — Require the developer of the system, system component, or system service to use automated tools to support the analysis of vulnerabilities.\n- **SA-15(8):** Reuse of Threat and Vulnerability Information — Require the developer of the system, system component, or system service to use threat modeling and vulnerability analyses from similar systems, components, or services to inform the current development process.\n\n**Related Controls:** MA-6, SA-3, SA-4, SA-8, SA-10, SA-11, SR-3, SR-4, SR-5, SR-6, SR-9\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SA-16": {
+      "control_id": "SA-16",
+      "control_title": "Developer-Provided Training",
+      "base_control": {
+        "control_id": "SA-16",
+        "control_title": "Developer-Provided Training",
+        "control_text": "Require the developer of the system, system component, or system service to provide organization-defined training on the correct use and operation of the implemented security and privacy functions, controls, and/or mechanisms.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for SA-16.",
+        "related_controls": [
+          "AT-2",
+          "AT-3",
+          "PE-3",
+          "SA-4",
+          "SA-5"
+        ],
+        "baselines": [
+          "High"
+        ],
+        "baselines_text": "High",
+        "source_markdown": "Require the developer of the system, system component, or system service to provide organization-defined training on the correct use and operation of the implemented security and privacy functions, controls, and/or mechanisms.\n\n**Key Enhancements:** None defined for SA-16.\n\n**Related Controls:** AT-2, AT-3, PE-3, SA-4, SA-5\n\n**Baselines:** High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SA-17": {
+      "control_id": "SA-17",
+      "control_title": "Developer Security and Privacy Architecture and Design",
+      "base_control": {
+        "control_id": "SA-17",
+        "control_title": "Developer Security and Privacy Architecture and Design",
+        "control_text": "Require the developer of the system, system component, or system service to produce a design specification and security and privacy architecture that is consistent with the organization's security and privacy architecture, accurately and completely describes the required security and privacy functionality, and addresses the allocation of controls among physical and logical components, and accurately and completely describes the design and implementation of the controls including security-relevant interfaces and the interactions and exclusions among design elements.",
+        "key_enhancements": [
+          {
+            "id": "SA-17(1)",
+            "title": "Formal Policy Model"
+          },
+          {
+            "id": "SA-17(2)",
+            "title": "Security-Relevant Components"
+          },
+          {
+            "id": "SA-17(3)",
+            "title": "Formal Correspondence"
+          },
+          {
+            "id": "SA-17(4)",
+            "title": "Informal Correspondence"
+          },
+          {
+            "id": "SA-17(5)",
+            "title": "Conceptually Simple Design"
+          },
+          {
+            "id": "SA-17(6)",
+            "title": "Structure for Testing"
+          },
+          {
+            "id": "SA-17(7)",
+            "title": "Structure for Least Privilege"
+          },
+          {
+            "id": "SA-17(8)",
+            "title": "Orchestration"
+          },
+          {
+            "id": "SA-17(9)",
+            "title": "Design Diversity"
+          }
+        ],
+        "key_enhancements_text": "- **SA-17(1):** Formal Policy Model — Require the developer of the system, system component, or system service to design and implement the controls using a formal policy model.\n- **SA-17(2):** Security-Relevant Components — Require the developer of the system, system component, or system service to define security-relevant hardware, software, and firmware.\n- **SA-17(3):** Formal Correspondence — Require the developer of the system, system component, or system service to produce a formal top-level specification showing correspondence with the formal policy model.\n- **SA-17(4):** Informal Correspondence — Require the developer of the system, system component, or system service to produce, as an integral part of the development process, an informal descriptive top-level specification that shows correspondence with the formal policy model.\n- **SA-17(5):** Conceptually Simple Design — Require the developer of the system, system component, or system service to design and structure the security-relevant hardware, software, and firmware to use a complete, conceptually simple protection mechanism with precisely defined semantics.\n- **SA-17(6):** Structure for Testing — Require the developer of the system, system component, or system service to structure security-relevant hardware, software, and firmware to facilitate testing.\n- **SA-17(7):** Structure for Least Privilege — Require the developer of the system, system component, or system service to structure security-relevant hardware, software, and firmware to facilitate controlling access with least privilege.\n- **SA-17(8):** Orchestration — Design organization-defined critical systems or system components to be orchestrated.\n- **SA-17(9):** Design Diversity — Use different designs for organization-defined critical systems or system components to satisfy a common set of requirements or provide equivalent functionality.",
+        "related_controls": [
+          "PL-2",
+          "PL-8",
+          "PM-7",
+          "SA-3",
+          "SA-4",
+          "SA-8",
+          "SC-7"
+        ],
+        "baselines": [
+          "High"
+        ],
+        "baselines_text": "High",
+        "source_markdown": "Require the developer of the system, system component, or system service to produce a design specification and security and privacy architecture that is consistent with the organization's security and privacy architecture, accurately and completely describes the required security and privacy functionality, and addresses the allocation of controls among physical and logical components, and accurately and completely describes the design and implementation of the controls including security-relevant interfaces and the interactions and exclusions among design elements.\n\n**Key Enhancements:**\n- **SA-17(1):** Formal Policy Model — Require the developer of the system, system component, or system service to design and implement the controls using a formal policy model.\n- **SA-17(2):** Security-Relevant Components — Require the developer of the system, system component, or system service to define security-relevant hardware, software, and firmware.\n- **SA-17(3):** Formal Correspondence — Require the developer of the system, system component, or system service to produce a formal top-level specification showing correspondence with the formal policy model.\n- **SA-17(4):** Informal Correspondence — Require the developer of the system, system component, or system service to produce, as an integral part of the development process, an informal descriptive top-level specification that shows correspondence with the formal policy model.\n- **SA-17(5):** Conceptually Simple Design — Require the developer of the system, system component, or system service to design and structure the security-relevant hardware, software, and firmware to use a complete, conceptually simple protection mechanism with precisely defined semantics.\n- **SA-17(6):** Structure for Testing — Require the developer of the system, system component, or system service to structure security-relevant hardware, software, and firmware to facilitate testing.\n- **SA-17(7):** Structure for Least Privilege — Require the developer of the system, system component, or system service to structure security-relevant hardware, software, and firmware to facilitate controlling access with least privilege.\n- **SA-17(8):** Orchestration — Design organization-defined critical systems or system components to be orchestrated.\n- **SA-17(9):** Design Diversity — Use different designs for organization-defined critical systems or system components to satisfy a common set of requirements or provide equivalent functionality.\n\n**Related Controls:** PL-2, PL-8, PM-7, SA-3, SA-4, SA-8, SC-7\n\n**Baselines:** High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SA-18": {
+      "control_id": "SA-18",
+      "control_title": "Tamper Resistance and Detection",
+      "base_control": {
+        "control_id": "SA-18",
+        "control_title": "Tamper Resistance and Detection",
+        "control_text": "[Withdrawn: Incorporated into SR-9.]\n\n**Baselines:** None (not in any baseline)",
+        "key_enhancements": [],
+        "key_enhancements_text": null,
+        "related_controls": [],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "[Withdrawn: Incorporated into SR-9.]\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SA-19": {
+      "control_id": "SA-19",
+      "control_title": "Component Authenticity",
+      "base_control": {
+        "control_id": "SA-19",
+        "control_title": "Component Authenticity",
+        "control_text": "[Withdrawn: Incorporated into SR-11.]\n\n**Baselines:** None (not in any baseline)",
+        "key_enhancements": [],
+        "key_enhancements_text": null,
+        "related_controls": [],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "[Withdrawn: Incorporated into SR-11.]\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SA-20": {
+      "control_id": "SA-20",
+      "control_title": "Customized Development of Critical Components",
+      "base_control": {
+        "control_id": "SA-20",
+        "control_title": "Customized Development of Critical Components",
+        "control_text": "Reimplement or custom develop organization-defined critical system components.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for SA-20.",
+        "related_controls": [
+          "CP-2",
+          "RA-9",
+          "SA-8"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Reimplement or custom develop organization-defined critical system components.\n\n**Key Enhancements:** None defined for SA-20.\n\n**Related Controls:** CP-2, RA-9, SA-8\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SA-21": {
+      "control_id": "SA-21",
+      "control_title": "Developer Screening",
+      "base_control": {
+        "control_id": "SA-21",
+        "control_title": "Developer Screening",
+        "control_text": "Require that the developer of organization-defined system, system component, or system service satisfies the organization-defined screening requirements for access to the system, system component, or system service.",
+        "key_enhancements": [
+          {
+            "id": "SA-21(1)",
+            "title": "Validation of Screening"
+          }
+        ],
+        "key_enhancements_text": "- **SA-21(1):** Validation of Screening — [Withdrawn: Incorporated into SA-21.]",
+        "related_controls": [
+          "PS-2",
+          "PS-3",
+          "PS-6",
+          "PS-7",
+          "SA-4",
+          "SR-6"
+        ],
+        "baselines": [
+          "High"
+        ],
+        "baselines_text": "High",
+        "source_markdown": "Require that the developer of organization-defined system, system component, or system service satisfies the organization-defined screening requirements for access to the system, system component, or system service.\n\n**Key Enhancements:**\n- **SA-21(1):** Validation of Screening — [Withdrawn: Incorporated into SA-21.]\n\n**Related Controls:** PS-2, PS-3, PS-6, PS-7, SA-4, SR-6\n\n**Baselines:** High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SA-22": {
+      "control_id": "SA-22",
+      "control_title": "Unsupported System Components",
+      "base_control": {
+        "control_id": "SA-22",
+        "control_title": "Unsupported System Components",
+        "control_text": "Replace system components when support for the components is no longer available from the developer, vendor, or manufacturer. Provide organization-defined options for alternative sources for continued support for unsupported components, including in-house support.",
+        "key_enhancements": [
+          {
+            "id": "SA-22(1)",
+            "title": "Alternative Sources for Continued Support"
+          }
+        ],
+        "key_enhancements_text": "- **SA-22(1):** Alternative Sources for Continued Support — [Withdrawn: Incorporated into SA-22.]",
+        "related_controls": [
+          "PL-2",
+          "SA-3"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Replace system components when support for the components is no longer available from the developer, vendor, or manufacturer. Provide organization-defined options for alternative sources for continued support for unsupported components, including in-house support.\n\n**Key Enhancements:**\n- **SA-22(1):** Alternative Sources for Continued Support — [Withdrawn: Incorporated into SA-22.]\n\n**Related Controls:** PL-2, SA-3\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SA-23": {
+      "control_id": "SA-23",
+      "control_title": "Specialization",
+      "base_control": {
+        "control_id": "SA-23",
+        "control_title": "Specialization",
+        "control_text": "Employ organization-defined specialization techniques to organization-defined systems or system components. Use organization-defined techniques to constrain, restrict, or reduce the attack surface of systems or system components.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for SA-23.",
+        "related_controls": [
+          "RA-9",
+          "SA-8"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Employ organization-defined specialization techniques to organization-defined systems or system components. Use organization-defined techniques to constrain, restrict, or reduce the attack surface of systems or system components.\n\n**Key Enhancements:** None defined for SA-23.\n\n**Related Controls:** RA-9, SA-8\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    }
+  }
+}

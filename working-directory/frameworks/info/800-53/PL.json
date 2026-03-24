@@ -1,0 +1,433 @@
+{
+  "source_documents": {
+    "nist_800_53_pl": "/Users/austinsonger/code/strm-Mapping/working-directory/frameworks/info/800-53/800-53/pl.md",
+    "nist_800_53a_pl": "/Users/austinsonger/code/strm-Mapping/working-directory/frameworks/info/800-53/800-53a/pl.md"
+  },
+  "generated_at": "2026-03-24T19:28:31.687Z",
+  "control_family": "PL",
+  "control_count": 11,
+  "controls": {
+    "PL-1": {
+      "control_id": "PL-1",
+      "control_title": "Policy and Procedures",
+      "base_control": {
+        "control_id": "PL-1",
+        "control_title": "Policy and Procedures",
+        "control_text": "Develop, document, and disseminate a planning policy and procedures that address purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance. Review and update the policy and procedures at organization-defined frequencies.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PL-1.",
+        "related_controls": [
+          "PM-9",
+          "PS-8",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Develop, document, and disseminate a planning policy and procedures that address purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance. Review and update the policy and procedures at organization-defined frequencies.\n\n**Key Enhancements:** None defined for PL-1.\n\n**Related Controls:** PM-9, PS-8, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization develops, documents, disseminates, reviews, and updates planning policy and procedures.",
+        "examine_procedures": "Planning policy; planning procedures; system security plan.",
+        "interview_procedures": "Organizational personnel responsible for planning policy.",
+        "test_procedures": "Organizational processes for managing planning policy.",
+        "determination_statements": [
+          "PL-01a. — A planning policy is developed, documented, and disseminated",
+          "PL-01b. — Planning procedures are developed, documented, and disseminated",
+          "PL-01c. — The policy and procedures are reviewed and updated at an organization-defined frequency"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization develops, documents, disseminates, reviews, and updates planning policy and procedures.\n\n**Examine:** Planning policy; planning procedures; system security plan.\n\n**Interview:** Organizational personnel responsible for planning policy.\n\n**Test:** Organizational processes for managing planning policy.\n\n**Determination Statements:**\n- PL-01a. — A planning policy is developed, documented, and disseminated\n- PL-01b. — Planning procedures are developed, documented, and disseminated\n- PL-01c. — The policy and procedures are reviewed and updated at an organization-defined frequency"
+      }
+    },
+    "PL-2": {
+      "control_id": "PL-2",
+      "control_title": "System Security and Privacy Plans",
+      "base_control": {
+        "control_id": "PL-2",
+        "control_title": "System Security and Privacy Plans",
+        "control_text": "Develop security and privacy plans for the system that are consistent with the organization's enterprise architecture; explicitly define the constituent system components; describe the operational context of the system in terms of mission and business processes; identify the individuals that fulfill system roles and responsibilities; identify the information types processed, stored, and transmitted by the system; provide the applicable security categorization including supporting rationale; describe any specific threats to the system; provide the results of a privacy risk assessment; describe the operational environment and any dependencies on or connections to other systems; provide an overview of the security and privacy requirements for the system; identify any relevant control tailoring; describe the control implementation including planned inputs, expected behavior, and expected outputs; and are reviewed and approved by the authorizing official or designated representative prior to plan implementation.",
+        "key_enhancements": [
+          {
+            "id": "PL-2(1)",
+            "title": "Concept of Operations"
+          },
+          {
+            "id": "PL-2(2)",
+            "title": "Functional Architecture"
+          },
+          {
+            "id": "PL-2(3)",
+            "title": "Plan and Coordinate with Other Organizational Entities"
+          }
+        ],
+        "key_enhancements_text": "- **PL-2(1):** Concept of Operations — [Withdrawn: Incorporated into PL-7.]\n- **PL-2(2):** Functional Architecture — [Withdrawn: Incorporated into PL-8.]\n- **PL-2(3):** Plan and Coordinate with Other Organizational Entities — [Withdrawn: Incorporated into PL-2.]",
+        "related_controls": [
+          "AC-2",
+          "AC-6",
+          "AC-14",
+          "AC-17",
+          "AC-20",
+          "CA-2",
+          "CA-3",
+          "CA-7",
+          "CM-9",
+          "CM-13",
+          "CP-2",
+          "CP-4",
+          "IR-4",
+          "IR-8",
+          "MA-4",
+          "MA-5",
+          "MP-4",
+          "MP-5",
+          "PL-7",
+          "PL-8",
+          "PL-10",
+          "PL-11",
+          "PM-1",
+          "PM-7",
+          "PM-8",
+          "PM-9",
+          "PM-10",
+          "PM-11",
+          "RA-3",
+          "RA-8",
+          "RA-9",
+          "SA-5",
+          "SA-17",
+          "SA-22",
+          "SI-12",
+          "SR-2",
+          "SR-4"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Develop security and privacy plans for the system that are consistent with the organization's enterprise architecture; explicitly define the constituent system components; describe the operational context of the system in terms of mission and business processes; identify the individuals that fulfill system roles and responsibilities; identify the information types processed, stored, and transmitted by the system; provide the applicable security categorization including supporting rationale; describe any specific threats to the system; provide the results of a privacy risk assessment; describe the operational environment and any dependencies on or connections to other systems; provide an overview of the security and privacy requirements for the system; identify any relevant control tailoring; describe the control implementation including planned inputs, expected behavior, and expected outputs; and are reviewed and approved by the authorizing official or designated representative prior to plan implementation.\n\n**Key Enhancements:**\n- **PL-2(1):** Concept of Operations — [Withdrawn: Incorporated into PL-7.]\n- **PL-2(2):** Functional Architecture — [Withdrawn: Incorporated into PL-8.]\n- **PL-2(3):** Plan and Coordinate with Other Organizational Entities — [Withdrawn: Incorporated into PL-2.]\n\n**Related Controls:** AC-2, AC-6, AC-14, AC-17, AC-20, CA-2, CA-3, CA-7, CM-9, CM-13, CP-2, CP-4, IR-4, IR-8, MA-4, MA-5, MP-4, MP-5, PL-7, PL-8, PL-10, PL-11, PM-1, PM-7, PM-8, PM-9, PM-10, PM-11, RA-3, RA-8, RA-9, SA-5, SA-17, SA-22, SI-12, SR-2, SR-4\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization develops, documents, reviews, and updates system security and privacy plans.",
+        "examine_procedures": "Planning policy; system security plan; privacy plan; system design documentation; organizational risk management documentation.",
+        "interview_procedures": "Organizational personnel responsible for security and privacy planning; system owners; information system security officers.",
+        "test_procedures": "System security plan review and update processes; plan approval mechanisms.",
+        "determination_statements": [
+          "PL-02a.[01] — A system security plan is developed that defines the authorization boundary of the system",
+          "PL-02a.[02] — The plan describes the operational context of the system in terms of mission and business processes",
+          "PL-02a.[03] — The plan provides the security categorization of the system including supporting rationale",
+          "PL-02a.[04] — The plan describes the operational environment for the system and any dependencies or connections to other systems",
+          "PL-02a.[05] — The plan provides an overview of the security requirements for the system",
+          "PL-02a.[06] — The plan identifies any relevant overlays",
+          "PL-02a.[07] — The plan describes the security controls in place or planned for meeting the security requirements",
+          "PL-02b. — The system security plan is distributed to organization-defined personnel or roles",
+          "PL-02c. — The system security plan is reviewed at an organization-defined frequency",
+          "PL-02d. — The system security plan is updated to address changes to the system, environment of operation, or problems identified during plan implementation or control assessments",
+          "PL-02e. — The system security plan is protected from unauthorized disclosure and modification"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization develops, documents, reviews, and updates system security and privacy plans.\n\n**Examine:** Planning policy; system security plan; privacy plan; system design documentation; organizational risk management documentation.\n\n**Interview:** Organizational personnel responsible for security and privacy planning; system owners; information system security officers.\n\n**Test:** System security plan review and update processes; plan approval mechanisms.\n\n**Determination Statements:**\n- PL-02a.[01] — A system security plan is developed that defines the authorization boundary of the system\n- PL-02a.[02] — The plan describes the operational context of the system in terms of mission and business processes\n- PL-02a.[03] — The plan provides the security categorization of the system including supporting rationale\n- PL-02a.[04] — The plan describes the operational environment for the system and any dependencies or connections to other systems\n- PL-02a.[05] — The plan provides an overview of the security requirements for the system\n- PL-02a.[06] — The plan identifies any relevant overlays\n- PL-02a.[07] — The plan describes the security controls in place or planned for meeting the security requirements\n- PL-02b. — The system security plan is distributed to organization-defined personnel or roles\n- PL-02c. — The system security plan is reviewed at an organization-defined frequency\n- PL-02d. — The system security plan is updated to address changes to the system, environment of operation, or problems identified during plan implementation or control assessments\n- PL-02e. — The system security plan is protected from unauthorized disclosure and modification"
+      }
+    },
+    "PL-3": {
+      "control_id": "PL-3",
+      "control_title": "System Security Plan Update",
+      "base_control": {
+        "control_id": "PL-3",
+        "control_title": "System Security Plan Update",
+        "control_text": "[Withdrawn: Incorporated into PL-2.]\n\n**Baselines:** None (not in any baseline)",
+        "key_enhancements": [],
+        "key_enhancements_text": null,
+        "related_controls": [],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "[Withdrawn: Incorporated into PL-2.]\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PL-4": {
+      "control_id": "PL-4",
+      "control_title": "Rules of Behavior",
+      "base_control": {
+        "control_id": "PL-4",
+        "control_title": "Rules of Behavior",
+        "control_text": "Establish and provide to individuals requiring access to the system the rules that describe their responsibilities and expected behavior for information and system usage, security, and privacy. Receive a documented acknowledgment from such individuals, indicating that they have read, understand, and agree to abide by the rules of behavior, before authorizing access to information and the system. Review and update the rules of behavior at an organization-defined frequency. Require individuals who have acknowledged a previous version of the rules of behavior to read and re-acknowledge revised/updated rules.",
+        "key_enhancements": [
+          {
+            "id": "PL-4(1)",
+            "title": "Social Media and External Site/Application Usage Restrictions"
+          }
+        ],
+        "key_enhancements_text": "- **PL-4(1):** Social Media and External Site/Application Usage Restrictions — Include in the rules of behavior restrictions on the use of social media, social networking sites, and external sites/applications as well as posting organizational information on public websites.",
+        "related_controls": [
+          "AC-2",
+          "AC-6",
+          "AC-8",
+          "AC-9",
+          "AC-17",
+          "AC-18",
+          "AC-19",
+          "AC-20",
+          "AT-2",
+          "AT-3",
+          "CM-11",
+          "IA-2",
+          "IA-4",
+          "IA-5",
+          "MP-7",
+          "PS-6",
+          "PS-8",
+          "SA-5",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Establish and provide to individuals requiring access to the system the rules that describe their responsibilities and expected behavior for information and system usage, security, and privacy. Receive a documented acknowledgment from such individuals, indicating that they have read, understand, and agree to abide by the rules of behavior, before authorizing access to information and the system. Review and update the rules of behavior at an organization-defined frequency. Require individuals who have acknowledged a previous version of the rules of behavior to read and re-acknowledge revised/updated rules.\n\n**Key Enhancements:**\n- **PL-4(1):** Social Media and External Site/Application Usage Restrictions — Include in the rules of behavior restrictions on the use of social media, social networking sites, and external sites/applications as well as posting organizational information on public websites.\n\n**Related Controls:** AC-2, AC-6, AC-8, AC-9, AC-17, AC-18, AC-19, AC-20, AT-2, AT-3, CM-11, IA-2, IA-4, IA-5, MP-7, PS-6, PS-8, SA-5, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization establishes and provides rules describing responsibilities and expected behavior for system use.",
+        "examine_procedures": "Planning policy; rules of behavior; signed acknowledgments; system security plan.",
+        "interview_procedures": "Organizational personnel responsible for establishing rules of behavior; system users who have signed rules of behavior.",
+        "test_procedures": "Rules of behavior distribution and acknowledgment processes.",
+        "determination_statements": [
+          "PL-04a. — Rules are established and made available that describe the responsibilities and expected behavior for system and information use",
+          "PL-04b. — A signed acknowledgment is received from individuals indicating that they have read, understand, and agree to abide by the rules of behavior before authorizing access",
+          "PL-04c. — The rules of behavior are reviewed and updated at an organization-defined frequency",
+          "PL-04d. — Individuals who have signed a previous version of the rules of behavior are required to read and re-sign when the rules are revised/updated",
+          "NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final",
+          "[SP 800-53 PL Family](../800-53/pl.md)",
+          "[SP 800-171 PL Requirements](../800-171/pl.md)"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization establishes and provides rules describing responsibilities and expected behavior for system use.\n\n**Examine:** Planning policy; rules of behavior; signed acknowledgments; system security plan.\n\n**Interview:** Organizational personnel responsible for establishing rules of behavior; system users who have signed rules of behavior.\n\n**Test:** Rules of behavior distribution and acknowledgment processes.\n\n**Determination Statements:**\n- PL-04a. — Rules are established and made available that describe the responsibilities and expected behavior for system and information use\n- PL-04b. — A signed acknowledgment is received from individuals indicating that they have read, understand, and agree to abide by the rules of behavior before authorizing access\n- PL-04c. — The rules of behavior are reviewed and updated at an organization-defined frequency\n- PL-04d. — Individuals who have signed a previous version of the rules of behavior are required to read and re-sign when the rules are revised/updated\n\n## References\n\n- NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final\n- [SP 800-53 PL Family](../800-53/pl.md)\n- [SP 800-171 PL Requirements](../800-171/pl.md)"
+      }
+    },
+    "PL-5": {
+      "control_id": "PL-5",
+      "control_title": "Privacy Impact Assessment",
+      "base_control": {
+        "control_id": "PL-5",
+        "control_title": "Privacy Impact Assessment",
+        "control_text": "[Withdrawn: Incorporated into RA-8.]\n\n**Baselines:** None (not in any baseline)",
+        "key_enhancements": [],
+        "key_enhancements_text": null,
+        "related_controls": [],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "[Withdrawn: Incorporated into RA-8.]\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PL-6": {
+      "control_id": "PL-6",
+      "control_title": "Security-Related Activity Planning",
+      "base_control": {
+        "control_id": "PL-6",
+        "control_title": "Security-Related Activity Planning",
+        "control_text": "[Withdrawn: Incorporated into PL-2.]\n\n**Baselines:** None (not in any baseline)",
+        "key_enhancements": [],
+        "key_enhancements_text": null,
+        "related_controls": [],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "[Withdrawn: Incorporated into PL-2.]\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PL-7": {
+      "control_id": "PL-7",
+      "control_title": "Concept of Operations",
+      "base_control": {
+        "control_id": "PL-7",
+        "control_title": "Concept of Operations",
+        "control_text": "Develop a concept of operations for the system describing how the organization intends to operate the system from the perspective of information security and privacy. Review and update the concept of operations at an organization-defined frequency.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PL-7.",
+        "related_controls": [
+          "PL-2",
+          "SA-2",
+          "SI-12"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Develop a concept of operations for the system describing how the organization intends to operate the system from the perspective of information security and privacy. Review and update the concept of operations at an organization-defined frequency.\n\n**Key Enhancements:** None defined for PL-7.\n\n**Related Controls:** PL-2, SA-2, SI-12\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PL-8": {
+      "control_id": "PL-8",
+      "control_title": "Security and Privacy Architectures",
+      "base_control": {
+        "control_id": "PL-8",
+        "control_title": "Security and Privacy Architectures",
+        "control_text": "Develop security and privacy architectures for the system that describe the requirements and approach to be taken for protecting the confidentiality, integrity, and availability of organizational information; describe the requirements and approach to be taken for processing personally identifiable information to minimize privacy risk to individuals; describe how the architectures are integrated into and support the enterprise architecture; and are reviewed and updated at an organization-defined frequency to reflect changes in the enterprise architecture.",
+        "key_enhancements": [
+          {
+            "id": "PL-8(1)",
+            "title": "Defense in Depth"
+          },
+          {
+            "id": "PL-8(2)",
+            "title": "Supplier Diversity"
+          }
+        ],
+        "key_enhancements_text": "- **PL-8(1):** Defense in Depth — Design the security and privacy architectures for the system using a defense-in-depth approach that applies organization-defined types of controls at organization-defined levels, allocates organization-defined controls to organization-defined locations, and allocates organization-defined controls to organization-defined architectural layers.\n- **PL-8(2):** Supplier Diversity — Require that organization-defined controls allocated to organization-defined locations and architectural layers are obtained from different suppliers.",
+        "related_controls": [
+          "CM-2",
+          "CM-6",
+          "PL-2",
+          "PL-7",
+          "PL-9",
+          "PM-5",
+          "PM-7",
+          "RA-9",
+          "SA-3",
+          "SA-5",
+          "SA-8",
+          "SA-17",
+          "SC-7"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Develop security and privacy architectures for the system that describe the requirements and approach to be taken for protecting the confidentiality, integrity, and availability of organizational information; describe the requirements and approach to be taken for processing personally identifiable information to minimize privacy risk to individuals; describe how the architectures are integrated into and support the enterprise architecture; and are reviewed and updated at an organization-defined frequency to reflect changes in the enterprise architecture.\n\n**Key Enhancements:**\n- **PL-8(1):** Defense in Depth — Design the security and privacy architectures for the system using a defense-in-depth approach that applies organization-defined types of controls at organization-defined levels, allocates organization-defined controls to organization-defined locations, and allocates organization-defined controls to organization-defined architectural layers.\n- **PL-8(2):** Supplier Diversity — Require that organization-defined controls allocated to organization-defined locations and architectural layers are obtained from different suppliers.\n\n**Related Controls:** CM-2, CM-6, PL-2, PL-7, PL-9, PM-5, PM-7, RA-9, SA-3, SA-5, SA-8, SA-17, SC-7\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PL-9": {
+      "control_id": "PL-9",
+      "control_title": "Central Management",
+      "base_control": {
+        "control_id": "PL-9",
+        "control_title": "Central Management",
+        "control_text": "Centrally manage organization-defined controls and related processes.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PL-9.",
+        "related_controls": [
+          "PL-8",
+          "PM-9"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Centrally manage organization-defined controls and related processes.\n\n**Key Enhancements:** None defined for PL-9.\n\n**Related Controls:** PL-8, PM-9\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PL-10": {
+      "control_id": "PL-10",
+      "control_title": "Baseline Selection",
+      "base_control": {
+        "control_id": "PL-10",
+        "control_title": "Baseline Selection",
+        "control_text": "Select a control baseline for the system.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PL-10.",
+        "related_controls": [
+          "PL-2",
+          "PL-11",
+          "RA-2",
+          "RA-3",
+          "SA-8"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Select a control baseline for the system.\n\n**Key Enhancements:** None defined for PL-10.\n\n**Related Controls:** PL-2, PL-11, RA-2, RA-3, SA-8\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PL-11": {
+      "control_id": "PL-11",
+      "control_title": "Baseline Tailoring",
+      "base_control": {
+        "control_id": "PL-11",
+        "control_title": "Baseline Tailoring",
+        "control_text": "Tailor the selected control baseline by identifying and designating common controls, applying scoping considerations, selecting compensating controls, assigning specific values to organization-defined parameters, supplementing baselines with additional controls or control enhancements, and providing additional specification information for control implementation.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PL-11.",
+        "related_controls": [
+          "PL-10",
+          "RA-2",
+          "RA-3",
+          "RA-9",
+          "SA-8"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Tailor the selected control baseline by identifying and designating common controls, applying scoping considerations, selecting compensating controls, assigning specific values to organization-defined parameters, supplementing baselines with additional controls or control enhancements, and providing additional specification information for control implementation.\n\n**Key Enhancements:** None defined for PL-11.\n\n**Related Controls:** PL-10, RA-2, RA-3, RA-9, SA-8\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    }
+  }
+}

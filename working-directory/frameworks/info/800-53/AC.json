@@ -1,0 +1,1426 @@
+{
+  "generated_at": "2026-03-24T19:11:28.973Z",
+  "control_count": 25,
+  "controls": {
+    "AC-1": {
+      "control_id": "AC-1",
+      "control_title": "Policy and Procedures",
+      "base_control": {
+        "control_id": "AC-1",
+        "control_title": "Policy and Procedures",
+        "control_text": "Requires the organization to develop, document, disseminate, and periodically review and update access control policy and procedures that address purpose, scope, roles, responsibilities, management commitment, coordination, and compliance.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "IA-1",
+          "PM-9",
+          "PM-24",
+          "PS-8",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to develop, document, disseminate, and periodically review and update access control policy and procedures that address purpose, scope, roles, responsibilities, management commitment, coordination, and compliance.\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** IA-1, PM-9, PM-24, PS-8, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization develops, documents, disseminates, reviews, and updates access control policy and procedures.",
+        "examine_procedures": "Access control policy; access control procedures; system security plan; privacy plan; organizational policy development documentation.",
+        "interview_procedures": "Organizational personnel responsible for developing, implementing, and managing access control policy and procedures.",
+        "test_procedures": "Organizational processes for developing, documenting, reviewing, and updating access control policy and procedures.",
+        "determination_statements": [
+          "AC-01a.[01] — An access control policy is developed and documented",
+          "AC-01a.[02] — The access control policy addresses purpose, scope, roles, responsibilities, management commitment, coordination, and compliance",
+          "AC-01a.[03] — The access control policy is consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines",
+          "AC-01b. — The access control policy is disseminated to organization-defined personnel or roles",
+          "AC-01c.[01] — Access control procedures to facilitate implementation of the policy are developed and documented",
+          "AC-01c.[02] — Access control procedures are disseminated to organization-defined personnel or roles",
+          "AC-01d.[01] — The access control policy is reviewed and updated at an organization-defined frequency and following organization-defined events",
+          "AC-01d.[02] — The access control procedures are reviewed and updated at an organization-defined frequency and following organization-defined events"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization develops, documents, disseminates, reviews, and updates access control policy and procedures.\n\n**Examine:** Access control policy; access control procedures; system security plan; privacy plan; organizational policy development documentation.\n\n**Interview:** Organizational personnel responsible for developing, implementing, and managing access control policy and procedures.\n\n**Test:** Organizational processes for developing, documenting, reviewing, and updating access control policy and procedures.\n\n**Determination Statements:**\n- AC-01a.[01] — An access control policy is developed and documented\n- AC-01a.[02] — The access control policy addresses purpose, scope, roles, responsibilities, management commitment, coordination, and compliance\n- AC-01a.[03] — The access control policy is consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines\n- AC-01b. — The access control policy is disseminated to organization-defined personnel or roles\n- AC-01c.[01] — Access control procedures to facilitate implementation of the policy are developed and documented\n- AC-01c.[02] — Access control procedures are disseminated to organization-defined personnel or roles\n- AC-01d.[01] — The access control policy is reviewed and updated at an organization-defined frequency and following organization-defined events\n- AC-01d.[02] — The access control procedures are reviewed and updated at an organization-defined frequency and following organization-defined events"
+      }
+    },
+    "AC-2": {
+      "control_id": "AC-2",
+      "control_title": "Account Management",
+      "base_control": {
+        "control_id": "AC-2",
+        "control_title": "Account Management",
+        "control_text": "Requires the organization to define and manage information system accounts, including identifying account types (individual, shared, group, system, guest, temporary, emergency), establishing conditions for group and role membership, assigning account managers, authorizing access, and establishing, activating, modifying, reviewing, disabling, and removing accounts.",
+        "key_enhancements": [
+          {
+            "id": "AC-2(1)",
+            "title": "Automated System Account Management"
+          },
+          {
+            "id": "AC-2(2)",
+            "title": "Automated Temporary and Emergency Account Management"
+          },
+          {
+            "id": "AC-2(3)",
+            "title": "Disable Accounts"
+          },
+          {
+            "id": "AC-2(4)",
+            "title": "Automated Audit Actions"
+          },
+          {
+            "id": "AC-2(5)",
+            "title": "Inactivity Logout"
+          },
+          {
+            "id": "AC-2(6)",
+            "title": "Dynamic Privilege Management"
+          },
+          {
+            "id": "AC-2(7)",
+            "title": "Privileged User Accounts"
+          },
+          {
+            "id": "AC-2(8)",
+            "title": "Dynamic Account Management"
+          },
+          {
+            "id": "AC-2(9)",
+            "title": "Restrictions on Use of Shared and Group Accounts"
+          },
+          {
+            "id": "AC-2(11)",
+            "title": "Usage Conditions"
+          },
+          {
+            "id": "AC-2(12)",
+            "title": "Account Monitoring for Atypical Usage"
+          },
+          {
+            "id": "AC-2(13)",
+            "title": "Disable Accounts for High-Risk Individuals"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AC-2(1) | Automated System Account Management |\n| AC-2(2) | Automated Temporary and Emergency Account Management |\n| AC-2(3) | Disable Accounts |\n| AC-2(4) | Automated Audit Actions |\n| AC-2(5) | Inactivity Logout |\n| AC-2(6) | Dynamic Privilege Management |\n| AC-2(7) | Privileged User Accounts |\n| AC-2(8) | Dynamic Account Management |\n| AC-2(9) | Restrictions on Use of Shared and Group Accounts |\n| AC-2(11) | Usage Conditions |\n| AC-2(12) | Account Monitoring for Atypical Usage |\n| AC-2(13) | Disable Accounts for High-Risk Individuals |",
+        "related_controls": [
+          "AC-3",
+          "AC-5",
+          "AC-6",
+          "AC-17",
+          "AC-18",
+          "AC-20",
+          "AC-24",
+          "AU-2",
+          "AU-12",
+          "CM-5",
+          "IA-2",
+          "IA-4",
+          "IA-5",
+          "IA-8",
+          "MA-3",
+          "MA-5",
+          "PE-2",
+          "PL-4",
+          "PS-2",
+          "PS-4",
+          "PS-5",
+          "PS-7",
+          "PT-2",
+          "PT-3",
+          "SC-7",
+          "SC-12",
+          "SC-13",
+          "SC-37"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to define and manage information system accounts, including identifying account types (individual, shared, group, system, guest, temporary, emergency), establishing conditions for group and role membership, assigning account managers, authorizing access, and establishing, activating, modifying, reviewing, disabling, and removing accounts.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AC-2(1) | Automated System Account Management |\n| AC-2(2) | Automated Temporary and Emergency Account Management |\n| AC-2(3) | Disable Accounts |\n| AC-2(4) | Automated Audit Actions |\n| AC-2(5) | Inactivity Logout |\n| AC-2(6) | Dynamic Privilege Management |\n| AC-2(7) | Privileged User Accounts |\n| AC-2(8) | Dynamic Account Management |\n| AC-2(9) | Restrictions on Use of Shared and Group Accounts |\n| AC-2(11) | Usage Conditions |\n| AC-2(12) | Account Monitoring for Atypical Usage |\n| AC-2(13) | Disable Accounts for High-Risk Individuals |\n\n**Related Controls:** AC-3, AC-5, AC-6, AC-17, AC-18, AC-20, AC-24, AU-2, AU-12, CM-5, IA-2, IA-4, IA-5, IA-8, MA-3, MA-5, PE-2, PL-4, PS-2, PS-4, PS-5, PS-7, PT-2, PT-3, SC-7, SC-12, SC-13, SC-37\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization manages system accounts including defining account types, assigning account managers, establishing conditions for membership, and performing account lifecycle management.",
+        "examine_procedures": "Access control policy; account management procedures; system security plan; system design documentation; system configuration settings; system audit records; list of system account types; list of authorized system users; notifications of account management activities.",
+        "interview_procedures": "System administrators; account managers; organizational personnel responsible for account management; information system security officers.",
+        "test_procedures": "Automated mechanisms for account management; processes for creating, enabling, modifying, disabling, and removing accounts; notification mechanisms.",
+        "determination_statements": [
+          "AC-02a.[01] — Account types allowed for the system are defined",
+          "AC-02a.[02] — Account managers are assigned for system accounts",
+          "AC-02b. — Conditions for group and role membership are established",
+          "AC-02c. — Authorized users, group and role membership, and access authorizations for each account are specified",
+          "AC-02d. — A process for creating, enabling, modifying, disabling, and removing accounts is established",
+          "AC-02e. — Approval is required for requests to create system accounts",
+          "AC-02f. — Accounts are created, enabled, modified, disabled, and removed in accordance with organizational policy",
+          "AC-02g. — Accounts are monitored for use",
+          "AC-02h. — Account managers and appropriate personnel are notified when accounts are no longer required, users are terminated or transferred, and when system usage or need-to-know changes",
+          "AC-02i. — Access is authorized for accounts based on a valid access authorization, intended system usage, and other organizational attributes",
+          "AC-02j. — Accounts are reviewed for compliance with account management requirements at an organization-defined frequency",
+          "AC-02k. — A process is established for changing shared or group account authenticators when members leave the group"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization manages system accounts including defining account types, assigning account managers, establishing conditions for membership, and performing account lifecycle management.\n\n**Examine:** Access control policy; account management procedures; system security plan; system design documentation; system configuration settings; system audit records; list of system account types; list of authorized system users; notifications of account management activities.\n\n**Interview:** System administrators; account managers; organizational personnel responsible for account management; information system security officers.\n\n**Test:** Automated mechanisms for account management; processes for creating, enabling, modifying, disabling, and removing accounts; notification mechanisms.\n\n**Determination Statements:**\n- AC-02a.[01] — Account types allowed for the system are defined\n- AC-02a.[02] — Account managers are assigned for system accounts\n- AC-02b. — Conditions for group and role membership are established\n- AC-02c. — Authorized users, group and role membership, and access authorizations for each account are specified\n- AC-02d. — A process for creating, enabling, modifying, disabling, and removing accounts is established\n- AC-02e. — Approval is required for requests to create system accounts\n- AC-02f. — Accounts are created, enabled, modified, disabled, and removed in accordance with organizational policy\n- AC-02g. — Accounts are monitored for use\n- AC-02h. — Account managers and appropriate personnel are notified when accounts are no longer required, users are terminated or transferred, and when system usage or need-to-know changes\n- AC-02i. — Access is authorized for accounts based on a valid access authorization, intended system usage, and other organizational attributes\n- AC-02j. — Accounts are reviewed for compliance with account management requirements at an organization-defined frequency\n- AC-02k. — A process is established for changing shared or group account authenticators when members leave the group"
+      }
+    },
+    "AC-3": {
+      "control_id": "AC-3",
+      "control_title": "Access Enforcement",
+      "base_control": {
+        "control_id": "AC-3",
+        "control_title": "Access Enforcement",
+        "control_text": "Requires the system to enforce approved authorizations for logical access to information and system resources in accordance with applicable access control policies.",
+        "key_enhancements": [
+          {
+            "id": "AC-3(2)",
+            "title": "Dual Authorization"
+          },
+          {
+            "id": "AC-3(3)",
+            "title": "Mandatory Access Control"
+          },
+          {
+            "id": "AC-3(4)",
+            "title": "Discretionary Access Control"
+          },
+          {
+            "id": "AC-3(5)",
+            "title": "Security-Relevant Information"
+          },
+          {
+            "id": "AC-3(7)",
+            "title": "Role-Based Access Control"
+          },
+          {
+            "id": "AC-3(8)",
+            "title": "Revocation of Access Authorizations"
+          },
+          {
+            "id": "AC-3(9)",
+            "title": "Controlled Release"
+          },
+          {
+            "id": "AC-3(10)",
+            "title": "Audited Override of Access Control Mechanisms"
+          },
+          {
+            "id": "AC-3(11)",
+            "title": "Restrict Access to Specific Information Types"
+          },
+          {
+            "id": "AC-3(12)",
+            "title": "Assert and Enforce Application Access"
+          },
+          {
+            "id": "AC-3(13)",
+            "title": "Attribute-Based Access Control"
+          },
+          {
+            "id": "AC-3(14)",
+            "title": "Individual Access"
+          },
+          {
+            "id": "AC-3(15)",
+            "title": "Discretionary and Mandatory Access Control"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AC-3(2) | Dual Authorization |\n| AC-3(3) | Mandatory Access Control |\n| AC-3(4) | Discretionary Access Control |\n| AC-3(5) | Security-Relevant Information |\n| AC-3(7) | Role-Based Access Control |\n| AC-3(8) | Revocation of Access Authorizations |\n| AC-3(9) | Controlled Release |\n| AC-3(10) | Audited Override of Access Control Mechanisms |\n| AC-3(11) | Restrict Access to Specific Information Types |\n| AC-3(12) | Assert and Enforce Application Access |\n| AC-3(13) | Attribute-Based Access Control |\n| AC-3(14) | Individual Access |\n| AC-3(15) | Discretionary and Mandatory Access Control |",
+        "related_controls": [
+          "AC-2",
+          "AC-4",
+          "AC-5",
+          "AC-6",
+          "AC-16",
+          "AC-17",
+          "AC-18",
+          "AC-19",
+          "AC-20",
+          "AC-21",
+          "AC-22",
+          "AC-24",
+          "AC-25",
+          "AT-2",
+          "AT-3",
+          "AU-9",
+          "CA-9",
+          "CM-5",
+          "CM-11",
+          "IA-2",
+          "IA-5",
+          "IA-6",
+          "IA-7",
+          "IA-11",
+          "IA-13",
+          "MA-3",
+          "MA-4",
+          "MA-5",
+          "MP-4",
+          "PM-2",
+          "PS-3",
+          "PT-2",
+          "PT-3",
+          "SA-17",
+          "SC-2",
+          "SC-3",
+          "SC-4",
+          "SC-12",
+          "SC-13",
+          "SC-28",
+          "SC-31",
+          "SC-34",
+          "SI-4",
+          "SI-8"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the system to enforce approved authorizations for logical access to information and system resources in accordance with applicable access control policies.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AC-3(2) | Dual Authorization |\n| AC-3(3) | Mandatory Access Control |\n| AC-3(4) | Discretionary Access Control |\n| AC-3(5) | Security-Relevant Information |\n| AC-3(7) | Role-Based Access Control |\n| AC-3(8) | Revocation of Access Authorizations |\n| AC-3(9) | Controlled Release |\n| AC-3(10) | Audited Override of Access Control Mechanisms |\n| AC-3(11) | Restrict Access to Specific Information Types |\n| AC-3(12) | Assert and Enforce Application Access |\n| AC-3(13) | Attribute-Based Access Control |\n| AC-3(14) | Individual Access |\n| AC-3(15) | Discretionary and Mandatory Access Control |\n\n**Related Controls:** AC-2, AC-4, AC-5, AC-6, AC-16, AC-17, AC-18, AC-19, AC-20, AC-21, AC-22, AC-24, AC-25, AT-2, AT-3, AU-9, CA-9, CM-5, CM-11, IA-2, IA-5, IA-6, IA-7, IA-11, IA-13, MA-3, MA-4, MA-5, MP-4, PM-2, PS-3, PT-2, PT-3, SA-17, SC-2, SC-3, SC-4, SC-12, SC-13, SC-28, SC-31, SC-34, SI-4, SI-8\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the system enforces approved authorizations for logical access to information and system resources.",
+        "examine_procedures": "Access control policy; access control procedures; system security plan; system design documentation; system configuration settings; system audit records; access control lists; access control mechanisms.",
+        "interview_procedures": "System administrators; system developers; organizational personnel responsible for access control enforcement.",
+        "test_procedures": "Access enforcement mechanisms; automated mechanisms implementing access control policies; access control configurations.",
+        "determination_statements": [
+          "AC-03 — The system enforces approved authorizations for logical access to information and system resources in accordance with applicable access control policies"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the system enforces approved authorizations for logical access to information and system resources.\n\n**Examine:** Access control policy; access control procedures; system security plan; system design documentation; system configuration settings; system audit records; access control lists; access control mechanisms.\n\n**Interview:** System administrators; system developers; organizational personnel responsible for access control enforcement.\n\n**Test:** Access enforcement mechanisms; automated mechanisms implementing access control policies; access control configurations.\n\n**Determination Statements:**\n- AC-03 — The system enforces approved authorizations for logical access to information and system resources in accordance with applicable access control policies"
+      }
+    },
+    "AC-4": {
+      "control_id": "AC-4",
+      "control_title": "Information Flow Enforcement",
+      "base_control": {
+        "control_id": "AC-4",
+        "control_title": "Information Flow Enforcement",
+        "control_text": "Requires the system to enforce approved authorizations for controlling the flow of information within the system and between connected systems based on information flow control policies.",
+        "key_enhancements": [
+          {
+            "id": "AC-4(1)",
+            "title": "Object Security and Privacy Attributes"
+          },
+          {
+            "id": "AC-4(2)",
+            "title": "Processing Domains"
+          },
+          {
+            "id": "AC-4(3)",
+            "title": "Dynamic Information Flow Control"
+          },
+          {
+            "id": "AC-4(4)",
+            "title": "Flow Control of Encrypted Information"
+          },
+          {
+            "id": "AC-4(5)",
+            "title": "Embedded Data Types"
+          },
+          {
+            "id": "AC-4(6)",
+            "title": "Metadata"
+          },
+          {
+            "id": "AC-4(7)",
+            "title": "One-Way Flow Mechanisms"
+          },
+          {
+            "id": "AC-4(8)",
+            "title": "Security and Privacy Policy Filters"
+          },
+          {
+            "id": "AC-4(9)",
+            "title": "Human Reviews"
+          },
+          {
+            "id": "AC-4(10)",
+            "title": "Enable and Disable Security or Privacy Policy Filters"
+          },
+          {
+            "id": "AC-4(11)",
+            "title": "Configuration of Security or Privacy Policy Filters"
+          },
+          {
+            "id": "AC-4(12)",
+            "title": "Data Type Identifiers"
+          },
+          {
+            "id": "AC-4(13)",
+            "title": "Decomposition into Policy-Relevant Subcomponents"
+          },
+          {
+            "id": "AC-4(14)",
+            "title": "Security or Privacy Policy Filter Constraints"
+          },
+          {
+            "id": "AC-4(15)",
+            "title": "Detection of Unsanctioned Information"
+          },
+          {
+            "id": "AC-4(17)",
+            "title": "Domain Authentication"
+          },
+          {
+            "id": "AC-4(19)",
+            "title": "Validation of Metadata"
+          },
+          {
+            "id": "AC-4(20)",
+            "title": "Approved Solutions"
+          },
+          {
+            "id": "AC-4(21)",
+            "title": "Physical or Logical Separation of Information Flows"
+          },
+          {
+            "id": "AC-4(22)",
+            "title": "Access Only"
+          },
+          {
+            "id": "AC-4(23)",
+            "title": "Modify Non-Releasable Information"
+          },
+          {
+            "id": "AC-4(24)",
+            "title": "Internal Normalized Format"
+          },
+          {
+            "id": "AC-4(25)",
+            "title": "Data Sanitization"
+          },
+          {
+            "id": "AC-4(26)",
+            "title": "Audit Filtering Actions"
+          },
+          {
+            "id": "AC-4(27)",
+            "title": "Redundant/Independent Filtering Mechanisms"
+          },
+          {
+            "id": "AC-4(28)",
+            "title": "Linear Filter Pipelines"
+          },
+          {
+            "id": "AC-4(29)",
+            "title": "Filter Orchestration Engines"
+          },
+          {
+            "id": "AC-4(30)",
+            "title": "Filter Mechanisms Using Multiple Processes"
+          },
+          {
+            "id": "AC-4(31)",
+            "title": "Failed Content Transfer Prevention"
+          },
+          {
+            "id": "AC-4(32)",
+            "title": "Process Requirements for Information Transfer"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AC-4(1) | Object Security and Privacy Attributes |\n| AC-4(2) | Processing Domains |\n| AC-4(3) | Dynamic Information Flow Control |\n| AC-4(4) | Flow Control of Encrypted Information |\n| AC-4(5) | Embedded Data Types |\n| AC-4(6) | Metadata |\n| AC-4(7) | One-Way Flow Mechanisms |\n| AC-4(8) | Security and Privacy Policy Filters |\n| AC-4(9) | Human Reviews |\n| AC-4(10) | Enable and Disable Security or Privacy Policy Filters |\n| AC-4(11) | Configuration of Security or Privacy Policy Filters |\n| AC-4(12) | Data Type Identifiers |\n| AC-4(13) | Decomposition into Policy-Relevant Subcomponents |\n| AC-4(14) | Security or Privacy Policy Filter Constraints |\n| AC-4(15) | Detection of Unsanctioned Information |\n| AC-4(17) | Domain Authentication |\n| AC-4(19) | Validation of Metadata |\n| AC-4(20) | Approved Solutions |\n| AC-4(21) | Physical or Logical Separation of Information Flows |\n| AC-4(22) | Access Only |\n| AC-4(23) | Modify Non-Releasable Information |\n| AC-4(24) | Internal Normalized Format |\n| AC-4(25) | Data Sanitization |\n| AC-4(26) | Audit Filtering Actions |\n| AC-4(27) | Redundant/Independent Filtering Mechanisms |\n| AC-4(28) | Linear Filter Pipelines |\n| AC-4(29) | Filter Orchestration Engines |\n| AC-4(30) | Filter Mechanisms Using Multiple Processes |\n| AC-4(31) | Failed Content Transfer Prevention |\n| AC-4(32) | Process Requirements for Information Transfer |",
+        "related_controls": [
+          "AC-3",
+          "AC-6",
+          "AC-16",
+          "AC-17",
+          "AC-19",
+          "AC-21",
+          "AU-10",
+          "CA-3",
+          "CA-9",
+          "CM-7",
+          "PL-9",
+          "PM-24",
+          "SA-17",
+          "SC-4",
+          "SC-7",
+          "SC-16",
+          "SC-31"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Requires the system to enforce approved authorizations for controlling the flow of information within the system and between connected systems based on information flow control policies.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AC-4(1) | Object Security and Privacy Attributes |\n| AC-4(2) | Processing Domains |\n| AC-4(3) | Dynamic Information Flow Control |\n| AC-4(4) | Flow Control of Encrypted Information |\n| AC-4(5) | Embedded Data Types |\n| AC-4(6) | Metadata |\n| AC-4(7) | One-Way Flow Mechanisms |\n| AC-4(8) | Security and Privacy Policy Filters |\n| AC-4(9) | Human Reviews |\n| AC-4(10) | Enable and Disable Security or Privacy Policy Filters |\n| AC-4(11) | Configuration of Security or Privacy Policy Filters |\n| AC-4(12) | Data Type Identifiers |\n| AC-4(13) | Decomposition into Policy-Relevant Subcomponents |\n| AC-4(14) | Security or Privacy Policy Filter Constraints |\n| AC-4(15) | Detection of Unsanctioned Information |\n| AC-4(17) | Domain Authentication |\n| AC-4(19) | Validation of Metadata |\n| AC-4(20) | Approved Solutions |\n| AC-4(21) | Physical or Logical Separation of Information Flows |\n| AC-4(22) | Access Only |\n| AC-4(23) | Modify Non-Releasable Information |\n| AC-4(24) | Internal Normalized Format |\n| AC-4(25) | Data Sanitization |\n| AC-4(26) | Audit Filtering Actions |\n| AC-4(27) | Redundant/Independent Filtering Mechanisms |\n| AC-4(28) | Linear Filter Pipelines |\n| AC-4(29) | Filter Orchestration Engines |\n| AC-4(30) | Filter Mechanisms Using Multiple Processes |\n| AC-4(31) | Failed Content Transfer Prevention |\n| AC-4(32) | Process Requirements for Information Transfer |\n\n**Related Controls:** AC-3, AC-6, AC-16, AC-17, AC-19, AC-21, AU-10, CA-3, CA-9, CM-7, PL-9, PM-24, SA-17, SC-4, SC-7, SC-16, SC-31\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the system enforces approved authorizations for controlling the flow of information within the system and between connected systems.",
+        "examine_procedures": "Access control policy; information flow enforcement procedures; system security plan; system design documentation; system configuration settings; system audit records; information flow control policies.",
+        "interview_procedures": "System administrators; system developers; organizational personnel responsible for information flow enforcement; network engineers.",
+        "test_procedures": "Information flow enforcement mechanisms; automated mechanisms implementing information flow policies; boundary protection devices.",
+        "determination_statements": [
+          "AC-04 — The system enforces approved authorizations for controlling the flow of information within the system and between connected systems based on organization-defined information flow control policies"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the system enforces approved authorizations for controlling the flow of information within the system and between connected systems.\n\n**Examine:** Access control policy; information flow enforcement procedures; system security plan; system design documentation; system configuration settings; system audit records; information flow control policies.\n\n**Interview:** System administrators; system developers; organizational personnel responsible for information flow enforcement; network engineers.\n\n**Test:** Information flow enforcement mechanisms; automated mechanisms implementing information flow policies; boundary protection devices.\n\n**Determination Statements:**\n- AC-04 — The system enforces approved authorizations for controlling the flow of information within the system and between connected systems based on organization-defined information flow control policies"
+      }
+    },
+    "AC-5": {
+      "control_id": "AC-5",
+      "control_title": "Separation of Duties",
+      "base_control": {
+        "control_id": "AC-5",
+        "control_title": "Separation of Duties",
+        "control_text": "Requires the organization to identify and separate duties of individuals to prevent potential for abuse of authorized privileges. Define system access authorizations to support separation of duties.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "AC-2",
+          "AC-3",
+          "AC-6",
+          "AU-9",
+          "CM-5",
+          "CM-11",
+          "CP-9",
+          "IA-2",
+          "IA-4",
+          "IA-5",
+          "IA-12",
+          "MA-3",
+          "MA-5",
+          "PS-2",
+          "SA-8",
+          "SA-17"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Requires the organization to identify and separate duties of individuals to prevent potential for abuse of authorized privileges. Define system access authorizations to support separation of duties.\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** AC-2, AC-3, AC-6, AU-9, CM-5, CM-11, CP-9, IA-2, IA-4, IA-5, IA-12, MA-3, MA-5, PS-2, SA-8, SA-17\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization identifies and separates duties of individuals and defines system access authorizations to support separation of duties.",
+        "examine_procedures": "Access control policy; separation of duties procedures; system security plan; system configuration settings; system access authorizations; list of duties requiring separation; system audit records.",
+        "interview_procedures": "Organizational personnel responsible for defining duties and access authorizations; system administrators.",
+        "test_procedures": "Access enforcement mechanisms that implement separation of duties policies.",
+        "determination_statements": [
+          "AC-05a. — Organization-defined duties of individuals requiring separation are identified and documented",
+          "AC-05b. — System access authorizations to support separation of duties are defined"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization identifies and separates duties of individuals and defines system access authorizations to support separation of duties.\n\n**Examine:** Access control policy; separation of duties procedures; system security plan; system configuration settings; system access authorizations; list of duties requiring separation; system audit records.\n\n**Interview:** Organizational personnel responsible for defining duties and access authorizations; system administrators.\n\n**Test:** Access enforcement mechanisms that implement separation of duties policies.\n\n**Determination Statements:**\n- AC-05a. — Organization-defined duties of individuals requiring separation are identified and documented\n- AC-05b. — System access authorizations to support separation of duties are defined"
+      }
+    },
+    "AC-6": {
+      "control_id": "AC-6",
+      "control_title": "Least Privilege",
+      "base_control": {
+        "control_id": "AC-6",
+        "control_title": "Least Privilege",
+        "control_text": "Requires the organization to employ the principle of least privilege, allowing only authorized access for users and processes that is necessary to accomplish assigned organizational tasks.",
+        "key_enhancements": [
+          {
+            "id": "AC-6(1)",
+            "title": "Authorize Access to Security Functions"
+          },
+          {
+            "id": "AC-6(2)",
+            "title": "Non-Privileged Access for Nonsecurity Functions"
+          },
+          {
+            "id": "AC-6(3)",
+            "title": "Network Access to Privileged Commands"
+          },
+          {
+            "id": "AC-6(4)",
+            "title": "Separate Processing Domains"
+          },
+          {
+            "id": "AC-6(5)",
+            "title": "Privileged Accounts"
+          },
+          {
+            "id": "AC-6(6)",
+            "title": "Privileged Access by Non-Organizational Users"
+          },
+          {
+            "id": "AC-6(7)",
+            "title": "Review of User Privileges"
+          },
+          {
+            "id": "AC-6(8)",
+            "title": "Privilege Levels for Code Execution"
+          },
+          {
+            "id": "AC-6(9)",
+            "title": "Log Use of Privileged Functions"
+          },
+          {
+            "id": "AC-6(10)",
+            "title": "Prohibit Non-Privileged Users from Executing Privileged Functions"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AC-6(1) | Authorize Access to Security Functions |\n| AC-6(2) | Non-Privileged Access for Nonsecurity Functions |\n| AC-6(3) | Network Access to Privileged Commands |\n| AC-6(4) | Separate Processing Domains |\n| AC-6(5) | Privileged Accounts |\n| AC-6(6) | Privileged Access by Non-Organizational Users |\n| AC-6(7) | Review of User Privileges |\n| AC-6(8) | Privilege Levels for Code Execution |\n| AC-6(9) | Log Use of Privileged Functions |\n| AC-6(10) | Prohibit Non-Privileged Users from Executing Privileged Functions |",
+        "related_controls": [
+          "AC-2",
+          "AC-3",
+          "AC-5",
+          "AC-16",
+          "CM-5",
+          "CM-11",
+          "PL-2",
+          "PM-12",
+          "SA-8",
+          "SA-15",
+          "SA-17",
+          "SC-38"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Requires the organization to employ the principle of least privilege, allowing only authorized access for users and processes that is necessary to accomplish assigned organizational tasks.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AC-6(1) | Authorize Access to Security Functions |\n| AC-6(2) | Non-Privileged Access for Nonsecurity Functions |\n| AC-6(3) | Network Access to Privileged Commands |\n| AC-6(4) | Separate Processing Domains |\n| AC-6(5) | Privileged Accounts |\n| AC-6(6) | Privileged Access by Non-Organizational Users |\n| AC-6(7) | Review of User Privileges |\n| AC-6(8) | Privilege Levels for Code Execution |\n| AC-6(9) | Log Use of Privileged Functions |\n| AC-6(10) | Prohibit Non-Privileged Users from Executing Privileged Functions |\n\n**Related Controls:** AC-2, AC-3, AC-5, AC-16, CM-5, CM-11, PL-2, PM-12, SA-8, SA-15, SA-17, SC-38\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization employs the principle of least privilege, allowing only authorized accesses for users and processes necessary to accomplish assigned organizational tasks.",
+        "examine_procedures": "Access control policy; least privilege procedures; system security plan; system design documentation; system configuration settings; system audit records; list of security functions requiring privileged access; list of authorized users of privileged accounts.",
+        "interview_procedures": "System administrators; organizational personnel responsible for defining least privilege requirements; system developers.",
+        "test_procedures": "Automated mechanisms implementing least privilege functions; privileged access controls; processes for reviewing and adjusting privileges.",
+        "determination_statements": [
+          "AC-06 — The system employs the principle of least privilege, allowing only authorized accesses for users and processes which are necessary to accomplish assigned organizational tasks"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization employs the principle of least privilege, allowing only authorized accesses for users and processes necessary to accomplish assigned organizational tasks.\n\n**Examine:** Access control policy; least privilege procedures; system security plan; system design documentation; system configuration settings; system audit records; list of security functions requiring privileged access; list of authorized users of privileged accounts.\n\n**Interview:** System administrators; organizational personnel responsible for defining least privilege requirements; system developers.\n\n**Test:** Automated mechanisms implementing least privilege functions; privileged access controls; processes for reviewing and adjusting privileges.\n\n**Determination Statements:**\n- AC-06 — The system employs the principle of least privilege, allowing only authorized accesses for users and processes which are necessary to accomplish assigned organizational tasks"
+      }
+    },
+    "AC-7": {
+      "control_id": "AC-7",
+      "control_title": "Unsuccessful Logon Attempts",
+      "base_control": {
+        "control_id": "AC-7",
+        "control_title": "Unsuccessful Logon Attempts",
+        "control_text": "Requires the system to enforce a limit on the number of consecutive invalid logon attempts by a user within a defined time period and automatically lock the account or delay the next logon prompt when the maximum number is exceeded.",
+        "key_enhancements": [
+          {
+            "id": "AC-7(1)",
+            "title": "Automatic Account Lock"
+          },
+          {
+            "id": "AC-7(2)",
+            "title": "Purge or Wipe Mobile Device"
+          },
+          {
+            "id": "AC-7(3)",
+            "title": "Biometric Attempt Limiting"
+          },
+          {
+            "id": "AC-7(4)",
+            "title": "Use of Alternate Authentication Factor"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AC-7(1) | Automatic Account Lock |\n| AC-7(2) | Purge or Wipe Mobile Device |\n| AC-7(3) | Biometric Attempt Limiting |\n| AC-7(4) | Use of Alternate Authentication Factor |",
+        "related_controls": [
+          "AC-2",
+          "AC-9",
+          "AU-2",
+          "AU-6",
+          "IA-5"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the system to enforce a limit on the number of consecutive invalid logon attempts by a user within a defined time period and automatically lock the account or delay the next logon prompt when the maximum number is exceeded.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AC-7(1) | Automatic Account Lock |\n| AC-7(2) | Purge or Wipe Mobile Device |\n| AC-7(3) | Biometric Attempt Limiting |\n| AC-7(4) | Use of Alternate Authentication Factor |\n\n**Related Controls:** AC-2, AC-9, AU-2, AU-6, IA-5\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the system enforces a limit on consecutive invalid logon attempts and takes appropriate action when limits are exceeded.",
+        "examine_procedures": "Access control policy; system security plan; system design documentation; system configuration settings; system audit records; account lockout settings.",
+        "interview_procedures": "System administrators; organizational personnel responsible for account management.",
+        "test_procedures": "Automated mechanisms for limiting unsuccessful logon attempts; account lockout mechanisms; logon attempt monitoring.",
+        "determination_statements": [
+          "AC-07a. — The system enforces a limit of organization-defined number of consecutive invalid logon attempts by a user during an organization-defined time period",
+          "AC-07b. — The system automatically locks the account or node for an organization-defined time period, locks the account or node until released by an administrator, delays next logon prompt for an organization-defined delay, notifies system administrator, and/or takes other organization-defined action when the maximum number of unsuccessful attempts is exceeded"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the system enforces a limit on consecutive invalid logon attempts and takes appropriate action when limits are exceeded.\n\n**Examine:** Access control policy; system security plan; system design documentation; system configuration settings; system audit records; account lockout settings.\n\n**Interview:** System administrators; organizational personnel responsible for account management.\n\n**Test:** Automated mechanisms for limiting unsuccessful logon attempts; account lockout mechanisms; logon attempt monitoring.\n\n**Determination Statements:**\n- AC-07a. — The system enforces a limit of organization-defined number of consecutive invalid logon attempts by a user during an organization-defined time period\n- AC-07b. — The system automatically locks the account or node for an organization-defined time period, locks the account or node until released by an administrator, delays next logon prompt for an organization-defined delay, notifies system administrator, and/or takes other organization-defined action when the maximum number of unsuccessful attempts is exceeded"
+      }
+    },
+    "AC-8": {
+      "control_id": "AC-8",
+      "control_title": "System Use Notification",
+      "base_control": {
+        "control_id": "AC-8",
+        "control_title": "System Use Notification",
+        "control_text": "Requires the system to display an approved system use notification message or banner before granting access, informing users of applicable monitoring, recording, and auditing conditions, and of unauthorized use consequences.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "AC-14",
+          "PL-4",
+          "SI-4"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the system to display an approved system use notification message or banner before granting access, informing users of applicable monitoring, recording, and auditing conditions, and of unauthorized use consequences.\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** AC-14, PL-4, SI-4\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the system displays an approved notification message before granting access.",
+        "examine_procedures": "Access control policy; system security plan; system use notification messages/banners; system design documentation; system configuration settings; system audit records.",
+        "interview_procedures": "System administrators; organizational personnel responsible for defining system use notification content.",
+        "test_procedures": "System use notification mechanisms; system logon processes displaying notification banners.",
+        "determination_statements": [
+          "AC-08a.[01] — The system displays an organization-defined system use notification message or banner before granting access to the system that provides privacy and security notices consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines",
+          "AC-08a.[02] — The notification states that users are accessing a government system (or an organization system, as applicable)",
+          "AC-08a.[03] — The notification states that system usage may be monitored, recorded, and subject to audit",
+          "AC-08a.[04] — The notification states that unauthorized use of the system is prohibited and subject to criminal and civil penalties",
+          "AC-08a.[05] — The notification states that use of the system indicates consent to monitoring and recording",
+          "AC-08b. — The notification message or banner is retained on the screen until users acknowledge the notification and take explicit actions to log on to or further access the system"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the system displays an approved notification message before granting access.\n\n**Examine:** Access control policy; system security plan; system use notification messages/banners; system design documentation; system configuration settings; system audit records.\n\n**Interview:** System administrators; organizational personnel responsible for defining system use notification content.\n\n**Test:** System use notification mechanisms; system logon processes displaying notification banners.\n\n**Determination Statements:**\n- AC-08a.[01] — The system displays an organization-defined system use notification message or banner before granting access to the system that provides privacy and security notices consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines\n- AC-08a.[02] — The notification states that users are accessing a government system (or an organization system, as applicable)\n- AC-08a.[03] — The notification states that system usage may be monitored, recorded, and subject to audit\n- AC-08a.[04] — The notification states that unauthorized use of the system is prohibited and subject to criminal and civil penalties\n- AC-08a.[05] — The notification states that use of the system indicates consent to monitoring and recording\n- AC-08b. — The notification message or banner is retained on the screen until users acknowledge the notification and take explicit actions to log on to or further access the system"
+      }
+    },
+    "AC-9": {
+      "control_id": "AC-9",
+      "control_title": "Previous Logon Notification",
+      "base_control": {
+        "control_id": "AC-9",
+        "control_title": "Previous Logon Notification",
+        "control_text": "Requires the system to notify the user upon successful logon of the date and time of the last logon, and the number of unsuccessful logon attempts since the last successful logon.",
+        "key_enhancements": [
+          {
+            "id": "AC-9(1)",
+            "title": "Unsuccessful Logons"
+          },
+          {
+            "id": "AC-9(2)",
+            "title": "Successful and Unsuccessful Logons"
+          },
+          {
+            "id": "AC-9(3)",
+            "title": "Notification of Account Changes"
+          },
+          {
+            "id": "AC-9(4)",
+            "title": "Additional Logon Information"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AC-9(1) | Unsuccessful Logons |\n| AC-9(2) | Successful and Unsuccessful Logons |\n| AC-9(3) | Notification of Account Changes |\n| AC-9(4) | Additional Logon Information |",
+        "related_controls": [
+          "AC-7",
+          "PL-4"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Requires the system to notify the user upon successful logon of the date and time of the last logon, and the number of unsuccessful logon attempts since the last successful logon.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AC-9(1) | Unsuccessful Logons |\n| AC-9(2) | Successful and Unsuccessful Logons |\n| AC-9(3) | Notification of Account Changes |\n| AC-9(4) | Additional Logon Information |\n\n**Related Controls:** AC-7, PL-4\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "AC-10": {
+      "control_id": "AC-10",
+      "control_title": "Concurrent Session Control",
+      "base_control": {
+        "control_id": "AC-10",
+        "control_title": "Concurrent Session Control",
+        "control_text": "Requires the system to limit the number of concurrent sessions for each system account to an organization-defined number.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "SC-23"
+        ],
+        "baselines": [
+          "High"
+        ],
+        "baselines_text": "High",
+        "source_markdown": "Requires the system to limit the number of concurrent sessions for each system account to an organization-defined number.\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** SC-23\n\n**Baselines:** High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "AC-11": {
+      "control_id": "AC-11",
+      "control_title": "Device Lock",
+      "base_control": {
+        "control_id": "AC-11",
+        "control_title": "Device Lock",
+        "control_text": "Requires the system to prevent further access by initiating a device lock after an organization-defined time period of inactivity, and retain the lock until the user reestablishes access using established identification and authentication procedures.",
+        "key_enhancements": [
+          {
+            "id": "AC-11(1)",
+            "title": "Pattern-Hiding Displays"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AC-11(1) | Pattern-Hiding Displays |",
+        "related_controls": [
+          "AC-2",
+          "AC-7",
+          "IA-11",
+          "PL-4"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Requires the system to prevent further access by initiating a device lock after an organization-defined time period of inactivity, and retain the lock until the user reestablishes access using established identification and authentication procedures.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AC-11(1) | Pattern-Hiding Displays |\n\n**Related Controls:** AC-2, AC-7, IA-11, PL-4\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the system initiates a session lock after an organization-defined time period of inactivity.",
+        "examine_procedures": "Access control policy; system security plan; system design documentation; system configuration settings; system audit records.",
+        "interview_procedures": "System administrators; organizational personnel responsible for configuring session lock.",
+        "test_procedures": "Session lock mechanisms; session lock configuration settings; pattern-hiding display mechanisms.",
+        "determination_statements": [
+          "AC-11a. — The system prevents further access by initiating a session lock after an organization-defined time period of inactivity or upon receiving a request from a user",
+          "AC-11b. — The system retains the session lock until the user reestablishes access using established identification and authentication procedures"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the system initiates a session lock after an organization-defined time period of inactivity.\n\n**Examine:** Access control policy; system security plan; system design documentation; system configuration settings; system audit records.\n\n**Interview:** System administrators; organizational personnel responsible for configuring session lock.\n\n**Test:** Session lock mechanisms; session lock configuration settings; pattern-hiding display mechanisms.\n\n**Determination Statements:**\n- AC-11a. — The system prevents further access by initiating a session lock after an organization-defined time period of inactivity or upon receiving a request from a user\n- AC-11b. — The system retains the session lock until the user reestablishes access using established identification and authentication procedures"
+      }
+    },
+    "AC-12": {
+      "control_id": "AC-12",
+      "control_title": "Session Termination",
+      "base_control": {
+        "control_id": "AC-12",
+        "control_title": "Session Termination",
+        "control_text": "Requires the system to automatically terminate a user session after organization-defined conditions or trigger events.",
+        "key_enhancements": [
+          {
+            "id": "AC-12(1)",
+            "title": "User-Initiated Logouts"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AC-12(1) | User-Initiated Logouts |",
+        "related_controls": [
+          "MA-4",
+          "SC-10",
+          "SC-23"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Requires the system to automatically terminate a user session after organization-defined conditions or trigger events.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AC-12(1) | User-Initiated Logouts |\n\n**Related Controls:** MA-4, SC-10, SC-23\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "AC-13": {
+      "control_id": "AC-13",
+      "control_title": "Supervision and Review — Access Control",
+      "base_control": {
+        "control_id": "AC-13",
+        "control_title": "Supervision and Review — Access Control",
+        "control_text": "*Withdrawn.* Incorporated into AC-2 and AU-6.",
+        "key_enhancements": [],
+        "key_enhancements_text": null,
+        "related_controls": [],
+        "baselines": [],
+        "baselines_text": null,
+        "source_markdown": "*Withdrawn.* Incorporated into AC-2 and AU-6."
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "AC-14": {
+      "control_id": "AC-14",
+      "control_title": "Permitted Actions Without Identification or Authentication",
+      "base_control": {
+        "control_id": "AC-14",
+        "control_title": "Permitted Actions Without Identification or Authentication",
+        "control_text": "Requires the organization to identify specific user actions that can be performed on the system without identification or authentication, and document and justify those actions.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "AC-8",
+          "IA-2",
+          "PL-2"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to identify specific user actions that can be performed on the system without identification or authentication, and document and justify those actions.\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** AC-8, IA-2, PL-2\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "AC-15": {
+      "control_id": "AC-15",
+      "control_title": "Automated Marking",
+      "base_control": {
+        "control_id": "AC-15",
+        "control_title": "Automated Marking",
+        "control_text": "*Withdrawn.* Incorporated into MP-3.",
+        "key_enhancements": [],
+        "key_enhancements_text": null,
+        "related_controls": [],
+        "baselines": [],
+        "baselines_text": null,
+        "source_markdown": "*Withdrawn.* Incorporated into MP-3."
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "AC-16": {
+      "control_id": "AC-16",
+      "control_title": "Security and Privacy Attributes",
+      "base_control": {
+        "control_id": "AC-16",
+        "control_title": "Security and Privacy Attributes",
+        "control_text": "Requires the system to provide the means to associate organization-defined security and privacy attributes with information in storage, in process, and in transmission. Supports attribute-based access control mechanisms.",
+        "key_enhancements": [
+          {
+            "id": "AC-16(1)",
+            "title": "Dynamic Attribute Association"
+          },
+          {
+            "id": "AC-16(2)",
+            "title": "Attribute Value Changes by Authorized Individuals"
+          },
+          {
+            "id": "AC-16(3)",
+            "title": "Maintenance of Attribute Associations by System"
+          },
+          {
+            "id": "AC-16(4)",
+            "title": "Association of Attributes by Authorized Individuals"
+          },
+          {
+            "id": "AC-16(5)",
+            "title": "Attribute Displays on Objects to Be Output"
+          },
+          {
+            "id": "AC-16(6)",
+            "title": "Maintenance of Attribute Association"
+          },
+          {
+            "id": "AC-16(7)",
+            "title": "Consistent Attribute Interpretation"
+          },
+          {
+            "id": "AC-16(8)",
+            "title": "Association Techniques and Technologies"
+          },
+          {
+            "id": "AC-16(9)",
+            "title": "Attribute Reassignment — Regrading Mechanisms"
+          },
+          {
+            "id": "AC-16(10)",
+            "title": "Attribute Configuration by Authorized Individuals"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AC-16(1) | Dynamic Attribute Association |\n| AC-16(2) | Attribute Value Changes by Authorized Individuals |\n| AC-16(3) | Maintenance of Attribute Associations by System |\n| AC-16(4) | Association of Attributes by Authorized Individuals |\n| AC-16(5) | Attribute Displays on Objects to Be Output |\n| AC-16(6) | Maintenance of Attribute Association |\n| AC-16(7) | Consistent Attribute Interpretation |\n| AC-16(8) | Association Techniques and Technologies |\n| AC-16(9) | Attribute Reassignment — Regrading Mechanisms |\n| AC-16(10) | Attribute Configuration by Authorized Individuals |",
+        "related_controls": [
+          "AC-3",
+          "AC-4",
+          "AC-6",
+          "AC-21",
+          "AC-25",
+          "AU-2",
+          "AU-10",
+          "MP-3",
+          "PE-22",
+          "PT-2",
+          "PT-3",
+          "PT-4",
+          "SC-11",
+          "SC-16",
+          "SI-12",
+          "SI-18"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Requires the system to provide the means to associate organization-defined security and privacy attributes with information in storage, in process, and in transmission. Supports attribute-based access control mechanisms.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AC-16(1) | Dynamic Attribute Association |\n| AC-16(2) | Attribute Value Changes by Authorized Individuals |\n| AC-16(3) | Maintenance of Attribute Associations by System |\n| AC-16(4) | Association of Attributes by Authorized Individuals |\n| AC-16(5) | Attribute Displays on Objects to Be Output |\n| AC-16(6) | Maintenance of Attribute Association |\n| AC-16(7) | Consistent Attribute Interpretation |\n| AC-16(8) | Association Techniques and Technologies |\n| AC-16(9) | Attribute Reassignment — Regrading Mechanisms |\n| AC-16(10) | Attribute Configuration by Authorized Individuals |\n\n**Related Controls:** AC-3, AC-4, AC-6, AC-21, AC-25, AU-2, AU-10, MP-3, PE-22, PT-2, PT-3, PT-4, SC-11, SC-16, SI-12, SI-18\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "AC-17": {
+      "control_id": "AC-17",
+      "control_title": "Remote Access",
+      "base_control": {
+        "control_id": "AC-17",
+        "control_title": "Remote Access",
+        "control_text": "Requires the organization to establish and document usage restrictions, configuration and connection requirements, and implementation guidance for each type of remote access allowed. Authorize each type of remote access prior to allowing such connections.",
+        "key_enhancements": [
+          {
+            "id": "AC-17(1)",
+            "title": "Monitoring and Control"
+          },
+          {
+            "id": "AC-17(2)",
+            "title": "Protection of Confidentiality and Integrity Using Encryption"
+          },
+          {
+            "id": "AC-17(3)",
+            "title": "Managed Access Control Points"
+          },
+          {
+            "id": "AC-17(4)",
+            "title": "Privileged Commands and Access"
+          },
+          {
+            "id": "AC-17(6)",
+            "title": "Protection of Mechanism Information"
+          },
+          {
+            "id": "AC-17(9)",
+            "title": "Disconnect or Disable Access"
+          },
+          {
+            "id": "AC-17(10)",
+            "title": "Authenticate Remote Commands"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AC-17(1) | Monitoring and Control |\n| AC-17(2) | Protection of Confidentiality and Integrity Using Encryption |\n| AC-17(3) | Managed Access Control Points |\n| AC-17(4) | Privileged Commands and Access |\n| AC-17(6) | Protection of Mechanism Information |\n| AC-17(9) | Disconnect or Disable Access |\n| AC-17(10) | Authenticate Remote Commands |",
+        "related_controls": [
+          "AC-2",
+          "AC-3",
+          "AC-4",
+          "AC-18",
+          "AC-19",
+          "AC-20",
+          "CA-3",
+          "CM-10",
+          "IA-2",
+          "IA-3",
+          "IA-8",
+          "MA-4",
+          "PE-17",
+          "PL-2",
+          "PL-4",
+          "SC-10",
+          "SC-12",
+          "SC-13",
+          "SI-4"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to establish and document usage restrictions, configuration and connection requirements, and implementation guidance for each type of remote access allowed. Authorize each type of remote access prior to allowing such connections.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AC-17(1) | Monitoring and Control |\n| AC-17(2) | Protection of Confidentiality and Integrity Using Encryption |\n| AC-17(3) | Managed Access Control Points |\n| AC-17(4) | Privileged Commands and Access |\n| AC-17(6) | Protection of Mechanism Information |\n| AC-17(9) | Disconnect or Disable Access |\n| AC-17(10) | Authenticate Remote Commands |\n\n**Related Controls:** AC-2, AC-3, AC-4, AC-18, AC-19, AC-20, CA-3, CM-10, IA-2, IA-3, IA-8, MA-4, PE-17, PL-2, PL-4, SC-10, SC-12, SC-13, SI-4\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization establishes usage restrictions and manages remote access to the system.",
+        "examine_procedures": "Access control policy; remote access procedures; system security plan; system configuration settings; remote access authorizations; system audit records; VPN configurations.",
+        "interview_procedures": "System administrators; organizational personnel responsible for remote access management; information system security officers.",
+        "test_procedures": "Remote access management mechanisms; remote access encryption mechanisms; remote access authentication mechanisms; managed access control points.",
+        "determination_statements": [
+          "AC-17a. — Usage restrictions, configuration/connection requirements, and implementation guidance are established and documented for each type of remote access allowed",
+          "AC-17b. — Each type of remote access is authorized prior to establishing connections"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization establishes usage restrictions and manages remote access to the system.\n\n**Examine:** Access control policy; remote access procedures; system security plan; system configuration settings; remote access authorizations; system audit records; VPN configurations.\n\n**Interview:** System administrators; organizational personnel responsible for remote access management; information system security officers.\n\n**Test:** Remote access management mechanisms; remote access encryption mechanisms; remote access authentication mechanisms; managed access control points.\n\n**Determination Statements:**\n- AC-17a. — Usage restrictions, configuration/connection requirements, and implementation guidance are established and documented for each type of remote access allowed\n- AC-17b. — Each type of remote access is authorized prior to establishing connections"
+      }
+    },
+    "AC-18": {
+      "control_id": "AC-18",
+      "control_title": "Wireless Access",
+      "base_control": {
+        "control_id": "AC-18",
+        "control_title": "Wireless Access",
+        "control_text": "Requires the organization to establish configuration requirements, connection requirements, and implementation guidance for each type of wireless access. Authorize wireless access prior to allowing such connections.",
+        "key_enhancements": [
+          {
+            "id": "AC-18(1)",
+            "title": "Authentication and Encryption"
+          },
+          {
+            "id": "AC-18(3)",
+            "title": "Disable Wireless Networking"
+          },
+          {
+            "id": "AC-18(4)",
+            "title": "Restrict Configurations by Users"
+          },
+          {
+            "id": "AC-18(5)",
+            "title": "Antennas and Transmission Power Levels"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AC-18(1) | Authentication and Encryption |\n| AC-18(3) | Disable Wireless Networking |\n| AC-18(4) | Restrict Configurations by Users |\n| AC-18(5) | Antennas and Transmission Power Levels |",
+        "related_controls": [
+          "AC-2",
+          "AC-3",
+          "AC-17",
+          "AC-19",
+          "CA-9",
+          "CM-7",
+          "IA-2",
+          "IA-3",
+          "IA-8",
+          "PL-4",
+          "SC-40",
+          "SC-43",
+          "SI-4"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to establish configuration requirements, connection requirements, and implementation guidance for each type of wireless access. Authorize wireless access prior to allowing such connections.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AC-18(1) | Authentication and Encryption |\n| AC-18(3) | Disable Wireless Networking |\n| AC-18(4) | Restrict Configurations by Users |\n| AC-18(5) | Antennas and Transmission Power Levels |\n\n**Related Controls:** AC-2, AC-3, AC-17, AC-19, CA-9, CM-7, IA-2, IA-3, IA-8, PL-4, SC-40, SC-43, SI-4\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization establishes configuration and connection requirements for wireless access and authorizes wireless access before allowing connections.",
+        "examine_procedures": "Access control policy; wireless access procedures; system security plan; system design documentation; system configuration settings; wireless access authorizations; system audit records.",
+        "interview_procedures": "System administrators; organizational personnel responsible for wireless access management.",
+        "test_procedures": "Wireless access authentication mechanisms; wireless encryption mechanisms; wireless access configuration settings.",
+        "determination_statements": [
+          "AC-18a. — Configuration requirements, connection requirements, and implementation guidance are established for each type of wireless access",
+          "AC-18b. — Each type of wireless access is authorized prior to allowing connections"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization establishes configuration and connection requirements for wireless access and authorizes wireless access before allowing connections.\n\n**Examine:** Access control policy; wireless access procedures; system security plan; system design documentation; system configuration settings; wireless access authorizations; system audit records.\n\n**Interview:** System administrators; organizational personnel responsible for wireless access management.\n\n**Test:** Wireless access authentication mechanisms; wireless encryption mechanisms; wireless access configuration settings.\n\n**Determination Statements:**\n- AC-18a. — Configuration requirements, connection requirements, and implementation guidance are established for each type of wireless access\n- AC-18b. — Each type of wireless access is authorized prior to allowing connections"
+      }
+    },
+    "AC-19": {
+      "control_id": "AC-19",
+      "control_title": "Access Control for Mobile Devices",
+      "base_control": {
+        "control_id": "AC-19",
+        "control_title": "Access Control for Mobile Devices",
+        "control_text": "Requires the organization to establish configuration requirements, connection requirements, and implementation guidance for organization-controlled mobile devices, and authorize the connection of mobile devices to organizational systems.",
+        "key_enhancements": [
+          {
+            "id": "AC-19(1)",
+            "title": "Use of Writable and Portable Storage Devices"
+          },
+          {
+            "id": "AC-19(2)",
+            "title": "Use of Personally Owned Portable Storage Devices"
+          },
+          {
+            "id": "AC-19(4)",
+            "title": "Restrictions for Classified Information"
+          },
+          {
+            "id": "AC-19(5)",
+            "title": "Full Device or Container-Based Encryption"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AC-19(1) | Use of Writable and Portable Storage Devices |\n| AC-19(2) | Use of Personally Owned Portable Storage Devices |\n| AC-19(4) | Restrictions for Classified Information |\n| AC-19(5) | Full Device or Container-Based Encryption |",
+        "related_controls": [
+          "AC-3",
+          "AC-4",
+          "AC-7",
+          "AC-11",
+          "AC-17",
+          "AC-18",
+          "AC-20",
+          "CA-9",
+          "CM-2",
+          "CM-6",
+          "IA-2",
+          "IA-3",
+          "MP-2",
+          "MP-4",
+          "MP-5",
+          "MP-7",
+          "PL-4",
+          "SC-7",
+          "SC-34",
+          "SC-43",
+          "SI-3",
+          "SI-4"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to establish configuration requirements, connection requirements, and implementation guidance for organization-controlled mobile devices, and authorize the connection of mobile devices to organizational systems.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AC-19(1) | Use of Writable and Portable Storage Devices |\n| AC-19(2) | Use of Personally Owned Portable Storage Devices |\n| AC-19(4) | Restrictions for Classified Information |\n| AC-19(5) | Full Device or Container-Based Encryption |\n\n**Related Controls:** AC-3, AC-4, AC-7, AC-11, AC-17, AC-18, AC-20, CA-9, CM-2, CM-6, IA-2, IA-3, MP-2, MP-4, MP-5, MP-7, PL-4, SC-7, SC-34, SC-43, SI-3, SI-4\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization establishes configuration and connection requirements for mobile devices and authorizes their connection.",
+        "examine_procedures": "Access control policy; mobile device policies; system security plan; system configuration settings; mobile device management configuration; authorization records.",
+        "interview_procedures": "System administrators; organizational personnel responsible for mobile device management.",
+        "test_procedures": "Mobile device management mechanisms; mobile device encryption mechanisms; mobile device access controls.",
+        "determination_statements": [
+          "AC-19a. — Configuration requirements, connection requirements, and implementation guidance are established for organization-controlled mobile devices",
+          "AC-19b. — Connection of mobile devices to organizational systems is authorized"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization establishes configuration and connection requirements for mobile devices and authorizes their connection.\n\n**Examine:** Access control policy; mobile device policies; system security plan; system configuration settings; mobile device management configuration; authorization records.\n\n**Interview:** System administrators; organizational personnel responsible for mobile device management.\n\n**Test:** Mobile device management mechanisms; mobile device encryption mechanisms; mobile device access controls.\n\n**Determination Statements:**\n- AC-19a. — Configuration requirements, connection requirements, and implementation guidance are established for organization-controlled mobile devices\n- AC-19b. — Connection of mobile devices to organizational systems is authorized"
+      }
+    },
+    "AC-20": {
+      "control_id": "AC-20",
+      "control_title": "Use of External Systems",
+      "base_control": {
+        "control_id": "AC-20",
+        "control_title": "Use of External Systems",
+        "control_text": "Requires the organization to establish terms and conditions for authorized individuals to access the system from external systems, and establish terms and conditions for processing, storing, or transmitting organization-controlled information using external systems.",
+        "key_enhancements": [
+          {
+            "id": "AC-20(1)",
+            "title": "Limits on Authorized Use"
+          },
+          {
+            "id": "AC-20(2)",
+            "title": "Portable Storage Devices — Restricted Use"
+          },
+          {
+            "id": "AC-20(3)",
+            "title": "Non-Organizationally Owned Systems — Restricted Use"
+          },
+          {
+            "id": "AC-20(4)",
+            "title": "Network Accessible Storage Devices — Prohibited Use"
+          },
+          {
+            "id": "AC-20(5)",
+            "title": "Portable Storage Devices — Prohibited Use"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AC-20(1) | Limits on Authorized Use |\n| AC-20(2) | Portable Storage Devices — Restricted Use |\n| AC-20(3) | Non-Organizationally Owned Systems — Restricted Use |\n| AC-20(4) | Network Accessible Storage Devices — Prohibited Use |\n| AC-20(5) | Portable Storage Devices — Prohibited Use |",
+        "related_controls": [
+          "AC-2",
+          "AC-3",
+          "AC-17",
+          "AC-19",
+          "CA-3",
+          "PL-2",
+          "PL-4",
+          "SA-9",
+          "SC-7"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to establish terms and conditions for authorized individuals to access the system from external systems, and establish terms and conditions for processing, storing, or transmitting organization-controlled information using external systems.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AC-20(1) | Limits on Authorized Use |\n| AC-20(2) | Portable Storage Devices — Restricted Use |\n| AC-20(3) | Non-Organizationally Owned Systems — Restricted Use |\n| AC-20(4) | Network Accessible Storage Devices — Prohibited Use |\n| AC-20(5) | Portable Storage Devices — Prohibited Use |\n\n**Related Controls:** AC-2, AC-3, AC-17, AC-19, CA-3, PL-2, PL-4, SA-9, SC-7\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization establishes terms and conditions for use of external systems.",
+        "examine_procedures": "Access control policy; external system use procedures; system security plan; terms and conditions for external system access; list of approved external systems; system configuration settings.",
+        "interview_procedures": "Organizational personnel using external systems; organizational personnel responsible for defining external system use requirements.",
+        "test_procedures": "Mechanisms for enforcing terms and conditions of external system use; portable storage device restrictions.",
+        "determination_statements": [
+          "AC-20a. — Terms and conditions are established for authorized individuals to access the system from external systems",
+          "AC-20b. — Terms and conditions are established for processing, storing, or transmitting organization-controlled information using external systems"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization establishes terms and conditions for use of external systems.\n\n**Examine:** Access control policy; external system use procedures; system security plan; terms and conditions for external system access; list of approved external systems; system configuration settings.\n\n**Interview:** Organizational personnel using external systems; organizational personnel responsible for defining external system use requirements.\n\n**Test:** Mechanisms for enforcing terms and conditions of external system use; portable storage device restrictions.\n\n**Determination Statements:**\n- AC-20a. — Terms and conditions are established for authorized individuals to access the system from external systems\n- AC-20b. — Terms and conditions are established for processing, storing, or transmitting organization-controlled information using external systems"
+      }
+    },
+    "AC-21": {
+      "control_id": "AC-21",
+      "control_title": "Information Sharing",
+      "base_control": {
+        "control_id": "AC-21",
+        "control_title": "Information Sharing",
+        "control_text": "Requires the organization to facilitate information sharing by enabling authorized users to determine whether access authorizations assigned to a sharing partner match the access restrictions on the information, and employ automated mechanisms or manual processes to assist users in making sharing decisions.",
+        "key_enhancements": [
+          {
+            "id": "AC-21(1)",
+            "title": "Automated Decision Support"
+          },
+          {
+            "id": "AC-21(2)",
+            "title": "Information Search and Retrieval"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AC-21(1) | Automated Decision Support |\n| AC-21(2) | Information Search and Retrieval |",
+        "related_controls": [
+          "AC-3",
+          "AC-4",
+          "AC-16",
+          "PT-2",
+          "PT-7",
+          "RA-3",
+          "SC-15"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Requires the organization to facilitate information sharing by enabling authorized users to determine whether access authorizations assigned to a sharing partner match the access restrictions on the information, and employ automated mechanisms or manual processes to assist users in making sharing decisions.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AC-21(1) | Automated Decision Support |\n| AC-21(2) | Information Search and Retrieval |\n\n**Related Controls:** AC-3, AC-4, AC-16, PT-2, PT-7, RA-3, SC-15\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization facilitates information sharing by enabling authorized users to determine whether access authorizations match access restrictions.",
+        "examine_procedures": "Access control policy; information sharing procedures; system security plan; system design documentation; system configuration settings.",
+        "interview_procedures": "Organizational personnel involved in information sharing decisions.",
+        "test_procedures": "Information sharing mechanisms; access authorization verification mechanisms.",
+        "determination_statements": [
+          "AC-21a. — Authorized users are enabled to determine whether access authorizations assigned to a sharing partner match the information's access restrictions",
+          "AC-21b. — Organization-defined automated mechanisms or manual processes are employed to assist users in making information sharing decisions",
+          "NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final",
+          "[SP 800-53 AC Family](../800-53/ac.md)",
+          "[SP 800-171 AC Requirements](../800-171/ac.md)"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization facilitates information sharing by enabling authorized users to determine whether access authorizations match access restrictions.\n\n**Examine:** Access control policy; information sharing procedures; system security plan; system design documentation; system configuration settings.\n\n**Interview:** Organizational personnel involved in information sharing decisions.\n\n**Test:** Information sharing mechanisms; access authorization verification mechanisms.\n\n**Determination Statements:**\n- AC-21a. — Authorized users are enabled to determine whether access authorizations assigned to a sharing partner match the information's access restrictions\n- AC-21b. — Organization-defined automated mechanisms or manual processes are employed to assist users in making information sharing decisions\n\n## References\n\n- NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final\n- [SP 800-53 AC Family](../800-53/ac.md)\n- [SP 800-171 AC Requirements](../800-171/ac.md)"
+      }
+    },
+    "AC-22": {
+      "control_id": "AC-22",
+      "control_title": "Publicly Accessible Content",
+      "base_control": {
+        "control_id": "AC-22",
+        "control_title": "Publicly Accessible Content",
+        "control_text": "Requires the organization to designate individuals authorized to make information publicly accessible, review publicly accessible content for nonpublic information and remove it if found, and review content on the publicly accessible system periodically.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "AC-3",
+          "AT-2",
+          "AT-3",
+          "AU-13"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to designate individuals authorized to make information publicly accessible, review publicly accessible content for nonpublic information and remove it if found, and review content on the publicly accessible system periodically.\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** AC-3, AT-2, AT-3, AU-13\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "AC-23": {
+      "control_id": "AC-23",
+      "control_title": "Data Mining Protection",
+      "base_control": {
+        "control_id": "AC-23",
+        "control_title": "Data Mining Protection",
+        "control_text": "Requires the organization to employ data mining prevention and detection techniques for organization-defined data storage objects to detect and protect against unauthorized data mining.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "PM-12",
+          "PT-2"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Requires the organization to employ data mining prevention and detection techniques for organization-defined data storage objects to detect and protect against unauthorized data mining.\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** PM-12, PT-2\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "AC-24": {
+      "control_id": "AC-24",
+      "control_title": "Access Control Decisions",
+      "base_control": {
+        "control_id": "AC-24",
+        "control_title": "Access Control Decisions",
+        "control_text": "Requires the system to establish procedures to ensure that access control decisions are applied to each access request prior to access enforcement.",
+        "key_enhancements": [
+          {
+            "id": "AC-24(1)",
+            "title": "Transmit Access Authorization Information"
+          },
+          {
+            "id": "AC-24(2)",
+            "title": "No User or Process Identity"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AC-24(1) | Transmit Access Authorization Information |\n| AC-24(2) | No User or Process Identity |",
+        "related_controls": [
+          "AC-2",
+          "AC-3"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Requires the system to establish procedures to ensure that access control decisions are applied to each access request prior to access enforcement.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AC-24(1) | Transmit Access Authorization Information |\n| AC-24(2) | No User or Process Identity |\n\n**Related Controls:** AC-2, AC-3\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "AC-25": {
+      "control_id": "AC-25",
+      "control_title": "Reference Monitor",
+      "base_control": {
+        "control_id": "AC-25",
+        "control_title": "Reference Monitor",
+        "control_text": "Requires the system to implement a reference monitor for access control that is tamperproof, always invoked, and small enough to be subject to analysis and testing, the completeness of which can be assured.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "AC-3",
+          "AC-16",
+          "SA-8",
+          "SA-17",
+          "SC-3",
+          "SC-11",
+          "SC-39",
+          "SI-13"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Requires the system to implement a reference monitor for access control that is tamperproof, always invoked, and small enough to be subject to analysis and testing, the completeness of which can be assured.\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** AC-3, AC-16, SA-8, SA-17, SC-3, SC-11, SC-39, SI-13\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    }
+  }
+}

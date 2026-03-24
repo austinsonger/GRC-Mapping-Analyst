@@ -1,0 +1,929 @@
+{
+  "source_documents": {
+    "nist_800_53_pe": "/Users/austinsonger/code/strm-Mapping/working-directory/frameworks/info/800-53/800-53/pe.md",
+    "nist_800_53a_pe": "/Users/austinsonger/code/strm-Mapping/working-directory/frameworks/info/800-53/800-53a/pe.md"
+  },
+  "generated_at": "2026-03-24T19:25:56.777Z",
+  "control_family": "PE",
+  "control_count": 23,
+  "controls": {
+    "PE-1": {
+      "control_id": "PE-1",
+      "control_title": "Policy and Procedures",
+      "base_control": {
+        "control_id": "PE-1",
+        "control_title": "Policy and Procedures",
+        "control_text": "Develop, document, and disseminate a physical and environmental protection policy and procedures that address purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance. Review and update the policy and procedures at organization-defined frequencies.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PE-1.",
+        "related_controls": [
+          "AT-3",
+          "PM-9",
+          "PS-8",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Develop, document, and disseminate a physical and environmental protection policy and procedures that address purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance. Review and update the policy and procedures at organization-defined frequencies.\n\n**Key Enhancements:** None defined for PE-1.\n\n**Related Controls:** AT-3, PM-9, PS-8, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization develops, documents, disseminates, reviews, and updates physical and environmental protection policy and procedures.",
+        "examine_procedures": "Physical and environmental protection policy; physical and environmental protection procedures; system security plan.",
+        "interview_procedures": "Organizational personnel responsible for physical and environmental protection policy.",
+        "test_procedures": "Organizational processes for managing physical and environmental protection policy.",
+        "determination_statements": [
+          "PE-01a. — A physical and environmental protection policy is developed, documented, and disseminated",
+          "PE-01b. — Physical and environmental protection procedures are developed, documented, and disseminated",
+          "PE-01c. — The policy and procedures are reviewed and updated at an organization-defined frequency"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization develops, documents, disseminates, reviews, and updates physical and environmental protection policy and procedures.\n\n**Examine:** Physical and environmental protection policy; physical and environmental protection procedures; system security plan.\n\n**Interview:** Organizational personnel responsible for physical and environmental protection policy.\n\n**Test:** Organizational processes for managing physical and environmental protection policy.\n\n**Determination Statements:**\n- PE-01a. — A physical and environmental protection policy is developed, documented, and disseminated\n- PE-01b. — Physical and environmental protection procedures are developed, documented, and disseminated\n- PE-01c. — The policy and procedures are reviewed and updated at an organization-defined frequency"
+      }
+    },
+    "PE-2": {
+      "control_id": "PE-2",
+      "control_title": "Physical Access Authorizations",
+      "base_control": {
+        "control_id": "PE-2",
+        "control_title": "Physical Access Authorizations",
+        "control_text": "Develop, approve, and maintain a list of individuals with authorized access to the facility where the system resides. Issue authorization credentials for facility access. Review the access list detailing authorized facility access by individuals at an organization-defined frequency. Remove individuals from the facility access list when access is no longer required.",
+        "key_enhancements": [
+          {
+            "id": "PE-2(1)",
+            "title": "Access by Position or Role"
+          },
+          {
+            "id": "PE-2(2)",
+            "title": "Two Forms of Identification"
+          },
+          {
+            "id": "PE-2(3)",
+            "title": "Restrict Unescorted Access"
+          }
+        ],
+        "key_enhancements_text": "- **PE-2(1):** Access by Position or Role — Authorize physical access to the facility where the system resides based on position or role.\n- **PE-2(2):** Two Forms of Identification — Require two forms of identification from organization-defined list of acceptable forms of identification for visitor access to the facility.\n- **PE-2(3):** Restrict Unescorted Access — Restrict unescorted access to the facility where the system resides to personnel with organization-defined security clearances, formal access authorizations, or organization-defined credentials.",
+        "related_controls": [
+          "AT-3",
+          "AU-9",
+          "IA-4",
+          "MA-5",
+          "MP-2",
+          "PE-3",
+          "PE-4",
+          "PE-5",
+          "PE-8",
+          "PM-12",
+          "PS-3",
+          "PS-4",
+          "PS-5",
+          "PS-6"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Develop, approve, and maintain a list of individuals with authorized access to the facility where the system resides. Issue authorization credentials for facility access. Review the access list detailing authorized facility access by individuals at an organization-defined frequency. Remove individuals from the facility access list when access is no longer required.\n\n**Key Enhancements:**\n- **PE-2(1):** Access by Position or Role — Authorize physical access to the facility where the system resides based on position or role.\n- **PE-2(2):** Two Forms of Identification — Require two forms of identification from organization-defined list of acceptable forms of identification for visitor access to the facility.\n- **PE-2(3):** Restrict Unescorted Access — Restrict unescorted access to the facility where the system resides to personnel with organization-defined security clearances, formal access authorizations, or organization-defined credentials.\n\n**Related Controls:** AT-3, AU-9, IA-4, MA-5, MP-2, PE-3, PE-4, PE-5, PE-8, PM-12, PS-3, PS-4, PS-5, PS-6\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization develops, approves, and maintains a list of individuals with authorized access to the facility.",
+        "examine_procedures": "Physical and environmental protection policy; physical access authorization records; physical access list; system security plan.",
+        "interview_procedures": "Organizational personnel responsible for physical access authorizations; facility security personnel.",
+        "test_procedures": "Physical access authorization processes; credential issuance processes.",
+        "determination_statements": [
+          "PE-02a. — A list of individuals with authorized access to the facility where the system resides is developed, approved, and maintained",
+          "PE-02b. — Authorization credentials are issued for facility access",
+          "PE-02c. — The access list is reviewed at an organization-defined frequency, and individuals removed when access is no longer required"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization develops, approves, and maintains a list of individuals with authorized access to the facility.\n\n**Examine:** Physical and environmental protection policy; physical access authorization records; physical access list; system security plan.\n\n**Interview:** Organizational personnel responsible for physical access authorizations; facility security personnel.\n\n**Test:** Physical access authorization processes; credential issuance processes.\n\n**Determination Statements:**\n- PE-02a. — A list of individuals with authorized access to the facility where the system resides is developed, approved, and maintained\n- PE-02b. — Authorization credentials are issued for facility access\n- PE-02c. — The access list is reviewed at an organization-defined frequency, and individuals removed when access is no longer required"
+      }
+    },
+    "PE-3": {
+      "control_id": "PE-3",
+      "control_title": "Physical Access Control",
+      "base_control": {
+        "control_id": "PE-3",
+        "control_title": "Physical Access Control",
+        "control_text": "Enforce physical access authorizations at organization-defined entry and exit points to the facility where the system resides by verifying individual access authorizations before granting access to the facility and controlling ingress and egress to the facility using organization-defined physical access control systems/devices or guards. Maintain physical access audit logs for organization-defined entry or exit points. Control access to areas within the facility officially designated as publicly accessible by employing organization-defined controls. Escort visitors and control visitor activity at organization-defined circumstances. Secure keys, combinations, and other physical access devices. Inventory physical access devices at an organization-defined frequency. Change combinations and keys at an organization-defined frequency and/or when keys are lost, combinations are compromised, or when individuals possessing the keys or combinations are transferred or terminated.",
+        "key_enhancements": [
+          {
+            "id": "PE-3(1)",
+            "title": "System Access"
+          },
+          {
+            "id": "PE-3(2)",
+            "title": "Facility and Systems"
+          },
+          {
+            "id": "PE-3(3)",
+            "title": "Continuous Guards"
+          },
+          {
+            "id": "PE-3(4)",
+            "title": "Lockable Casings"
+          },
+          {
+            "id": "PE-3(5)",
+            "title": "Tamper Protection"
+          },
+          {
+            "id": "PE-3(6)",
+            "title": "Facility Penetration Testing"
+          },
+          {
+            "id": "PE-3(7)",
+            "title": "Physical Barriers"
+          },
+          {
+            "id": "PE-3(8)",
+            "title": "Access Control Vestibules"
+          }
+        ],
+        "key_enhancements_text": "- **PE-3(1):** System Access — Enforce physical access authorizations to the system in addition to the physical access controls for the facility.\n- **PE-3(2):** Facility and Systems — Perform security checks at the physical perimeter of the facility or system for exfiltration of information or removal of system components at organization-defined frequency.\n- **PE-3(3):** Continuous Guards — Employ guards to control organization-defined physical access points to the facility where the system resides 24 hours per day, 7 days per week.\n- **PE-3(4):** Lockable Casings — Use lockable physical casings to protect organization-defined system components from unauthorized physical access.\n- **PE-3(5):** Tamper Protection — Employ organization-defined anti-tamper technologies to detect and/or prevent physical tampering or alteration of organization-defined hardware components within the system.\n- **PE-3(6):** Facility Penetration Testing — Employ organization-defined frequency facility penetration testing for organization-defined elements of the physical security of the facility.\n- **PE-3(7):** Physical Barriers — Limit uncontrolled physical access using physical barriers.\n- **PE-3(8):** Access Control Vestibules — Employ access control vestibules at organization-defined locations within the facility.",
+        "related_controls": [
+          "AT-3",
+          "AU-2",
+          "AU-6",
+          "AU-9",
+          "AU-13",
+          "CP-10",
+          "IA-3",
+          "IA-8",
+          "MA-5",
+          "MP-2",
+          "MP-4",
+          "PE-2",
+          "PE-4",
+          "PE-5",
+          "PE-8",
+          "PS-2",
+          "PS-3",
+          "PS-6",
+          "PS-7",
+          "RA-3",
+          "SC-28",
+          "SI-4",
+          "SR-3"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Enforce physical access authorizations at organization-defined entry and exit points to the facility where the system resides by verifying individual access authorizations before granting access to the facility and controlling ingress and egress to the facility using organization-defined physical access control systems/devices or guards. Maintain physical access audit logs for organization-defined entry or exit points. Control access to areas within the facility officially designated as publicly accessible by employing organization-defined controls. Escort visitors and control visitor activity at organization-defined circumstances. Secure keys, combinations, and other physical access devices. Inventory physical access devices at an organization-defined frequency. Change combinations and keys at an organization-defined frequency and/or when keys are lost, combinations are compromised, or when individuals possessing the keys or combinations are transferred or terminated.\n\n**Key Enhancements:**\n- **PE-3(1):** System Access — Enforce physical access authorizations to the system in addition to the physical access controls for the facility.\n- **PE-3(2):** Facility and Systems — Perform security checks at the physical perimeter of the facility or system for exfiltration of information or removal of system components at organization-defined frequency.\n- **PE-3(3):** Continuous Guards — Employ guards to control organization-defined physical access points to the facility where the system resides 24 hours per day, 7 days per week.\n- **PE-3(4):** Lockable Casings — Use lockable physical casings to protect organization-defined system components from unauthorized physical access.\n- **PE-3(5):** Tamper Protection — Employ organization-defined anti-tamper technologies to detect and/or prevent physical tampering or alteration of organization-defined hardware components within the system.\n- **PE-3(6):** Facility Penetration Testing — Employ organization-defined frequency facility penetration testing for organization-defined elements of the physical security of the facility.\n- **PE-3(7):** Physical Barriers — Limit uncontrolled physical access using physical barriers.\n- **PE-3(8):** Access Control Vestibules — Employ access control vestibules at organization-defined locations within the facility.\n\n**Related Controls:** AT-3, AU-2, AU-6, AU-9, AU-13, CP-10, IA-3, IA-8, MA-5, MP-2, MP-4, PE-2, PE-4, PE-5, PE-8, PS-2, PS-3, PS-6, PS-7, RA-3, SC-28, SI-4, SR-3\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization enforces physical access authorizations at entry and exit points.",
+        "examine_procedures": "Physical and environmental protection policy; physical access control procedures; physical access control logs; physical access control mechanisms; facility security plans; visitor logs.",
+        "interview_procedures": "Facility security personnel; system administrators; organizational personnel responsible for physical access control.",
+        "test_procedures": "Physical access control mechanisms (card readers, biometrics, mantraps, locks); visitor escort processes; alarm systems.",
+        "determination_statements": [
+          "PE-03a. — Physical access authorizations are enforced at organization-defined entry/exit points to the facility by verifying individual access authorizations before granting access",
+          "PE-03b. — Physical access audit logs are maintained for entry/exit points",
+          "PE-03c. — Physical access devices are controlled and managed",
+          "PE-03d. — Visitors are escorted and visitor activity is monitored",
+          "PE-03e. — Keys, combinations, and other physical access devices are secured",
+          "PE-03f. — Inventories of physical access devices are maintained",
+          "PE-03g. — Physical access devices are changed at an organization-defined frequency and/or when devices are compromised, lost, or keys are lost or combinations are compromised"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization enforces physical access authorizations at entry and exit points.\n\n**Examine:** Physical and environmental protection policy; physical access control procedures; physical access control logs; physical access control mechanisms; facility security plans; visitor logs.\n\n**Interview:** Facility security personnel; system administrators; organizational personnel responsible for physical access control.\n\n**Test:** Physical access control mechanisms (card readers, biometrics, mantraps, locks); visitor escort processes; alarm systems.\n\n**Determination Statements:**\n- PE-03a. — Physical access authorizations are enforced at organization-defined entry/exit points to the facility by verifying individual access authorizations before granting access\n- PE-03b. — Physical access audit logs are maintained for entry/exit points\n- PE-03c. — Physical access devices are controlled and managed\n- PE-03d. — Visitors are escorted and visitor activity is monitored\n- PE-03e. — Keys, combinations, and other physical access devices are secured\n- PE-03f. — Inventories of physical access devices are maintained\n- PE-03g. — Physical access devices are changed at an organization-defined frequency and/or when devices are compromised, lost, or keys are lost or combinations are compromised"
+      }
+    },
+    "PE-4": {
+      "control_id": "PE-4",
+      "control_title": "Access Control for Transmission",
+      "base_control": {
+        "control_id": "PE-4",
+        "control_title": "Access Control for Transmission",
+        "control_text": "Control physical access to organization-defined system distribution and transmission lines within organizational facilities using organization-defined security controls.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PE-4.",
+        "related_controls": [
+          "AT-3",
+          "IA-4",
+          "MP-2",
+          "MP-4",
+          "PE-2",
+          "PE-3",
+          "PE-5",
+          "PE-9",
+          "SC-7",
+          "SC-8"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Control physical access to organization-defined system distribution and transmission lines within organizational facilities using organization-defined security controls.\n\n**Key Enhancements:** None defined for PE-4.\n\n**Related Controls:** AT-3, IA-4, MP-2, MP-4, PE-2, PE-3, PE-5, PE-9, SC-7, SC-8\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization controls physical access to system distribution and transmission lines within organizational facilities.",
+        "examine_procedures": "Physical and environmental protection policy; system security plan; facility floor plans showing transmission lines; physical access controls for transmission media.",
+        "interview_procedures": "Facility security personnel; system administrators; network engineers.",
+        "test_procedures": "Physical access controls for wiring closets, cable trays, and transmission infrastructure.",
+        "determination_statements": [
+          "PE-04 — Physical access to organization-defined system distribution and transmission lines is controlled within organizational facilities"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization controls physical access to system distribution and transmission lines within organizational facilities.\n\n**Examine:** Physical and environmental protection policy; system security plan; facility floor plans showing transmission lines; physical access controls for transmission media.\n\n**Interview:** Facility security personnel; system administrators; network engineers.\n\n**Test:** Physical access controls for wiring closets, cable trays, and transmission infrastructure.\n\n**Determination Statements:**\n- PE-04 — Physical access to organization-defined system distribution and transmission lines is controlled within organizational facilities"
+      }
+    },
+    "PE-5": {
+      "control_id": "PE-5",
+      "control_title": "Access Control for Output Devices",
+      "base_control": {
+        "control_id": "PE-5",
+        "control_title": "Access Control for Output Devices",
+        "control_text": "Control physical access to output from organization-defined output devices to prevent unauthorized individuals from obtaining the output.",
+        "key_enhancements": [
+          {
+            "id": "PE-5(1)",
+            "title": "Access to Output by Authorized Individuals"
+          },
+          {
+            "id": "PE-5(2)",
+            "title": "Link to Individual Identity"
+          },
+          {
+            "id": "PE-5(3)",
+            "title": "Marking Output Devices"
+          }
+        ],
+        "key_enhancements_text": "- **PE-5(1):** Access to Output by Authorized Individuals — [Withdrawn: Incorporated into PE-5.]\n- **PE-5(2):** Link to Individual Identity — Link individual identity to receipt of output from output devices.\n- **PE-5(3):** Marking Output Devices — Mark organization-defined system output devices indicating the appropriate security marking of the information permitted to be output from the device.",
+        "related_controls": [
+          "PE-2",
+          "PE-3",
+          "PE-4",
+          "PE-18"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Control physical access to output from organization-defined output devices to prevent unauthorized individuals from obtaining the output.\n\n**Key Enhancements:**\n- **PE-5(1):** Access to Output by Authorized Individuals — [Withdrawn: Incorporated into PE-5.]\n- **PE-5(2):** Link to Individual Identity — Link individual identity to receipt of output from output devices.\n- **PE-5(3):** Marking Output Devices — Mark organization-defined system output devices indicating the appropriate security marking of the information permitted to be output from the device.\n\n**Related Controls:** PE-2, PE-3, PE-4, PE-18\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization controls physical access to output from system output devices.",
+        "examine_procedures": "Physical and environmental protection policy; system security plan; list of output devices; physical access controls for output devices.",
+        "interview_procedures": "System administrators; organizational personnel responsible for controlling output device access.",
+        "test_procedures": "Output device access control mechanisms; print release systems.",
+        "determination_statements": [
+          "PE-05 — Physical access to output from organization-defined system output devices is controlled to prevent unauthorized individuals from obtaining the output"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization controls physical access to output from system output devices.\n\n**Examine:** Physical and environmental protection policy; system security plan; list of output devices; physical access controls for output devices.\n\n**Interview:** System administrators; organizational personnel responsible for controlling output device access.\n\n**Test:** Output device access control mechanisms; print release systems.\n\n**Determination Statements:**\n- PE-05 — Physical access to output from organization-defined system output devices is controlled to prevent unauthorized individuals from obtaining the output"
+      }
+    },
+    "PE-6": {
+      "control_id": "PE-6",
+      "control_title": "Monitoring Physical Access",
+      "base_control": {
+        "control_id": "PE-6",
+        "control_title": "Monitoring Physical Access",
+        "control_text": "Monitor physical access to the facility where the system resides to detect and respond to physical security incidents. Review physical access logs at an organization-defined frequency and upon occurrence of organization-defined events or potential indications of events. Coordinate results of reviews and investigations with the organizational incident response capability.",
+        "key_enhancements": [
+          {
+            "id": "PE-6(1)",
+            "title": "Intrusion Alarms and Surveillance Equipment"
+          },
+          {
+            "id": "PE-6(2)",
+            "title": "Automated Intrusion Recognition and Responses"
+          },
+          {
+            "id": "PE-6(3)",
+            "title": "Video Surveillance"
+          },
+          {
+            "id": "PE-6(4)",
+            "title": "Monitoring Physical Access to Systems"
+          }
+        ],
+        "key_enhancements_text": "- **PE-6(1):** Intrusion Alarms and Surveillance Equipment — Monitor physical access to the facility where the system resides using physical intrusion alarms and surveillance equipment.\n- **PE-6(2):** Automated Intrusion Recognition and Responses — Recognize organization-defined classes or types of intrusions and initiate organization-defined response actions using automated mechanisms.\n- **PE-6(3):** Video Surveillance — Employ video surveillance of organization-defined operational areas and retain video recordings for an organization-defined time period.\n- **PE-6(4):** Monitoring Physical Access to Systems — Monitor physical access to the system in addition to the physical access monitoring of the facility.",
+        "related_controls": [
+          "AU-2",
+          "AU-6",
+          "AU-9",
+          "AU-12",
+          "CA-7",
+          "CP-10",
+          "IR-4",
+          "IR-8"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Monitor physical access to the facility where the system resides to detect and respond to physical security incidents. Review physical access logs at an organization-defined frequency and upon occurrence of organization-defined events or potential indications of events. Coordinate results of reviews and investigations with the organizational incident response capability.\n\n**Key Enhancements:**\n- **PE-6(1):** Intrusion Alarms and Surveillance Equipment — Monitor physical access to the facility where the system resides using physical intrusion alarms and surveillance equipment.\n- **PE-6(2):** Automated Intrusion Recognition and Responses — Recognize organization-defined classes or types of intrusions and initiate organization-defined response actions using automated mechanisms.\n- **PE-6(3):** Video Surveillance — Employ video surveillance of organization-defined operational areas and retain video recordings for an organization-defined time period.\n- **PE-6(4):** Monitoring Physical Access to Systems — Monitor physical access to the system in addition to the physical access monitoring of the facility.\n\n**Related Controls:** AU-2, AU-6, AU-9, AU-12, CA-7, CP-10, IR-4, IR-8\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization monitors the facility for physical security incidents.",
+        "examine_procedures": "Physical and environmental protection policy; physical access monitoring records; physical access logs; surveillance video recordings; alarm system records; incident reports.",
+        "interview_procedures": "Facility security personnel; organizational personnel responsible for physical access monitoring.",
+        "test_procedures": "Physical access monitoring mechanisms (video surveillance, intrusion alarms, motion detectors).",
+        "determination_statements": [
+          "PE-06a. — Physical access to the facility where the system resides is monitored to detect and respond to physical security incidents",
+          "PE-06b. — Physical access monitoring records are reviewed at an organization-defined frequency and upon occurrence of organization-defined events",
+          "PE-06c. — Review results are coordinated with organizational incident response capability"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization monitors the facility for physical security incidents.\n\n**Examine:** Physical and environmental protection policy; physical access monitoring records; physical access logs; surveillance video recordings; alarm system records; incident reports.\n\n**Interview:** Facility security personnel; organizational personnel responsible for physical access monitoring.\n\n**Test:** Physical access monitoring mechanisms (video surveillance, intrusion alarms, motion detectors).\n\n**Determination Statements:**\n- PE-06a. — Physical access to the facility where the system resides is monitored to detect and respond to physical security incidents\n- PE-06b. — Physical access monitoring records are reviewed at an organization-defined frequency and upon occurrence of organization-defined events\n- PE-06c. — Review results are coordinated with organizational incident response capability"
+      }
+    },
+    "PE-7": {
+      "control_id": "PE-7",
+      "control_title": "Visitor Control",
+      "base_control": {
+        "control_id": "PE-7",
+        "control_title": "Visitor Control",
+        "control_text": "[Withdrawn: Incorporated into PE-2 and PE-3.]\n\n**Baselines:** None (not in any baseline)",
+        "key_enhancements": [],
+        "key_enhancements_text": null,
+        "related_controls": [],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "[Withdrawn: Incorporated into PE-2 and PE-3.]\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PE-8": {
+      "control_id": "PE-8",
+      "control_title": "Visitor Access Records",
+      "base_control": {
+        "control_id": "PE-8",
+        "control_title": "Visitor Access Records",
+        "control_text": "Maintain visitor access records to the facility where the system resides for an organization-defined time period. Review visitor access records at an organization-defined frequency.",
+        "key_enhancements": [
+          {
+            "id": "PE-8(1)",
+            "title": "Automated Records Maintenance and Review"
+          },
+          {
+            "id": "PE-8(2)",
+            "title": "Physical Access Records"
+          },
+          {
+            "id": "PE-8(3)",
+            "title": "Limit Personally Identifiable Information Elements"
+          }
+        ],
+        "key_enhancements_text": "- **PE-8(1):** Automated Records Maintenance and Review — Maintain and review visitor access records using automated mechanisms.\n- **PE-8(2):** Physical Access Records — [Withdrawn: Incorporated into PE-2.]\n- **PE-8(3):** Limit Personally Identifiable Information Elements — Limit personally identifiable information contained in visitor access records to the organization-defined elements.",
+        "related_controls": [
+          "PE-2",
+          "PE-3",
+          "PE-6"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Maintain visitor access records to the facility where the system resides for an organization-defined time period. Review visitor access records at an organization-defined frequency.\n\n**Key Enhancements:**\n- **PE-8(1):** Automated Records Maintenance and Review — Maintain and review visitor access records using automated mechanisms.\n- **PE-8(2):** Physical Access Records — [Withdrawn: Incorporated into PE-2.]\n- **PE-8(3):** Limit Personally Identifiable Information Elements — Limit personally identifiable information contained in visitor access records to the organization-defined elements.\n\n**Related Controls:** PE-2, PE-3, PE-6\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization maintains visitor access records.",
+        "examine_procedures": "Physical and environmental protection policy; visitor access records; visitor log; system security plan.",
+        "interview_procedures": "Facility security personnel; organizational personnel responsible for visitor access records.",
+        "test_procedures": "Visitor access record management processes.",
+        "determination_statements": [
+          "PE-08a. — Visitor access records to the facility where the system resides are maintained that include the name and organization of the person visiting, the signature of the visitor, the form of identification, the date of access, the time of entry and departure, the purpose of visit, and the name and organization of the person visited",
+          "PE-08b. — Visitor access records are reviewed at an organization-defined frequency",
+          "NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final",
+          "[SP 800-53 PE Family](../800-53/pe.md)",
+          "[SP 800-171 PE Requirements](../800-171/pe.md)"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization maintains visitor access records.\n\n**Examine:** Physical and environmental protection policy; visitor access records; visitor log; system security plan.\n\n**Interview:** Facility security personnel; organizational personnel responsible for visitor access records.\n\n**Test:** Visitor access record management processes.\n\n**Determination Statements:**\n- PE-08a. — Visitor access records to the facility where the system resides are maintained that include the name and organization of the person visiting, the signature of the visitor, the form of identification, the date of access, the time of entry and departure, the purpose of visit, and the name and organization of the person visited\n- PE-08b. — Visitor access records are reviewed at an organization-defined frequency\n\n## References\n\n- NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final\n- [SP 800-53 PE Family](../800-53/pe.md)\n- [SP 800-171 PE Requirements](../800-171/pe.md)"
+      }
+    },
+    "PE-9": {
+      "control_id": "PE-9",
+      "control_title": "Power Equipment and Cabling",
+      "base_control": {
+        "control_id": "PE-9",
+        "control_title": "Power Equipment and Cabling",
+        "control_text": "Protect power equipment and power cabling for the system from damage and destruction.",
+        "key_enhancements": [
+          {
+            "id": "PE-9(1)",
+            "title": "Redundant Cabling"
+          },
+          {
+            "id": "PE-9(2)",
+            "title": "Automatic Voltage Controls"
+          }
+        ],
+        "key_enhancements_text": "- **PE-9(1):** Redundant Cabling — Employ redundant power cabling paths that are physically separated by organization-defined distance.\n- **PE-9(2):** Automatic Voltage Controls — Employ automatic voltage controls for organization-defined critical system components.",
+        "related_controls": [
+          "PE-4"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Protect power equipment and power cabling for the system from damage and destruction.\n\n**Key Enhancements:**\n- **PE-9(1):** Redundant Cabling — Employ redundant power cabling paths that are physically separated by organization-defined distance.\n- **PE-9(2):** Automatic Voltage Controls — Employ automatic voltage controls for organization-defined critical system components.\n\n**Related Controls:** PE-4\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PE-10": {
+      "control_id": "PE-10",
+      "control_title": "Emergency Shutoff",
+      "base_control": {
+        "control_id": "PE-10",
+        "control_title": "Emergency Shutoff",
+        "control_text": "Provide the capability of shutting off power to organization-defined system components or the system in emergency situations. Place emergency shutoff switches or devices in an organization-defined location by system or system component to facilitate access for authorized personnel. Protect emergency power shutoff capability from unauthorized activation.",
+        "key_enhancements": [
+          {
+            "id": "PE-10(1)",
+            "title": "Accidental and Unauthorized Activation"
+          }
+        ],
+        "key_enhancements_text": "- **PE-10(1):** Accidental and Unauthorized Activation — [Withdrawn: Incorporated into PE-10.]",
+        "related_controls": [
+          "PE-15"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Provide the capability of shutting off power to organization-defined system components or the system in emergency situations. Place emergency shutoff switches or devices in an organization-defined location by system or system component to facilitate access for authorized personnel. Protect emergency power shutoff capability from unauthorized activation.\n\n**Key Enhancements:**\n- **PE-10(1):** Accidental and Unauthorized Activation — [Withdrawn: Incorporated into PE-10.]\n\n**Related Controls:** PE-15\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PE-11": {
+      "control_id": "PE-11",
+      "control_title": "Emergency Power",
+      "base_control": {
+        "control_id": "PE-11",
+        "control_title": "Emergency Power",
+        "control_text": "Provide an uninterruptible power supply to facilitate an orderly shutdown of the system in the event of a primary power source loss.",
+        "key_enhancements": [
+          {
+            "id": "PE-11(1)",
+            "title": "Alternate Power Supply"
+          },
+          {
+            "id": "PE-11(2)",
+            "title": "Alternate Power Supply"
+          }
+        ],
+        "key_enhancements_text": "- **PE-11(1):** Alternate Power Supply — Permanent — Provide an alternate power supply for the system that is self-contained and not reliant on external power generation.\n- **PE-11(2):** Alternate Power Supply — Self-Contained — Provide an alternate power supply for the system that is activated without loss of information or information system capability and that can maintain the system in an operational state for an organization-defined time period.",
+        "related_controls": [
+          "AT-3",
+          "CP-2",
+          "CP-7"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Provide an uninterruptible power supply to facilitate an orderly shutdown of the system in the event of a primary power source loss.\n\n**Key Enhancements:**\n- **PE-11(1):** Alternate Power Supply — Permanent — Provide an alternate power supply for the system that is self-contained and not reliant on external power generation.\n- **PE-11(2):** Alternate Power Supply — Self-Contained — Provide an alternate power supply for the system that is activated without loss of information or information system capability and that can maintain the system in an operational state for an organization-defined time period.\n\n**Related Controls:** AT-3, CP-2, CP-7\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PE-12": {
+      "control_id": "PE-12",
+      "control_title": "Emergency Lighting",
+      "base_control": {
+        "control_id": "PE-12",
+        "control_title": "Emergency Lighting",
+        "control_text": "Employ and maintain automatic emergency lighting for the system that activates in the event of a power outage or disruption and that covers emergency exits and evacuation routes within the facility.",
+        "key_enhancements": [
+          {
+            "id": "PE-12(1)",
+            "title": "Essential Mission and Business Functions"
+          }
+        ],
+        "key_enhancements_text": "- **PE-12(1):** Essential Mission and Business Functions — Provide emergency lighting for all areas within the facility supporting essential mission and business functions.",
+        "related_controls": [
+          "CP-2",
+          "CP-7"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Employ and maintain automatic emergency lighting for the system that activates in the event of a power outage or disruption and that covers emergency exits and evacuation routes within the facility.\n\n**Key Enhancements:**\n- **PE-12(1):** Essential Mission and Business Functions — Provide emergency lighting for all areas within the facility supporting essential mission and business functions.\n\n**Related Controls:** CP-2, CP-7\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PE-13": {
+      "control_id": "PE-13",
+      "control_title": "Fire Protection",
+      "base_control": {
+        "control_id": "PE-13",
+        "control_title": "Fire Protection",
+        "control_text": "Employ and maintain fire detection and suppression systems for the system that are supported by an independent energy source.",
+        "key_enhancements": [
+          {
+            "id": "PE-13(1)",
+            "title": "Detection Systems"
+          },
+          {
+            "id": "PE-13(2)",
+            "title": "Suppression Systems"
+          },
+          {
+            "id": "PE-13(3)",
+            "title": "Automatic Fire Suppression"
+          },
+          {
+            "id": "PE-13(4)",
+            "title": "Inspections"
+          }
+        ],
+        "key_enhancements_text": "- **PE-13(1):** Detection Systems — Automatic Activation and Notification — Employ fire detection systems that activate automatically and notify organization-defined personnel or roles and organization-defined emergency responders in the event of a fire.\n- **PE-13(2):** Suppression Systems — Automatic Activation and Notification — Employ fire suppression systems that activate automatically and notify organization-defined personnel or roles and organization-defined emergency responders.\n- **PE-13(3):** Automatic Fire Suppression — [Withdrawn: Incorporated into PE-13(2).]\n- **PE-13(4):** Inspections — Ensure that the facility undergoes organization-defined frequency fire protection inspections by authorized and qualified inspectors and that identified deficiencies are resolved within organization-defined time period.",
+        "related_controls": [
+          "AT-3"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Employ and maintain fire detection and suppression systems for the system that are supported by an independent energy source.\n\n**Key Enhancements:**\n- **PE-13(1):** Detection Systems — Automatic Activation and Notification — Employ fire detection systems that activate automatically and notify organization-defined personnel or roles and organization-defined emergency responders in the event of a fire.\n- **PE-13(2):** Suppression Systems — Automatic Activation and Notification — Employ fire suppression systems that activate automatically and notify organization-defined personnel or roles and organization-defined emergency responders.\n- **PE-13(3):** Automatic Fire Suppression — [Withdrawn: Incorporated into PE-13(2).]\n- **PE-13(4):** Inspections — Ensure that the facility undergoes organization-defined frequency fire protection inspections by authorized and qualified inspectors and that identified deficiencies are resolved within organization-defined time period.\n\n**Related Controls:** AT-3\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PE-14": {
+      "control_id": "PE-14",
+      "control_title": "Environmental Controls",
+      "base_control": {
+        "control_id": "PE-14",
+        "control_title": "Environmental Controls",
+        "control_text": "Maintain organization-defined environmental control levels within the facility where the system resides. Monitor environmental control levels at an organization-defined frequency.",
+        "key_enhancements": [
+          {
+            "id": "PE-14(1)",
+            "title": "Automatic Controls"
+          },
+          {
+            "id": "PE-14(2)",
+            "title": "Monitoring with Alarms and Notifications"
+          }
+        ],
+        "key_enhancements_text": "- **PE-14(1):** Automatic Controls — Employ automated environmental controls in the facility to prevent fluctuations potentially harmful to the system.\n- **PE-14(2):** Monitoring with Alarms and Notifications — Employ environmental monitoring that provides an alarm or notification of changes potentially harmful to personnel or equipment to organization-defined personnel or roles.",
+        "related_controls": [
+          "AT-3",
+          "CP-2"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Maintain organization-defined environmental control levels within the facility where the system resides. Monitor environmental control levels at an organization-defined frequency.\n\n**Key Enhancements:**\n- **PE-14(1):** Automatic Controls — Employ automated environmental controls in the facility to prevent fluctuations potentially harmful to the system.\n- **PE-14(2):** Monitoring with Alarms and Notifications — Employ environmental monitoring that provides an alarm or notification of changes potentially harmful to personnel or equipment to organization-defined personnel or roles.\n\n**Related Controls:** AT-3, CP-2\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PE-15": {
+      "control_id": "PE-15",
+      "control_title": "Water Damage Protection",
+      "base_control": {
+        "control_id": "PE-15",
+        "control_title": "Water Damage Protection",
+        "control_text": "Protect the system from damage resulting from water leakage by providing master shutoff or isolation valves that are accessible, working properly, and known to key personnel.",
+        "key_enhancements": [
+          {
+            "id": "PE-15(1)",
+            "title": "Automation Support"
+          }
+        ],
+        "key_enhancements_text": "- **PE-15(1):** Automation Support — Detect the presence of water near the system and alert organization-defined personnel or roles using automated mechanisms.",
+        "related_controls": [
+          "AT-3",
+          "PE-10"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Protect the system from damage resulting from water leakage by providing master shutoff or isolation valves that are accessible, working properly, and known to key personnel.\n\n**Key Enhancements:**\n- **PE-15(1):** Automation Support — Detect the presence of water near the system and alert organization-defined personnel or roles using automated mechanisms.\n\n**Related Controls:** AT-3, PE-10\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PE-16": {
+      "control_id": "PE-16",
+      "control_title": "Delivery and Removal",
+      "base_control": {
+        "control_id": "PE-16",
+        "control_title": "Delivery and Removal",
+        "control_text": "Authorize and control organization-defined types of system components entering and exiting the facility. Maintain records of the system components.",
+        "key_enhancements": [
+          {
+            "id": "PE-16(1)",
+            "title": "Alarming"
+          }
+        ],
+        "key_enhancements_text": "- **PE-16(1):** Alarming — Employ an alarming mechanism to detect unauthorized exfiltration of organization-defined system components from the facility.",
+        "related_controls": [
+          "CM-3",
+          "CM-8",
+          "MA-2",
+          "MA-3",
+          "MP-5",
+          "PE-20",
+          "SR-2",
+          "SR-3",
+          "SR-4",
+          "SR-6"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Authorize and control organization-defined types of system components entering and exiting the facility. Maintain records of the system components.\n\n**Key Enhancements:**\n- **PE-16(1):** Alarming — Employ an alarming mechanism to detect unauthorized exfiltration of organization-defined system components from the facility.\n\n**Related Controls:** CM-3, CM-8, MA-2, MA-3, MP-5, PE-20, SR-2, SR-3, SR-4, SR-6\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PE-17": {
+      "control_id": "PE-17",
+      "control_title": "Alternate Work Site",
+      "base_control": {
+        "control_id": "PE-17",
+        "control_title": "Alternate Work Site",
+        "control_text": "Determine and document the organization-defined alternate work sites allowed for use by employees. Employ organization-defined controls at alternate work sites. Assess the effectiveness of controls at alternate work sites.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PE-17.",
+        "related_controls": [
+          "AC-17",
+          "AC-18",
+          "CP-7"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Determine and document the organization-defined alternate work sites allowed for use by employees. Employ organization-defined controls at alternate work sites. Assess the effectiveness of controls at alternate work sites.\n\n**Key Enhancements:** None defined for PE-17.\n\n**Related Controls:** AC-17, AC-18, CP-7\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PE-18": {
+      "control_id": "PE-18",
+      "control_title": "Location of System Components",
+      "base_control": {
+        "control_id": "PE-18",
+        "control_title": "Location of System Components",
+        "control_text": "Position system components within the facility to minimize potential damage from organization-defined physical and environmental hazards and to minimize the opportunity for unauthorized access.",
+        "key_enhancements": [
+          {
+            "id": "PE-18(1)",
+            "title": "Facility Site"
+          }
+        ],
+        "key_enhancements_text": "- **PE-18(1):** Facility Site — Plan the location or site of the facility where the system resides considering physical and environmental hazards and for existing facilities, consider the physical and environmental hazards in the organizational risk management strategy.",
+        "related_controls": [
+          "CP-2",
+          "PE-5",
+          "PE-19",
+          "PE-20",
+          "RA-3"
+        ],
+        "baselines": [
+          "High"
+        ],
+        "baselines_text": "High",
+        "source_markdown": "Position system components within the facility to minimize potential damage from organization-defined physical and environmental hazards and to minimize the opportunity for unauthorized access.\n\n**Key Enhancements:**\n- **PE-18(1):** Facility Site — Plan the location or site of the facility where the system resides considering physical and environmental hazards and for existing facilities, consider the physical and environmental hazards in the organizational risk management strategy.\n\n**Related Controls:** CP-2, PE-5, PE-19, PE-20, RA-3\n\n**Baselines:** High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PE-19": {
+      "control_id": "PE-19",
+      "control_title": "Information Leakage",
+      "base_control": {
+        "control_id": "PE-19",
+        "control_title": "Information Leakage",
+        "control_text": "Protect the system from information leakage due to electromagnetic signals emanations.",
+        "key_enhancements": [
+          {
+            "id": "PE-19(1)",
+            "title": "National Emissions and TEMPEST Policies and Procedures"
+          }
+        ],
+        "key_enhancements_text": "- **PE-19(1):** National Emissions and TEMPEST Policies and Procedures — Ensure that system components, associated data communications, and networks are protected in accordance with national emissions and TEMPEST policies and procedures based on the security category or classification of the information.",
+        "related_controls": [
+          "AC-18",
+          "PE-18",
+          "PE-20"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Protect the system from information leakage due to electromagnetic signals emanations.\n\n**Key Enhancements:**\n- **PE-19(1):** National Emissions and TEMPEST Policies and Procedures — Ensure that system components, associated data communications, and networks are protected in accordance with national emissions and TEMPEST policies and procedures based on the security category or classification of the information.\n\n**Related Controls:** AC-18, PE-18, PE-20\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PE-20": {
+      "control_id": "PE-20",
+      "control_title": "Asset Monitoring and Tracking",
+      "base_control": {
+        "control_id": "PE-20",
+        "control_title": "Asset Monitoring and Tracking",
+        "control_text": "Employ organization-defined asset location technologies to track and monitor the location and movement of organization-defined assets within organization-defined controlled areas.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PE-20.",
+        "related_controls": [
+          "CM-8",
+          "PE-16",
+          "PM-8"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Employ organization-defined asset location technologies to track and monitor the location and movement of organization-defined assets within organization-defined controlled areas.\n\n**Key Enhancements:** None defined for PE-20.\n\n**Related Controls:** CM-8, PE-16, PM-8\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PE-21": {
+      "control_id": "PE-21",
+      "control_title": "Electromagnetic Pulse Protection",
+      "base_control": {
+        "control_id": "PE-21",
+        "control_title": "Electromagnetic Pulse Protection",
+        "control_text": "Employ organization-defined protective measures against electromagnetic pulse damage for organization-defined systems and system components.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PE-21.",
+        "related_controls": [
+          "PE-18",
+          "PE-19"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Employ organization-defined protective measures against electromagnetic pulse damage for organization-defined systems and system components.\n\n**Key Enhancements:** None defined for PE-21.\n\n**Related Controls:** PE-18, PE-19\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PE-22": {
+      "control_id": "PE-22",
+      "control_title": "Component Marking",
+      "base_control": {
+        "control_id": "PE-22",
+        "control_title": "Component Marking",
+        "control_text": "Mark organization-defined system hardware components indicating the impact level or classification level of the information permitted to be processed, stored, or transmitted by the hardware component.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PE-22.",
+        "related_controls": [
+          "AC-3",
+          "AC-4",
+          "AC-16",
+          "MP-3"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Mark organization-defined system hardware components indicating the impact level or classification level of the information permitted to be processed, stored, or transmitted by the hardware component.\n\n**Key Enhancements:** None defined for PE-22.\n\n**Related Controls:** AC-3, AC-4, AC-16, MP-3\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "PE-23": {
+      "control_id": "PE-23",
+      "control_title": "Facility Location",
+      "base_control": {
+        "control_id": "PE-23",
+        "control_title": "Facility Location",
+        "control_text": "Plan the location or site of the facility where the system resides considering physical and environmental hazards. For existing facilities, consider the physical and environmental hazards in the organizational risk management strategy.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for PE-23.",
+        "related_controls": [
+          "CP-2",
+          "PE-18",
+          "PE-19",
+          "PM-8",
+          "PM-9",
+          "RA-3"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Plan the location or site of the facility where the system resides considering physical and environmental hazards. For existing facilities, consider the physical and environmental hazards in the organizational risk management strategy.\n\n**Key Enhancements:** None defined for PE-23.\n\n**Related Controls:** CP-2, PE-18, PE-19, PM-8, PM-9, RA-3\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    }
+  }
+}

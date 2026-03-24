@@ -1,0 +1,279 @@
+{
+  "generated_at": "2026-03-24T19:13:15.283Z",
+  "control_count": 6,
+  "controls": {
+    "AT-1": {
+      "control_id": "AT-1",
+      "control_title": "Policy and Procedures",
+      "base_control": {
+        "control_id": "AT-1",
+        "control_title": "Policy and Procedures",
+        "control_text": "Requires the organization to develop, document, disseminate, and periodically review and update awareness and training policy and procedures. The policy must address purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "PM-9",
+          "PS-8",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to develop, document, disseminate, and periodically review and update awareness and training policy and procedures. The policy must address purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance.\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** PM-9, PS-8, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization develops, documents, disseminates, reviews, and updates awareness and training policy and procedures.",
+        "examine_procedures": "Awareness and training policy; awareness and training procedures; system security plan; organizational policy development documentation.",
+        "interview_procedures": "Organizational personnel responsible for awareness and training policy development and implementation.",
+        "test_procedures": "Organizational processes for managing awareness and training policy and procedures.",
+        "determination_statements": [
+          "AT-01a.[01] — An awareness and training policy is developed and documented",
+          "AT-01a.[02] — The awareness and training policy addresses purpose, scope, roles, responsibilities, management commitment, coordination, and compliance",
+          "AT-01b. — The awareness and training policy is disseminated to organization-defined personnel or roles",
+          "AT-01c. — Awareness and training procedures to facilitate implementation of the policy are developed, documented, and disseminated",
+          "AT-01d. — The awareness and training policy and procedures are reviewed and updated at an organization-defined frequency"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization develops, documents, disseminates, reviews, and updates awareness and training policy and procedures.\n\n**Examine:** Awareness and training policy; awareness and training procedures; system security plan; organizational policy development documentation.\n\n**Interview:** Organizational personnel responsible for awareness and training policy development and implementation.\n\n**Test:** Organizational processes for managing awareness and training policy and procedures.\n\n**Determination Statements:**\n- AT-01a.[01] — An awareness and training policy is developed and documented\n- AT-01a.[02] — The awareness and training policy addresses purpose, scope, roles, responsibilities, management commitment, coordination, and compliance\n- AT-01b. — The awareness and training policy is disseminated to organization-defined personnel or roles\n- AT-01c. — Awareness and training procedures to facilitate implementation of the policy are developed, documented, and disseminated\n- AT-01d. — The awareness and training policy and procedures are reviewed and updated at an organization-defined frequency"
+      }
+    },
+    "AT-2": {
+      "control_id": "AT-2",
+      "control_title": "Literacy Training and Awareness",
+      "base_control": {
+        "control_id": "AT-2",
+        "control_title": "Literacy Training and Awareness",
+        "control_text": "Requires the organization to provide security and privacy literacy training to system users (including managers, senior executives, and contractors) as part of initial training for new users, when required by system changes, and at an organization-defined frequency thereafter. Training content must include recognition and reporting of potential indicators of insider threat, social engineering, and other cyber threats.",
+        "key_enhancements": [
+          {
+            "id": "AT-2(1)",
+            "title": "Practical Exercises"
+          },
+          {
+            "id": "AT-2(2)",
+            "title": "Insider Threat"
+          },
+          {
+            "id": "AT-2(3)",
+            "title": "Social Engineering and Mining"
+          },
+          {
+            "id": "AT-2(4)",
+            "title": "Suspicious Communications and Anomalous System Behavior"
+          },
+          {
+            "id": "AT-2(5)",
+            "title": "Advanced Persistent Threat"
+          },
+          {
+            "id": "AT-2(6)",
+            "title": "Cyber Threat Environment"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AT-2(1) | Practical Exercises |\n| AT-2(2) | Insider Threat |\n| AT-2(3) | Social Engineering and Mining |\n| AT-2(4) | Suspicious Communications and Anomalous System Behavior |\n| AT-2(5) | Advanced Persistent Threat |\n| AT-2(6) | Cyber Threat Environment |",
+        "related_controls": [
+          "AC-3",
+          "AC-17",
+          "AC-22",
+          "AT-3",
+          "AT-4",
+          "CP-3",
+          "IA-4",
+          "IR-2",
+          "IR-7",
+          "IR-9",
+          "PL-4",
+          "PM-13",
+          "PM-21",
+          "PS-7",
+          "PT-2",
+          "SA-8",
+          "SA-16"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to provide security and privacy literacy training to system users (including managers, senior executives, and contractors) as part of initial training for new users, when required by system changes, and at an organization-defined frequency thereafter. Training content must include recognition and reporting of potential indicators of insider threat, social engineering, and other cyber threats.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AT-2(1) | Practical Exercises |\n| AT-2(2) | Insider Threat |\n| AT-2(3) | Social Engineering and Mining |\n| AT-2(4) | Suspicious Communications and Anomalous System Behavior |\n| AT-2(5) | Advanced Persistent Threat |\n| AT-2(6) | Cyber Threat Environment |\n\n**Related Controls:** AC-3, AC-17, AC-22, AT-3, AT-4, CP-3, IA-4, IR-2, IR-7, IR-9, PL-4, PM-13, PM-21, PS-7, PT-2, SA-8, SA-16\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization provides security and privacy literacy training to system users.",
+        "examine_procedures": "Awareness and training policy; security awareness training materials; training records; security awareness training curriculum; insider threat awareness training materials.",
+        "interview_procedures": "Organizational personnel who receive security awareness training; organizational personnel responsible for developing and delivering training.",
+        "test_procedures": "Automated mechanisms for managing awareness training; training tracking systems.",
+        "determination_statements": [
+          "AT-02a.[01] — Security and privacy literacy training is provided to system users as part of initial training for new users",
+          "AT-02a.[02] — Security and privacy literacy training is provided when required by system changes",
+          "AT-02a.[03] — Security and privacy literacy training is provided at an organization-defined frequency thereafter",
+          "AT-02b. — Literacy training content includes recognition and reporting of potential indicators of insider threat",
+          "AT-02c. — Security and privacy literacy training is updated at an organization-defined frequency or when changes to the threat environment require"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization provides security and privacy literacy training to system users.\n\n**Examine:** Awareness and training policy; security awareness training materials; training records; security awareness training curriculum; insider threat awareness training materials.\n\n**Interview:** Organizational personnel who receive security awareness training; organizational personnel responsible for developing and delivering training.\n\n**Test:** Automated mechanisms for managing awareness training; training tracking systems.\n\n**Determination Statements:**\n- AT-02a.[01] — Security and privacy literacy training is provided to system users as part of initial training for new users\n- AT-02a.[02] — Security and privacy literacy training is provided when required by system changes\n- AT-02a.[03] — Security and privacy literacy training is provided at an organization-defined frequency thereafter\n- AT-02b. — Literacy training content includes recognition and reporting of potential indicators of insider threat\n- AT-02c. — Security and privacy literacy training is updated at an organization-defined frequency or when changes to the threat environment require"
+      }
+    },
+    "AT-3": {
+      "control_id": "AT-3",
+      "control_title": "Role-Based Training",
+      "base_control": {
+        "control_id": "AT-3",
+        "control_title": "Role-Based Training",
+        "control_text": "Requires the organization to provide role-based security and privacy training to personnel with assigned security roles and responsibilities before authorizing access to the system or performing assigned duties, when required by system changes, and at an organization-defined frequency thereafter. Training must address the specific roles and responsibilities of the individual.",
+        "key_enhancements": [
+          {
+            "id": "AT-3(1)",
+            "title": "Environmental Controls"
+          },
+          {
+            "id": "AT-3(2)",
+            "title": "Physical Security Controls"
+          },
+          {
+            "id": "AT-3(3)",
+            "title": "Practical Exercises"
+          },
+          {
+            "id": "AT-3(5)",
+            "title": "Processing Personally Identifiable Information"
+          }
+        ],
+        "key_enhancements_text": "| # | Title |\n|---|-------|\n| AT-3(1) | Environmental Controls |\n| AT-3(2) | Physical Security Controls |\n| AT-3(3) | Practical Exercises |\n| AT-3(5) | Processing Personally Identifiable Information |",
+        "related_controls": [
+          "AC-3",
+          "AC-17",
+          "AC-22",
+          "AT-2",
+          "AT-4",
+          "CP-3",
+          "IR-2",
+          "IR-4",
+          "IR-7",
+          "IR-9",
+          "PL-4",
+          "PM-13",
+          "PM-23",
+          "PS-7",
+          "PS-9",
+          "SA-3",
+          "SA-8",
+          "SA-11",
+          "SA-16",
+          "SR-5",
+          "SR-6",
+          "SR-11"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to provide role-based security and privacy training to personnel with assigned security roles and responsibilities before authorizing access to the system or performing assigned duties, when required by system changes, and at an organization-defined frequency thereafter. Training must address the specific roles and responsibilities of the individual.\n\n**Key Enhancements:**\n\n| # | Title |\n|---|-------|\n| AT-3(1) | Environmental Controls |\n| AT-3(2) | Physical Security Controls |\n| AT-3(3) | Practical Exercises |\n| AT-3(5) | Processing Personally Identifiable Information |\n\n**Related Controls:** AC-3, AC-17, AC-22, AT-2, AT-4, CP-3, IR-2, IR-4, IR-7, IR-9, PL-4, PM-13, PM-23, PS-7, PS-9, SA-3, SA-8, SA-11, SA-16, SR-5, SR-6, SR-11\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization provides role-based security and privacy training to personnel with assigned security roles and responsibilities.",
+        "examine_procedures": "Awareness and training policy; role-based training materials; training records; role-based training curriculum; system security plan; personnel records identifying security roles.",
+        "interview_procedures": "Organizational personnel with security roles and responsibilities; training developers; system administrators.",
+        "test_procedures": "Automated mechanisms for managing role-based training; training tracking systems; practical exercise environments.",
+        "determination_statements": [
+          "AT-03a.[01] — Role-based security and privacy training is provided before authorizing access to the system or performing assigned duties",
+          "AT-03a.[02] — Role-based security and privacy training is provided when required by system changes",
+          "AT-03a.[03] — Role-based security and privacy training is provided at an organization-defined frequency thereafter",
+          "AT-03b. — Role-based training content is defined based on assigned roles and responsibilities"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization provides role-based security and privacy training to personnel with assigned security roles and responsibilities.\n\n**Examine:** Awareness and training policy; role-based training materials; training records; role-based training curriculum; system security plan; personnel records identifying security roles.\n\n**Interview:** Organizational personnel with security roles and responsibilities; training developers; system administrators.\n\n**Test:** Automated mechanisms for managing role-based training; training tracking systems; practical exercise environments.\n\n**Determination Statements:**\n- AT-03a.[01] — Role-based security and privacy training is provided before authorizing access to the system or performing assigned duties\n- AT-03a.[02] — Role-based security and privacy training is provided when required by system changes\n- AT-03a.[03] — Role-based security and privacy training is provided at an organization-defined frequency thereafter\n- AT-03b. — Role-based training content is defined based on assigned roles and responsibilities"
+      }
+    },
+    "AT-4": {
+      "control_id": "AT-4",
+      "control_title": "Training Records",
+      "base_control": {
+        "control_id": "AT-4",
+        "control_title": "Training Records",
+        "control_text": "Requires the organization to document and monitor individual system security and privacy training activities, including basic awareness training, role-based training, and specific training. Retain training records for an organization-defined time period.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "AT-2",
+          "AT-3",
+          "CP-3",
+          "IR-2",
+          "PM-14",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Requires the organization to document and monitor individual system security and privacy training activities, including basic awareness training, role-based training, and specific training. Retain training records for an organization-defined time period.\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** AT-2, AT-3, CP-3, IR-2, PM-14, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization documents and monitors security and privacy training activities and retains training records.",
+        "examine_procedures": "Awareness and training policy; training records; training attendance records; training certificates; system security plan.",
+        "interview_procedures": "Organizational personnel responsible for maintaining training records.",
+        "test_procedures": "Training record management systems; automated training tracking mechanisms.",
+        "determination_statements": [
+          "AT-04a. — Security and privacy training activities are documented and monitored",
+          "AT-04b. — Individual training records are retained for an organization-defined time period",
+          "NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final",
+          "[SP 800-53 AT Family](../800-53/at.md)",
+          "[SP 800-171 AT Requirements](../800-171/at.md)"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization documents and monitors security and privacy training activities and retains training records.\n\n**Examine:** Awareness and training policy; training records; training attendance records; training certificates; system security plan.\n\n**Interview:** Organizational personnel responsible for maintaining training records.\n\n**Test:** Training record management systems; automated training tracking mechanisms.\n\n**Determination Statements:**\n- AT-04a. — Security and privacy training activities are documented and monitored\n- AT-04b. — Individual training records are retained for an organization-defined time period\n\n## References\n\n- NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final\n- [SP 800-53 AT Family](../800-53/at.md)\n- [SP 800-171 AT Requirements](../800-171/at.md)"
+      }
+    },
+    "AT-5": {
+      "control_id": "AT-5",
+      "control_title": "Contacts with Security Groups and Associations",
+      "base_control": {
+        "control_id": "AT-5",
+        "control_title": "Contacts with Security Groups and Associations",
+        "control_text": "*Withdrawn.* Incorporated into PM-15.",
+        "key_enhancements": [],
+        "key_enhancements_text": null,
+        "related_controls": [],
+        "baselines": [],
+        "baselines_text": null,
+        "source_markdown": "*Withdrawn.* Incorporated into PM-15."
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "AT-6": {
+      "control_id": "AT-6",
+      "control_title": "Training Feedback",
+      "base_control": {
+        "control_id": "AT-6",
+        "control_title": "Training Feedback",
+        "control_text": "Requires the organization to provide feedback on organizational training results to designated personnel at an organization-defined frequency. This supports continuous improvement of the training program based on effectiveness metrics and participant feedback.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined.",
+        "related_controls": [
+          "None"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Requires the organization to provide feedback on organizational training results to designated personnel at an organization-defined frequency. This supports continuous improvement of the training program based on effectiveness metrics and participant feedback.\n\n**Key Enhancements:** None defined.\n\n**Related Controls:** None\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    }
+  }
+}

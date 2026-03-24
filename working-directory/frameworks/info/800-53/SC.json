@@ -1,0 +1,2079 @@
+{
+  "source_documents": {
+    "nist_800_53_sc": "/Users/austinsonger/code/strm-Mapping/working-directory/frameworks/info/800-53/800-53/sc.md",
+    "nist_800_53a_sc": "/Users/austinsonger/code/strm-Mapping/working-directory/frameworks/info/800-53/800-53a/sc.md"
+  },
+  "generated_at": "2026-03-24T19:47:24.422Z",
+  "control_family": "SC",
+  "control_count": 51,
+  "controls": {
+    "SC-1": {
+      "control_id": "SC-1",
+      "control_title": "Policy and Procedures",
+      "base_control": {
+        "control_id": "SC-1",
+        "control_title": "Policy and Procedures",
+        "control_text": "Develop, document, and disseminate a system and communications protection policy and procedures that address purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance. Review and update the policy and procedures at organization-defined frequencies.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for SC-1.",
+        "related_controls": [
+          "PM-9",
+          "PS-8",
+          "SA-8",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Develop, document, and disseminate a system and communications protection policy and procedures that address purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance. Review and update the policy and procedures at organization-defined frequencies.\n\n**Key Enhancements:** None defined for SC-1.\n\n**Related Controls:** PM-9, PS-8, SA-8, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization develops, documents, disseminates, reviews, and updates system and communications protection policy and procedures.",
+        "examine_procedures": "System and communications protection policy; system and communications protection procedures; system security plan.",
+        "interview_procedures": "Organizational personnel responsible for system and communications protection policy.",
+        "test_procedures": "Organizational processes for managing system and communications protection policy.",
+        "determination_statements": [
+          "SC-01a. — A system and communications protection policy is developed, documented, and disseminated",
+          "SC-01b. — System and communications protection procedures are developed, documented, and disseminated",
+          "SC-01c. — The policy and procedures are reviewed and updated at an organization-defined frequency"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization develops, documents, disseminates, reviews, and updates system and communications protection policy and procedures.\n\n**Examine:** System and communications protection policy; system and communications protection procedures; system security plan.\n\n**Interview:** Organizational personnel responsible for system and communications protection policy.\n\n**Test:** Organizational processes for managing system and communications protection policy.\n\n**Determination Statements:**\n- SC-01a. — A system and communications protection policy is developed, documented, and disseminated\n- SC-01b. — System and communications protection procedures are developed, documented, and disseminated\n- SC-01c. — The policy and procedures are reviewed and updated at an organization-defined frequency"
+      }
+    },
+    "SC-2": {
+      "control_id": "SC-2",
+      "control_title": "Separation of System and User Functionality",
+      "base_control": {
+        "control_id": "SC-2",
+        "control_title": "Separation of System and User Functionality",
+        "control_text": "Separate user functionality, including user interface services, from system management functionality. Isolate security functions from nonsecurity functions.",
+        "key_enhancements": [
+          {
+            "id": "SC-2(1)",
+            "title": "Interfaces for Non-Privileged Users"
+          },
+          {
+            "id": "SC-2(2)",
+            "title": "Disassociability"
+          }
+        ],
+        "key_enhancements_text": "- **SC-2(1):** Interfaces for Non-Privileged Users — Prevent the presentation of system management functionality at interfaces to non-privileged users.\n- **SC-2(2):** Disassociability — Store state information from applications and software separately.",
+        "related_controls": [
+          "AC-6",
+          "SA-4",
+          "SA-8",
+          "SC-3",
+          "SC-7",
+          "SC-22",
+          "SC-32",
+          "SC-39"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Separate user functionality, including user interface services, from system management functionality. Isolate security functions from nonsecurity functions.\n\n**Key Enhancements:**\n- **SC-2(1):** Interfaces for Non-Privileged Users — Prevent the presentation of system management functionality at interfaces to non-privileged users.\n- **SC-2(2):** Disassociability — Store state information from applications and software separately.\n\n**Related Controls:** AC-6, SA-4, SA-8, SC-3, SC-7, SC-22, SC-32, SC-39\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-3": {
+      "control_id": "SC-3",
+      "control_title": "Security Function Isolation",
+      "base_control": {
+        "control_id": "SC-3",
+        "control_title": "Security Function Isolation",
+        "control_text": "Isolate security functions from nonsecurity functions.",
+        "key_enhancements": [
+          {
+            "id": "SC-3(1)",
+            "title": "Hardware Separation"
+          },
+          {
+            "id": "SC-3(2)",
+            "title": "Access and Flow Control Functions"
+          },
+          {
+            "id": "SC-3(3)",
+            "title": "Minimize Nonsecurity Functionality"
+          },
+          {
+            "id": "SC-3(4)",
+            "title": "Module Coupling and Cohesiveness"
+          },
+          {
+            "id": "SC-3(5)",
+            "title": "Layered Structures"
+          }
+        ],
+        "key_enhancements_text": "- **SC-3(1):** Hardware Separation — Employ hardware separation mechanisms to implement security function isolation.\n- **SC-3(2):** Access and Flow Control Functions — Isolate security functions enforcing access and information flow control from nonsecurity functions and from other security functions.\n- **SC-3(3):** Minimize Nonsecurity Functionality — Minimize the number of nonsecurity functions included within the isolation boundary containing security functions.\n- **SC-3(4):** Module Coupling and Cohesiveness — Implement security functions as largely independent modules that maximize internal cohesiveness within modules and minimize coupling between modules.\n- **SC-3(5):** Layered Structures — Implement security functions as a layered structure minimizing interactions between layers of the design and avoiding any dependence by lower layers on the functionality or correctness of higher layers.",
+        "related_controls": [
+          "AC-3",
+          "AC-6",
+          "AC-25",
+          "CM-2",
+          "CM-4",
+          "SA-4",
+          "SA-5",
+          "SA-8",
+          "SA-15",
+          "SA-17",
+          "SC-2",
+          "SC-7",
+          "SC-32",
+          "SC-39",
+          "SI-16"
+        ],
+        "baselines": [
+          "High"
+        ],
+        "baselines_text": "High",
+        "source_markdown": "Isolate security functions from nonsecurity functions.\n\n**Key Enhancements:**\n- **SC-3(1):** Hardware Separation — Employ hardware separation mechanisms to implement security function isolation.\n- **SC-3(2):** Access and Flow Control Functions — Isolate security functions enforcing access and information flow control from nonsecurity functions and from other security functions.\n- **SC-3(3):** Minimize Nonsecurity Functionality — Minimize the number of nonsecurity functions included within the isolation boundary containing security functions.\n- **SC-3(4):** Module Coupling and Cohesiveness — Implement security functions as largely independent modules that maximize internal cohesiveness within modules and minimize coupling between modules.\n- **SC-3(5):** Layered Structures — Implement security functions as a layered structure minimizing interactions between layers of the design and avoiding any dependence by lower layers on the functionality or correctness of higher layers.\n\n**Related Controls:** AC-3, AC-6, AC-25, CM-2, CM-4, SA-4, SA-5, SA-8, SA-15, SA-17, SC-2, SC-7, SC-32, SC-39, SI-16\n\n**Baselines:** High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-4": {
+      "control_id": "SC-4",
+      "control_title": "Information in Shared System Resources",
+      "base_control": {
+        "control_id": "SC-4",
+        "control_title": "Information in Shared System Resources",
+        "control_text": "Prevent unauthorized and unintended information transfer via shared system resources.",
+        "key_enhancements": [
+          {
+            "id": "SC-4(1)",
+            "title": "Security Levels"
+          },
+          {
+            "id": "SC-4(2)",
+            "title": "Multilevel or Periods Processing"
+          }
+        ],
+        "key_enhancements_text": "- **SC-4(1):** Security Levels — [Withdrawn: Incorporated into SC-4.]\n- **SC-4(2):** Multilevel or Periods Processing — Prevent unauthorized information transfer via shared resources in accordance with organization-defined procedures when system processing explicitly switches between different information classification levels or security categories.",
+        "related_controls": [
+          "AC-3",
+          "AC-4",
+          "SA-8"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Prevent unauthorized and unintended information transfer via shared system resources.\n\n**Key Enhancements:**\n- **SC-4(1):** Security Levels — [Withdrawn: Incorporated into SC-4.]\n- **SC-4(2):** Multilevel or Periods Processing — Prevent unauthorized information transfer via shared resources in accordance with organization-defined procedures when system processing explicitly switches between different information classification levels or security categories.\n\n**Related Controls:** AC-3, AC-4, SA-8\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-5": {
+      "control_id": "SC-5",
+      "control_title": "Denial-of-Service Protection",
+      "base_control": {
+        "control_id": "SC-5",
+        "control_title": "Denial-of-Service Protection",
+        "control_text": "Protect against or limit the effects of organization-defined types of denial-of-service events by employing organization-defined controls.",
+        "key_enhancements": [
+          {
+            "id": "SC-5(1)",
+            "title": "Restrict Ability to Attack Other Systems"
+          },
+          {
+            "id": "SC-5(2)",
+            "title": "Capacity, Bandwidth, and Redundancy"
+          },
+          {
+            "id": "SC-5(3)",
+            "title": "Detection and Monitoring"
+          }
+        ],
+        "key_enhancements_text": "- **SC-5(1):** Restrict Ability to Attack Other Systems — Restrict the ability of individuals to launch denial-of-service attacks against other systems.\n- **SC-5(2):** Capacity, Bandwidth, and Redundancy — Manage capacity, bandwidth, or other redundancy to limit the effects of information flooding denial-of-service attacks.\n- **SC-5(3):** Detection and Monitoring — Employ organization-defined monitoring tools to detect indicators of denial-of-service attacks against, or launched from, the system and to monitor organization-defined system resources to determine if sufficient resources exist to prevent effective denial-of-service attacks.",
+        "related_controls": [
+          "CP-2",
+          "IR-4",
+          "SC-6",
+          "SC-7",
+          "SC-40"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Protect against or limit the effects of organization-defined types of denial-of-service events by employing organization-defined controls.\n\n**Key Enhancements:**\n- **SC-5(1):** Restrict Ability to Attack Other Systems — Restrict the ability of individuals to launch denial-of-service attacks against other systems.\n- **SC-5(2):** Capacity, Bandwidth, and Redundancy — Manage capacity, bandwidth, or other redundancy to limit the effects of information flooding denial-of-service attacks.\n- **SC-5(3):** Detection and Monitoring — Employ organization-defined monitoring tools to detect indicators of denial-of-service attacks against, or launched from, the system and to monitor organization-defined system resources to determine if sufficient resources exist to prevent effective denial-of-service attacks.\n\n**Related Controls:** CP-2, IR-4, SC-6, SC-7, SC-40\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the system protects against or limits the effects of denial-of-service attacks.",
+        "examine_procedures": "System and communications protection policy; system security plan; system design documentation; system configuration settings; denial-of-service protection mechanisms.",
+        "interview_procedures": "System administrators; network engineers; information system security officers.",
+        "test_procedures": "Denial-of-service protection mechanisms; monitoring and detection capabilities.",
+        "determination_statements": [
+          "SC-05 — The system protects against or limits the effects of organization-defined types of denial-of-service events by employing organization-defined controls"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the system protects against or limits the effects of denial-of-service attacks.\n\n**Examine:** System and communications protection policy; system security plan; system design documentation; system configuration settings; denial-of-service protection mechanisms.\n\n**Interview:** System administrators; network engineers; information system security officers.\n\n**Test:** Denial-of-service protection mechanisms; monitoring and detection capabilities.\n\n**Determination Statements:**\n- SC-05 — The system protects against or limits the effects of organization-defined types of denial-of-service events by employing organization-defined controls"
+      }
+    },
+    "SC-6": {
+      "control_id": "SC-6",
+      "control_title": "Resource Availability",
+      "base_control": {
+        "control_id": "SC-6",
+        "control_title": "Resource Availability",
+        "control_text": "Protect the availability of resources by allocating organization-defined resources by priority, quota, or organization-defined controls.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for SC-6.",
+        "related_controls": [
+          "SC-5"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Protect the availability of resources by allocating organization-defined resources by priority, quota, or organization-defined controls.\n\n**Key Enhancements:** None defined for SC-6.\n\n**Related Controls:** SC-5\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-7": {
+      "control_id": "SC-7",
+      "control_title": "Boundary Protection",
+      "base_control": {
+        "control_id": "SC-7",
+        "control_title": "Boundary Protection",
+        "control_text": "Monitor and control communications at the external managed interfaces to the system and at key internal managed interfaces within the system. Implement subnetworks for publicly accessible system components that are physically or logically separated from internal organizational networks. Connect to external networks or systems only through managed interfaces consisting of boundary protection devices arranged in accordance with an organizational security and privacy architecture.",
+        "key_enhancements": [
+          {
+            "id": "SC-7(1)",
+            "title": "Physically Separated Subnetworks"
+          },
+          {
+            "id": "SC-7(2)",
+            "title": "Public Access"
+          },
+          {
+            "id": "SC-7(3)",
+            "title": "Access Points"
+          },
+          {
+            "id": "SC-7(4)",
+            "title": "External Telecommunications Services"
+          },
+          {
+            "id": "SC-7(5)",
+            "title": "Deny by Default"
+          },
+          {
+            "id": "SC-7(6)",
+            "title": "Response to Recognized Failures"
+          },
+          {
+            "id": "SC-7(7)",
+            "title": "Split Tunneling for Remote Devices"
+          },
+          {
+            "id": "SC-7(8)",
+            "title": "Route Traffic to Authenticated Proxy Servers"
+          },
+          {
+            "id": "SC-7(9)",
+            "title": "Restrict Threatening Outgoing Communications Traffic"
+          },
+          {
+            "id": "SC-7(10)",
+            "title": "Prevent Exfiltration"
+          },
+          {
+            "id": "SC-7(11)",
+            "title": "Restrict Incoming Communications Traffic"
+          },
+          {
+            "id": "SC-7(12)",
+            "title": "Host-Based Protection"
+          },
+          {
+            "id": "SC-7(13)",
+            "title": "Isolation of Security Tools, Mechanisms, and Support Components"
+          },
+          {
+            "id": "SC-7(14)",
+            "title": "Protect Against Unauthorized Physical Connections"
+          },
+          {
+            "id": "SC-7(15)",
+            "title": "Networked Privileged Accesses"
+          },
+          {
+            "id": "SC-7(16)",
+            "title": "Prevent Discovery of System Components"
+          },
+          {
+            "id": "SC-7(17)",
+            "title": "Automated Enforcement of Protocol Formats"
+          },
+          {
+            "id": "SC-7(18)",
+            "title": "Fail Secure"
+          },
+          {
+            "id": "SC-7(19)",
+            "title": "Block Communication from Non-Organizationally Configured Hosts"
+          },
+          {
+            "id": "SC-7(20)",
+            "title": "Dynamic Isolation and Segregation"
+          },
+          {
+            "id": "SC-7(21)",
+            "title": "Isolation of System Components"
+          },
+          {
+            "id": "SC-7(22)",
+            "title": "Separate Subnets for Connecting to Different Security Domains"
+          },
+          {
+            "id": "SC-7(23)",
+            "title": "Disable Sender Feedback on Protocol Validation Failure"
+          },
+          {
+            "id": "SC-7(24)",
+            "title": "Personally Identifiable Information"
+          },
+          {
+            "id": "SC-7(25)",
+            "title": "Unclassified National Security System Connections"
+          },
+          {
+            "id": "SC-7(26)",
+            "title": "Classified National Security System Connections"
+          },
+          {
+            "id": "SC-7(27)",
+            "title": "Unclassified Non-National Security System Connections"
+          },
+          {
+            "id": "SC-7(28)",
+            "title": "Connections to Public Networks"
+          },
+          {
+            "id": "SC-7(29)",
+            "title": "Separate Subnets to Isolate Functions"
+          }
+        ],
+        "key_enhancements_text": "- **SC-7(1):** Physically Separated Subnetworks — [Withdrawn: Incorporated into SC-7.]\n- **SC-7(2):** Public Access — [Withdrawn: Incorporated into SC-7.]\n- **SC-7(3):** Access Points — Limit the number of external network connections to the system.\n- **SC-7(4):** External Telecommunications Services — Implement a managed interface for each external telecommunication service; establish a traffic flow policy for each managed interface; protect the confidentiality and integrity of the information being transmitted across each interface; document each exception to the traffic flow policy with a supporting mission or business need and duration of that need; review exceptions to the traffic flow policy at an organization-defined frequency; and remove traffic flow policy exceptions that are no longer supported by an explicit mission or business need.\n- **SC-7(5):** Deny by Default — Allow by Exception — Deny network communications traffic by default and allow network communications traffic by exception at managed interfaces.\n- **SC-7(6):** Response to Recognized Failures — [Withdrawn: Incorporated into SC-7(18).]\n- **SC-7(7):** Split Tunneling for Remote Devices — Prevent split tunneling for remote devices connecting to organizational systems unless the split tunnel is securely provisioned using organization-defined safeguards.\n- **SC-7(8):** Route Traffic to Authenticated Proxy Servers — Route organization-defined internal communications traffic to organization-defined external networks through authenticated proxy servers at managed interfaces.\n- **SC-7(9):** Restrict Threatening Outgoing Communications Traffic — Detect and deny outgoing communications traffic posing a threat to external systems and audit the identity of internal users associated with denied communications.\n- **SC-7(10):** Prevent Exfiltration — Prevent the unauthorized exfiltration of information.\n- **SC-7(11):** Restrict Incoming Communications Traffic — Only allow incoming communications from organization-defined authorized sources to be routed to organization-defined authorized destinations.\n- **SC-7(12):** Host-Based Protection — Implement organization-defined host-based boundary protection mechanisms at organization-defined system components.\n- **SC-7(13):** Isolation of Security Tools, Mechanisms, and Support Components — Isolate organization-defined information security tools, mechanisms, and support components from other internal system components by implementing physically separate subnetworks with managed interfaces to other components of the system.\n- **SC-7(14):** Protect Against Unauthorized Physical Connections — Protect against unauthorized physical connections at organization-defined managed interfaces.\n- **SC-7(15):** Networked Privileged Accesses — Route networked, privileged accesses through a dedicated, managed interface for purposes of access control and auditing.\n- **SC-7(16):** Prevent Discovery of System Components — Prevent discovery of specific system components composing a managed interface.\n- **SC-7(17):** Automated Enforcement of Protocol Formats — Enforce adherence to protocol formats.\n- **SC-7(18):** Fail Secure — Prevent systems from entering unsecure states in the event of an operational failure of a boundary protection device.\n- **SC-7(19):** Block Communication from Non-Organizationally Configured Hosts — Block inbound and outbound communications traffic between organization-defined communication clients that are independently configured by end users and external service providers.\n- **SC-7(20):** Dynamic Isolation and Segregation — Provide the capability to dynamically isolate organization-defined system components from other system components.\n- **SC-7(21):** Isolation of System Components — Employ boundary protection mechanisms to isolate organization-defined system components supporting organization-defined missions and/or business functions.\n- **SC-7(22):** Separate Subnets for Connecting to Different Security Domains — Implement separate network addresses to connect to systems in different security domains.\n- **SC-7(23):** Disable Sender Feedback on Protocol Validation Failure — Disable feedback to senders on protocol format validation failure.\n- **SC-7(24):** Personally Identifiable Information — For systems that process personally identifiable information, implement organization-defined boundary protections.\n- **SC-7(25):** Unclassified National Security System Connections — Prohibit the direct connection of an unclassified national security system to an external network without the use of organization-defined boundary protection device.\n- **SC-7(26):** Classified National Security System Connections — Prohibit the direct connection of a classified national security system to an external network without the use of organization-defined boundary protection device.\n- **SC-7(27):** Unclassified Non-National Security System Connections — Prohibit the direct connection of an organization-defined unclassified non-national security system to an external network without the use of organization-defined boundary protection device.\n- **SC-7(28):** Connections to Public Networks — Prohibit the direct connection of organization-defined system to a public network.\n- **SC-7(29):** Separate Subnets to Isolate Functions — Implement organization-defined physically or logically separate subnets to isolate the organization-defined system components supporting the organization-defined mission/business critical functions.",
+        "related_controls": [
+          "AC-4",
+          "AC-17",
+          "AC-18",
+          "AC-19",
+          "AC-20",
+          "AU-13",
+          "CA-3",
+          "CM-2",
+          "CM-4",
+          "CM-7",
+          "CM-10",
+          "CP-8",
+          "CP-10",
+          "IR-4",
+          "MA-4",
+          "PE-3",
+          "PL-8",
+          "PM-12",
+          "SA-8",
+          "SA-17",
+          "SC-5",
+          "SC-26",
+          "SC-32",
+          "SC-35",
+          "SC-43"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Monitor and control communications at the external managed interfaces to the system and at key internal managed interfaces within the system. Implement subnetworks for publicly accessible system components that are physically or logically separated from internal organizational networks. Connect to external networks or systems only through managed interfaces consisting of boundary protection devices arranged in accordance with an organizational security and privacy architecture.\n\n**Key Enhancements:**\n- **SC-7(1):** Physically Separated Subnetworks — [Withdrawn: Incorporated into SC-7.]\n- **SC-7(2):** Public Access — [Withdrawn: Incorporated into SC-7.]\n- **SC-7(3):** Access Points — Limit the number of external network connections to the system.\n- **SC-7(4):** External Telecommunications Services — Implement a managed interface for each external telecommunication service; establish a traffic flow policy for each managed interface; protect the confidentiality and integrity of the information being transmitted across each interface; document each exception to the traffic flow policy with a supporting mission or business need and duration of that need; review exceptions to the traffic flow policy at an organization-defined frequency; and remove traffic flow policy exceptions that are no longer supported by an explicit mission or business need.\n- **SC-7(5):** Deny by Default — Allow by Exception — Deny network communications traffic by default and allow network communications traffic by exception at managed interfaces.\n- **SC-7(6):** Response to Recognized Failures — [Withdrawn: Incorporated into SC-7(18).]\n- **SC-7(7):** Split Tunneling for Remote Devices — Prevent split tunneling for remote devices connecting to organizational systems unless the split tunnel is securely provisioned using organization-defined safeguards.\n- **SC-7(8):** Route Traffic to Authenticated Proxy Servers — Route organization-defined internal communications traffic to organization-defined external networks through authenticated proxy servers at managed interfaces.\n- **SC-7(9):** Restrict Threatening Outgoing Communications Traffic — Detect and deny outgoing communications traffic posing a threat to external systems and audit the identity of internal users associated with denied communications.\n- **SC-7(10):** Prevent Exfiltration — Prevent the unauthorized exfiltration of information.\n- **SC-7(11):** Restrict Incoming Communications Traffic — Only allow incoming communications from organization-defined authorized sources to be routed to organization-defined authorized destinations.\n- **SC-7(12):** Host-Based Protection — Implement organization-defined host-based boundary protection mechanisms at organization-defined system components.\n- **SC-7(13):** Isolation of Security Tools, Mechanisms, and Support Components — Isolate organization-defined information security tools, mechanisms, and support components from other internal system components by implementing physically separate subnetworks with managed interfaces to other components of the system.\n- **SC-7(14):** Protect Against Unauthorized Physical Connections — Protect against unauthorized physical connections at organization-defined managed interfaces.\n- **SC-7(15):** Networked Privileged Accesses — Route networked, privileged accesses through a dedicated, managed interface for purposes of access control and auditing.\n- **SC-7(16):** Prevent Discovery of System Components — Prevent discovery of specific system components composing a managed interface.\n- **SC-7(17):** Automated Enforcement of Protocol Formats — Enforce adherence to protocol formats.\n- **SC-7(18):** Fail Secure — Prevent systems from entering unsecure states in the event of an operational failure of a boundary protection device.\n- **SC-7(19):** Block Communication from Non-Organizationally Configured Hosts — Block inbound and outbound communications traffic between organization-defined communication clients that are independently configured by end users and external service providers.\n- **SC-7(20):** Dynamic Isolation and Segregation — Provide the capability to dynamically isolate organization-defined system components from other system components.\n- **SC-7(21):** Isolation of System Components — Employ boundary protection mechanisms to isolate organization-defined system components supporting organization-defined missions and/or business functions.\n- **SC-7(22):** Separate Subnets for Connecting to Different Security Domains — Implement separate network addresses to connect to systems in different security domains.\n- **SC-7(23):** Disable Sender Feedback on Protocol Validation Failure — Disable feedback to senders on protocol format validation failure.\n- **SC-7(24):** Personally Identifiable Information — For systems that process personally identifiable information, implement organization-defined boundary protections.\n- **SC-7(25):** Unclassified National Security System Connections — Prohibit the direct connection of an unclassified national security system to an external network without the use of organization-defined boundary protection device.\n- **SC-7(26):** Classified National Security System Connections — Prohibit the direct connection of a classified national security system to an external network without the use of organization-defined boundary protection device.\n- **SC-7(27):** Unclassified Non-National Security System Connections — Prohibit the direct connection of an organization-defined unclassified non-national security system to an external network without the use of organization-defined boundary protection device.\n- **SC-7(28):** Connections to Public Networks — Prohibit the direct connection of organization-defined system to a public network.\n- **SC-7(29):** Separate Subnets to Isolate Functions — Implement organization-defined physically or logically separate subnets to isolate the organization-defined system components supporting the organization-defined mission/business critical functions.\n\n**Related Controls:** AC-4, AC-17, AC-18, AC-19, AC-20, AU-13, CA-3, CM-2, CM-4, CM-7, CM-10, CP-8, CP-10, IR-4, MA-4, PE-3, PL-8, PM-12, SA-8, SA-17, SC-5, SC-26, SC-32, SC-35, SC-43\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the system monitors and controls communications at external and key internal boundaries.",
+        "examine_procedures": "System and communications protection policy; system security plan; system design documentation; boundary protection mechanisms; network diagrams; firewall rules; system configuration settings; system audit records.",
+        "interview_procedures": "System administrators; network engineers; information system security officers.",
+        "test_procedures": "Boundary protection mechanisms (firewalls, gateways, routers); DMZ architecture; network segmentation controls; deny-by-default configurations.",
+        "determination_statements": [
+          "SC-07a. — Communications at the external managed interfaces to the system and at key internal managed interfaces within the system are monitored and controlled",
+          "SC-07b. — Subnetworks for publicly accessible system components are implemented that are physically or logically separated from internal organizational networks",
+          "SC-07c. — The system connects to external networks or systems only through managed interfaces consisting of boundary protection devices arranged in accordance with an organizational security and privacy architecture"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the system monitors and controls communications at external and key internal boundaries.\n\n**Examine:** System and communications protection policy; system security plan; system design documentation; boundary protection mechanisms; network diagrams; firewall rules; system configuration settings; system audit records.\n\n**Interview:** System administrators; network engineers; information system security officers.\n\n**Test:** Boundary protection mechanisms (firewalls, gateways, routers); DMZ architecture; network segmentation controls; deny-by-default configurations.\n\n**Determination Statements:**\n- SC-07a. — Communications at the external managed interfaces to the system and at key internal managed interfaces within the system are monitored and controlled\n- SC-07b. — Subnetworks for publicly accessible system components are implemented that are physically or logically separated from internal organizational networks\n- SC-07c. — The system connects to external networks or systems only through managed interfaces consisting of boundary protection devices arranged in accordance with an organizational security and privacy architecture"
+      }
+    },
+    "SC-8": {
+      "control_id": "SC-8",
+      "control_title": "Transmission Confidentiality and Integrity",
+      "base_control": {
+        "control_id": "SC-8",
+        "control_title": "Transmission Confidentiality and Integrity",
+        "control_text": "Protect the confidentiality and/or integrity of transmitted information.",
+        "key_enhancements": [
+          {
+            "id": "SC-8(1)",
+            "title": "Cryptographic Protection"
+          },
+          {
+            "id": "SC-8(2)",
+            "title": "Pre- and Post-Transmission Handling"
+          },
+          {
+            "id": "SC-8(3)",
+            "title": "Cryptographic Protection for Message Externals"
+          },
+          {
+            "id": "SC-8(4)",
+            "title": "Conceal or Randomize Communications"
+          },
+          {
+            "id": "SC-8(5)",
+            "title": "Protected Distribution System"
+          }
+        ],
+        "key_enhancements_text": "- **SC-8(1):** Cryptographic Protection — Implement cryptographic mechanisms to prevent unauthorized disclosure of information and/or detect changes to information during transmission.\n- **SC-8(2):** Pre- and Post-Transmission Handling — Maintain the confidentiality and/or integrity of information during preparation for transmission and during reception.\n- **SC-8(3):** Cryptographic Protection for Message Externals — Implement cryptographic mechanisms to protect message externals unless otherwise protected by organization-defined alternative physical controls.\n- **SC-8(4):** Conceal or Randomize Communications — Implement cryptographic mechanisms to conceal or randomize communication patterns unless otherwise protected by organization-defined alternative physical controls.\n- **SC-8(5):** Protected Distribution System — Implement organization-defined protected distribution system to protect organization-defined system during transmission.",
+        "related_controls": [
+          "AC-17",
+          "AC-18",
+          "AU-10",
+          "IA-3",
+          "IA-8",
+          "IA-9",
+          "MA-4",
+          "PE-4",
+          "SA-4",
+          "SA-8",
+          "SC-7",
+          "SC-16",
+          "SC-20",
+          "SC-23",
+          "SC-28"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Protect the confidentiality and/or integrity of transmitted information.\n\n**Key Enhancements:**\n- **SC-8(1):** Cryptographic Protection — Implement cryptographic mechanisms to prevent unauthorized disclosure of information and/or detect changes to information during transmission.\n- **SC-8(2):** Pre- and Post-Transmission Handling — Maintain the confidentiality and/or integrity of information during preparation for transmission and during reception.\n- **SC-8(3):** Cryptographic Protection for Message Externals — Implement cryptographic mechanisms to protect message externals unless otherwise protected by organization-defined alternative physical controls.\n- **SC-8(4):** Conceal or Randomize Communications — Implement cryptographic mechanisms to conceal or randomize communication patterns unless otherwise protected by organization-defined alternative physical controls.\n- **SC-8(5):** Protected Distribution System — Implement organization-defined protected distribution system to protect organization-defined system during transmission.\n\n**Related Controls:** AC-17, AC-18, AU-10, IA-3, IA-8, IA-9, MA-4, PE-4, SA-4, SA-8, SC-7, SC-16, SC-20, SC-23, SC-28\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the system protects the confidentiality and/or integrity of transmitted information.",
+        "examine_procedures": "System and communications protection policy; system security plan; system design documentation; system configuration settings; cryptographic mechanism documentation.",
+        "interview_procedures": "System administrators; network engineers; information system security officers.",
+        "test_procedures": "Cryptographic mechanisms for transmission protection (TLS, IPsec, S/MIME); transmission protection verification.",
+        "determination_statements": [
+          "SC-08 — The confidentiality and/or integrity of organization-defined information during transmission is protected using organization-defined mechanisms"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the system protects the confidentiality and/or integrity of transmitted information.\n\n**Examine:** System and communications protection policy; system security plan; system design documentation; system configuration settings; cryptographic mechanism documentation.\n\n**Interview:** System administrators; network engineers; information system security officers.\n\n**Test:** Cryptographic mechanisms for transmission protection (TLS, IPsec, S/MIME); transmission protection verification.\n\n**Determination Statements:**\n- SC-08 — The confidentiality and/or integrity of organization-defined information during transmission is protected using organization-defined mechanisms"
+      }
+    },
+    "SC-9": {
+      "control_id": "SC-9",
+      "control_title": "Transmission Confidentiality",
+      "base_control": {
+        "control_id": "SC-9",
+        "control_title": "Transmission Confidentiality",
+        "control_text": "[Withdrawn: Incorporated into SC-8.]\n\n**Baselines:** None (not in any baseline)",
+        "key_enhancements": [],
+        "key_enhancements_text": null,
+        "related_controls": [],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "[Withdrawn: Incorporated into SC-8.]\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-10": {
+      "control_id": "SC-10",
+      "control_title": "Network Disconnect",
+      "base_control": {
+        "control_id": "SC-10",
+        "control_title": "Network Disconnect",
+        "control_text": "Terminate the network connection associated with a communications session at the end of the session or after an organization-defined time period of inactivity.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for SC-10.",
+        "related_controls": [
+          "AC-17",
+          "SC-23"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Terminate the network connection associated with a communications session at the end of the session or after an organization-defined time period of inactivity.\n\n**Key Enhancements:** None defined for SC-10.\n\n**Related Controls:** AC-17, SC-23\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-11": {
+      "control_id": "SC-11",
+      "control_title": "Trusted Path",
+      "base_control": {
+        "control_id": "SC-11",
+        "control_title": "Trusted Path",
+        "control_text": "Provide a organization-defined trusted communications path that is irrefutably distinguishable from other communications paths between the organization-defined security functions of the system and the user.",
+        "key_enhancements": [
+          {
+            "id": "SC-11(1)",
+            "title": "Irrefutable Communications Path"
+          }
+        ],
+        "key_enhancements_text": "- **SC-11(1):** Irrefutable Communications Path — Provide a trusted communications path that is logically isolated and distinguishable from other paths.",
+        "related_controls": [
+          "AC-16",
+          "AC-25",
+          "SC-12",
+          "SC-23"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Provide a organization-defined trusted communications path that is irrefutably distinguishable from other communications paths between the organization-defined security functions of the system and the user.\n\n**Key Enhancements:**\n- **SC-11(1):** Irrefutable Communications Path — Provide a trusted communications path that is logically isolated and distinguishable from other paths.\n\n**Related Controls:** AC-16, AC-25, SC-12, SC-23\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-12": {
+      "control_id": "SC-12",
+      "control_title": "Cryptographic Key Establishment and Management",
+      "base_control": {
+        "control_id": "SC-12",
+        "control_title": "Cryptographic Key Establishment and Management",
+        "control_text": "Establish and manage cryptographic keys when cryptography is employed within the system in accordance with organization-defined requirements for key generation, distribution, storage, access, and destruction.",
+        "key_enhancements": [
+          {
+            "id": "SC-12(1)",
+            "title": "Availability"
+          },
+          {
+            "id": "SC-12(2)",
+            "title": "Symmetric Keys"
+          },
+          {
+            "id": "SC-12(3)",
+            "title": "Asymmetric Keys"
+          },
+          {
+            "id": "SC-12(6)",
+            "title": "Physical Control of Keys"
+          }
+        ],
+        "key_enhancements_text": "- **SC-12(1):** Availability — Maintain availability of information in the event of the loss of cryptographic keys by users.\n- **SC-12(2):** Symmetric Keys — Produce, control, and distribute symmetric cryptographic keys using NIST-approved or NSA-approved key management technology and processes.\n- **SC-12(3):** Asymmetric Keys — Produce, control, and distribute asymmetric cryptographic keys using organization-defined approved key management technology and processes.\n- **SC-12(6):** Physical Control of Keys — Maintain physical control of cryptographic keys when stored information is encrypted by external service providers.",
+        "related_controls": [
+          "AC-17",
+          "AU-9",
+          "AU-10",
+          "CM-3",
+          "IA-3",
+          "IA-7",
+          "IA-13",
+          "SA-4",
+          "SA-8",
+          "SA-9",
+          "SC-8",
+          "SC-11",
+          "SC-13",
+          "SC-17",
+          "SC-20",
+          "SC-37",
+          "SC-40",
+          "SI-3",
+          "SI-7"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Establish and manage cryptographic keys when cryptography is employed within the system in accordance with organization-defined requirements for key generation, distribution, storage, access, and destruction.\n\n**Key Enhancements:**\n- **SC-12(1):** Availability — Maintain availability of information in the event of the loss of cryptographic keys by users.\n- **SC-12(2):** Symmetric Keys — Produce, control, and distribute symmetric cryptographic keys using NIST-approved or NSA-approved key management technology and processes.\n- **SC-12(3):** Asymmetric Keys — Produce, control, and distribute asymmetric cryptographic keys using organization-defined approved key management technology and processes.\n- **SC-12(6):** Physical Control of Keys — Maintain physical control of cryptographic keys when stored information is encrypted by external service providers.\n\n**Related Controls:** AC-17, AU-9, AU-10, CM-3, IA-3, IA-7, IA-13, SA-4, SA-8, SA-9, SC-8, SC-11, SC-13, SC-17, SC-20, SC-37, SC-40, SI-3, SI-7\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization establishes and manages cryptographic keys when cryptography is employed.",
+        "examine_procedures": "System and communications protection policy; cryptographic key management procedures; system security plan; key management documentation; NIST SP 800-57 compliance documentation.",
+        "interview_procedures": "System administrators; organizational personnel responsible for cryptographic key management.",
+        "test_procedures": "Cryptographic key management mechanisms; key lifecycle management processes.",
+        "determination_statements": [
+          "SC-12 — Cryptographic keys are established and managed when cryptography is employed within the system in accordance with organization-defined requirements for key generation, distribution, storage, access, and destruction"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization establishes and manages cryptographic keys when cryptography is employed.\n\n**Examine:** System and communications protection policy; cryptographic key management procedures; system security plan; key management documentation; NIST SP 800-57 compliance documentation.\n\n**Interview:** System administrators; organizational personnel responsible for cryptographic key management.\n\n**Test:** Cryptographic key management mechanisms; key lifecycle management processes.\n\n**Determination Statements:**\n- SC-12 — Cryptographic keys are established and managed when cryptography is employed within the system in accordance with organization-defined requirements for key generation, distribution, storage, access, and destruction"
+      }
+    },
+    "SC-13": {
+      "control_id": "SC-13",
+      "control_title": "Cryptographic Protection",
+      "base_control": {
+        "control_id": "SC-13",
+        "control_title": "Cryptographic Protection",
+        "control_text": "Determine the organization-defined cryptographic uses and implement the organization-defined types of cryptography required for each specified cryptographic use in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines.",
+        "key_enhancements": [
+          {
+            "id": "SC-13(1)",
+            "title": "FIPS-Validated Cryptography"
+          },
+          {
+            "id": "SC-13(2)",
+            "title": "NSA-Approved Cryptography"
+          },
+          {
+            "id": "SC-13(3)",
+            "title": "Individuals Without Formal Access Approvals"
+          },
+          {
+            "id": "SC-13(4)",
+            "title": "Digital Signatures"
+          }
+        ],
+        "key_enhancements_text": "- **SC-13(1):** FIPS-Validated Cryptography — [Withdrawn: Incorporated into SC-13.]\n- **SC-13(2):** NSA-Approved Cryptography — [Withdrawn: Incorporated into SC-13.]\n- **SC-13(3):** Individuals Without Formal Access Approvals — [Withdrawn: Incorporated into SC-13.]\n- **SC-13(4):** Digital Signatures — [Withdrawn: Incorporated into SC-13.]",
+        "related_controls": [
+          "AC-2",
+          "AC-3",
+          "AC-7",
+          "AC-17",
+          "AC-18",
+          "AC-19",
+          "AU-9",
+          "AU-10",
+          "CM-11",
+          "CP-9",
+          "IA-3",
+          "IA-5",
+          "IA-7",
+          "IA-13",
+          "MA-4",
+          "MP-2",
+          "MP-4",
+          "MP-5",
+          "SA-4",
+          "SA-8",
+          "SA-9",
+          "SC-8",
+          "SC-12",
+          "SC-20",
+          "SC-23",
+          "SC-28",
+          "SC-40",
+          "SI-3",
+          "SI-7"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Determine the organization-defined cryptographic uses and implement the organization-defined types of cryptography required for each specified cryptographic use in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines.\n\n**Key Enhancements:**\n- **SC-13(1):** FIPS-Validated Cryptography — [Withdrawn: Incorporated into SC-13.]\n- **SC-13(2):** NSA-Approved Cryptography — [Withdrawn: Incorporated into SC-13.]\n- **SC-13(3):** Individuals Without Formal Access Approvals — [Withdrawn: Incorporated into SC-13.]\n- **SC-13(4):** Digital Signatures — [Withdrawn: Incorporated into SC-13.]\n\n**Related Controls:** AC-2, AC-3, AC-7, AC-17, AC-18, AC-19, AU-9, AU-10, CM-11, CP-9, IA-3, IA-5, IA-7, IA-13, MA-4, MP-2, MP-4, MP-5, SA-4, SA-8, SA-9, SC-8, SC-12, SC-20, SC-23, SC-28, SC-40, SI-3, SI-7\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-14": {
+      "control_id": "SC-14",
+      "control_title": "Public Access Protections",
+      "base_control": {
+        "control_id": "SC-14",
+        "control_title": "Public Access Protections",
+        "control_text": "[Withdrawn: Incorporated into AC-2, AC-3, AC-5, AC-6, SI-3, SI-4, SI-5, SI-7, and SI-10.]\n\n**Baselines:** None (not in any baseline)",
+        "key_enhancements": [],
+        "key_enhancements_text": null,
+        "related_controls": [],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "[Withdrawn: Incorporated into AC-2, AC-3, AC-5, AC-6, SI-3, SI-4, SI-5, SI-7, and SI-10.]\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-15": {
+      "control_id": "SC-15",
+      "control_title": "Collaborative Computing Devices and Applications",
+      "base_control": {
+        "control_id": "SC-15",
+        "control_title": "Collaborative Computing Devices and Applications",
+        "control_text": "Prohibit remote activation of collaborative computing devices and applications with the following exceptions: organization-defined exceptions where remote activation is to be allowed. Provide an explicit indication of use to users physically present at the devices.",
+        "key_enhancements": [
+          {
+            "id": "SC-15(1)",
+            "title": "Physical or Logical Disconnect"
+          },
+          {
+            "id": "SC-15(2)",
+            "title": "Blocking Inbound and Outbound Communications Traffic"
+          },
+          {
+            "id": "SC-15(3)",
+            "title": "Disabling and Removal in Secure Work Areas"
+          },
+          {
+            "id": "SC-15(4)",
+            "title": "Explicitly Indicate Current Participants"
+          }
+        ],
+        "key_enhancements_text": "- **SC-15(1):** Physical or Logical Disconnect — Provide organization-defined users with the capability to physically or logically disconnect collaborative computing devices in a manner that supports ease of use.\n- **SC-15(2):** Blocking Inbound and Outbound Communications Traffic — [Withdrawn: Incorporated into SC-7.]\n- **SC-15(3):** Disabling and Removal in Secure Work Areas — Disable or remove collaborative computing devices and applications from organization-defined systems or system components in organization-defined secure work areas.\n- **SC-15(4):** Explicitly Indicate Current Participants — Provide an explicit indication of current participants in organization-defined online meetings and teleconferences.",
+        "related_controls": [
+          "AC-21",
+          "SC-42"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Prohibit remote activation of collaborative computing devices and applications with the following exceptions: organization-defined exceptions where remote activation is to be allowed. Provide an explicit indication of use to users physically present at the devices.\n\n**Key Enhancements:**\n- **SC-15(1):** Physical or Logical Disconnect — Provide organization-defined users with the capability to physically or logically disconnect collaborative computing devices in a manner that supports ease of use.\n- **SC-15(2):** Blocking Inbound and Outbound Communications Traffic — [Withdrawn: Incorporated into SC-7.]\n- **SC-15(3):** Disabling and Removal in Secure Work Areas — Disable or remove collaborative computing devices and applications from organization-defined systems or system components in organization-defined secure work areas.\n- **SC-15(4):** Explicitly Indicate Current Participants — Provide an explicit indication of current participants in organization-defined online meetings and teleconferences.\n\n**Related Controls:** AC-21, SC-42\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the system prohibits remote activation of collaborative computing devices with defined exceptions.",
+        "examine_procedures": "System and communications protection policy; system security plan; system design documentation; system configuration settings; collaborative computing device inventory.",
+        "interview_procedures": "System administrators; organizational personnel using collaborative computing devices.",
+        "test_procedures": "Collaborative computing device access controls; remote activation prevention mechanisms; active use indicators.",
+        "determination_statements": [
+          "SC-15a. — Remote activation of organization-defined collaborative computing devices and applications is prohibited, with organization-defined exceptions",
+          "SC-15b. — An explicit indication of use is provided to users physically present at the devices"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the system prohibits remote activation of collaborative computing devices with defined exceptions.\n\n**Examine:** System and communications protection policy; system security plan; system design documentation; system configuration settings; collaborative computing device inventory.\n\n**Interview:** System administrators; organizational personnel using collaborative computing devices.\n\n**Test:** Collaborative computing device access controls; remote activation prevention mechanisms; active use indicators.\n\n**Determination Statements:**\n- SC-15a. — Remote activation of organization-defined collaborative computing devices and applications is prohibited, with organization-defined exceptions\n- SC-15b. — An explicit indication of use is provided to users physically present at the devices"
+      }
+    },
+    "SC-16": {
+      "control_id": "SC-16",
+      "control_title": "Transmission of Security and Privacy Attributes",
+      "base_control": {
+        "control_id": "SC-16",
+        "control_title": "Transmission of Security and Privacy Attributes",
+        "control_text": "Associate organization-defined security and privacy attributes with information exchanged between systems and between system components.",
+        "key_enhancements": [
+          {
+            "id": "SC-16(1)",
+            "title": "Integrity Verification"
+          },
+          {
+            "id": "SC-16(2)",
+            "title": "Anti-Spoofing Mechanisms"
+          },
+          {
+            "id": "SC-16(3)",
+            "title": "Cryptographic Mechanisms"
+          }
+        ],
+        "key_enhancements_text": "- **SC-16(1):** Integrity Verification — Verify the integrity of transmitted security and privacy attributes.\n- **SC-16(2):** Anti-Spoofing Mechanisms — Implement anti-spoofing mechanisms to prevent adversaries from falsifying the security or privacy attributes indicating the security or privacy policy of an information exchange.\n- **SC-16(3):** Cryptographic Mechanisms — Implement cryptographic mechanisms to verify the integrity of security and privacy attributes.",
+        "related_controls": [
+          "AC-3",
+          "AC-4",
+          "AC-16"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Associate organization-defined security and privacy attributes with information exchanged between systems and between system components.\n\n**Key Enhancements:**\n- **SC-16(1):** Integrity Verification — Verify the integrity of transmitted security and privacy attributes.\n- **SC-16(2):** Anti-Spoofing Mechanisms — Implement anti-spoofing mechanisms to prevent adversaries from falsifying the security or privacy attributes indicating the security or privacy policy of an information exchange.\n- **SC-16(3):** Cryptographic Mechanisms — Implement cryptographic mechanisms to verify the integrity of security and privacy attributes.\n\n**Related Controls:** AC-3, AC-4, AC-16\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-17": {
+      "control_id": "SC-17",
+      "control_title": "Public Key Infrastructure Certificates",
+      "base_control": {
+        "control_id": "SC-17",
+        "control_title": "Public Key Infrastructure Certificates",
+        "control_text": "Issue public key certificates under an organization-defined certificate policy or obtain public key certificates from an approved service provider. Include only approved trust anchors in trust stores or certificate stores managed by the organization.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for SC-17.",
+        "related_controls": [
+          "AU-10",
+          "IA-5",
+          "SC-12"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Issue public key certificates under an organization-defined certificate policy or obtain public key certificates from an approved service provider. Include only approved trust anchors in trust stores or certificate stores managed by the organization.\n\n**Key Enhancements:** None defined for SC-17.\n\n**Related Controls:** AU-10, IA-5, SC-12\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-18": {
+      "control_id": "SC-18",
+      "control_title": "Mobile Code",
+      "base_control": {
+        "control_id": "SC-18",
+        "control_title": "Mobile Code",
+        "control_text": "Define acceptable and unacceptable mobile code and mobile code technologies. Authorize, monitor, and control the use of mobile code within the system.",
+        "key_enhancements": [
+          {
+            "id": "SC-18(1)",
+            "title": "Identify Unacceptable Code and Take Corrective Actions"
+          },
+          {
+            "id": "SC-18(2)",
+            "title": "Acquisition, Development, and Use"
+          },
+          {
+            "id": "SC-18(3)",
+            "title": "Prevent Downloading and Execution"
+          },
+          {
+            "id": "SC-18(4)",
+            "title": "Prevent Automatic Execution"
+          },
+          {
+            "id": "SC-18(5)",
+            "title": "Allow Execution Only in Confined Environments"
+          }
+        ],
+        "key_enhancements_text": "- **SC-18(1):** Identify Unacceptable Code and Take Corrective Actions — Identify organization-defined unacceptable mobile code and take organization-defined corrective actions.\n- **SC-18(2):** Acquisition, Development, and Use — Verify that the acquisition, development, and use of mobile code to be deployed in the system meets organization-defined mobile code requirements.\n- **SC-18(3):** Prevent Downloading and Execution — Prevent the download and execution of organization-defined unacceptable mobile code.\n- **SC-18(4):** Prevent Automatic Execution — Prevent the automatic execution of mobile code in organization-defined software applications and enforce organization-defined actions prior to executing the code.\n- **SC-18(5):** Allow Execution Only in Confined Environments — Allow execution of permitted mobile code only in confined virtual machine environments.",
+        "related_controls": [
+          "AU-2",
+          "AU-12",
+          "CM-2",
+          "CM-6",
+          "SI-3"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Define acceptable and unacceptable mobile code and mobile code technologies. Authorize, monitor, and control the use of mobile code within the system.\n\n**Key Enhancements:**\n- **SC-18(1):** Identify Unacceptable Code and Take Corrective Actions — Identify organization-defined unacceptable mobile code and take organization-defined corrective actions.\n- **SC-18(2):** Acquisition, Development, and Use — Verify that the acquisition, development, and use of mobile code to be deployed in the system meets organization-defined mobile code requirements.\n- **SC-18(3):** Prevent Downloading and Execution — Prevent the download and execution of organization-defined unacceptable mobile code.\n- **SC-18(4):** Prevent Automatic Execution — Prevent the automatic execution of mobile code in organization-defined software applications and enforce organization-defined actions prior to executing the code.\n- **SC-18(5):** Allow Execution Only in Confined Environments — Allow execution of permitted mobile code only in confined virtual machine environments.\n\n**Related Controls:** AU-2, AU-12, CM-2, CM-6, SI-3\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-19": {
+      "control_id": "SC-19",
+      "control_title": "Voice over Internet Protocol",
+      "base_control": {
+        "control_id": "SC-19",
+        "control_title": "Voice over Internet Protocol",
+        "control_text": "[Withdrawn: Technology-specific; addressed by other controls.]\n\n**Baselines:** None (not in any baseline)",
+        "key_enhancements": [],
+        "key_enhancements_text": null,
+        "related_controls": [],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "[Withdrawn: Technology-specific; addressed by other controls.]\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-20": {
+      "control_id": "SC-20",
+      "control_title": "Secure Name/Address Resolution Service (Authoritative Source)",
+      "base_control": {
+        "control_id": "SC-20",
+        "control_title": "Secure Name/Address Resolution Service (Authoritative Source)",
+        "control_text": "Provide additional data origin authentication and integrity verification artifacts along with the authoritative name resolution data the system returns in response to external name/address resolution queries. Provide the means to indicate the security status of child zones and (if the child supports secure resolution services) to enable verification of a chain of trust among parent and child domains, when operating as part of a distributed, hierarchical namespace.",
+        "key_enhancements": [
+          {
+            "id": "SC-20(1)",
+            "title": "Child Subspaces"
+          },
+          {
+            "id": "SC-20(2)",
+            "title": "Data Origin and Integrity"
+          }
+        ],
+        "key_enhancements_text": "- **SC-20(1):** Child Subspaces — [Withdrawn: Incorporated into SC-20.]\n- **SC-20(2):** Data Origin and Integrity — Provide data origin and integrity protection artifacts for internal name/address resolution queries.",
+        "related_controls": [
+          "AU-10",
+          "SC-8",
+          "SC-12",
+          "SC-13",
+          "SC-21",
+          "SC-22"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Provide additional data origin authentication and integrity verification artifacts along with the authoritative name resolution data the system returns in response to external name/address resolution queries. Provide the means to indicate the security status of child zones and (if the child supports secure resolution services) to enable verification of a chain of trust among parent and child domains, when operating as part of a distributed, hierarchical namespace.\n\n**Key Enhancements:**\n- **SC-20(1):** Child Subspaces — [Withdrawn: Incorporated into SC-20.]\n- **SC-20(2):** Data Origin and Integrity — Provide data origin and integrity protection artifacts for internal name/address resolution queries.\n\n**Related Controls:** AU-10, SC-8, SC-12, SC-13, SC-21, SC-22\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-21": {
+      "control_id": "SC-21",
+      "control_title": "Secure Name/Address Resolution Service (Recursive or Caching Resolver)",
+      "base_control": {
+        "control_id": "SC-21",
+        "control_title": "Secure Name/Address Resolution Service (Recursive or Caching Resolver)",
+        "control_text": "Request and perform data origin authentication and data integrity verification on the name/address resolution responses the system receives from authoritative sources.",
+        "key_enhancements": [
+          {
+            "id": "SC-21(1)",
+            "title": "Data Origin and Integrity"
+          }
+        ],
+        "key_enhancements_text": "- **SC-21(1):** Data Origin and Integrity — [Withdrawn: Incorporated into SC-21.]",
+        "related_controls": [
+          "SC-20",
+          "SC-22"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Request and perform data origin authentication and data integrity verification on the name/address resolution responses the system receives from authoritative sources.\n\n**Key Enhancements:**\n- **SC-21(1):** Data Origin and Integrity — [Withdrawn: Incorporated into SC-21.]\n\n**Related Controls:** SC-20, SC-22\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-22": {
+      "control_id": "SC-22",
+      "control_title": "Architecture and Provisioning for Name/Address Resolution Service",
+      "base_control": {
+        "control_id": "SC-22",
+        "control_title": "Architecture and Provisioning for Name/Address Resolution Service",
+        "control_text": "Ensure the systems that collectively provide name/address resolution service for an organization are fault-tolerant and implement internal/external role separation.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for SC-22.",
+        "related_controls": [
+          "SC-2",
+          "SC-20",
+          "SC-21",
+          "SC-24"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Ensure the systems that collectively provide name/address resolution service for an organization are fault-tolerant and implement internal/external role separation.\n\n**Key Enhancements:** None defined for SC-22.\n\n**Related Controls:** SC-2, SC-20, SC-21, SC-24\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-23": {
+      "control_id": "SC-23",
+      "control_title": "Session Authenticity",
+      "base_control": {
+        "control_id": "SC-23",
+        "control_title": "Session Authenticity",
+        "control_text": "Protect the authenticity of communications sessions.",
+        "key_enhancements": [
+          {
+            "id": "SC-23(1)",
+            "title": "Invalidate Session Identifiers at Logout"
+          },
+          {
+            "id": "SC-23(2)",
+            "title": "User-Initiated Logouts and Message Displays"
+          },
+          {
+            "id": "SC-23(3)",
+            "title": "Unique System-Generated Session Identifiers"
+          },
+          {
+            "id": "SC-23(5)",
+            "title": "Allowed Certificate Authorities"
+          }
+        ],
+        "key_enhancements_text": "- **SC-23(1):** Invalidate Session Identifiers at Logout — Invalidate session identifiers upon user logout or other session termination.\n- **SC-23(2):** User-Initiated Logouts and Message Displays — [Withdrawn: Incorporated into AC-12(1).]\n- **SC-23(3):** Unique System-Generated Session Identifiers — Generate a unique session identifier for each session with organization-defined randomness requirements and recognize only session identifiers that are system-generated.\n- **SC-23(5):** Allowed Certificate Authorities — Only allow the use of organization-defined certificate authorities for verification of the establishment of protected sessions.",
+        "related_controls": [
+          "AU-10",
+          "SC-8",
+          "SC-10",
+          "SC-11"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Protect the authenticity of communications sessions.\n\n**Key Enhancements:**\n- **SC-23(1):** Invalidate Session Identifiers at Logout — Invalidate session identifiers upon user logout or other session termination.\n- **SC-23(2):** User-Initiated Logouts and Message Displays — [Withdrawn: Incorporated into AC-12(1).]\n- **SC-23(3):** Unique System-Generated Session Identifiers — Generate a unique session identifier for each session with organization-defined randomness requirements and recognize only session identifiers that are system-generated.\n- **SC-23(5):** Allowed Certificate Authorities — Only allow the use of organization-defined certificate authorities for verification of the establishment of protected sessions.\n\n**Related Controls:** AU-10, SC-8, SC-10, SC-11\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the system protects the authenticity of communications sessions.",
+        "examine_procedures": "System and communications protection policy; system security plan; system design documentation; system configuration settings.",
+        "interview_procedures": "System administrators; system developers.",
+        "test_procedures": "Session authenticity mechanisms; TLS configurations; session management controls.",
+        "determination_statements": [
+          "SC-23 — The authenticity of communications sessions is protected"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the system protects the authenticity of communications sessions.\n\n**Examine:** System and communications protection policy; system security plan; system design documentation; system configuration settings.\n\n**Interview:** System administrators; system developers.\n\n**Test:** Session authenticity mechanisms; TLS configurations; session management controls.\n\n**Determination Statements:**\n- SC-23 — The authenticity of communications sessions is protected"
+      }
+    },
+    "SC-24": {
+      "control_id": "SC-24",
+      "control_title": "Fail in Known State",
+      "base_control": {
+        "control_id": "SC-24",
+        "control_title": "Fail in Known State",
+        "control_text": "Fail to an organization-defined known system state for organization-defined types of failures on organization-defined system components, preserving organization-defined system state information in failure.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for SC-24.",
+        "related_controls": [
+          "CP-2",
+          "CP-4",
+          "CP-10",
+          "CP-12",
+          "SA-8",
+          "SC-7",
+          "SC-22",
+          "SI-13"
+        ],
+        "baselines": [
+          "High"
+        ],
+        "baselines_text": "High",
+        "source_markdown": "Fail to an organization-defined known system state for organization-defined types of failures on organization-defined system components, preserving organization-defined system state information in failure.\n\n**Key Enhancements:** None defined for SC-24.\n\n**Related Controls:** CP-2, CP-4, CP-10, CP-12, SA-8, SC-7, SC-22, SI-13\n\n**Baselines:** High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-25": {
+      "control_id": "SC-25",
+      "control_title": "Thin Nodes",
+      "base_control": {
+        "control_id": "SC-25",
+        "control_title": "Thin Nodes",
+        "control_text": "Employ organization-defined processing components with minimal functionality and minimal information storage.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for SC-25.",
+        "related_controls": [
+          "SC-30",
+          "SC-44"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Employ organization-defined processing components with minimal functionality and minimal information storage.\n\n**Key Enhancements:** None defined for SC-25.\n\n**Related Controls:** SC-30, SC-44\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-26": {
+      "control_id": "SC-26",
+      "control_title": "Decoys",
+      "base_control": {
+        "control_id": "SC-26",
+        "control_title": "Decoys",
+        "control_text": "Employ organization-defined decoys and/or decoy components within organizational systems to detect adversarial activity and to hinder adversary operations.",
+        "key_enhancements": [
+          {
+            "id": "SC-26(1)",
+            "title": "Detection of Malicious Code"
+          }
+        ],
+        "key_enhancements_text": "- **SC-26(1):** Detection of Malicious Code — [Withdrawn: Incorporated into SC-35.]",
+        "related_controls": [
+          "RA-5",
+          "SC-7",
+          "SC-30",
+          "SC-35",
+          "SC-44",
+          "SI-3",
+          "SI-4"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Employ organization-defined decoys and/or decoy components within organizational systems to detect adversarial activity and to hinder adversary operations.\n\n**Key Enhancements:**\n- **SC-26(1):** Detection of Malicious Code — [Withdrawn: Incorporated into SC-35.]\n\n**Related Controls:** RA-5, SC-7, SC-30, SC-35, SC-44, SI-3, SI-4\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-27": {
+      "control_id": "SC-27",
+      "control_title": "Platform-Independent Applications",
+      "base_control": {
+        "control_id": "SC-27",
+        "control_title": "Platform-Independent Applications",
+        "control_text": "Include within organizational systems organization-defined platform-independent applications.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for SC-27.",
+        "related_controls": [
+          "SC-29"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Include within organizational systems organization-defined platform-independent applications.\n\n**Key Enhancements:** None defined for SC-27.\n\n**Related Controls:** SC-29\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-28": {
+      "control_id": "SC-28",
+      "control_title": "Protection of Information at Rest",
+      "base_control": {
+        "control_id": "SC-28",
+        "control_title": "Protection of Information at Rest",
+        "control_text": "Protect the confidentiality and/or integrity of organization-defined information at rest.",
+        "key_enhancements": [
+          {
+            "id": "SC-28(1)",
+            "title": "Cryptographic Protection"
+          },
+          {
+            "id": "SC-28(2)",
+            "title": "Offline Storage"
+          },
+          {
+            "id": "SC-28(3)",
+            "title": "Cryptographic Keys"
+          }
+        ],
+        "key_enhancements_text": "- **SC-28(1):** Cryptographic Protection — Implement cryptographic mechanisms to prevent unauthorized disclosure and modification of organization-defined information on organization-defined system components.\n- **SC-28(2):** Offline Storage — Remove from online storage and store offline in a secure location organization-defined information.\n- **SC-28(3):** Cryptographic Keys — Provide protected storage for cryptographic keys with organization-defined controls.",
+        "related_controls": [
+          "AC-3",
+          "AC-4",
+          "AC-6",
+          "AC-19",
+          "CA-7",
+          "CM-3",
+          "CM-5",
+          "CM-6",
+          "CP-9",
+          "MP-4",
+          "MP-5",
+          "PE-3",
+          "SC-8",
+          "SC-12",
+          "SC-13",
+          "SC-34",
+          "SI-3",
+          "SI-7",
+          "SI-16"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Protect the confidentiality and/or integrity of organization-defined information at rest.\n\n**Key Enhancements:**\n- **SC-28(1):** Cryptographic Protection — Implement cryptographic mechanisms to prevent unauthorized disclosure and modification of organization-defined information on organization-defined system components.\n- **SC-28(2):** Offline Storage — Remove from online storage and store offline in a secure location organization-defined information.\n- **SC-28(3):** Cryptographic Keys — Provide protected storage for cryptographic keys with organization-defined controls.\n\n**Related Controls:** AC-3, AC-4, AC-6, AC-19, CA-7, CM-3, CM-5, CM-6, CP-9, MP-4, MP-5, PE-3, SC-8, SC-12, SC-13, SC-34, SI-3, SI-7, SI-16\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the system protects the confidentiality and/or integrity of information at rest.",
+        "examine_procedures": "System and communications protection policy; system security plan; system design documentation; encryption configurations; storage encryption documentation.",
+        "interview_procedures": "System administrators; information system security officers.",
+        "test_procedures": "Information at rest protection mechanisms; encryption verification for stored data.",
+        "determination_statements": [
+          "SC-28 — The confidentiality and/or integrity of organization-defined information at rest is protected"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the system protects the confidentiality and/or integrity of information at rest.\n\n**Examine:** System and communications protection policy; system security plan; system design documentation; encryption configurations; storage encryption documentation.\n\n**Interview:** System administrators; information system security officers.\n\n**Test:** Information at rest protection mechanisms; encryption verification for stored data.\n\n**Determination Statements:**\n- SC-28 — The confidentiality and/or integrity of organization-defined information at rest is protected"
+      }
+    },
+    "SC-29": {
+      "control_id": "SC-29",
+      "control_title": "Heterogeneity",
+      "base_control": {
+        "control_id": "SC-29",
+        "control_title": "Heterogeneity",
+        "control_text": "Employ a diverse set of information technologies for organization-defined system components in the implementation of the system.",
+        "key_enhancements": [
+          {
+            "id": "SC-29(1)",
+            "title": "Virtualization Techniques"
+          }
+        ],
+        "key_enhancements_text": "- **SC-29(1):** Virtualization Techniques — Employ virtualization techniques to support the deployment of a diversity of operating systems and applications that are changed at an organization-defined frequency.",
+        "related_controls": [
+          "AU-9",
+          "PL-8",
+          "SC-27",
+          "SC-30",
+          "SR-3"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Employ a diverse set of information technologies for organization-defined system components in the implementation of the system.\n\n**Key Enhancements:**\n- **SC-29(1):** Virtualization Techniques — Employ virtualization techniques to support the deployment of a diversity of operating systems and applications that are changed at an organization-defined frequency.\n\n**Related Controls:** AU-9, PL-8, SC-27, SC-30, SR-3\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-30": {
+      "control_id": "SC-30",
+      "control_title": "Concealment and Misdirection",
+      "base_control": {
+        "control_id": "SC-30",
+        "control_title": "Concealment and Misdirection",
+        "control_text": "Employ organization-defined concealment and misdirection techniques for organization-defined systems at organization-defined time periods to confuse and mislead adversaries.",
+        "key_enhancements": [
+          {
+            "id": "SC-30(1)",
+            "title": "Virtualization Techniques"
+          },
+          {
+            "id": "SC-30(2)",
+            "title": "Randomness"
+          },
+          {
+            "id": "SC-30(3)",
+            "title": "Change Processing and Storage Locations"
+          },
+          {
+            "id": "SC-30(4)",
+            "title": "Misleading Information"
+          },
+          {
+            "id": "SC-30(5)",
+            "title": "Concealment of System Components"
+          }
+        ],
+        "key_enhancements_text": "- **SC-30(1):** Virtualization Techniques — [Withdrawn: Incorporated into SC-29(1).]\n- **SC-30(2):** Randomness — Employ organization-defined techniques to introduce randomness into organizational operations and assets.\n- **SC-30(3):** Change Processing and Storage Locations — Change the location of organization-defined processing and/or storage at organization-defined time intervals or at random time intervals.\n- **SC-30(4):** Misleading Information — Employ realistic but misleading information in organization-defined system components about its security state or posture.\n- **SC-30(5):** Concealment of System Components — Employ organization-defined techniques to hide or conceal organization-defined system components.",
+        "related_controls": [
+          "AC-6",
+          "SC-25",
+          "SC-26",
+          "SC-29",
+          "SC-44",
+          "SI-14"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Employ organization-defined concealment and misdirection techniques for organization-defined systems at organization-defined time periods to confuse and mislead adversaries.\n\n**Key Enhancements:**\n- **SC-30(1):** Virtualization Techniques — [Withdrawn: Incorporated into SC-29(1).]\n- **SC-30(2):** Randomness — Employ organization-defined techniques to introduce randomness into organizational operations and assets.\n- **SC-30(3):** Change Processing and Storage Locations — Change the location of organization-defined processing and/or storage at organization-defined time intervals or at random time intervals.\n- **SC-30(4):** Misleading Information — Employ realistic but misleading information in organization-defined system components about its security state or posture.\n- **SC-30(5):** Concealment of System Components — Employ organization-defined techniques to hide or conceal organization-defined system components.\n\n**Related Controls:** AC-6, SC-25, SC-26, SC-29, SC-44, SI-14\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-31": {
+      "control_id": "SC-31",
+      "control_title": "Covert Channel Analysis",
+      "base_control": {
+        "control_id": "SC-31",
+        "control_title": "Covert Channel Analysis",
+        "control_text": "Perform a covert channel analysis to identify those aspects of communications within the system that are potential avenues for covert storage and timing channels. Estimate the maximum bandwidth of those channels.",
+        "key_enhancements": [
+          {
+            "id": "SC-31(1)",
+            "title": "Test Covert Channels for Exploitability"
+          },
+          {
+            "id": "SC-31(2)",
+            "title": "Maximum Bandwidth"
+          },
+          {
+            "id": "SC-31(3)",
+            "title": "Measure Bandwidth in Operational Environments"
+          }
+        ],
+        "key_enhancements_text": "- **SC-31(1):** Test Covert Channels for Exploitability — Test a subset of the identified covert channels to determine the channels that are exploitable.\n- **SC-31(2):** Maximum Bandwidth — Reduce the maximum bandwidth for identified covert storage channels to organization-defined values.\n- **SC-31(3):** Measure Bandwidth in Operational Environments — Measure the bandwidth of organization-defined subset of identified covert channels in the operational environment of the system.",
+        "related_controls": [
+          "AC-3",
+          "AC-4",
+          "SA-8",
+          "SI-11"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Perform a covert channel analysis to identify those aspects of communications within the system that are potential avenues for covert storage and timing channels. Estimate the maximum bandwidth of those channels.\n\n**Key Enhancements:**\n- **SC-31(1):** Test Covert Channels for Exploitability — Test a subset of the identified covert channels to determine the channels that are exploitable.\n- **SC-31(2):** Maximum Bandwidth — Reduce the maximum bandwidth for identified covert storage channels to organization-defined values.\n- **SC-31(3):** Measure Bandwidth in Operational Environments — Measure the bandwidth of organization-defined subset of identified covert channels in the operational environment of the system.\n\n**Related Controls:** AC-3, AC-4, SA-8, SI-11\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-32": {
+      "control_id": "SC-32",
+      "control_title": "System Partitioning",
+      "base_control": {
+        "control_id": "SC-32",
+        "control_title": "System Partitioning",
+        "control_text": "Partition the system into organization-defined system components residing in separate physical domains or environments based on organization-defined circumstances for physical separation of components.",
+        "key_enhancements": [
+          {
+            "id": "SC-32(1)",
+            "title": "Separate Physical Domains for Privileged Functions"
+          }
+        ],
+        "key_enhancements_text": "- **SC-32(1):** Separate Physical Domains for Privileged Functions — Partition privileged functions into separate physical domains.",
+        "related_controls": [
+          "AC-4",
+          "AC-6",
+          "SA-8",
+          "SC-2",
+          "SC-3",
+          "SC-7",
+          "SC-36"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Partition the system into organization-defined system components residing in separate physical domains or environments based on organization-defined circumstances for physical separation of components.\n\n**Key Enhancements:**\n- **SC-32(1):** Separate Physical Domains for Privileged Functions — Partition privileged functions into separate physical domains.\n\n**Related Controls:** AC-4, AC-6, SA-8, SC-2, SC-3, SC-7, SC-36\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-33": {
+      "control_id": "SC-33",
+      "control_title": "Transmission Preparation Integrity",
+      "base_control": {
+        "control_id": "SC-33",
+        "control_title": "Transmission Preparation Integrity",
+        "control_text": "[Withdrawn: Incorporated into SC-8.]\n\n**Baselines:** None (not in any baseline)",
+        "key_enhancements": [],
+        "key_enhancements_text": null,
+        "related_controls": [],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "[Withdrawn: Incorporated into SC-8.]\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-34": {
+      "control_id": "SC-34",
+      "control_title": "Non-Modifiable Executable Programs",
+      "base_control": {
+        "control_id": "SC-34",
+        "control_title": "Non-Modifiable Executable Programs",
+        "control_text": "For organization-defined system components, load and execute the operating environment from hardware-enforced, read-only media and the organization-defined applications from hardware-enforced, read-only media.",
+        "key_enhancements": [
+          {
+            "id": "SC-34(1)",
+            "title": "No Writable Storage"
+          },
+          {
+            "id": "SC-34(2)",
+            "title": "Integrity Protection on Read-Only Media"
+          },
+          {
+            "id": "SC-34(3)",
+            "title": "Hardware-Based Protection"
+          }
+        ],
+        "key_enhancements_text": "- **SC-34(1):** No Writable Storage — Employ organization-defined system components with no writeable storage that is persistent across component restart or power on/off.\n- **SC-34(2):** Integrity Protection on Read-Only Media — Protect the integrity of information prior to storage on read-only media and control the media after such information has been recorded onto the media.\n- **SC-34(3):** Hardware-Based Protection — [Withdrawn: Incorporated into SC-51.]",
+        "related_controls": [
+          "AC-3",
+          "SI-7",
+          "SI-14"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "For organization-defined system components, load and execute the operating environment from hardware-enforced, read-only media and the organization-defined applications from hardware-enforced, read-only media.\n\n**Key Enhancements:**\n- **SC-34(1):** No Writable Storage — Employ organization-defined system components with no writeable storage that is persistent across component restart or power on/off.\n- **SC-34(2):** Integrity Protection on Read-Only Media — Protect the integrity of information prior to storage on read-only media and control the media after such information has been recorded onto the media.\n- **SC-34(3):** Hardware-Based Protection — [Withdrawn: Incorporated into SC-51.]\n\n**Related Controls:** AC-3, SI-7, SI-14\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-35": {
+      "control_id": "SC-35",
+      "control_title": "External Malicious Code Identification",
+      "base_control": {
+        "control_id": "SC-35",
+        "control_title": "External Malicious Code Identification",
+        "control_text": "Include system components that proactively seek to identify malicious websites and/or web-based malicious code.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for SC-35.",
+        "related_controls": [
+          "SC-7",
+          "SC-26",
+          "SC-44",
+          "SI-3",
+          "SI-4"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Include system components that proactively seek to identify malicious websites and/or web-based malicious code.\n\n**Key Enhancements:** None defined for SC-35.\n\n**Related Controls:** SC-7, SC-26, SC-44, SI-3, SI-4\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-36": {
+      "control_id": "SC-36",
+      "control_title": "Distributed Processing and Storage",
+      "base_control": {
+        "control_id": "SC-36",
+        "control_title": "Distributed Processing and Storage",
+        "control_text": "Distribute organization-defined processing and storage across multiple physical locations.",
+        "key_enhancements": [
+          {
+            "id": "SC-36(1)",
+            "title": "Polling Techniques"
+          },
+          {
+            "id": "SC-36(2)",
+            "title": "Synchronization"
+          }
+        ],
+        "key_enhancements_text": "- **SC-36(1):** Polling Techniques — Employ polling techniques to identify potential faults, errors, or compromises to organization-defined distributed processing and storage components.\n- **SC-36(2):** Synchronization — Synchronize the following duplicate systems or system components at organization-defined frequency.",
+        "related_controls": [
+          "CP-6",
+          "CP-7",
+          "PL-8",
+          "SC-32"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Distribute organization-defined processing and storage across multiple physical locations.\n\n**Key Enhancements:**\n- **SC-36(1):** Polling Techniques — Employ polling techniques to identify potential faults, errors, or compromises to organization-defined distributed processing and storage components.\n- **SC-36(2):** Synchronization — Synchronize the following duplicate systems or system components at organization-defined frequency.\n\n**Related Controls:** CP-6, CP-7, PL-8, SC-32\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-37": {
+      "control_id": "SC-37",
+      "control_title": "Out-of-Band Channels",
+      "base_control": {
+        "control_id": "SC-37",
+        "control_title": "Out-of-Band Channels",
+        "control_text": "Employ organization-defined out-of-band channels for the physical delivery or electronic transmission of organization-defined information, system components, or devices to organization-defined individuals or systems.",
+        "key_enhancements": [
+          {
+            "id": "SC-37(1)",
+            "title": "Ensure Delivery and Transmission"
+          }
+        ],
+        "key_enhancements_text": "- **SC-37(1):** Ensure Delivery and Transmission — Employ organization-defined controls to ensure that only organization-defined individuals or systems receive the organization-defined information, system components, or devices.",
+        "related_controls": [
+          "AC-2",
+          "CM-3",
+          "CM-5",
+          "CM-7",
+          "IA-2",
+          "IA-4",
+          "IA-5",
+          "MA-4",
+          "SC-12",
+          "SI-3",
+          "SI-4",
+          "SI-7"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Employ organization-defined out-of-band channels for the physical delivery or electronic transmission of organization-defined information, system components, or devices to organization-defined individuals or systems.\n\n**Key Enhancements:**\n- **SC-37(1):** Ensure Delivery and Transmission — Employ organization-defined controls to ensure that only organization-defined individuals or systems receive the organization-defined information, system components, or devices.\n\n**Related Controls:** AC-2, CM-3, CM-5, CM-7, IA-2, IA-4, IA-5, MA-4, SC-12, SI-3, SI-4, SI-7\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-38": {
+      "control_id": "SC-38",
+      "control_title": "Operations Security",
+      "base_control": {
+        "control_id": "SC-38",
+        "control_title": "Operations Security",
+        "control_text": "Employ organization-defined operations security controls to protect key organizational information throughout the system development life cycle.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for SC-38.",
+        "related_controls": [
+          "CA-2",
+          "CA-7",
+          "PL-1",
+          "PM-9",
+          "PM-12",
+          "RA-2",
+          "RA-3",
+          "RA-5",
+          "SC-7",
+          "SR-3",
+          "SR-7"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Employ organization-defined operations security controls to protect key organizational information throughout the system development life cycle.\n\n**Key Enhancements:** None defined for SC-38.\n\n**Related Controls:** CA-2, CA-7, PL-1, PM-9, PM-12, RA-2, RA-3, RA-5, SC-7, SR-3, SR-7\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-39": {
+      "control_id": "SC-39",
+      "control_title": "Process Isolation",
+      "base_control": {
+        "control_id": "SC-39",
+        "control_title": "Process Isolation",
+        "control_text": "Maintain a separate execution domain for each executing system process.",
+        "key_enhancements": [
+          {
+            "id": "SC-39(1)",
+            "title": "Hardware Separation"
+          },
+          {
+            "id": "SC-39(2)",
+            "title": "Separate Execution Domain Per Thread"
+          }
+        ],
+        "key_enhancements_text": "- **SC-39(1):** Hardware Separation — Implement hardware separation mechanisms to facilitate process isolation.\n- **SC-39(2):** Separate Execution Domain Per Thread — Maintain a separate execution domain for each thread in organization-defined multi-threaded processing.",
+        "related_controls": [
+          "AC-3",
+          "AC-4",
+          "AC-6",
+          "AC-25",
+          "SA-8",
+          "SC-2",
+          "SC-3",
+          "SI-16"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Maintain a separate execution domain for each executing system process.\n\n**Key Enhancements:**\n- **SC-39(1):** Hardware Separation — Implement hardware separation mechanisms to facilitate process isolation.\n- **SC-39(2):** Separate Execution Domain Per Thread — Maintain a separate execution domain for each thread in organization-defined multi-threaded processing.\n\n**Related Controls:** AC-3, AC-4, AC-6, AC-25, SA-8, SC-2, SC-3, SI-16\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the system maintains a separate execution domain for each executing system process.",
+        "examine_procedures": "System and communications protection policy; system security plan; system design documentation; system architecture diagrams.",
+        "interview_procedures": "System developers; system administrators.",
+        "test_procedures": "Process isolation mechanisms; execution domain separation verification.",
+        "determination_statements": [
+          "SC-39 — The system maintains a separate execution domain for each executing system process",
+          "NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final",
+          "[SP 800-53 SC Family](../800-53/sc.md)",
+          "[SP 800-171 SC Requirements](../800-171/sc.md)"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the system maintains a separate execution domain for each executing system process.\n\n**Examine:** System and communications protection policy; system security plan; system design documentation; system architecture diagrams.\n\n**Interview:** System developers; system administrators.\n\n**Test:** Process isolation mechanisms; execution domain separation verification.\n\n**Determination Statements:**\n- SC-39 — The system maintains a separate execution domain for each executing system process\n\n## References\n\n- NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final\n- [SP 800-53 SC Family](../800-53/sc.md)\n- [SP 800-171 SC Requirements](../800-171/sc.md)"
+      }
+    },
+    "SC-40": {
+      "control_id": "SC-40",
+      "control_title": "Wireless Link Protection",
+      "base_control": {
+        "control_id": "SC-40",
+        "control_title": "Wireless Link Protection",
+        "control_text": "Protect external and internal organization-defined wireless links from organization-defined types of signal parameter attacks or references to sources for such attacks.",
+        "key_enhancements": [
+          {
+            "id": "SC-40(1)",
+            "title": "Electromagnetic Interference"
+          },
+          {
+            "id": "SC-40(2)",
+            "title": "Reduce Detection Potential"
+          },
+          {
+            "id": "SC-40(3)",
+            "title": "Imitative or Manipulative Communications Deception"
+          },
+          {
+            "id": "SC-40(4)",
+            "title": "Signal Parameter Identification"
+          }
+        ],
+        "key_enhancements_text": "- **SC-40(1):** Electromagnetic Interference — Implement cryptographic mechanisms that achieve organization-defined level of protection against the effects of intentional electromagnetic interference.\n- **SC-40(2):** Reduce Detection Potential — Implement cryptographic mechanisms to reduce the detection potential of wireless links to organization-defined level of reduction.\n- **SC-40(3):** Imitative or Manipulative Communications Deception — Implement cryptographic mechanisms to identify and reject wireless transmissions that are deliberate attempts to achieve imitative or manipulative communications deception based on signal parameters.\n- **SC-40(4):** Signal Parameter Identification — Implement cryptographic mechanisms to prevent the identification of organization-defined wireless transmitters by using the transmitter signal parameters.",
+        "related_controls": [
+          "AC-18",
+          "SC-5"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Protect external and internal organization-defined wireless links from organization-defined types of signal parameter attacks or references to sources for such attacks.\n\n**Key Enhancements:**\n- **SC-40(1):** Electromagnetic Interference — Implement cryptographic mechanisms that achieve organization-defined level of protection against the effects of intentional electromagnetic interference.\n- **SC-40(2):** Reduce Detection Potential — Implement cryptographic mechanisms to reduce the detection potential of wireless links to organization-defined level of reduction.\n- **SC-40(3):** Imitative or Manipulative Communications Deception — Implement cryptographic mechanisms to identify and reject wireless transmissions that are deliberate attempts to achieve imitative or manipulative communications deception based on signal parameters.\n- **SC-40(4):** Signal Parameter Identification — Implement cryptographic mechanisms to prevent the identification of organization-defined wireless transmitters by using the transmitter signal parameters.\n\n**Related Controls:** AC-18, SC-5\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-41": {
+      "control_id": "SC-41",
+      "control_title": "Port and I/O Device Access",
+      "base_control": {
+        "control_id": "SC-41",
+        "control_title": "Port and I/O Device Access",
+        "control_text": "Physically or logically disable or remove organization-defined connection ports or input/output devices on organization-defined systems or system components.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for SC-41.",
+        "related_controls": [
+          "AC-20",
+          "MP-7"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Physically or logically disable or remove organization-defined connection ports or input/output devices on organization-defined systems or system components.\n\n**Key Enhancements:** None defined for SC-41.\n\n**Related Controls:** AC-20, MP-7\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-42": {
+      "control_id": "SC-42",
+      "control_title": "Sensor Capability and Data",
+      "base_control": {
+        "control_id": "SC-42",
+        "control_title": "Sensor Capability and Data",
+        "control_text": "Prohibit the use of devices possessing organization-defined environmental sensing capabilities in organization-defined facilities, areas, or systems, or prohibit the remote activation of environmental sensing capabilities on organizational systems or system components with the following exceptions: organization-defined exceptions where remote activation of sensors is allowed.",
+        "key_enhancements": [
+          {
+            "id": "SC-42(1)",
+            "title": "Reporting to Authorized Individuals or Roles"
+          },
+          {
+            "id": "SC-42(2)",
+            "title": "Authorized Use"
+          },
+          {
+            "id": "SC-42(3)",
+            "title": "Prohibit Use of Devices"
+          }
+        ],
+        "key_enhancements_text": "- **SC-42(1):** Reporting to Authorized Individuals or Roles — Verify that the system is configured so that data or information collected by organization-defined sensors is only reported to authorized individuals or roles.\n- **SC-42(2):** Authorized Use — Employ organization-defined measures so that data or information collected by organization-defined sensors is only used for authorized purposes.\n- **SC-42(3):** Prohibit Use of Devices — Prohibit the use of devices possessing organization-defined sensing capabilities in organization-defined facilities, areas, or systems.",
+        "related_controls": [
+          "SC-15"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Prohibit the use of devices possessing organization-defined environmental sensing capabilities in organization-defined facilities, areas, or systems, or prohibit the remote activation of environmental sensing capabilities on organizational systems or system components with the following exceptions: organization-defined exceptions where remote activation of sensors is allowed.\n\n**Key Enhancements:**\n- **SC-42(1):** Reporting to Authorized Individuals or Roles — Verify that the system is configured so that data or information collected by organization-defined sensors is only reported to authorized individuals or roles.\n- **SC-42(2):** Authorized Use — Employ organization-defined measures so that data or information collected by organization-defined sensors is only used for authorized purposes.\n- **SC-42(3):** Prohibit Use of Devices — Prohibit the use of devices possessing organization-defined sensing capabilities in organization-defined facilities, areas, or systems.\n\n**Related Controls:** SC-15\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-43": {
+      "control_id": "SC-43",
+      "control_title": "Usage Restrictions",
+      "base_control": {
+        "control_id": "SC-43",
+        "control_title": "Usage Restrictions",
+        "control_text": "Establish usage restrictions and implementation guidelines for organization-defined system components and authorize, monitor, and control the use of such components within the system.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for SC-43.",
+        "related_controls": [
+          "AC-18",
+          "AC-19",
+          "CM-6",
+          "SC-7",
+          "SC-18"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Establish usage restrictions and implementation guidelines for organization-defined system components and authorize, monitor, and control the use of such components within the system.\n\n**Key Enhancements:** None defined for SC-43.\n\n**Related Controls:** AC-18, AC-19, CM-6, SC-7, SC-18\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-44": {
+      "control_id": "SC-44",
+      "control_title": "Detonation Chambers",
+      "base_control": {
+        "control_id": "SC-44",
+        "control_title": "Detonation Chambers",
+        "control_text": "Employ a detonation chamber capability within organization-defined system, system component, or location.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for SC-44.",
+        "related_controls": [
+          "SC-7",
+          "SC-18",
+          "SC-25",
+          "SC-26",
+          "SC-30",
+          "SC-35",
+          "SC-39",
+          "SI-3",
+          "SI-7"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Employ a detonation chamber capability within organization-defined system, system component, or location.\n\n**Key Enhancements:** None defined for SC-44.\n\n**Related Controls:** SC-7, SC-18, SC-25, SC-26, SC-30, SC-35, SC-39, SI-3, SI-7\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-45": {
+      "control_id": "SC-45",
+      "control_title": "System Time Synchronization",
+      "base_control": {
+        "control_id": "SC-45",
+        "control_title": "System Time Synchronization",
+        "control_text": "Synchronize system clocks within and between systems and system components.",
+        "key_enhancements": [
+          {
+            "id": "SC-45(1)",
+            "title": "Synchronization with Authoritative Time Source"
+          },
+          {
+            "id": "SC-45(2)",
+            "title": "Secondary Authoritative Time Source"
+          }
+        ],
+        "key_enhancements_text": "- **SC-45(1):** Synchronization with Authoritative Time Source — Compare the internal system clocks at an organization-defined frequency with an organization-defined authoritative time source.\n- **SC-45(2):** Secondary Authoritative Time Source — Identify a secondary authoritative time source that is in a different geographic region than the primary authoritative time source.",
+        "related_controls": [
+          "AC-3",
+          "AU-8",
+          "IA-2",
+          "IA-8"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Synchronize system clocks within and between systems and system components.\n\n**Key Enhancements:**\n- **SC-45(1):** Synchronization with Authoritative Time Source — Compare the internal system clocks at an organization-defined frequency with an organization-defined authoritative time source.\n- **SC-45(2):** Secondary Authoritative Time Source — Identify a secondary authoritative time source that is in a different geographic region than the primary authoritative time source.\n\n**Related Controls:** AC-3, AU-8, IA-2, IA-8\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-46": {
+      "control_id": "SC-46",
+      "control_title": "Cross Domain Policy Enforcement",
+      "base_control": {
+        "control_id": "SC-46",
+        "control_title": "Cross Domain Policy Enforcement",
+        "control_text": "Implement a policy enforcement mechanism between the interconnected security domains.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for SC-46.",
+        "related_controls": [
+          "AC-4",
+          "SC-7"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Implement a policy enforcement mechanism between the interconnected security domains.\n\n**Key Enhancements:** None defined for SC-46.\n\n**Related Controls:** AC-4, SC-7\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-47": {
+      "control_id": "SC-47",
+      "control_title": "Alternate Communications Paths",
+      "base_control": {
+        "control_id": "SC-47",
+        "control_title": "Alternate Communications Paths",
+        "control_text": "Establish organization-defined alternate communications paths for system operations organizational command and control.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for SC-47.",
+        "related_controls": [
+          "CP-2",
+          "CP-8"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Establish organization-defined alternate communications paths for system operations organizational command and control.\n\n**Key Enhancements:** None defined for SC-47.\n\n**Related Controls:** CP-2, CP-8\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-48": {
+      "control_id": "SC-48",
+      "control_title": "Sensor Relocation",
+      "base_control": {
+        "control_id": "SC-48",
+        "control_title": "Sensor Relocation",
+        "control_text": "Relocate organization-defined sensors and monitoring capabilities to organization-defined locations under organization-defined conditions or circumstances.",
+        "key_enhancements": [
+          {
+            "id": "SC-48(1)",
+            "title": "Dynamic Relocation of Sensors or Monitoring Capabilities"
+          }
+        ],
+        "key_enhancements_text": "- **SC-48(1):** Dynamic Relocation of Sensors or Monitoring Capabilities — Dynamically relocate organization-defined sensors and monitoring capabilities to organization-defined locations under organization-defined conditions or circumstances.",
+        "related_controls": [
+          "AU-2",
+          "SC-7",
+          "SI-4"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Relocate organization-defined sensors and monitoring capabilities to organization-defined locations under organization-defined conditions or circumstances.\n\n**Key Enhancements:**\n- **SC-48(1):** Dynamic Relocation of Sensors or Monitoring Capabilities — Dynamically relocate organization-defined sensors and monitoring capabilities to organization-defined locations under organization-defined conditions or circumstances.\n\n**Related Controls:** AU-2, SC-7, SI-4\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-49": {
+      "control_id": "SC-49",
+      "control_title": "Hardware-Enforced Separation and Policy Enforcement",
+      "base_control": {
+        "control_id": "SC-49",
+        "control_title": "Hardware-Enforced Separation and Policy Enforcement",
+        "control_text": "Implement hardware-enforced separation and policy enforcement mechanisms between organization-defined security domains.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for SC-49.",
+        "related_controls": [
+          "AC-4",
+          "SA-8",
+          "SC-50"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Implement hardware-enforced separation and policy enforcement mechanisms between organization-defined security domains.\n\n**Key Enhancements:** None defined for SC-49.\n\n**Related Controls:** AC-4, SA-8, SC-50\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-50": {
+      "control_id": "SC-50",
+      "control_title": "Software-Enforced Separation and Policy Enforcement",
+      "base_control": {
+        "control_id": "SC-50",
+        "control_title": "Software-Enforced Separation and Policy Enforcement",
+        "control_text": "Implement software-enforced separation and policy enforcement mechanisms between organization-defined security domains.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for SC-50.",
+        "related_controls": [
+          "AC-3",
+          "AC-4",
+          "SA-8",
+          "SC-2",
+          "SC-3",
+          "SC-49"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Implement software-enforced separation and policy enforcement mechanisms between organization-defined security domains.\n\n**Key Enhancements:** None defined for SC-50.\n\n**Related Controls:** AC-3, AC-4, SA-8, SC-2, SC-3, SC-49\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "SC-51": {
+      "control_id": "SC-51",
+      "control_title": "Hardware-Based Protection",
+      "base_control": {
+        "control_id": "SC-51",
+        "control_title": "Hardware-Based Protection",
+        "control_text": "Implement hardware-based, write-protect mechanisms for organization-defined system firmware components and implement specific procedures for organization-defined authorized individuals to manually disable hardware write-protect for firmware modifications and re-enable the write-protect prior to returning to operational mode.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for SC-51.",
+        "related_controls": [
+          "None"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Implement hardware-based, write-protect mechanisms for organization-defined system firmware components and implement specific procedures for organization-defined authorized individuals to manually disable hardware write-protect for firmware modifications and re-enable the write-protect prior to returning to operational mode.\n\n**Key Enhancements:** None defined for SC-51.\n\n**Related Controls:** None\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    }
+  }
+}

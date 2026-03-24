@@ -101,6 +101,7 @@ already specified in the request:
 | Step 1 (JSON input) | `node scripts/bin/strm-extract-json.mjs <file.json>` |
 | Step 3 (Map rows) | `node scripts/bin/strm-map-extracted.mjs --focal "<Focal>" --target "<Target>" --focal-csv "<focal-extracted.csv>" --target-csv "<target-extracted.csv>" --output "<output.csv>"` |
 | Step 4 (Write CSV) | `node scripts/bin/strm-init-mapping.mjs --focal "<Focal>" --target "<Target>" --working-dir working-directory`, then `node scripts/bin/strm-generate-filename.mjs --focal "<Focal>" --target "<Target>" [--bridge "<Bridge>"]` |
+| Step 5 (Manual QA, required) | No script. Review every row and correct relationship/confidence/rationale/notes before validation. |
 | Post-completion (required) | `node scripts/bin/strm-validate-csv.mjs --file "<output.csv>"` |
 | Post-completion | `node scripts/bin/strm-gap-report.mjs --file "<output.csv>" --focal "<Focal>" --target "<Target>" --working-dir working-directory` |
 
@@ -244,6 +245,27 @@ Example (FFIEC → NIST SP 800-53):
 For `intersects_with` mappings, conclude with the divergence:
 > Both address <overlap>. <Source Framework> additionally covers <FDE-specific scope>; <Target Framework> additionally covers <RDE-specific scope>.
 
+### 6. Manual Adjudication Pass (Required Before Declaring Done)
+
+Script-generated rows are a starting point only. Before validation and completion:
+
+1. Review every mapping row manually.
+2. Confirm `STRM Relationship` is defensible for the pair.
+3. Re-check `equal` rows first:
+   - If scope/mechanism differs materially, downgrade to `intersects_with` or `subset_of`/`superset_of`.
+4. Re-check `intersects_with` rows:
+   - If wording and scope are substantially identical, promote to `equal`.
+5. Re-check `subset_of`/`superset_of` rows:
+   - Verify containment direction is correct.
+6. Ensure Notes explain *why* the grading was chosen for that row (no placeholder boilerplate).
+7. Recompute strength using the formula after any relationship/confidence/rationale-type changes.
+8. Save a manual-review log in the artifact folder:
+   - `Manual_Review_<Focal>-to-<Target>.md`
+   - Include at minimum: rows reviewed, rows changed, and the list of changed FDE IDs.
+   - For every changed row, include a one-line rationale explaining *why* the relationship/confidence/rationale-type was changed.
+   - Required per-row log format:
+     - `Row <n>: <FDE#> -> <Target ID #> (<old> => <new>) | Reason: <justification>`
+
 ---
 
 ## Transitivity Rules
@@ -293,6 +315,8 @@ When generating reverse mappings (Target → Source):
    - If `subset_of + superset_of = 0%`, review `equal` rows; many may actually be `subset_of`.
    - If `equal > 50%`, review each `equal` row and confirm neither control explicitly requires more than the other.
    - If one control says "SHALL" and the other says "SHOULD", this is typically `subset_of`, not `equal`.
+10. **Manual QA is mandatory** — never declare completion from script output alone.
+11. **Validation and gap report run after manual QA only** — do not run post-completion checks in parallel with row generation.
 
 ---
 

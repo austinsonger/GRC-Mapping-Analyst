@@ -1,0 +1,459 @@
+{
+  "source_documents": {
+    "nist_800_53_ra": "/Users/austinsonger/code/strm-Mapping/working-directory/frameworks/info/800-53/800-53/ra.md",
+    "nist_800_53a_ra": "/Users/austinsonger/code/strm-Mapping/working-directory/frameworks/info/800-53/800-53a/ra.md"
+  },
+  "generated_at": "2026-03-24T19:45:16.940Z",
+  "control_family": "RA",
+  "control_count": 10,
+  "controls": {
+    "RA-1": {
+      "control_id": "RA-1",
+      "control_title": "Policy and Procedures",
+      "base_control": {
+        "control_id": "RA-1",
+        "control_title": "Policy and Procedures",
+        "control_text": "Develop, document, and disseminate a risk assessment policy and procedures that address purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance. Review and update the policy and procedures at organization-defined frequencies.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for RA-1.",
+        "related_controls": [
+          "PM-9",
+          "PS-8",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Develop, document, and disseminate a risk assessment policy and procedures that address purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance. Review and update the policy and procedures at organization-defined frequencies.\n\n**Key Enhancements:** None defined for RA-1.\n\n**Related Controls:** PM-9, PS-8, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization develops, documents, disseminates, reviews, and updates risk assessment policy and procedures.",
+        "examine_procedures": "Risk assessment policy; risk assessment procedures; system security plan.",
+        "interview_procedures": "Organizational personnel responsible for risk assessment policy.",
+        "test_procedures": "Organizational processes for managing risk assessment policy.",
+        "determination_statements": [
+          "RA-01a. — A risk assessment policy is developed, documented, and disseminated",
+          "RA-01b. — Risk assessment procedures are developed, documented, and disseminated",
+          "RA-01c. — The policy and procedures are reviewed and updated at an organization-defined frequency"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization develops, documents, disseminates, reviews, and updates risk assessment policy and procedures.\n\n**Examine:** Risk assessment policy; risk assessment procedures; system security plan.\n\n**Interview:** Organizational personnel responsible for risk assessment policy.\n\n**Test:** Organizational processes for managing risk assessment policy.\n\n**Determination Statements:**\n- RA-01a. — A risk assessment policy is developed, documented, and disseminated\n- RA-01b. — Risk assessment procedures are developed, documented, and disseminated\n- RA-01c. — The policy and procedures are reviewed and updated at an organization-defined frequency"
+      }
+    },
+    "RA-2": {
+      "control_id": "RA-2",
+      "control_title": "Security Categorization",
+      "base_control": {
+        "control_id": "RA-2",
+        "control_title": "Security Categorization",
+        "control_text": "Categorize the system and the information it processes, stores, and transmits. Document the security categorization results, including supporting rationale, in the security plan for the system. Verify that the authorizing official or authorizing official designated representative reviews and approves the security categorization decision.",
+        "key_enhancements": [
+          {
+            "id": "RA-2(1)",
+            "title": "Impact-Level Prioritization"
+          }
+        ],
+        "key_enhancements_text": "- **RA-2(1):** Impact-Level Prioritization — Conduct an impact-level prioritization of organizational systems to obtain additional granularity on the impact level of the system based on mission criticality.",
+        "related_controls": [
+          "CM-8",
+          "MP-4",
+          "PL-2",
+          "PL-10",
+          "PL-11",
+          "PM-7",
+          "RA-3",
+          "RA-5",
+          "RA-7",
+          "RA-8",
+          "SA-8",
+          "SC-7",
+          "SC-38",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Categorize the system and the information it processes, stores, and transmits. Document the security categorization results, including supporting rationale, in the security plan for the system. Verify that the authorizing official or authorizing official designated representative reviews and approves the security categorization decision.\n\n**Key Enhancements:**\n- **RA-2(1):** Impact-Level Prioritization — Conduct an impact-level prioritization of organizational systems to obtain additional granularity on the impact level of the system based on mission criticality.\n\n**Related Controls:** CM-8, MP-4, PL-2, PL-10, PL-11, PM-7, RA-3, RA-5, RA-7, RA-8, SA-8, SC-7, SC-38, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization categorizes the system and its information in accordance with applicable laws and standards.",
+        "examine_procedures": "Risk assessment policy; security categorization documentation; system security plan; FIPS 199 categorization.",
+        "interview_procedures": "Organizational personnel responsible for security categorization; system owners; information system security officers.",
+        "test_procedures": "Security categorization processes.",
+        "determination_statements": [
+          "RA-02a. — The system and the information processed, stored, and transmitted by the system are categorized in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines",
+          "RA-02b. — The security categorization results including supporting rationale are documented in the system security plan",
+          "RA-02c. — The security categorization decision is reviewed and approved by the authorizing official or designated representative"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization categorizes the system and its information in accordance with applicable laws and standards.\n\n**Examine:** Risk assessment policy; security categorization documentation; system security plan; FIPS 199 categorization.\n\n**Interview:** Organizational personnel responsible for security categorization; system owners; information system security officers.\n\n**Test:** Security categorization processes.\n\n**Determination Statements:**\n- RA-02a. — The system and the information processed, stored, and transmitted by the system are categorized in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines\n- RA-02b. — The security categorization results including supporting rationale are documented in the system security plan\n- RA-02c. — The security categorization decision is reviewed and approved by the authorizing official or designated representative"
+      }
+    },
+    "RA-3": {
+      "control_id": "RA-3",
+      "control_title": "Risk Assessment",
+      "base_control": {
+        "control_id": "RA-3",
+        "control_title": "Risk Assessment",
+        "control_text": "Conduct a risk assessment, including identifying threats to and vulnerabilities in the system, the likelihood and magnitude of harm from unauthorized access, use, disclosure, disruption, modification, or destruction of the system, the information it processes, stores, or transmits, and any related information, and the likelihood and impact of adverse effects on individuals arising from the processing of personally identifiable information. Integrate risk assessment results and risk management decisions from the organization and mission or business process perspectives with system-level risk assessments. Document risk assessment results in the security and privacy plans, risk assessment report, or organization-defined document. Review risk assessment results at an organization-defined frequency. Disseminate risk assessment results to organization-defined personnel or roles. Update the risk assessment at an organization-defined frequency or when there are significant changes to the system, its environment of operation, or other conditions that may impact the security or privacy state of the system.",
+        "key_enhancements": [
+          {
+            "id": "RA-3(1)",
+            "title": "Supply Chain Risk Assessment"
+          },
+          {
+            "id": "RA-3(2)",
+            "title": "Use of All-Source Intelligence"
+          },
+          {
+            "id": "RA-3(3)",
+            "title": "Dynamic Threat Awareness"
+          },
+          {
+            "id": "RA-3(4)",
+            "title": "Predictive Cyber Analytics"
+          }
+        ],
+        "key_enhancements_text": "- **RA-3(1):** Supply Chain Risk Assessment — Assess supply chain risks associated with organization-defined systems, system components, and system services, and update the supply chain risk assessment at an organization-defined frequency or when there are significant changes to the relevant supply chain, or when changes to the system, environments of operation, or other conditions may necessitate a change in the supply chain.\n- **RA-3(2):** Use of All-Source Intelligence — Use all-source intelligence to assist in the analysis of risk.\n- **RA-3(3):** Dynamic Threat Awareness — Determine the current cyber threat environment on an ongoing basis using organization-defined means.\n- **RA-3(4):** Predictive Cyber Analytics — Employ organization-defined advanced automation and analytics capabilities to predict and identify risks.",
+        "related_controls": [
+          "CA-3",
+          "CA-6",
+          "CM-4",
+          "CM-13",
+          "CP-6",
+          "CP-7",
+          "IA-8",
+          "MA-5",
+          "PE-3",
+          "PE-8",
+          "PE-18",
+          "PL-2",
+          "PL-10",
+          "PL-11",
+          "PM-8",
+          "PM-9",
+          "PM-28",
+          "PT-2",
+          "PT-7",
+          "RA-2",
+          "RA-5",
+          "RA-7",
+          "SA-8",
+          "SA-9",
+          "SC-38",
+          "SI-12"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Conduct a risk assessment, including identifying threats to and vulnerabilities in the system, the likelihood and magnitude of harm from unauthorized access, use, disclosure, disruption, modification, or destruction of the system, the information it processes, stores, or transmits, and any related information, and the likelihood and impact of adverse effects on individuals arising from the processing of personally identifiable information. Integrate risk assessment results and risk management decisions from the organization and mission or business process perspectives with system-level risk assessments. Document risk assessment results in the security and privacy plans, risk assessment report, or organization-defined document. Review risk assessment results at an organization-defined frequency. Disseminate risk assessment results to organization-defined personnel or roles. Update the risk assessment at an organization-defined frequency or when there are significant changes to the system, its environment of operation, or other conditions that may impact the security or privacy state of the system.\n\n**Key Enhancements:**\n- **RA-3(1):** Supply Chain Risk Assessment — Assess supply chain risks associated with organization-defined systems, system components, and system services, and update the supply chain risk assessment at an organization-defined frequency or when there are significant changes to the relevant supply chain, or when changes to the system, environments of operation, or other conditions may necessitate a change in the supply chain.\n- **RA-3(2):** Use of All-Source Intelligence — Use all-source intelligence to assist in the analysis of risk.\n- **RA-3(3):** Dynamic Threat Awareness — Determine the current cyber threat environment on an ongoing basis using organization-defined means.\n- **RA-3(4):** Predictive Cyber Analytics — Employ organization-defined advanced automation and analytics capabilities to predict and identify risks.\n\n**Related Controls:** CA-3, CA-6, CM-4, CM-13, CP-6, CP-7, IA-8, MA-5, PE-3, PE-8, PE-18, PL-2, PL-10, PL-11, PM-8, PM-9, PM-28, PT-2, PT-7, RA-2, RA-5, RA-7, SA-8, SA-9, SC-38, SI-12\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization conducts risk assessments and documents results.",
+        "examine_procedures": "Risk assessment policy; risk assessment reports; risk assessment methodology; system security plan; organizational risk register.",
+        "interview_procedures": "Organizational personnel responsible for risk assessment; system owners; information system security officers.",
+        "test_procedures": "Risk assessment processes and tools; risk scoring methodologies.",
+        "determination_statements": [
+          "RA-03a. — A risk assessment is conducted to identify threats to and vulnerabilities in the system",
+          "RA-03b. — The likelihood and magnitude of harm from unauthorized access, use, disclosure, disruption, modification, or destruction are assessed",
+          "RA-03c. — Risk assessment results are documented in the security and privacy plans, risk assessment reports, or organization-defined documents",
+          "RA-03d. — Risk assessment results are reviewed by organization-defined personnel or roles",
+          "RA-03e. — The risk assessment is updated at an organization-defined frequency or when significant changes occur to the system or environment"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization conducts risk assessments and documents results.\n\n**Examine:** Risk assessment policy; risk assessment reports; risk assessment methodology; system security plan; organizational risk register.\n\n**Interview:** Organizational personnel responsible for risk assessment; system owners; information system security officers.\n\n**Test:** Risk assessment processes and tools; risk scoring methodologies.\n\n**Determination Statements:**\n- RA-03a. — A risk assessment is conducted to identify threats to and vulnerabilities in the system\n- RA-03b. — The likelihood and magnitude of harm from unauthorized access, use, disclosure, disruption, modification, or destruction are assessed\n- RA-03c. — Risk assessment results are documented in the security and privacy plans, risk assessment reports, or organization-defined documents\n- RA-03d. — Risk assessment results are reviewed by organization-defined personnel or roles\n- RA-03e. — The risk assessment is updated at an organization-defined frequency or when significant changes occur to the system or environment"
+      }
+    },
+    "RA-4": {
+      "control_id": "RA-4",
+      "control_title": "Risk Assessment Update",
+      "base_control": {
+        "control_id": "RA-4",
+        "control_title": "Risk Assessment Update",
+        "control_text": "[Withdrawn: Incorporated into RA-3.]\n\n**Baselines:** None (not in any baseline)",
+        "key_enhancements": [],
+        "key_enhancements_text": null,
+        "related_controls": [],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "[Withdrawn: Incorporated into RA-3.]\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "RA-5": {
+      "control_id": "RA-5",
+      "control_title": "Vulnerability Monitoring and Scanning",
+      "base_control": {
+        "control_id": "RA-5",
+        "control_title": "Vulnerability Monitoring and Scanning",
+        "control_text": "Monitor and scan for vulnerabilities in the system and hosted applications at an organization-defined frequency and/or randomly in accordance with an organization-defined process, and when new vulnerabilities potentially affecting the system are identified and reported. Employ vulnerability monitoring tools and techniques that facilitate interoperability among tools and automate parts of the vulnerability management process. Analyze vulnerability scan reports and results from vulnerability monitoring. Remediate legitimate vulnerabilities in accordance with an organizational assessment of risk. Share information obtained from the vulnerability monitoring process and control assessments with organization-defined personnel or roles to help eliminate similar vulnerabilities in other systems.",
+        "key_enhancements": [
+          {
+            "id": "RA-5(1)",
+            "title": "Update Tool Capability"
+          },
+          {
+            "id": "RA-5(2)",
+            "title": "Update Vulnerabilities to Be Scanned"
+          },
+          {
+            "id": "RA-5(3)",
+            "title": "Breadth and Depth of Coverage"
+          },
+          {
+            "id": "RA-5(4)",
+            "title": "Discoverable Information"
+          },
+          {
+            "id": "RA-5(5)",
+            "title": "Privileged Access"
+          },
+          {
+            "id": "RA-5(6)",
+            "title": "Automated Trend Analyses"
+          },
+          {
+            "id": "RA-5(7)",
+            "title": "Automated Detection and Notification of Unauthorized Components"
+          },
+          {
+            "id": "RA-5(8)",
+            "title": "Review Historic Audit Logs"
+          },
+          {
+            "id": "RA-5(9)",
+            "title": "Penetration Testing and Analyses"
+          },
+          {
+            "id": "RA-5(10)",
+            "title": "Correlate Scanning Information"
+          },
+          {
+            "id": "RA-5(11)",
+            "title": "Public Disclosure Program"
+          }
+        ],
+        "key_enhancements_text": "- **RA-5(1):** Update Tool Capability — [Withdrawn: Incorporated into RA-5.]\n- **RA-5(2):** Update Vulnerabilities to Be Scanned — Update the system vulnerabilities to be scanned at an organization-defined frequency, prior to a new scan, and/or when new vulnerabilities are identified and reported.\n- **RA-5(3):** Breadth and Depth of Coverage — Define the breadth and depth of vulnerability scanning coverage.\n- **RA-5(4):** Discoverable Information — Determine information about the system that is discoverable and take organization-defined corrective actions.\n- **RA-5(5):** Privileged Access — Implement privileged access authorization to organization-defined system components for organization-defined vulnerability scanning activities.\n- **RA-5(6):** Automated Trend Analyses — Compare the results of multiple vulnerability scans using automated mechanisms.\n- **RA-5(7):** Automated Detection and Notification of Unauthorized Components — [Withdrawn: Incorporated into CM-8.]\n- **RA-5(8):** Review Historic Audit Logs — Review historic audit logs to determine if a vulnerability identified in a system has been previously exploited within an organization-defined time period.\n- **RA-5(9):** Penetration Testing and Analyses — [Withdrawn: Incorporated into CA-8.]\n- **RA-5(10):** Correlate Scanning Information — Correlate the output from vulnerability scanning tools to determine the presence of multi-vulnerability and multi-hop attack vectors.\n- **RA-5(11):** Public Disclosure Program — Establish a public reporting channel for receiving reports of vulnerabilities in organizational systems and system components.",
+        "related_controls": [
+          "CA-2",
+          "CA-7",
+          "CA-8",
+          "CM-2",
+          "CM-4",
+          "CM-6",
+          "CM-8",
+          "RA-2",
+          "RA-3",
+          "SA-11",
+          "SA-15",
+          "SC-38",
+          "SI-2",
+          "SI-3",
+          "SI-4",
+          "SI-7",
+          "SR-11"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Monitor and scan for vulnerabilities in the system and hosted applications at an organization-defined frequency and/or randomly in accordance with an organization-defined process, and when new vulnerabilities potentially affecting the system are identified and reported. Employ vulnerability monitoring tools and techniques that facilitate interoperability among tools and automate parts of the vulnerability management process. Analyze vulnerability scan reports and results from vulnerability monitoring. Remediate legitimate vulnerabilities in accordance with an organizational assessment of risk. Share information obtained from the vulnerability monitoring process and control assessments with organization-defined personnel or roles to help eliminate similar vulnerabilities in other systems.\n\n**Key Enhancements:**\n- **RA-5(1):** Update Tool Capability — [Withdrawn: Incorporated into RA-5.]\n- **RA-5(2):** Update Vulnerabilities to Be Scanned — Update the system vulnerabilities to be scanned at an organization-defined frequency, prior to a new scan, and/or when new vulnerabilities are identified and reported.\n- **RA-5(3):** Breadth and Depth of Coverage — Define the breadth and depth of vulnerability scanning coverage.\n- **RA-5(4):** Discoverable Information — Determine information about the system that is discoverable and take organization-defined corrective actions.\n- **RA-5(5):** Privileged Access — Implement privileged access authorization to organization-defined system components for organization-defined vulnerability scanning activities.\n- **RA-5(6):** Automated Trend Analyses — Compare the results of multiple vulnerability scans using automated mechanisms.\n- **RA-5(7):** Automated Detection and Notification of Unauthorized Components — [Withdrawn: Incorporated into CM-8.]\n- **RA-5(8):** Review Historic Audit Logs — Review historic audit logs to determine if a vulnerability identified in a system has been previously exploited within an organization-defined time period.\n- **RA-5(9):** Penetration Testing and Analyses — [Withdrawn: Incorporated into CA-8.]\n- **RA-5(10):** Correlate Scanning Information — Correlate the output from vulnerability scanning tools to determine the presence of multi-vulnerability and multi-hop attack vectors.\n- **RA-5(11):** Public Disclosure Program — Establish a public reporting channel for receiving reports of vulnerabilities in organizational systems and system components.\n\n**Related Controls:** CA-2, CA-7, CA-8, CM-2, CM-4, CM-6, CM-8, RA-2, RA-3, SA-11, SA-15, SC-38, SI-2, SI-3, SI-4, SI-7, SR-11\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": "Determine if the organization monitors and scans for vulnerabilities in the system.",
+        "examine_procedures": "Risk assessment policy; vulnerability scanning procedures; vulnerability scanning results; scan tool configurations; remediation records; system security plan.",
+        "interview_procedures": "Organizational personnel responsible for vulnerability scanning; system administrators; information system security officers.",
+        "test_procedures": "Vulnerability scanning tools; scanning processes; remediation verification processes.",
+        "determination_statements": [
+          "RA-05a. — The system and hosted applications are monitored and scanned for vulnerabilities at an organization-defined frequency and/or randomly and when new vulnerabilities potentially affecting the system are identified and reported",
+          "RA-05b. — Vulnerability scanning tools and techniques are employed that facilitate interoperability and automate parts of the vulnerability management process",
+          "RA-05c. — Vulnerability scan reports and results from monitoring are analyzed",
+          "RA-05d. — Legitimate vulnerabilities are remediated in accordance with an organizational assessment of risk",
+          "RA-05e. — Information obtained from vulnerability monitoring and scanning is shared with organization-defined personnel or roles to help eliminate similar vulnerabilities in other systems",
+          "NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final",
+          "[SP 800-53 RA Family](../800-53/ra.md)",
+          "[SP 800-171 RA Requirements](../800-171/ra.md)"
+        ],
+        "source_markdown": "**Assessment Objective:** Determine if the organization monitors and scans for vulnerabilities in the system.\n\n**Examine:** Risk assessment policy; vulnerability scanning procedures; vulnerability scanning results; scan tool configurations; remediation records; system security plan.\n\n**Interview:** Organizational personnel responsible for vulnerability scanning; system administrators; information system security officers.\n\n**Test:** Vulnerability scanning tools; scanning processes; remediation verification processes.\n\n**Determination Statements:**\n- RA-05a. — The system and hosted applications are monitored and scanned for vulnerabilities at an organization-defined frequency and/or randomly and when new vulnerabilities potentially affecting the system are identified and reported\n- RA-05b. — Vulnerability scanning tools and techniques are employed that facilitate interoperability and automate parts of the vulnerability management process\n- RA-05c. — Vulnerability scan reports and results from monitoring are analyzed\n- RA-05d. — Legitimate vulnerabilities are remediated in accordance with an organizational assessment of risk\n- RA-05e. — Information obtained from vulnerability monitoring and scanning is shared with organization-defined personnel or roles to help eliminate similar vulnerabilities in other systems\n\n## References\n\n- NIST SP 800-53A Rev 5: https://csrc.nist.gov/publications/detail/sp/800-53a/rev-5/final\n- [SP 800-53 RA Family](../800-53/ra.md)\n- [SP 800-171 RA Requirements](../800-171/ra.md)"
+      }
+    },
+    "RA-6": {
+      "control_id": "RA-6",
+      "control_title": "Technical Surveillance Countermeasures Survey",
+      "base_control": {
+        "control_id": "RA-6",
+        "control_title": "Technical Surveillance Countermeasures Survey",
+        "control_text": "Employ a technical surveillance countermeasures survey at organization-defined locations at an organization-defined frequency or when organization-defined events or indicators occur.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for RA-6.",
+        "related_controls": [
+          "None"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Employ a technical surveillance countermeasures survey at organization-defined locations at an organization-defined frequency or when organization-defined events or indicators occur.\n\n**Key Enhancements:** None defined for RA-6.\n\n**Related Controls:** None\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "RA-7": {
+      "control_id": "RA-7",
+      "control_title": "Risk Response",
+      "base_control": {
+        "control_id": "RA-7",
+        "control_title": "Risk Response",
+        "control_text": "Respond to findings from security and privacy assessments, monitoring, and audits in accordance with organizational risk tolerance.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for RA-7.",
+        "related_controls": [
+          "CA-5",
+          "IR-9",
+          "PM-4",
+          "PM-28",
+          "RA-2",
+          "RA-3",
+          "SR-2"
+        ],
+        "baselines": [
+          "Low",
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Low, Moderate, High",
+        "source_markdown": "Respond to findings from security and privacy assessments, monitoring, and audits in accordance with organizational risk tolerance.\n\n**Key Enhancements:** None defined for RA-7.\n\n**Related Controls:** CA-5, IR-9, PM-4, PM-28, RA-2, RA-3, SR-2\n\n**Baselines:** Low, Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "RA-8": {
+      "control_id": "RA-8",
+      "control_title": "Privacy Impact Assessments",
+      "base_control": {
+        "control_id": "RA-8",
+        "control_title": "Privacy Impact Assessments",
+        "control_text": "Conduct privacy impact assessments for systems, programs, or other activities before developing or procuring information technology that processes personally identifiable information, and when there are changes in the processing of personally identifiable information. The privacy impact assessment describes the information collected, the reason for collection, intended use, sharing practices, individual notice, retention, and security protections. It also evaluates the risks and documents the measures taken to mitigate those risks.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for RA-8.",
+        "related_controls": [
+          "CM-4",
+          "CM-9",
+          "CM-13",
+          "PT-2",
+          "PT-3",
+          "PT-5",
+          "RA-1",
+          "RA-2",
+          "RA-3",
+          "RA-7"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Conduct privacy impact assessments for systems, programs, or other activities before developing or procuring information technology that processes personally identifiable information, and when there are changes in the processing of personally identifiable information. The privacy impact assessment describes the information collected, the reason for collection, intended use, sharing practices, individual notice, retention, and security protections. It also evaluates the risks and documents the measures taken to mitigate those risks.\n\n**Key Enhancements:** None defined for RA-8.\n\n**Related Controls:** CM-4, CM-9, CM-13, PT-2, PT-3, PT-5, RA-1, RA-2, RA-3, RA-7\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "RA-9": {
+      "control_id": "RA-9",
+      "control_title": "Criticality Analysis",
+      "base_control": {
+        "control_id": "RA-9",
+        "control_title": "Criticality Analysis",
+        "control_text": "Identify critical system components and functions by performing a criticality analysis for organization-defined systems, system components, or system services at organization-defined decision points in the system development life cycle.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for RA-9.",
+        "related_controls": [
+          "CP-2",
+          "PL-2",
+          "PL-8",
+          "PL-11",
+          "PM-1",
+          "PM-11",
+          "RA-2",
+          "SA-8",
+          "SA-15",
+          "SA-20",
+          "SR-5"
+        ],
+        "baselines": [
+          "Moderate",
+          "High"
+        ],
+        "baselines_text": "Moderate, High",
+        "source_markdown": "Identify critical system components and functions by performing a criticality analysis for organization-defined systems, system components, or system services at organization-defined decision points in the system development life cycle.\n\n**Key Enhancements:** None defined for RA-9.\n\n**Related Controls:** CP-2, PL-2, PL-8, PL-11, PM-1, PM-11, RA-2, SA-8, SA-15, SA-20, SR-5\n\n**Baselines:** Moderate, High"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    },
+    "RA-10": {
+      "control_id": "RA-10",
+      "control_title": "Threat Hunting",
+      "base_control": {
+        "control_id": "RA-10",
+        "control_title": "Threat Hunting",
+        "control_text": "Establish and maintain a cyber threat hunting capability to search for indicators of compromise in organizational systems and detect, track, and disrupt threats that evade existing controls. Employ threat hunting at an organization-defined frequency. The threat hunting capability uses threat intelligence, information from the security operations center, incident response team, and other sources. Findings from threat hunting are used to adjust defensive measures.",
+        "key_enhancements": [],
+        "key_enhancements_text": "None defined for RA-10.",
+        "related_controls": [
+          "CA-2",
+          "CA-7",
+          "CA-8",
+          "RA-3",
+          "RA-5",
+          "RA-6",
+          "SI-4"
+        ],
+        "baselines": [],
+        "baselines_text": "None (not in any baseline)",
+        "source_markdown": "Establish and maintain a cyber threat hunting capability to search for indicators of compromise in organizational systems and detect, track, and disrupt threats that evade existing controls. Employ threat hunting at an organization-defined frequency. The threat hunting capability uses threat intelligence, information from the security operations center, incident response team, and other sources. Findings from threat hunting are used to adjust defensive measures.\n\n**Key Enhancements:** None defined for RA-10.\n\n**Related Controls:** CA-2, CA-7, CA-8, RA-3, RA-5, RA-6, SI-4\n\n**Baselines:** None (not in any baseline)"
+      },
+      "assessment_procedures": {
+        "assessment_objective": null,
+        "examine_procedures": null,
+        "interview_procedures": null,
+        "test_procedures": null,
+        "determination_statements": [],
+        "source_markdown": null
+      }
+    }
+  }
+}
