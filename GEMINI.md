@@ -131,7 +131,7 @@ For direct mappings, repeat the focal name as bridge: `(NIST_CSF-to-NIST_CSF)`.
 #### CSV Structure (12 columns)
 
 ```
-Row 1: FDE#,FDE Name,Focal Document Element (FDE),Confidence Levels,NIST IR-8477 Rational,STRM Rationale,STRM Relationship,Strength of Relationship,Target Requirement Title,Target ID #,Target Requirement Description,Notes
+Row 1: FDE#,FDE Name,Focal Document Element (FDE),Confidence Levels,NIST IR-8477 Rational,STRM Rationale,STRM Relationship,Strength of Relationship,<Target> Requirement Title,Target ID #,<Target> Requirement Description,Notes
 Row 2+: <data rows>
 ```
 

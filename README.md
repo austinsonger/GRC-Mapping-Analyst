@@ -99,7 +99,6 @@ Open the repository folder in VS Code with Copilot enabled.
 #### Cursor AI
 
 `.agents/skills/strm-mapping/` is auto-discovered — no install needed.
-`.cursor/rules/strm-mapping.mdc` also provides legacy rules for older Cursor versions.
 
 Open the repository folder in Cursor.
 
@@ -142,7 +141,6 @@ read:
 | Google Gemini CLI (context) | `GEMINI.md` | Repo root | Yes (hierarchical search) |
 | Google Gemini CLI (extension) | `gemini-extension/` | Link via `gemini extensions link` | Yes (after link + build) |
 | GitHub Copilot (repo instructions) | `.github/copilot-instructions.md` | `.github/` | Yes |
-| Cursor AI (legacy rules) | `.cursor/rules/strm-mapping.mdc` | `.cursor/rules/` | Yes (`alwaysApply: true`) |
 | Qoder | `.qoder/skills/strm-mapping/SKILL.md` | Repo root | Yes (auto-discovered) |
 | Aider | `CONVENTIONS.md` | Repo root | No (`--read` required) |
 
@@ -252,9 +250,9 @@ All outputs are 12-column CSV files:
 | F | `STRM Rationale` | Narrative explaining why the relationship holds |
 | G | `STRM Relationship` | `equal` / `subset_of` / `superset_of` / `intersects_with` / `not_related` |
 | H | `Strength of Relationship` | Integer 1–10 (computed via formula) |
-| I | `Target Requirement Title` | Target control short title |
+| I | `<Target> Requirement Title` | Target control short title (replace `<Target>` with actual target name) |
 | J | `Target ID #` | Target control ID |
-| K | `Target Requirement Description` | First sentence of target control text |
+| K | `<Target> Requirement Description` | First sentence of target control text (replace `<Target>` with actual target name) |
 | L | `Notes` | Scope caveats, gaps, or flags |
 
 ### Strength Score Formula

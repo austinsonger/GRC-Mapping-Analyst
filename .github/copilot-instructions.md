@@ -24,7 +24,7 @@ apply the following rules to all suggestions and completions.
 All output CSV files must follow this 12-column structure:
 
 ```
-Row 1: FDE#,FDE Name,Focal Document Element (FDE),Confidence Levels,NIST IR-8477 Rational,STRM Rationale,STRM Relationship,Strength of Relationship,Target Requirement Title,Target ID #,Target Requirement Description,Notes
+Row 1: FDE#,FDE Name,Focal Document Element (FDE),Confidence Levels,NIST IR-8477 Rational,STRM Rationale,STRM Relationship,Strength of Relationship,<Target> Requirement Title,Target ID #,<Target> Requirement Description,Notes
 Row 2+: <data rows>
 ```
 
@@ -101,5 +101,5 @@ When deriving A→C from A→B and B→C:
 - Always compute Strength via formula; never assign arbitrarily.
 - One FDE can produce multiple rows (one row per matching target control).
 - Never invent target control IDs — use only IDs from the actual target document.
-- Columns I and K use fixed names: `Target Requirement Title` and `Target Requirement Description`.
+- Columns I and K use target-adapted names: replace `<Target>` with the actual target document name (e.g., `ISO 27001 Requirement Title`, `ISO 27001 Requirement Description`).
 - Risk and threat files (`risks.json`, `threats.json`) are opt-in — load only when explicitly requested.

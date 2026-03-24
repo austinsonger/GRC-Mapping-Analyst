@@ -45,7 +45,6 @@ Body content: Markdown instructions. No format restrictions. Recommended: keep u
 | OpenAI Codex CLI | Agent Skill | `.agents/skills/strm-mapping/SKILL.md` | Yes (auto-discovered) |
 | OpenAI Codex CLI | Project context doc | `AGENTS.md` | Yes (always injected) |
 | Cursor AI | Agent Skill | `.agents/skills/strm-mapping/SKILL.md` | Yes (auto-discovered) |
-| Cursor AI | Legacy rules | `.cursor/rules/strm-mapping.mdc` | Yes (`alwaysApply: true`) |
 | Google Gemini CLI | Agent Skill | `.agents/skills/strm-mapping/SKILL.md` | Yes (auto-discovered) |
 | Google Gemini CLI | Context file | `GEMINI.md` | Yes (hierarchical search) |
 | Google Gemini CLI | Extension (MCP) | `gemini-extension/` | Yes (after `extensions link`) |
@@ -259,15 +258,12 @@ applyTo: "working-directory/**"
 
 ---
 
-### Cursor AI — `.agents/skills/strm-mapping/` (preferred) + `.cursor/rules/strm-mapping.mdc` (legacy)
-
-#### Agent Skills (Preferred)
+### Cursor AI — `.agents/skills/strm-mapping/SKILL.md`
 
 Cursor auto-discovers skills from these directories:
 - `.agents/skills/` (project-level) ← **our skill is here**
 - `.cursor/skills/` (project-level, Cursor-specific path)
 - `~/.cursor/skills/` (user-level)
-- Legacy paths: `.claude/skills/`, `.codex/skills/`, `~/.claude/skills/`, `~/.codex/skills/`
 
 Since `.agents/skills/strm-mapping/` exists in this repo, Cursor finds the skill
 automatically. No additional setup required.
@@ -279,23 +275,6 @@ automatically. No additional setup required.
 metadata:
   disable-model-invocation: "true"
 ```
-
-#### Legacy Rules (`.cursor/rules/strm-mapping.mdc`)
-
-The `.mdc` rules system predates Agent Skills. It is still functional and kept for
-backward compatibility with Cursor versions that don't yet support Agent Skills.
-
-**Format:** YAML frontmatter + Markdown body with `.mdc` extension
-```yaml
----
-description: "..."
-globs: ["working-directory/**/*.csv"]
-alwaysApply: true
----
-```
-
-**When both exist:** The Agent Skill (`SKILL.md`) is the preferred interface for new
-Cursor versions. The `.cursor/rules/` entry remains as a fallback.
 
 ---
 
@@ -394,7 +373,6 @@ When the STRM methodology changes in `.agents/skills/strm-mapping/SKILL.md`, upd
 | `GEMINI.md` | Workflow, formula, rationale pattern, quality rules |
 | `AGENTS.md` | Quick-reference methodology section |
 | `.github/copilot-instructions.md` | Formula, rationale pattern, quality rules |
-| `.cursor/rules/strm-mapping.mdc` | Workflow, formula, rationale pattern, quality rules |
 | `CONVENTIONS.md` | Formula, rationale pattern, quality checklist |
 | `gemini-extension/GEMINI.md` | Tool usage guide sections that reference methodology |
 | `.qoder/skills/strm-mapping/SKILL.md` | Mirror all methodology changes; keep Qoder-specific compatibility note |

@@ -93,13 +93,16 @@ function generateStrmFilename(
 
 // Returns the single header row matching the canonical STRM template.
 // The template has one row (column headers); data begins at Row 2.
-const CSV_HEADER_ROW =
-  'FDE#,FDE Name,Focal Document Element (FDE),Confidence Levels,NIST IR-8477 Rational,' +
-  'STRM Rationale,STRM Relationship,Strength of Relationship,' +
-  'Target Requirement Title,Target ID #,Target Requirement Description,Notes';
-
-function buildCsvHeader(): string[] {
-  return [CSV_HEADER_ROW];
+// Columns I and K use the target document name as a prefix:
+//   "ISO 27001 Requirement Title" / "ISO 27001 Requirement Description"
+// When no target name is provided, the literal "Target" is used as a placeholder.
+function buildCsvHeader(targetName?: string): string[] {
+  const t = targetName?.trim() || 'Target';
+  return [
+    'FDE#,FDE Name,Focal Document Element (FDE),Confidence Levels,NIST IR-8477 Rational,' +
+    `STRM Rationale,STRM Relationship,Strength of Relationship,` +
+    `${t} Requirement Title,Target ID #,${t} Requirement Description,Notes`,
+  ];
 }
 
 // ---------------------------------------------------------------------------
@@ -340,19 +343,28 @@ server.registerTool(
   'strm_build_csv_header',
   {
     description:
-      'Returns the single STRM CSV header row (Row 1) matching the canonical template. ' +
-      'Data rows begin at Row 2. Use this when starting a new CSV to get the exact column headers.',
-    inputSchema: z.object({}).shape,
+      'Returns the single STRM CSV header row (Row 1). ' +
+      'Columns I and K are prefixed with the target document name ' +
+      '(e.g., "ISO 27001 Requirement Title"). ' +
+      'Provide target_name to get the correctly labeled header; omit to get a template with "Target" as placeholder. ' +
+      'Data rows begin at Row 2.',
+    inputSchema: z.object({
+      target_name: z
+        .string()
+        .optional()
+        .describe('Short name of the target framework, e.g. "ISO 27001" or "NIST SP 800-53". Used to label columns I and K.'),
+    }).shape,
   },
-  async () => {
-    const rows = buildCsvHeader();
+  async ({ target_name }) => {
+    const rows = buildCsvHeader(target_name);
+    const t = target_name?.trim() || 'Target';
     return {
       content: [
         {
           type: 'text' as const,
           text: JSON.stringify({
             csv_header_row: rows[0],
-            note: 'This is Row 1. Add data starting at Row 2. Columns: FDE#, FDE Name, Focal Document Element (FDE), Confidence Levels, NIST IR-8477 Rational, STRM Rationale, STRM Relationship, Strength of Relationship, Target Requirement Title, Target ID #, Target Requirement Description, Notes',
+            note: `This is Row 1. Add data starting at Row 2. Columns I and K are labeled "${t} Requirement Title" and "${t} Requirement Description".`,
           }, null, 2),
         },
       ],
