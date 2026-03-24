@@ -1,12 +1,13 @@
 ---
 name: strm-mapping
-description: >
-  Produces NIST IR 8477 Set-Theory Relationship Mapping (STRM) CSV files between
-  any two documents that contain controls or requirements. Use whenever asked to
-  map, crosswalk, align, or perform a gap analysis between any two frameworks,
-  catalogs, or control sets. The source (Focal Document) and target (Reference
-  Document) are specified by the user at runtime.
-version: 2.0.0
+description: Use when asked to map, crosswalk, align, compare, or gap-analyze any two cybersecurity frameworks, control catalogs, or regulatory requirements using NIST IR 8477 Set-Theory Relationship Mapping (STRM). Triggers on terms like "map controls", "crosswalk", "framework alignment", "gap analysis", or producing a STRM CSV output file.
+license: Apache-2.0
+compatibility: Compatible with any Agent Skills-compatible assistant (Claude Code, OpenAI Codex, Cursor, Gemini CLI, GitHub Copilot, and others). Run your AI assistant from the repository root so relative paths resolve correctly.
+metadata:
+  author: austinsonger
+  version: "2.0.0"
+  methodology: NIST IR 8477
+  standard: agentskills.io
 ---
 
 # NIST IR 8477 STRM Mapping — GRC Toolkit Skill
@@ -19,6 +20,58 @@ Activate this skill whenever the user asks to:
 - Create a STRM CSV output file between any two documents
 - Perform a gap analysis between any source and target document
 - Extend or verify an existing STRM mapping file
+
+---
+
+## Working Directory
+
+All work **must** be performed inside the `working-directory/` folder at the repository root.
+Start your AI assistant from the repository root so relative paths resolve correctly.
+
+```
+working-directory/
+```
+
+- Read input files from this directory or from `knowledge/` and `examples/` in the repo root.
+- Write all in-progress and output files here.
+- Never write output to the repo root or any other location.
+
+---
+
+## Saving Completed Mappings
+
+When a mapping is fully complete, create a dated artifact folder inside:
+
+```
+working-directory/mapping-artifacts/
+```
+
+### Artifact Folder Naming Convention
+
+```
+YYYY-MM-DD_<FocalFramework>-to-<TargetFramework>
+```
+
+Use the same short framework names as the CSV file naming convention. Examples:
+
+| Mapping | Folder Name |
+|---|---|
+| NIST CSF 2.0 → ISO 27001:2022 | `2025-06-01_NIST-CSF-2.0-to-ISO-27001-2022` |
+| FFIEC CAT → NIST SP 800-53 | `2025-06-01_FFIEC-CAT-to-NIST-SP-800-53` |
+| ISO 27017:2015 → CIS Controls v8 | `2025-06-01_ISO-27017-2015-to-CIS-Controls-v8` |
+| CMMC 2.0 → NIST SP 800-171 | `2025-06-01_CMMC-2.0-to-NIST-SP-800-171` |
+| PCI DSS v4.0 → SOC 2 TSC | `2025-06-01_PCI-DSS-v4.0-to-SOC2-TSC` |
+
+Use today's date (YYYY-MM-DD) at the time the mapping is completed.
+
+### Artifact Folder Contents
+
+Place the following inside the dated folder:
+
+| File | Description |
+|---|---|
+| `<csv-filename>.csv` | The completed STRM CSV output (renamed per file naming convention) |
+| Any supporting notes or working files | Optional |
 
 ---
 
@@ -45,15 +98,15 @@ already specified in the request:
 Locate and read the relevant input files before generating any output:
 
 ```
-grc-pro/knowledge/mappings/ir8477-strm-reference.md   ← STRM methodology rules
-<source-document>.csv / .pdf / .md                     ← Focal document (controls/requirements)
-<target-document>.csv / .pdf / .md                     ← Reference document (controls/requirements)
+knowledge/ir8477-strm-reference.md                    ← STRM methodology rules
+working-directory/<source-document>.csv/.pdf/.md      ← Focal document
+working-directory/<target-document>.csv/.pdf/.md      ← Reference document
 ```
 
-Search the repository for existing files matching the document names:
-- Check `frameworks/` for framework CSVs and PDFs
-- Check the project root for catalog CSVs
-- Check `grc-pro/knowledge/` for structured control definitions
+Search for input files in this order:
+1. `working-directory/` — primary location for user-supplied inputs
+2. Project root — for catalog CSVs or PDFs placed there
+3. `knowledge/` — for structured control definitions
 
 If a prior STRM file already exists for this source→target pair, read it first to
 avoid duplicates and maintain consistency.
@@ -222,10 +275,88 @@ When generating reverse mappings (Target → Source):
 
 ---
 
+## Optional: Risk and Threat-Enriched Mappings
+
+> **These inputs are ONLY used when the user explicitly requests risk or threat data.**
+> Do not load, reference, or incorporate these files in any standard framework-to-framework
+> or control-to-control mapping unless the user specifically asks for it.
+
+### When to Activate
+
+Activate this section only when the user says something like:
+- "include risk data", "add threat context", "risk-to-control mapping"
+- "threat-to-risk", "threat-to-control", "comprehensive mapping with risks/threats"
+- "use the risk library", "use the threat library"
+
+### Source Files
+
+| File | Contents |
+|---|---|
+| `knowledge/libary/risks.json` | SCF 2025.4 risk catalog — `risk_id`, `title`, `description`, `likelihood`, `impact`, `mapped_controls`, `set_theory_relationships`, `threat_ids` |
+| `knowledge/libary/threats.json` | Threat catalog — `threat_id`, `threat_grouping`, `title`, `description`, `mapped_risk_ids` |
+
+### Relationship Chain
+
+```
+Threat → Risk → Control
+```
+
+- Each risk (`risk_id`) links to controls via `mapped_controls` and to threats via `threat_ids`
+- Each threat (`threat_id`) links to risks via `mapped_risk_ids`
+- Risks already carry embedded STRM `set_theory_relationships` — use these when available
+
+### Specialized Mapping Types
+
+#### Risk-to-Control
+
+Use when the user wants to map risks from the library to framework controls.
+
+- **FDE** = risk entry from `risks.json` (`risk_id` as FDE#, `title` as FDE Name, `description` as FDE text)
+- **RDE** = target framework control
+- Use the embedded `set_theory_relationships[].relation` and `confidence_alignment` from the risk record as starting points; override with independent analysis if needed
+- Include `likelihood` and `impact` scores in the Notes column
+
+#### Threat-to-Risk
+
+Use when the user wants to map threats to risks.
+
+- **FDE** = threat entry from `threats.json` (`threat_id` as FDE#, `title` as FDE Name, `description` as FDE text)
+- **RDE** = risk entry from `risks.json`
+- Derive the STRM relationship from the threat's materiality and the risk's scope
+- Note `threat_grouping` (Natural, Manmade, Technical) in the Notes column
+
+#### Threat-to-Control
+
+Use when the user wants to map threats directly to framework controls (skipping the intermediate risk layer).
+
+- **FDE** = threat entry from `threats.json`
+- **RDE** = target framework control
+- Traverse `threat → risk → control` chain to derive the relationship
+- Apply transitivity rules — if any intermediate relationship is `intersects_with`, mark derived as indeterminate and flag for review
+
+### Output Naming for Risk/Threat Mappings
+
+Follow the same artifact folder convention but reflect the mapping type:
+
+| Mapping Type | Folder Name Example |
+|---|---|
+| Risk-to-Control | `2025-06-01_SCF-Risks-to-NIST-SP-800-53` |
+| Threat-to-Risk | `2025-06-01_SCF-Threats-to-SCF-Risks` |
+| Threat-to-Control | `2025-06-01_SCF-Threats-to-CIS-Controls-v8` |
+
+### Quality Rules (Risk/Threat specific)
+
+- **Never auto-include** risk or threat files — wait for explicit user request
+- **Respect embedded STRM data** in `risks.json` — do not contradict without justification
+- **Flag unmapped threats** (`mapped_risk_ids: []`) in Notes — they require manual risk derivation
+- **Materiality fields** in threats (`pre_tax_income_5_percent`, etc.) are informational — include relevant values in Notes if present
+
+---
+
 ## Existing Mappings in This Repository
 
 Before starting a new mapping, search for existing files to avoid duplication.
-Run a glob across the project root and `frameworks/` for any CSV whose name
+Run a glob across the project root and `working-directory/` for any CSV whose name
 contains `Set Theory Relationship Mapping` or `STRM`. The file name pattern
 encodes both source and target, so it is the fastest way to check for prior work.
 
@@ -233,10 +364,14 @@ encodes both source and target, so it is the fastest way to check for prior work
 
 ## Template Reference
 
-A blank STRM template lives in the project root. Search for a file whose name
-starts with `TEMPLATE_` and contains `Set Theory Relationship Mapping`. Copy
-(do not modify) that file as the starting point, then rename the copy according
-to the file naming convention above.
+A blank STRM template lives at:
+
+```
+TEMPLATE_Set Theory Relationship Mapping (STRM).csv
+```
+
+Copy (do not modify) that file as the starting point, then rename the copy
+according to the file naming convention above.
 
 ---
 
@@ -244,7 +379,18 @@ to the file naming convention above.
 
 | Resource | Purpose |
 |---|---|
-| `grc-pro/skills/control-mapping/SKILL.md` | Higher-level control mapping guidance |
-| `grc-pro/knowledge/mappings/ir8477-strm-reference.md` | Full NIST IR 8477 methodology reference |
-| `grc-pro/knowledge/mappings/*.md` | Cross-framework human-readable tables |
-| `grc-pro/knowledge/oscal/` | OSCAL control definitions for NIST SP 800-53 and FedRAMP |
+| `TEMPLATE_Set Theory Relationship Mapping (STRM).csv` | Blank STRM template to copy for new mappings |
+| `knowledge/ir8477-strm-reference.md` | Full NIST IR 8477 methodology reference |
+| `examples/example-control-to-control.md` | ISO 27001 → SOC 2 worked example |
+| `examples/example-control-to-evidence.md` | Control-to-evidence mapping example |
+| `examples/example-framework-to-control.md` | Framework-to-control mapping example |
+| `examples/example-framework-to-policy.md` | Framework-to-policy mapping example |
+| `examples/example-framework-to-regulation.md` | Framework-to-regulation mapping example |
+| `examples/example-framework-to-risk.md` | Framework-to-risk mapping example |
+| `examples/example-regulation-to-control.md` | Regulation-to-control mapping example |
+| `knowledge/controls.schema.json` | JSON Schema for control data |
+| `knowledge/mappings.schema.json` | JSON Schema for mapping data validation |
+| `knowledge/risks.schema.json` | JSON Schema for risk data validation |
+| `knowledge/threats.schema.json` | JSON Schema for threat data validation |
+| `knowledge/libary/risks.json` | SCF 2025.4 risk catalog (optional — explicit request only) |
+| `knowledge/libary/threats.json` | Threat catalog (optional — explicit request only) |

@@ -26,7 +26,7 @@ The STRM mapping skill instructs AI assistants to:
 | Requirement | Notes |
 |---|---|
 | Git | For cloning the repository |
-| Any supported AI assistant | See platform table below |
+| Any supported AI assistant | See platform table below — most are zero-install after cloning |
 
 No additional runtime dependencies. All inputs and outputs are plain CSV/Markdown/JSON files.
 
@@ -45,6 +45,11 @@ cd strm-Mapping
 
 All AI assistants must be started from the **repository root** so relative paths resolve correctly.
 
+> **Most platforms are zero-install.** The `SKILL.md` in `.agents/skills/strm-mapping/` is
+> auto-discovered by OpenAI Codex, Cursor, Gemini CLI, GitHub Copilot (VS Code), and any other
+> tool that implements the [Agent Skills open standard](https://agentskills.io). Only Claude Code
+> requires a manual copy step.
+
 #### Claude Code
 
 ```bash
@@ -54,33 +59,49 @@ claude   # run from repo root
 
 Verify: ask Claude `What skills do you have available?` — you should see `strm-mapping`.
 
-#### Google Gemini CLI
-
-`GEMINI.md` is already at the repo root — no installation step needed.
-
-```bash
-gemini   # run from repo root
-```
-
 #### OpenAI Codex CLI
 
-`AGENTS.md` is already at the repo root — no installation step needed.
+**Agent Skill** (auto-discovered from `.agents/skills/strm-mapping/`) — no install needed.
 
 ```bash
 codex    # run from repo root
 ```
 
+Invoke explicitly with `/skills` or `$strm-mapping`, or let Codex activate it implicitly.
+`AGENTS.md` at the repo root is also always injected as a project context document.
+
+#### Google Gemini CLI
+
+Three integration levels — use any combination:
+
+**Level 1: Agent Skill** (auto-discovered from `.agents/skills/strm-mapping/`) — no install needed.
+```bash
+gemini   # run from repo root — Gemini activates the skill on demand
+```
+
+**Level 2: Context file** (`GEMINI.md` at repo root) — always injected, no install needed.
+
+**Level 3: Extension** (adds 6 MCP tools + 3 slash commands)
+```bash
+cd gemini-extension && npm install && npm run build && cd ..
+gemini extensions link gemini-extension
+# Restart Gemini CLI to activate
+```
+Slash commands: `/strm:map`, `/strm:gap-analysis`, `/strm:validate`
+
 #### GitHub Copilot
 
-`.github/copilot-instructions.md` is already committed — Copilot loads it automatically
-for all chat interactions in this repository.
+`.github/copilot-instructions.md` is auto-loaded for all Copilot Chat interactions.
+`.agents/skills/strm-mapping/` is also discoverable by Copilot in VS Code.
+
+Open the repository folder in VS Code with Copilot enabled.
 
 #### Cursor AI
 
-`.cursor/rules/strm-mapping.mdc` is already committed — Cursor loads it automatically
-with `alwaysApply: true`.
+`.agents/skills/strm-mapping/` is auto-discovered — no install needed.
+`.cursor/rules/strm-mapping.mdc` also provides legacy rules for older Cursor versions.
 
-Open the repo folder in Cursor.
+Open the repository folder in Cursor.
 
 #### Aider
 
@@ -98,17 +119,18 @@ read:
 
 ## Platform File Reference
 
-| Platform | Instruction File | Location | Auto-Loaded |
+| Platform | File | Location | Auto-Loaded |
 |---|---|---|---|
+| **All platforms** (Agent Skills standard) | `.agents/skills/strm-mapping/SKILL.md` | Repo root | Yes — Codex, Cursor, Gemini CLI, Copilot |
 | Claude Code | `skills/strm-mapping/SKILL.md` | Copy to `~/.claude/skills/strm-mapping/` | Yes (after install) |
-| Google Gemini CLI | `GEMINI.md` | Repository root | Yes |
-| OpenAI Codex CLI | `AGENTS.md` | Repository root | Yes |
-| GitHub Copilot | `.github/copilot-instructions.md` | `.github/` | Yes |
-| Cursor AI | `.cursor/rules/strm-mapping.mdc` | `.cursor/rules/` | Yes |
-| Aider | `CONVENTIONS.md` | Repository root | No (`--read` required) |
+| OpenAI Codex (context doc) | `AGENTS.md` | Repo root | Yes (always injected) |
+| Google Gemini CLI (context) | `GEMINI.md` | Repo root | Yes (hierarchical search) |
+| Google Gemini CLI (extension) | `gemini-extension/` | Link via `gemini extensions link` | Yes (after link + build) |
+| GitHub Copilot (repo instructions) | `.github/copilot-instructions.md` | `.github/` | Yes |
+| Cursor AI (legacy rules) | `.cursor/rules/strm-mapping.mdc` | `.cursor/rules/` | Yes (`alwaysApply: true`) |
+| Aider | `CONVENTIONS.md` | Repo root | No (`--read` required) |
 
-See `platform-skills/PLATFORM-COMPATIBILITY.md` for a detailed breakdown of the
-format differences and adaptations made for each platform.
+See `platform-skills/PLATFORM-COMPATIBILITY.md` for format details and what changed for each platform.
 
 ---
 

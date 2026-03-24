@@ -1,0 +1,18 @@
+prompt = """
+Validate existing STRM CSV files in working-directory.
+
+Steps:
+1. Run strm_list_input_files to find CSV files in working-directory.
+2. For each STRM CSV found (files whose names contain "STRM"):
+   a. Read the file and parse each data row (Row 5 onwards).
+   b. For each row, run strm_validate_row with the row's values.
+   c. Also run strm_compute_strength and verify it matches Column H.
+3. Produce a validation report listing:
+   - Total rows checked
+   - Rows with errors (list each error)
+   - Rows with warnings (list each warning)
+   - Overall pass/fail status
+
+Current STRM files:
+!{find working-directory -name "*.csv" -path "*STRM*" 2>/dev/null || echo "No STRM CSV files found in working-directory"}
+"""

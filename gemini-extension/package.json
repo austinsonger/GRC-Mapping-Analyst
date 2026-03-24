@@ -7,7 +7,9 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "package": "node scripts/package.mjs",
+    "package:all": "node scripts/package.mjs --platform=darwin --arch=arm64 && node scripts/package.mjs --platform=linux --arch=x64 && node scripts/package.mjs --platform=win32 --arch=x64"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.1",

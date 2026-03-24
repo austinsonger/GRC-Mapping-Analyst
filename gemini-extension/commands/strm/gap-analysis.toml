@@ -1,0 +1,17 @@
+prompt = """
+Perform a gap analysis between two cybersecurity frameworks.
+
+First, run strm_list_input_files to show available files.
+Then ask the user which two frameworks to compare.
+
+For the gap analysis:
+1. Run the full STRM mapping between the two frameworks.
+2. After completing all rows, produce a gap summary that identifies:
+   - Controls in the focal framework with no equal or subset_of match (gaps in target coverage)
+   - Controls with only intersects_with matches (partial gaps)
+   - Controls with equal matches (full coverage)
+   - Distribution of relationship types as a percentage breakdown
+3. Save the gap summary as a separate markdown file alongside the STRM CSV in the artifact folder.
+
+Use strm_compute_strength for every strength score and strm_validate_row for every row.
+"""

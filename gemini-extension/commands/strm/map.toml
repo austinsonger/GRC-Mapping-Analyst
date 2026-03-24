@@ -1,0 +1,13 @@
+prompt = """
+Start a new STRM mapping session.
+
+First, run strm_list_input_files to show available framework files in working-directory.
+Then run strm_check_existing_mapping for the requested source→target pair.
+
+Ask the user:
+1. Which framework are you mapping FROM (Focal Document)?
+2. Which framework are you mapping TO (Target Document)?
+3. Are the source and target files already in working-directory, or should we proceed with framework knowledge?
+
+Once confirmed, run strm_build_csv_header and begin the mapping workflow following the STRM methodology.
+"""

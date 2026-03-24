@@ -1,6 +1,13 @@
 ---
 name: strm-mapping
 description: Use when asked to map, crosswalk, align, compare, or gap-analyze any two cybersecurity frameworks, control catalogs, or regulatory requirements using NIST IR 8477 Set-Theory Relationship Mapping (STRM). Triggers on terms like "map controls", "crosswalk", "framework alignment", "gap analysis", or producing a STRM CSV output file.
+license: Apache-2.0
+compatibility: Compatible with Claude Code and any Agent Skills-compatible assistant. Run Claude Code from the repository root so relative paths resolve correctly.
+metadata:
+  author: austinsonger
+  version: "2.0.0"
+  methodology: NIST IR 8477
+  standard: agentskills.io
 ---
 
 # NIST IR 8477 STRM Mapping — GRC Toolkit Skill
