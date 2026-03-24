@@ -116,8 +116,10 @@ Claude Code automatically discovers skills from `~/.claude/skills/` and from
 
 **Install command:**
 ```bash
-cp -r skills/strm-mapping ~/.claude/skills/strm-mapping
+ls -la ~/.claude/skills/strm-mapping 2>/dev/null && echo "Already installed" || cp -r skills/strm-mapping ~/.claude/skills/strm-mapping
 ```
+
+If `~/.claude/skills/strm-mapping` already exists as a symlink to this repo, no copy action is needed.
 
 **Key constraints:**
 - Same `name`/`description` format as the open standard

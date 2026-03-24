@@ -53,9 +53,12 @@ All AI assistants must be started from the **repository root** so relative paths
 #### Claude Code
 
 ```bash
-cp -r skills/strm-mapping ~/.claude/skills/strm-mapping
+# Check if already installed (symlink or directory)
+ls -la ~/.claude/skills/strm-mapping 2>/dev/null && echo "Already installed" || cp -r skills/strm-mapping ~/.claude/skills/strm-mapping
 claude   # run from repo root
 ```
+
+If `~/.claude/skills/strm-mapping` already exists as a symlink to this repo, no action is needed.
 
 Verify: ask Claude `What skills do you have available?` — you should see `strm-mapping`.
 
@@ -177,7 +180,7 @@ strm-Mapping/
 │   ├── mappings.schema.json      ← JSON Schema for mapping validation
 │   ├── risks.schema.json         ← JSON Schema for risk data
 │   ├── threats.schema.json       ← JSON Schema for threat data
-│   └── libary/
+│   └── library/
 │       ├── risks.json            ← SCF 2025.4 risk catalog (optional)
 │       └── threats.json          ← Threat catalog (optional)
 ├── examples/
@@ -320,12 +323,14 @@ The `examples/` directory contains fully worked mapping examples showing correct
 
 ## Updating the Installed Skill
 
-When you pull new changes from this repository, re-copy the skill file:
+When you pull new changes from this repository:
 
 ```bash
 git pull
-cp skills/strm-mapping/SKILL.md ~/.claude/skills/strm-mapping/SKILL.md
+ls -la ~/.claude/skills/strm-mapping 2>/dev/null && echo "Already installed" || cp -r skills/strm-mapping ~/.claude/skills/strm-mapping
 ```
+
+If `~/.claude/skills/strm-mapping` is already a symlink to this repository, it is already live.
 
 ---
 

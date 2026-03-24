@@ -93,6 +93,16 @@ already specified in the request:
 
 ## Step-by-Step Workflow
 
+### Scripts to Call (by Step)
+
+| Step | Script to call |
+|---|---|
+| Step 1 (Gather) | `node scripts/bin/strm-check-existing-mapping.mjs --focal "<Focal>" --target "<Target>" --working-dir working-directory` |
+| Step 1 (JSON input) | `node scripts/bin/strm-extract-json.mjs <file.json>` |
+| Step 4 (Write CSV) | `node scripts/bin/strm-init-mapping.mjs --focal "<Focal>" --target "<Target>" --working-dir working-directory`, then `node scripts/bin/strm-generate-filename.mjs --focal "<Focal>" --target "<Target>" [--bridge "<Bridge>"]` |
+| Post-completion (required) | `node scripts/bin/strm-validate-csv.mjs --file "<output.csv>"` |
+| Post-completion | `node scripts/bin/strm-gap-report.mjs --file "<output.csv>" --focal "<Focal>" --target "<Target>" --working-dir working-directory` |
+
 ### 1. Gather Source Files
 
 Locate and read the relevant input files before generating any output:
@@ -107,6 +117,18 @@ Search for input files in this order:
 1. `working-directory/` — primary location for user-supplied inputs
 2. Project root — for catalog CSVs or PDFs placed there
 3. `knowledge/` — for structured control definitions
+
+When an input is JSON and uses HTML-tagged descriptions, run:
+
+```bash
+node scripts/bin/strm-extract-json.mjs <input.json> [output.csv]
+```
+
+Default output is `working-directory/<framework>-extracted.csv` with columns:
+`controlId,title,family,description`.
+
+Write all intermediate files (extracted control lists, partial drafts) to
+`working-directory/scratch/`. Do not use system temp directories.
 
 If a prior STRM file already exists for this source→target pair, read it first to
 avoid duplicates and maintain consistency.
@@ -150,7 +172,7 @@ result      : clamp(strength, 1, 10)
 | Attribute | Default | Override Condition |
 |---|---|---|
 | `Confidence Levels` | `high` | `medium` when interpretation or jurisdictional ambiguity exists; `low` when significant inference is required |
-| `NIST IR-8477 Rational` | `semantic` | `functional` when controls achieve the same outcome through different mechanisms; `syntactic` only when word-for-word similarity is the *primary* justification (rare) |
+| `NIST IR-8477 Rational` | `semantic` | `functional` when controls achieve the same outcome through different mechanisms. When mapping across different regulatory domains (for example healthcare → law enforcement, financial → defense), default to `functional` unless control wording and scope are substantially identical. Use `syntactic` only when word-for-word similarity is the *primary* justification (rare). |
 
 #### Observed Distribution Reference (calibration only)
 
@@ -266,6 +288,10 @@ When generating reverse mappings (Target → Source):
 6. **Confidence defaults to `high`** — use `medium` only when interpretation or jurisdictional ambiguity exists; use `low` only when the mapping requires significant inference.
 7. **Focus on Baseline maturity first** — when a framework has maturity tiers, prioritize baseline/foundational controls before advanced ones.
 8. **Adapt column header labels** — replace `<Target>` in columns I and K with the actual target document name (e.g., `ISO 27001 Requirement Title`, `ISO 27001 Requirement Description`).
+9. **Run a relationship distribution self-check after all rows are complete**:
+   - If `subset_of + superset_of = 0%`, review `equal` rows; many may actually be `subset_of`.
+   - If `equal > 50%`, review each `equal` row and confirm neither control explicitly requires more than the other.
+   - If one control says "SHALL" and the other says "SHOULD", this is typically `subset_of`, not `equal`.
 
 ---
 
@@ -286,8 +312,8 @@ Activate this section only when the user says something like:
 
 | File | Contents |
 |---|---|
-| `knowledge/libary/risks.json` | SCF 2025.4 risk catalog — `risk_id`, `title`, `description`, `likelihood`, `impact`, `mapped_controls`, `set_theory_relationships`, `threat_ids` |
-| `knowledge/libary/threats.json` | Threat catalog — `threat_id`, `threat_grouping`, `title`, `description`, `mapped_risk_ids` |
+| `knowledge/library/risks.json` | SCF 2025.4 risk catalog — `risk_id`, `title`, `description`, `likelihood`, `impact`, `mapped_controls`, `set_theory_relationships`, `threat_ids` |
+| `knowledge/library/threats.json` | Threat catalog — `threat_id`, `threat_grouping`, `title`, `description`, `mapped_risk_ids` |
 
 ### Relationship Chain
 
@@ -386,5 +412,5 @@ according to the file naming convention above.
 | `knowledge/mappings.schema.json` | JSON Schema for mapping data validation |
 | `knowledge/risks.schema.json` | JSON Schema for risk data validation |
 | `knowledge/threats.schema.json` | JSON Schema for threat data validation |
-| `knowledge/libary/risks.json` | SCF 2025.4 risk catalog (optional — explicit request only) |
-| `knowledge/libary/threats.json` | Threat catalog (optional — explicit request only) |
+| `knowledge/library/risks.json` | SCF 2025.4 risk catalog (optional — explicit request only) |
+| `knowledge/library/threats.json` | Threat catalog (optional — explicit request only) |

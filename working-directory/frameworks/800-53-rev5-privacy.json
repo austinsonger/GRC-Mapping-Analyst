@@ -1,0 +1,615 @@
+{
+  "profile": {
+    "uuid": "46f0e622-4a27-4189-ac2c-aa272e209ee4",
+    "metadata": {
+      "title": "NIST 800-53 Revision 5 - Privacy Baseline Profile",
+      "published": "2024-08-09T17:59:59+0000",
+      "last-modified": "2024-08-09T17:59:59+0000",
+      "oscal-version": "1.0.4",
+      "props": [
+        {
+          "name": "raw-profile-json",
+          "value": "{\"uuid\": \"46f0e622-4a27-4189-ac2c-aa272e209ee4\", \"name\": \"NIST 800-53 Revision 5 - Privacy Baseline Profile\", \"category\": \"Low\", \"isPublic\": true }"
+        }
+      ],
+      "roles": [
+        {
+          "id": "creator",
+          "title": "Document Creator"
+        }
+      ],
+      "responsible-parties": [
+        {
+          "role-id": "creator",
+          "party-uuids": [
+            "8d8d5468-74f8-499d-976c-bca671e19b14"
+          ]
+        }
+      ],
+      "version": "Version 2"
+    },
+    "imports": [
+      {
+        "href": "/catalogues/b0c40faa-fda4-4ed3-83df-368908d9e9b2",
+        "include-controls": [
+          {
+            "with-ids": "17856f6a-cfd9-4614-b163-ec43d2ae566e",
+            "matching": [
+              "AC-1"
+            ]
+          },
+          {
+            "with-ids": "c6528aa1-116e-412f-bfaa-4b321c3aee14",
+            "matching": [
+              "AC-3(14)"
+            ]
+          },
+          {
+            "with-ids": "8f44255b-398e-421b-81c1-0ebf29ba4336",
+            "matching": [
+              "AT-1"
+            ]
+          },
+          {
+            "with-ids": "5e9ccf51-2819-4595-ae9b-12ba5069c3a5",
+            "matching": [
+              "AT-2"
+            ]
+          },
+          {
+            "with-ids": "ae544c28-0f5a-46a3-b98e-8f064280ff06",
+            "matching": [
+              "AT-3"
+            ]
+          },
+          {
+            "with-ids": "fada73a0-415c-4bd1-b5d9-6a82914f71e8",
+            "matching": [
+              "AT-3(5)"
+            ]
+          },
+          {
+            "with-ids": "7325f1c3-086d-4f5f-87a2-3df2aceeb78b",
+            "matching": [
+              "AT-4"
+            ]
+          },
+          {
+            "with-ids": "ce21c2a2-1b38-4d16-a5ba-9878ee717d02",
+            "matching": [
+              "AU-1"
+            ]
+          },
+          {
+            "with-ids": "ecbe9c71-7ae3-43b2-be22-bd583fd48686",
+            "matching": [
+              "AU-2"
+            ]
+          },
+          {
+            "with-ids": "b82885d7-3399-4590-a0b7-f00534d811d7",
+            "matching": [
+              "AU-3(3)"
+            ]
+          },
+          {
+            "with-ids": "cb26ba7d-6da5-41c9-af92-f77de0d40535",
+            "matching": [
+              "AU-11"
+            ]
+          },
+          {
+            "with-ids": "351c46b8-990f-48f0-aa81-e4b8bfa2c2ac",
+            "matching": [
+              "CA-1"
+            ]
+          },
+          {
+            "with-ids": "98db80bd-9c05-4df6-8a3c-1f58e92d5251",
+            "matching": [
+              "CA-2"
+            ]
+          },
+          {
+            "with-ids": "8aa67a8d-cf75-4025-bd1b-48fc8f3a7c0d",
+            "matching": [
+              "CA-5"
+            ]
+          },
+          {
+            "with-ids": "aa1cc8a9-c9f8-45f6-ab1a-5980baf38de3",
+            "matching": [
+              "CA-6"
+            ]
+          },
+          {
+            "with-ids": "7de95312-e1f0-4e2f-b30f-beb69477c761",
+            "matching": [
+              "CA-7"
+            ]
+          },
+          {
+            "with-ids": "3317e87b-bf74-4963-a542-953345335225",
+            "matching": [
+              "CA-7(4)"
+            ]
+          },
+          {
+            "with-ids": "f7f86e47-e30c-4768-ac45-764b7685c3ff",
+            "matching": [
+              "CM-1"
+            ]
+          },
+          {
+            "with-ids": "d3d75ce6-c5d4-4598-894f-f218eedecf94",
+            "matching": [
+              "CM-4"
+            ]
+          },
+          {
+            "with-ids": "cd4a22f4-0259-4da1-9637-b4bad85f775c",
+            "matching": [
+              "IR-1"
+            ]
+          },
+          {
+            "with-ids": "3d981ec5-b6cb-4cc2-8ab5-e8c3adf2258a",
+            "matching": [
+              "IR-2"
+            ]
+          },
+          {
+            "with-ids": "27a0e747-e7c2-415d-8607-70776212edcc",
+            "matching": [
+              "IR-2(3)"
+            ]
+          },
+          {
+            "with-ids": "388bc870-4490-432d-8638-452bceb71a24",
+            "matching": [
+              "IR-3"
+            ]
+          },
+          {
+            "with-ids": "d9b63af8-521c-4100-84f5-61c9a767638b",
+            "matching": [
+              "IR-4"
+            ]
+          },
+          {
+            "with-ids": "08990bf0-6b06-422b-ac55-32e1338a5552",
+            "matching": [
+              "IR-5"
+            ]
+          },
+          {
+            "with-ids": "8213ccab-3267-4648-bdfa-fdc445ce8347",
+            "matching": [
+              "IR-6"
+            ]
+          },
+          {
+            "with-ids": "47faf1a4-73b7-497f-b707-06e35ace0f4d",
+            "matching": [
+              "IR-7"
+            ]
+          },
+          {
+            "with-ids": "8959fa40-b492-46b7-a0f4-84a4767b22af",
+            "matching": [
+              "IR-8"
+            ]
+          },
+          {
+            "with-ids": "aa562682-4236-4952-ba16-bc1b1fefb525",
+            "matching": [
+              "IR-8(1)"
+            ]
+          },
+          {
+            "with-ids": "e48d2772-0fb3-46b0-8200-2be54e74a28c",
+            "matching": [
+              "MP-1"
+            ]
+          },
+          {
+            "with-ids": "778f83e5-ed10-4b86-a386-6000711d5b2b",
+            "matching": [
+              "MP-6"
+            ]
+          },
+          {
+            "with-ids": "6683b7d2-763c-4d3f-9df4-22d38aa2b1d0",
+            "matching": [
+              "PE-8(3)"
+            ]
+          },
+          {
+            "with-ids": "3e16abf3-c185-429b-9dde-86be7989c04b",
+            "matching": [
+              "PL-1"
+            ]
+          },
+          {
+            "with-ids": "436ec146-03c2-4161-8b33-ae128722f274",
+            "matching": [
+              "PL-2"
+            ]
+          },
+          {
+            "with-ids": "0dded253-4bf0-4f01-9534-6ae261ea13ff",
+            "matching": [
+              "PL-4"
+            ]
+          },
+          {
+            "with-ids": "ecd09f82-46f7-4db2-aa65-1d4c12a759de",
+            "matching": [
+              "PL-4(1)"
+            ]
+          },
+          {
+            "with-ids": "18ab01c4-0fae-4f35-98df-1704535b67e4",
+            "matching": [
+              "PL-8"
+            ]
+          },
+          {
+            "with-ids": "6c3addb8-24ca-4356-95bc-3c3291134721",
+            "matching": [
+              "PL-9"
+            ]
+          },
+          {
+            "with-ids": "807d2d50-4c7a-402c-aa4e-079face844d2",
+            "matching": [
+              "PM-3"
+            ]
+          },
+          {
+            "with-ids": "4dd5f510-c037-4d2f-9163-3d84521be165",
+            "matching": [
+              "PM-4"
+            ]
+          },
+          {
+            "with-ids": "6700a35b-3734-4183-8878-9195ffeeaa66",
+            "matching": [
+              "PM-5(1)"
+            ]
+          },
+          {
+            "with-ids": "b06b726d-fd67-4d11-8010-830aa02e2b16",
+            "matching": [
+              "PM-6"
+            ]
+          },
+          {
+            "with-ids": "7d6dfdf0-c927-4e95-8de4-3b2e8d9e795a",
+            "matching": [
+              "PM-7"
+            ]
+          },
+          {
+            "with-ids": "60fa1e10-8535-498a-828e-5023dbd01ee6",
+            "matching": [
+              "PM-8"
+            ]
+          },
+          {
+            "with-ids": "f2239fb3-8636-4369-88b9-14dd05c597ed",
+            "matching": [
+              "PM-9"
+            ]
+          },
+          {
+            "with-ids": "4107975a-719c-489a-a131-b46219ea470a",
+            "matching": [
+              "PM-10"
+            ]
+          },
+          {
+            "with-ids": "f66edbbe-0f7b-4c73-bbb9-0ec4577f8a14",
+            "matching": [
+              "PM-11"
+            ]
+          },
+          {
+            "with-ids": "1a953fb8-7a32-4fb0-8768-423cf3feec89",
+            "matching": [
+              "PM-13"
+            ]
+          },
+          {
+            "with-ids": "9075f0ea-d2cd-4928-bbb1-edcf0f570046",
+            "matching": [
+              "PM-14"
+            ]
+          },
+          {
+            "with-ids": "dec8002f-0223-403a-9d22-50033becc7a0",
+            "matching": [
+              "PM-17"
+            ]
+          },
+          {
+            "with-ids": "226ae3f6-a950-4403-8a01-2b03d950903d",
+            "matching": [
+              "PM-18"
+            ]
+          },
+          {
+            "with-ids": "28c80f63-9902-48b7-a727-4d4ca69ef2bf",
+            "matching": [
+              "PM-19"
+            ]
+          },
+          {
+            "with-ids": "16b47d1b-0a36-4408-bc81-eee96cb45317",
+            "matching": [
+              "PM-20"
+            ]
+          },
+          {
+            "with-ids": "6a029c89-4449-4be3-84d1-ed29627ff6c7",
+            "matching": [
+              "PM-20(1)"
+            ]
+          },
+          {
+            "with-ids": "18909283-f558-4cff-8906-c07f613e3df7",
+            "matching": [
+              "PM-21"
+            ]
+          },
+          {
+            "with-ids": "7ad6a050-419a-4e31-9ff4-15170545c22b",
+            "matching": [
+              "PM-22"
+            ]
+          },
+          {
+            "with-ids": "c5f53422-6edf-4355-8e71-75b8cb5e667b",
+            "matching": [
+              "PM-24"
+            ]
+          },
+          {
+            "with-ids": "a7379e29-7ed6-44ca-bd48-d07c892dd740",
+            "matching": [
+              "PM-25"
+            ]
+          },
+          {
+            "with-ids": "143ca03f-93a6-40b3-a1e6-a84b9eeac541",
+            "matching": [
+              "PM-26"
+            ]
+          },
+          {
+            "with-ids": "fd172fc8-1a6b-4727-b4fd-68d36d66ebfe",
+            "matching": [
+              "PM-27"
+            ]
+          },
+          {
+            "with-ids": "22e39afa-86fd-4a48-8b01-9a68ed3a10a6",
+            "matching": [
+              "PM-28"
+            ]
+          },
+          {
+            "with-ids": "2280c933-4695-4f49-bd03-053b430b6190",
+            "matching": [
+              "PM-31"
+            ]
+          },
+          {
+            "with-ids": "79bd6517-f5e9-41e6-8f66-ebca70dd6a11",
+            "matching": [
+              "PS-6"
+            ]
+          },
+          {
+            "with-ids": "57f98e1b-7bea-4589-9f3a-de99ff428413",
+            "matching": [
+              "PT-1"
+            ]
+          },
+          {
+            "with-ids": "00200f34-78c0-4198-acb9-8c6ecb1ee7dd",
+            "matching": [
+              "PT-2"
+            ]
+          },
+          {
+            "with-ids": "13335dd9-ce23-47b2-be40-4b069a6afd1d",
+            "matching": [
+              "PT-3"
+            ]
+          },
+          {
+            "with-ids": "60906146-e9d1-45b8-aa89-357e856da62d",
+            "matching": [
+              "PT-4"
+            ]
+          },
+          {
+            "with-ids": "fb65459e-1efa-4aa5-be01-7bda075aba4e",
+            "matching": [
+              "PT-5"
+            ]
+          },
+          {
+            "with-ids": "c5d46c00-ab26-4c98-8f78-c4b94923fb8a",
+            "matching": [
+              "PT-5(2)"
+            ]
+          },
+          {
+            "with-ids": "6435d992-b6d9-435a-84e4-ab3312d4782c",
+            "matching": [
+              "PT-6"
+            ]
+          },
+          {
+            "with-ids": "aa95a7c5-4686-468d-8494-10dd56234354",
+            "matching": [
+              "PT-6(1)"
+            ]
+          },
+          {
+            "with-ids": "3e7b1ffe-66fc-4f1b-b38b-546c13c6d1dc",
+            "matching": [
+              "PT-6(2)"
+            ]
+          },
+          {
+            "with-ids": "3b44245c-7324-452c-ad12-4ebb7a5df837",
+            "matching": [
+              "PT-7"
+            ]
+          },
+          {
+            "with-ids": "7039764a-b2da-4346-a1e4-336df7f6dc82",
+            "matching": [
+              "PT-7(1)"
+            ]
+          },
+          {
+            "with-ids": "70d292d4-fb86-4644-83e7-0d1ddf1daed3",
+            "matching": [
+              "PT-7(2)"
+            ]
+          },
+          {
+            "with-ids": "5a157963-3c25-41fa-a358-b32b4cee6a26",
+            "matching": [
+              "PT-8"
+            ]
+          },
+          {
+            "with-ids": "6d0e07dd-6ae7-40d8-a023-1450b0cf86ef",
+            "matching": [
+              "RA-1"
+            ]
+          },
+          {
+            "with-ids": "8a761326-a7a1-4b4e-b5f1-4cc48d998f07",
+            "matching": [
+              "RA-3"
+            ]
+          },
+          {
+            "with-ids": "920be03c-b5f1-4288-b7a2-e484fd58fa31",
+            "matching": [
+              "RA-7"
+            ]
+          },
+          {
+            "with-ids": "700e5c2f-9bbe-4c7d-9724-b28c2f0a3907",
+            "matching": [
+              "RA-8"
+            ]
+          },
+          {
+            "with-ids": "fe3ecfe7-d5c4-47c1-98a8-bab64e31af88",
+            "matching": [
+              "SA-1"
+            ]
+          },
+          {
+            "with-ids": "8dd3f054-d625-4c06-aa56-8f68712c505b",
+            "matching": [
+              "SA-2"
+            ]
+          },
+          {
+            "with-ids": "ee33ef00-a9ed-43d4-9d9d-ed80f4d071d1",
+            "matching": [
+              "SA-3"
+            ]
+          },
+          {
+            "with-ids": "7738c2a6-0e41-46d2-ab88-28e10bc7357f",
+            "matching": [
+              "SA-4"
+            ]
+          },
+          {
+            "with-ids": "4b456de8-ca20-454c-b715-5908a5e02cbe",
+            "matching": [
+              "SA-8(33)"
+            ]
+          },
+          {
+            "with-ids": "8b1cfaa6-0b78-46f7-88a1-00046c6a34e0",
+            "matching": [
+              "SA-9"
+            ]
+          },
+          {
+            "with-ids": "8e6cf5e3-35ad-4c4f-bc16-415d826ff994",
+            "matching": [
+              "SA-11"
+            ]
+          },
+          {
+            "with-ids": "285be5d9-9700-4baa-8eb7-74ba8b8461e1",
+            "matching": [
+              "SC-7(24)"
+            ]
+          },
+          {
+            "with-ids": "b62ac580-0398-4717-8f63-d7b99d6fb54e",
+            "matching": [
+              "SI-1"
+            ]
+          },
+          {
+            "with-ids": "afd2aa4f-845f-42c5-8c7b-c6b57e416dbd",
+            "matching": [
+              "SI-12"
+            ]
+          },
+          {
+            "with-ids": "5e72a9af-66ba-4347-a4ed-58c17925967f",
+            "matching": [
+              "SI-12(1)"
+            ]
+          },
+          {
+            "with-ids": "09aeec78-f07c-421b-83d6-2a252f9364ea",
+            "matching": [
+              "SI-12(2)"
+            ]
+          },
+          {
+            "with-ids": "fc6eaa6f-0e96-422e-879a-9e64d74b17b9",
+            "matching": [
+              "SI-12(3)"
+            ]
+          },
+          {
+            "with-ids": "14025f91-9b5a-492c-9f0d-c6cc9ea3a648",
+            "matching": [
+              "SI-18"
+            ]
+          },
+          {
+            "with-ids": "adcb7191-5211-4d73-8d3d-07120f3d5e0a",
+            "matching": [
+              "SI-18(4)"
+            ]
+          },
+          {
+            "with-ids": "e4a7b44c-9cbe-4fe9-ba04-304b5aa5a74e",
+            "matching": [
+              "SI-19"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1164 @@
+[
+    {
+        "title": "Administrative Management: Facilities, Fleet, and Equipment Mgmt",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Administrative Management: Help Desk Services",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Administrative Management: Security Management",
+        "confidentiality": "Moderate",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Administrative Management: Travel",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Administrative Management: Workplace Policy Development and Management",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Community and Social Services: Community and Regional Development",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Community and Social Services: Homeownership Promotion",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Community and Social Services: Postal Services",
+        "confidentiality": "Low",
+        "availability": "Moderate",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Community and Social Services: Social Services",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Consumer Safety: Health Care Administration",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Controls and Oversight: Corrective Action (Policy/Regulation)",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Controls and Oversight: Program Evaluation",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Controls and Oversight: Program Monitoring",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Credits and Insurance: Direct Loans",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Credits and Insurance: General Insurance",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Credits and Insurance: Loan Guarantees",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Disaster Management: Disaster Monitoring and Prediction",
+        "confidentiality": "Low",
+        "availability": "High",
+        "integrity": "High",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Disaster Management: Disaster Preparedness and Planning",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Disaster Management: Disaster Repair and Restoration",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Disaster Management: Emergency Response",
+        "confidentiality": "Low",
+        "availability": "High",
+        "integrity": "High",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Economic Development: Business and Industry Development",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Economic Development: Financial Sector Oversight",
+        "confidentiality": "Moderate",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Economic Development: Industry Sector Income Stabilization",
+        "confidentiality": "Moderate",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Economic Development: Intellectual Property Protection",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Education: Cultural & Historic Exhibition",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Education: Cultural & Historic Preservation",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Education: Elementary, Secondary, and Vocational Education",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Education: Higher Education",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Energy: Energy Conservation and Preparedness",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Energy: Energy Production",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Energy: Energy Resource Management",
+        "confidentiality": "Moderate",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Energy: Energy Supply",
+        "confidentiality": "Low",
+        "availability": "Moderate",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Environmental Management: Environmental Monitoring/ Forecasting",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Environmental Management: Environmental Remediation",
+        "confidentiality": "Moderate",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Environmental Management: Pollution Prevention And Control",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Federal Correctional Activities: Criminal Incarceration",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Federal Correctional Activities: Criminal Rehabilitation",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Federal Financial Assistance: Direct Transfers to Individuals",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Federal Financial Assistance: Federal Grants (Non-State)",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Federal Financial Assistance: Subsidies",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Federal Financial Assistance: Tax Credits",
+        "confidentiality": "Moderate",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Financial Management: Accounting",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Financial Management: Asset and Liability Management",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Financial Management: Collections and Receivables",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Financial Management: Cost Accounting/ Performance Measurement",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Financial Management: Funds Control",
+        "confidentiality": "Moderate",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Financial Management: Payments",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Financial Management: Reporting and Information",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "General Government: Central Fiscal Operations",
+        "confidentiality": "Moderate",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "General Government: Central Personnel Management",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "General Government: Central Property Management",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "General Government: Central Records and Statistics Management",
+        "confidentiality": "Moderate",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "General Government: Entitlement Event Information",
+        "confidentiality": "Moderate",
+        "availability": "Moderate",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "General Government: Executive Functions",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "General Government: General Information",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "General Government: Income Information",
+        "confidentiality": "Moderate",
+        "availability": "Moderate",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "General Government: Legislative Functions",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "General Government: Personal Identity and Authentication",
+        "confidentiality": "Moderate",
+        "availability": "Moderate",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "General Government: Representative Payee Information",
+        "confidentiality": "Moderate",
+        "availability": "Moderate",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "General Government: Taxation Management",
+        "confidentiality": "Moderate",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "General Science and Innovation: Scientific and Technological Research and Innovation",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "General Science and Innovation: Space Exploration",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },    
+    {
+        "title": "Health: Access to Care",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Health: Health Care Administration",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Health: Health Care Delivery Services",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "High",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Health: Health Care Research and Practitioner Education",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Health: Population Health Management and Consumer Safety",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Homeland Security: Border Control and Transportation",
+        "confidentiality": "Moderate",
+        "availability": "Moderate",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Homeland Security: Catastrophic Defense",
+        "confidentiality": "High",
+        "availability": "High",
+        "integrity": "High",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Homeland Security: Executive Functions of the EOP",
+        "confidentiality": "High",
+        "availability": "High",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Homeland Security: Key Asset and Critical Infrastructure Protection",
+        "confidentiality": "High",
+        "availability": "High",
+        "integrity": "High",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Human Resource Management: Benefits Management",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Human Resource Management: Compensation Management",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Human Resource Management: Employee Performance Management",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Human Resource Management: Employee Relations",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Human Resource Management: HR Strategy",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Human Resource Management: Human Resources Development",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Human Resource Management: Labor Relations",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Human Resource Management: Organization and Position Management",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Human Resource Management: Separation Management",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Human Resource Management: Staff Acquisition",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Income Security: Food and Nutrition Assistance",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Income Security: General Retirement and Disability",
+        "confidentiality": "Moderate",
+        "availability": "Moderate",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Income Security: Housing Assistance",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Income Security: Survivor Compensation",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Income Security: Unemployment Compensation",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Information & Technology Management: Information Management",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Information & Technology Management: Information System Security",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Information & Technology Management: IT Infrastructure Maintenance",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Information & Technology Management: Lifecycle/Change Management",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Information & Technology Management: Record Retention",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Information & Technology Management: System and Network Monitoring",
+        "confidentiality": "Moderate",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Information & Technology Management: System Development",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Information & Technology Management: System Maintenance",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Intelligence Operations",
+        "confidentiality": "High",
+        "availability": "High",
+        "integrity": "High",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Internal Risk Management and Mitigation: Contingency Planning",
+        "confidentiality": "Moderate",
+        "availability": "Moderate",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Internal Risk Management and Mitigation: Continuity of Operations",
+        "confidentiality": "Moderate",
+        "availability": "Moderate",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Internal Risk Management and Mitigation: Service Recovery",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "International Affairs and Commerce: Foreign Affairs",
+        "confidentiality": "High",
+        "availability": "Moderate",
+        "integrity": "High",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "International Affairs and Commerce: Global Trade",
+        "confidentiality": "High",
+        "availability": "High",
+        "integrity": "High",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "International Affairs and Commerce: International Development and Humanitarian Aid",
+        "confidentiality": "Moderate",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Knowledge Creation and Management: Advising and Consulting",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Knowledge Creation and Management: General Purpose Data and Statistics",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Knowledge Creation and Management: Knowledge Dissemination",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Knowledge Creation and Management: Research and Development",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Law Enforcement: Citizen Protection",
+        "confidentiality": "Moderate",
+        "availability": "Moderate",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Law Enforcement: Crime Prevention",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Law Enforcement: Criminal Apprehension",
+        "confidentiality": "Low",
+        "availability": "Moderate",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Law Enforcement: Criminal Investigation and Surveillance",
+        "confidentiality": "Moderate",
+        "availability": "Moderate",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Law Enforcement: Leadership Protection",
+        "confidentiality": "Moderate",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Law Enforcement: Property Protection",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Law Enforcement: Substance Control",
+        "confidentiality": "Moderate",
+        "availability": "Moderate",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Law Enforcement: Trade Law Enforcement",
+        "confidentiality": "Moderate",
+        "availability": "Moderate",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Legislative Relations: Congressional Liason Operations",
+        "confidentiality": "Moderate",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Legislative Relations: Legislation Testimony",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Legislative Relations: Legislation Tracking",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Legislative Relations: Proposal Development",
+        "confidentiality": "Moderate",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Litigation and Judicial Activities: Judicial Hearings",
+        "confidentiality": "Moderate",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Litigation and Judicial Activities: Legal Defense",
+        "confidentiality": "Moderate",
+        "availability": "Low",
+        "integrity": "High",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Litigation and Judicial Activities: Legal Investigation",
+        "confidentiality": "Moderate",
+        "availability": "Moderate",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Litigation and Judicial Activities: Legal Prosecution and Litigation",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Litigation and Judicial Activities: Resolution Facilitation",
+        "confidentiality": "Moderate",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Natural Resources: Conservation, Marine, and Land Management",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Natural Resources: Recreation Resource Management and Tourism",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Natural Resources: Water Resource Management",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Planning and Budgeting: Budget Execution",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Planning and Budgeting: Budget Formulation",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Planning and Budgeting: Budgeting & Performance Integration",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Planning and Budgeting: Capital Planning",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Planning and Budgeting: Enterprise Architecture",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Planning and Budgeting: Management Improvement",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Planning and Budgeting: Strategic Planning",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Planning and Budgeting: Tax and Fiscal Policy",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Planning and Budgeting: Workforce Planning",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Public Affairs: Customer Services",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Public Affairs: Official Information Dissemination",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Public Affairs: Product Outreach",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Public Affairs: Public Relations",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Public Goods Creation and Management: Construction",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Public Goods Creation and Management: Manufacturing",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Public Goods Creation and Management: Public Resources, Facility, and Infrastructure Management",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Regulatory Compliance and Enforcement: Inspections and Auditing",
+        "confidentiality": "Moderate",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Regulatory Compliance and Enforcement: Permits and Licensing",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Regulatory Compliance and Enforcement: Standards Setting/ Reporting Guideline",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Regulatory Development: Policy and Guidance Development",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Regulatory Development: Public Comment Tracking",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Regulatory Development: Regulatory Creation",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Regulatory Development: Rule Publication",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Revenue Collection: Debt Collection",
+        "confidentiality": "Moderate",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Revenue Collection: Federal Asset Sales",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Moderate",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Revenue Collection: User Fee Collection",
+        "confidentiality": "Low",
+        "availability": "Moderate",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Supply Chain Management: Goods Acquisition",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Supply Chain Management: Inventory Control",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Supply Chain Management: Logistics Management",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Supply Chain Management: Services Acquisition",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Transfers to State/Local Governments: Earmarked Grants",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Transfers to State/Local Governments: Formula Grants",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Transfers to State/Local Governments: Project/Competitive Grants",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Transfers to State/Local Governments: State Loans",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Transportation: Air Transportation",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Transportation: Ground Transportation",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Transportation: Space Operations",
+        "confidentiality": "Low",
+        "availability": "High",
+        "integrity": "High",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Transportation: Water Transportation",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Workforce Management: Labor Rights Management",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Workforce Management: Training and Employment",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    },
+    {
+        "title": "Workforce Management: Worker Safety",
+        "confidentiality": "Low",
+        "availability": "Low",
+        "integrity": "Low",
+        "description": "https://csrc.nist.gov/pubs/sp/800/60/v2/r1/final"
+    }
+]

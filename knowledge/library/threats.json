@@ -1,0 +1,727 @@
+{
+  "version": "1.1.0",
+  "generated_at": "2026-03-17",
+  "threats": [
+    {
+      "threat_id": "THREAT-NT-001",
+      "threat_grouping": "Natural Threat",
+      "source_threat_code": "NT-1",
+      "title": "Drought and Water Shortage",
+      "description": "Regardless of geographic location, periods of reduced rainfall are expected. For non-agricultural industries, drought may not be impactful to operations until it reaches water rationing.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": []
+    },
+    {
+      "threat_id": "THREAT-NT-002",
+      "threat_grouping": "Natural Threat",
+      "source_threat_code": "NT-2",
+      "title": "Earthquakes",
+      "description": "Earthquakes are sudden shaking events caused by movement under the earth's surface. They usually last less than one minute but can have widespread and long-lasting impact.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": []
+    },
+    {
+      "threat_id": "THREAT-NT-003",
+      "threat_grouping": "Natural Threat",
+      "source_threat_code": "NT-3",
+      "title": "Fire and Wildfires",
+      "description": "Regardless of location or building material, fire is a concern for every business and can result in total loss of technology hardware, backups, and paper records.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": []
+    },
+    {
+      "threat_id": "THREAT-NT-004",
+      "threat_grouping": "Natural Threat",
+      "source_threat_code": "NT-4",
+      "title": "Floods",
+      "description": "Flooding is the most common natural hazard and requires understanding local floodplains and event frequency. Location of critical technologies should be considered.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": []
+    },
+    {
+      "threat_id": "THREAT-NT-005",
+      "threat_grouping": "Natural Threat",
+      "source_threat_code": "NT-5",
+      "title": "Hurricanes and Tropical Storms",
+      "description": "Hurricanes and tropical storms are powerful natural disasters with high winds, flooding, and infrastructure damage that can significantly disrupt operations.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": []
+    },
+    {
+      "threat_id": "THREAT-NT-006",
+      "threat_grouping": "Natural Threat",
+      "source_threat_code": "NT-6",
+      "title": "Landslides and Debris Flow",
+      "description": "Landslides can be triggered by earthquakes, storms, volcanic eruptions, fire, and human land modification. They can occur quickly with little notice.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": []
+    },
+    {
+      "threat_id": "THREAT-NT-007",
+      "threat_grouping": "Natural Threat",
+      "source_threat_code": "NT-7",
+      "title": "Pandemic (Disease) Outbreaks",
+      "description": "Due to a wide range of scenarios, consideration should be given to both likely magnitude and business actions that can lessen operational impacts of pandemics.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": []
+    },
+    {
+      "threat_id": "THREAT-NT-008",
+      "threat_grouping": "Natural Threat",
+      "source_threat_code": "NT-8",
+      "title": "Severe Weather",
+      "description": "Severe weather is a broad category of meteorological events ranging from damaging winds to hail.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": [
+        "RISK-BC-001",
+        "RISK-BC-002",
+        "RISK-BC-003",
+        "RISK-BC-004",
+        "RISK-BC-005"
+      ]
+    },
+    {
+      "threat_id": "THREAT-NT-009",
+      "threat_grouping": "Natural Threat",
+      "source_threat_code": "NT-9",
+      "title": "Space Weather",
+      "description": "Space weather includes natural events in space that affect near-earth environment and satellites, most commonly associated with solar flares.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": []
+    },
+    {
+      "threat_id": "THREAT-NT-010",
+      "threat_grouping": "Natural Threat",
+      "source_threat_code": "NT-10",
+      "title": "Thunderstorms and Lightning",
+      "description": "Thunderstorms can occur year-round and are associated with hazardous events including flash flooding. Lightning can cause equipment damage, fires, and fatalities.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": []
+    },
+    {
+      "threat_id": "THREAT-NT-011",
+      "threat_grouping": "Natural Threat",
+      "source_threat_code": "NT-11",
+      "title": "Tornadoes",
+      "description": "Tornadoes occur globally and can happen any time of year. Strong tornadoes can destroy all but the best-built structures.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": []
+    },
+    {
+      "threat_id": "THREAT-NT-012",
+      "threat_grouping": "Natural Threat",
+      "source_threat_code": "NT-12",
+      "title": "Tsunamis",
+      "description": "All tsunamis are potentially dangerous even when not every coastline is damaged. They can strike along most coastlines and cause severe impacts.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": []
+    },
+    {
+      "threat_id": "THREAT-NT-013",
+      "threat_grouping": "Natural Threat",
+      "source_threat_code": "NT-13",
+      "title": "Volcanoes",
+      "description": "Volcanoes are geographically fixed, but fallout can create downwind impacts for thousands of miles, affecting transportation and electrical grids.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": []
+    },
+    {
+      "threat_id": "THREAT-NT-014",
+      "threat_grouping": "Natural Threat",
+      "source_threat_code": "NT-14",
+      "title": "Winter Storms and Extreme Cold",
+      "description": "Winter storms include ice storms, heavy snowfall, and extreme cold. They can significantly impact operations and transportation over wide areas.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": [
+        "RISK-BC-001",
+        "RISK-BC-002",
+        "RISK-BC-003",
+        "RISK-BC-004",
+        "RISK-BC-005"
+      ]
+    },
+    {
+      "threat_id": "THREAT-MT-001",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-1",
+      "title": "Civil or Political Unrest",
+      "description": "Civil or political unrest can be singular or widespread events that are unexpected and unpredictable and can occur anywhere at any time.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": []
+    },
+    {
+      "threat_id": "THREAT-MT-002",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-2",
+      "title": "Technology and Cybersecurity",
+      "description": "Cyber incidents are often detected after occurrence and can have broad effects across individual, organizational, geographic, and national levels. This includes ICT vulnerabilities in software and hardware impacting confidentiality, integrity, availability, and safety.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": [
+        "RISK-AC-001",
+        "RISK-AC-002",
+        "RISK-AC-003",
+        "RISK-AC-004",
+        "RISK-IR-001",
+        "RISK-IR-002",
+        "RISK-IR-003",
+        "RISK-IR-004",
+        "RISK-SC-001",
+        "RISK-SC-002",
+        "RISK-SC-003",
+        "RISK-SC-004",
+        "RISK-SC-005",
+        "RISK-SC-006"
+      ]
+    },
+    {
+      "threat_id": "THREAT-MT-003",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-3",
+      "title": "Hazardous Materials Emergencies",
+      "description": "Hazardous materials emergencies include accidental industrial incidents ranging from chemical spills to groundwater contamination.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": []
+    },
+    {
+      "threat_id": "THREAT-MT-004",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-4",
+      "title": "Nuclear, Biological and Chemical (NBC) Weapons",
+      "description": "Use of NBC weapons is a consideration, including dirty bomb scenarios that scatter radioactive, chemical, or biological material over wide areas.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": []
+    },
+    {
+      "threat_id": "THREAT-MT-005",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-5",
+      "title": "Physical Crime",
+      "description": "Physical crime includes crimes of opportunity such as theft, vandalism, riots, looting, arson, and related criminal activity.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": [
+        "RISK-AM-001",
+        "RISK-AM-002",
+        "RISK-AM-003"
+      ]
+    },
+    {
+      "threat_id": "THREAT-MT-006",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-6",
+      "title": "Terrorism and Armed Attacks",
+      "description": "Armed attacks can range from single actors to coordinated assaults and involve blade weapons, blunt objects, firearms, or explosives.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": [
+        "RISK-IR-001",
+        "RISK-IR-002",
+        "RISK-IR-003",
+        "RISK-IR-004"
+      ]
+    },
+    {
+      "threat_id": "THREAT-MT-007",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-7",
+      "title": "Utility Service Disruption",
+      "description": "Sustained loss of electricity, internet, natural gas, water, or sanitation can directly impact operations and service delivery.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": [
+        "RISK-BC-001",
+        "RISK-BC-002",
+        "RISK-BC-003",
+        "RISK-BC-004",
+        "RISK-BC-005",
+        "RISK-EX-001",
+        "RISK-EX-002",
+        "RISK-EX-003",
+        "RISK-EX-004",
+        "RISK-EX-005",
+        "RISK-EX-006",
+        "RISK-EX-007"
+      ]
+    },
+    {
+      "threat_id": "THREAT-MT-008",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-8",
+      "title": "Dysfunctional Management Practices",
+      "description": "Weak, ineffective, or incompetent management can increase risk by failing to make and support risk-based decisions, causing absent or deficient controls.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": []
+    },
+    {
+      "threat_id": "THREAT-MT-009",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-9",
+      "title": "Human Error",
+      "description": "Human error includes non-malicious and unpredictable actions such as misconfigurations, misunderstandings, and other unintentional accidents.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": [
+        "RISK-AC-001",
+        "RISK-AC-002",
+        "RISK-AC-003",
+        "RISK-AC-004",
+        "RISK-AM-001",
+        "RISK-AM-002",
+        "RISK-AM-003"
+      ]
+    },
+    {
+      "threat_id": "THREAT-MT-010",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-10",
+      "title": "Technical / Mechanical Failure",
+      "description": "Non-malicious failure due to defects in technology, materials, or workmanship can cause malfunctions, reliability concerns, or catastrophic damage.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": [
+        "RISK-AC-001",
+        "RISK-AC-002",
+        "RISK-AC-003",
+        "RISK-AC-004",
+        "RISK-AM-001",
+        "RISK-AM-002",
+        "RISK-AM-003",
+        "RISK-SC-001",
+        "RISK-SC-002",
+        "RISK-SC-003",
+        "RISK-SC-004",
+        "RISK-SC-005",
+        "RISK-SC-006"
+      ]
+    },
+    {
+      "threat_id": "THREAT-MT-011",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-11",
+      "title": "Statutory / Regulatory / Contractual Obligation",
+      "description": "Laws, regulations, and contractual obligations can weaken controls or materially change cost, competitiveness, and supply-chain exposure.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": [
+        "RISK-GV-001",
+        "RISK-GV-002",
+        "RISK-GV-003",
+        "RISK-GV-004",
+        "RISK-GV-005",
+        "RISK-GV-006",
+        "RISK-GV-007",
+        "RISK-GV-008"
+      ]
+    },
+    {
+      "threat_id": "THREAT-MT-012",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-12",
+      "title": "Redundant, Obsolete/Outdated, Toxic, or Trivial (ROTT) Data",
+      "description": "ROTT data is untrustworthy information used in business processes despite issues with currency, accuracy, integrity, or applicability.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": []
+    },
+    {
+      "threat_id": "THREAT-MT-013",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-13",
+      "title": "Artificial Intelligence and Autonomous Technologies (AAT)",
+      "description": "AAT failures can result from hardware issues, bias, algorithmic flaws, emergent properties, and unintended consequences.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": []
+    },
+    {
+      "threat_id": "THREAT-MT-014",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-14",
+      "title": "Fraud, Corruption, and/or Willful Criminal Conduct",
+      "description": "Willful criminal conduct includes fraud, corruption, theft, and illegal content with intent, knowledge, recklessness, or negligence.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": [
+        "RISK-IR-001",
+        "RISK-IR-002",
+        "RISK-IR-003",
+        "RISK-IR-004"
+      ]
+    },
+    {
+      "threat_id": "THREAT-MT-015",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-15",
+      "title": "Conflict of Interest (COI)",
+      "description": "COI exists when concerns/goals of parties are incompatible or when decision-makers can derive personal benefit from official actions.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": [
+        "RISK-GV-001",
+        "RISK-GV-002",
+        "RISK-GV-003",
+        "RISK-GV-004",
+        "RISK-GV-005",
+        "RISK-GV-006",
+        "RISK-GV-007",
+        "RISK-GV-008"
+      ]
+    },
+    {
+      "threat_id": "THREAT-MT-016",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-16",
+      "title": "Macroeconomics",
+      "description": "Macroeconomic factors can disrupt supply chains and operations through recession, sanctions, demand shocks, inflation, unemployment, and price volatility.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": [
+        "RISK-EX-001",
+        "RISK-EX-002",
+        "RISK-EX-003",
+        "RISK-EX-004",
+        "RISK-EX-005",
+        "RISK-EX-006",
+        "RISK-EX-007",
+        "RISK-GV-001",
+        "RISK-GV-002",
+        "RISK-GV-003",
+        "RISK-GV-004",
+        "RISK-GV-005",
+        "RISK-GV-006",
+        "RISK-GV-007",
+        "RISK-GV-008"
+      ]
+    },
+    {
+      "threat_id": "THREAT-MT-017",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-17",
+      "title": "Foreign Ownership, Control, or Influence (FOCI)",
+      "description": "FOCI pertains to foreign ability to influence management or operations, potentially enabling unauthorized access or adverse contract performance.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": []
+    },
+    {
+      "threat_id": "THREAT-MT-018",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-18",
+      "title": "Geopolitical",
+      "description": "Geopolitical dynamics can affect supply chains through political intervention, causing disruption, cost increases, and investment impacts.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": [
+        "RISK-EX-001",
+        "RISK-EX-002",
+        "RISK-EX-003",
+        "RISK-EX-004",
+        "RISK-EX-005",
+        "RISK-EX-006",
+        "RISK-EX-007",
+        "RISK-GV-001",
+        "RISK-GV-002",
+        "RISK-GV-003",
+        "RISK-GV-004",
+        "RISK-GV-005",
+        "RISK-GV-006",
+        "RISK-GV-007",
+        "RISK-GV-008"
+      ]
+    },
+    {
+      "threat_id": "THREAT-MT-019",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-19",
+      "title": "Sanctions",
+      "description": "Sanctions risk pertains to suspension, exclusion, or other enforcement actions on third parties that can materially affect supply chain continuity.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": []
+    },
+    {
+      "threat_id": "THREAT-MT-020",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-20",
+      "title": "Counterfeit / Non-Conforming Products",
+      "description": "Counterfeit or non-conforming products can cause safety, reliability, maintenance, and performance risks due to poor integrity and quality.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": [
+        "RISK-SA-001",
+        "RISK-SA-002",
+        "RISK-SC-001",
+        "RISK-SC-002",
+        "RISK-SC-003",
+        "RISK-SC-004",
+        "RISK-SC-005",
+        "RISK-SC-006"
+      ]
+    },
+    {
+      "threat_id": "THREAT-MT-021",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-21",
+      "title": "Operational Environment",
+      "description": "Operational environment threat pertains to hazardous place-of-performance conditions that expose organizations to operational and financial risk.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": []
+    },
+    {
+      "threat_id": "THREAT-MT-022",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-22",
+      "title": "Manufacturing and Supply",
+      "description": "Manufacturing and supply threats include capacity constraints, sole-source concentration, obsolescence, and material delivery disruptions.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": [
+        "RISK-SA-001",
+        "RISK-SA-002"
+      ]
+    },
+    {
+      "threat_id": "THREAT-MT-023",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-23",
+      "title": "Product Quality and Design",
+      "description": "Inherent design and quality problems in materials, production, logistics, or packaging can cause products/services to fail standards and specifications.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": [
+        "RISK-SA-001",
+        "RISK-SA-002"
+      ]
+    },
+    {
+      "threat_id": "THREAT-MT-024",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-24",
+      "title": "Financial",
+      "description": "Financial distress can lead to inability to meet obligations, hostile takeover exposure, and bankruptcy-related interruptions.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": []
+    },
+    {
+      "threat_id": "THREAT-MT-025",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-25",
+      "title": "Human Capital",
+      "description": "Human capital threats involve skills, knowledge, and labor conditions that can disrupt market ability to produce goods/services and meet demand.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": []
+    },
+    {
+      "threat_id": "THREAT-MT-026",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-26",
+      "title": "Transportation and Distribution",
+      "description": "Transportation/logistics disruptions can cause shipment delays, supply chain breaks, higher costs, and reputational damage.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": [
+        "RISK-BC-001",
+        "RISK-BC-002",
+        "RISK-BC-003",
+        "RISK-BC-004",
+        "RISK-BC-005"
+      ]
+    },
+    {
+      "threat_id": "THREAT-MT-027",
+      "threat_grouping": "Man-Made Threat",
+      "source_threat_code": "MT-27",
+      "title": "Infrastructure",
+      "description": "Infrastructure threats involve availability and resilience of fundamental facilities/systems such as buildings, transport networks, utilities, and equipment.",
+      "materiality_considerations": {
+        "pre_tax_income_5_percent": "Unknown",
+        "total_assets_0_5_percent": "Unknown",
+        "total_equity_1_percent": "Unknown",
+        "total_revenue_0_5_percent": "Unknown"
+      },
+      "mapped_risk_ids": []
+    }
+  ]
+}

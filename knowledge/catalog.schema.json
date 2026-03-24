@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Catalogs Dataset",
+  "$defs": {
+    "setTheoryRelationship": {
+      "type": "object",
+      "required": ["relation", "source_scope", "target_scope"],
+      "properties": {
+        "relation": {
+          "type": "string",
+          "enum": [
+            "equal",
+            "equivalent",
+            "subset_of",
+            "subset",
+            "superset_of",
+            "superset",
+            "intersects_with",
+            "intersection",
+            "overlap",
+            "no_relationship",
+            "disjoint"
+          ],
+          "description": "Set-theory relation following NIST IR 8477. Canonical values: equal, subset_of, superset_of, intersects_with, no_relationship; legacy aliases are retained for compatibility."
+        },
+        "source_scope": {
+          "type": "string",
+          "enum": [
+            "framework_control_set",
+            "normalized_control_set",
+            "control_requirement_set",
+            "risk_scenario_set",
+            "implementation_evidence_set"
+          ]
+        },
+        "target_scope": {
+          "type": "string",
+          "enum": [
+            "framework_control_set",
+            "normalized_control_set",
+            "control_requirement_set",
+            "risk_scenario_set",
+            "implementation_evidence_set"
+          ]
+        },
+        "confidence_alignment": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "rationale": {
+          "type": "string",
+          "enum": ["syntactic", "semantic", "functional"],
+          "description": "IR 8477 rationale type for this relation: syntactic, semantic, or functional."
+        }
+      }
+    },
+    "catalogControl": {
+      "type": "object",
+      "required": ["control_id", "title", "description", "family", "objectives"],
+      "properties": {
+        "uuid": {
+          "type": "string",
+          "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+        },
+        "control_id": {"type": "string"},
+        "title": {"type": "string"},
+        "description": {"type": "string"},
+        "family": {"type": "string"},
+        "control_type": {"type": "string"},
+        "sortId": {"type": "string"},
+        "objectives": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["name", "description"],
+            "properties": {
+              "name": {"type": "string"},
+              "description": {"type": "string"}
+            }
+          }
+        },
+        "subControls": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "parameters": {
+          "type": "array",
+          "items": {
+            "type": ["object", "string", "number", "boolean", "array", "null"]
+          }
+        },
+        "references": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "mapped_control_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^CTRL-[A-Z]{2,5}-[0-9]{3}$"
+          }
+        },
+        "set_theory_relationships": {
+          "type": "array",
+          "description": "Optional IR 8477-aligned set relations for control-level catalog semantics.",
+          "items": {"$ref": "#/$defs/setTheoryRelationship"}
+        }
+      }
+    },
+    "catalogEntry": {
+      "type": "object",
+      "required": [
+        "catalog_id",
+        "title",
+        "description",
+        "publisher",
+        "version",
+        "controls"
+      ],
+      "properties": {
+        "catalog_id": {
+          "type": "string",
+          "pattern": "^CATALOG-[A-Z0-9][A-Z0-9_-]{1,62}$"
+        },
+        "title": {"type": "string"},
+        "description": {"type": "string"},
+        "publisher": {"type": "string"},
+        "version": {"type": "string"},
+        "published_at": {"type": "string"},
+        "source_url": {"type": "string"},
+        "framework_type": {
+          "type": "string",
+          "enum": ["framework", "catalog", "regulation", "standard", "internal"]
+        },
+        "keywords": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "controls": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/catalogControl"}
+        }
+      }
+    }
+  },
+  "type": "object",
+  "required": ["version", "generated_at", "catalogs"],
+  "properties": {
+    "version": {"type": "string"},
+    "generated_at": {"type": "string"},
+    "catalogs": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/catalogEntry"}
+    }
+  }
+}

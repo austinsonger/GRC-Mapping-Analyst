@@ -1,0 +1,1189 @@
+{
+  "version": "2.1.0",
+  "generated_at": "2026-03-17",
+  "risks": [
+    {
+      "risk_id": "RISK-AC-001",
+      "title": "Inability to maintain individual accountability",
+      "description": "The inability to maintain accountability (e.g., asset ownership, non-repudiation of actions or inactions, etc.).",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-AC-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-AC-1",
+        "risk_grouping": "Access Control",
+        "nist_csf_function": "Protect"
+      },
+      "threat_ids": [
+        "THREAT-MT-002",
+        "THREAT-MT-009",
+        "THREAT-MT-010"
+      ]
+    },
+    {
+      "risk_id": "RISK-AC-002",
+      "title": "Improper assignment of privileged functions",
+      "description": "The inability to implement least privileges (e.g., Role-Based Access Control (RBAC), Privileged Account Management (PAM), etc.).",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-AC-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-AC-2",
+        "risk_grouping": "Access Control",
+        "nist_csf_function": "Protect"
+      },
+      "threat_ids": [
+        "THREAT-MT-002",
+        "THREAT-MT-009",
+        "THREAT-MT-010"
+      ]
+    },
+    {
+      "risk_id": "RISK-AC-003",
+      "title": "Privilege escalation",
+      "description": "The inability to restrict access to privileged functions.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-AC-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-AC-3",
+        "risk_grouping": "Access Control",
+        "nist_csf_function": "Protect"
+      },
+      "threat_ids": [
+        "THREAT-MT-002",
+        "THREAT-MT-009",
+        "THREAT-MT-010"
+      ]
+    },
+    {
+      "risk_id": "RISK-AC-004",
+      "title": "Unauthorized access",
+      "description": "The inability to restrict access to only authorized individuals, groups or services.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-AC-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-AC-4",
+        "risk_grouping": "Access Control",
+        "nist_csf_function": "Protect"
+      },
+      "threat_ids": [
+        "THREAT-MT-002",
+        "THREAT-MT-009",
+        "THREAT-MT-010"
+      ]
+    },
+    {
+      "risk_id": "RISK-AM-001",
+      "title": "Lost, damaged or stolen asset(s)",
+      "description": "Lost, damaged or stolen assets.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-CM-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-AM-1",
+        "risk_grouping": "Asset Management",
+        "nist_csf_function": "Protect"
+      },
+      "threat_ids": [
+        "THREAT-MT-009",
+        "THREAT-MT-010",
+        "THREAT-MT-005"
+      ]
+    },
+    {
+      "risk_id": "RISK-AM-002",
+      "title": "Loss of integrity through unauthorized changes",
+      "description": "Unauthorized changes that corrupt the integrity of the system / application / service.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-CM-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-AM-2",
+        "risk_grouping": "Asset Management",
+        "nist_csf_function": "Protect"
+      },
+      "threat_ids": [
+        "THREAT-MT-009",
+        "THREAT-MT-010",
+        "THREAT-MT-005"
+      ]
+    },
+    {
+      "risk_id": "RISK-AM-003",
+      "title": "Emergent properties and/or unintended consequences",
+      "description": "Emergent properties and/or unintended consequences from Artificial Intelligence & Autonomous Technologies (AAT).",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-CM-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-AM-3",
+        "risk_grouping": "Asset Management",
+        "nist_csf_function": "Protect"
+      },
+      "threat_ids": [
+        "THREAT-MT-009",
+        "THREAT-MT-010",
+        "THREAT-MT-005"
+      ]
+    },
+    {
+      "risk_id": "RISK-BC-001",
+      "title": "Business interruption",
+      "description": "Increased latency, or a service outage, that negatively impact business operations.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-CP-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-BC-1",
+        "risk_grouping": "Business Continuity",
+        "nist_csf_function": "Recover"
+      },
+      "threat_ids": [
+        "THREAT-NT-008",
+        "THREAT-NT-014",
+        "THREAT-MT-007",
+        "THREAT-MT-026"
+      ]
+    },
+    {
+      "risk_id": "RISK-BC-002",
+      "title": "Data loss / corruption",
+      "description": "The inability to maintain the confidentiality of the data (compromise) or prevent data corruption (loss).",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-CP-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-BC-2",
+        "risk_grouping": "Business Continuity",
+        "nist_csf_function": "Recover"
+      },
+      "threat_ids": [
+        "THREAT-NT-008",
+        "THREAT-NT-014",
+        "THREAT-MT-007",
+        "THREAT-MT-026"
+      ]
+    },
+    {
+      "risk_id": "RISK-BC-003",
+      "title": "Reduction in productivity",
+      "description": "Diminished user productivity.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-CP-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-BC-3",
+        "risk_grouping": "Business Continuity",
+        "nist_csf_function": "Protect"
+      },
+      "threat_ids": [
+        "THREAT-NT-008",
+        "THREAT-NT-014",
+        "THREAT-MT-007",
+        "THREAT-MT-026"
+      ]
+    },
+    {
+      "risk_id": "RISK-BC-004",
+      "title": "Information loss / corruption or system compromise due to technical attack",
+      "description": "A technical attack that compromises data, systems, applications or services (e.g., malware, phishing, hacking, etc.).",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-CP-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-BC-4",
+        "risk_grouping": "Business Continuity",
+        "nist_csf_function": "Protect"
+      },
+      "threat_ids": [
+        "THREAT-NT-008",
+        "THREAT-NT-014",
+        "THREAT-MT-007",
+        "THREAT-MT-026"
+      ]
+    },
+    {
+      "risk_id": "RISK-BC-005",
+      "title": "Information loss / corruption or system compromise due to non‐technical attack",
+      "description": "A non-technical attack that compromises data, systems, applications or services (e.g., social engineering, sabotage, etc.).",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-CP-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-BC-5",
+        "risk_grouping": "Business Continuity",
+        "nist_csf_function": "Protect"
+      },
+      "threat_ids": [
+        "THREAT-NT-008",
+        "THREAT-NT-014",
+        "THREAT-MT-007",
+        "THREAT-MT-026"
+      ]
+    },
+    {
+      "risk_id": "RISK-EX-001",
+      "title": "Loss of revenue",
+      "description": "A negative impact on the ability to generate revenue (e.g., a loss of clients or an inability to generate future revenue).",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-CP-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-EX-1",
+        "risk_grouping": "Exposure",
+        "nist_csf_function": "Recover"
+      },
+      "threat_ids": [
+        "THREAT-MT-016",
+        "THREAT-MT-018",
+        "THREAT-MT-007"
+      ]
+    },
+    {
+      "risk_id": "RISK-EX-002",
+      "title": "Cancelled contract",
+      "description": "A cancelled contract with a client or other entity for cause (e.g., failure to fulfill obligations for secure practices).",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-CP-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-EX-2",
+        "risk_grouping": "Exposure",
+        "nist_csf_function": "Recover"
+      },
+      "threat_ids": [
+        "THREAT-MT-016",
+        "THREAT-MT-018",
+        "THREAT-MT-007"
+      ]
+    },
+    {
+      "risk_id": "RISK-EX-003",
+      "title": "Diminished competitive advantage",
+      "description": "Diminished competitive advantage (e.g., lose market share, internal dysfunction, etc.).",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-CP-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-EX-3",
+        "risk_grouping": "Exposure",
+        "nist_csf_function": "Recover"
+      },
+      "threat_ids": [
+        "THREAT-MT-016",
+        "THREAT-MT-018",
+        "THREAT-MT-007"
+      ]
+    },
+    {
+      "risk_id": "RISK-EX-004",
+      "title": "Diminished reputation",
+      "description": "Diminished brand value (e.g., tarnished reputation).",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-CP-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-EX-4",
+        "risk_grouping": "Exposure",
+        "nist_csf_function": "Recover"
+      },
+      "threat_ids": [
+        "THREAT-MT-016",
+        "THREAT-MT-018",
+        "THREAT-MT-007"
+      ]
+    },
+    {
+      "risk_id": "RISK-EX-005",
+      "title": "Fines and judgements",
+      "description": "Financial damages due to fines and/or judgements from statutory / regulatory / contractual non-compliance.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-CP-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-EX-5",
+        "risk_grouping": "Exposure",
+        "nist_csf_function": "Recover"
+      },
+      "threat_ids": [
+        "THREAT-MT-016",
+        "THREAT-MT-018",
+        "THREAT-MT-007"
+      ]
+    },
+    {
+      "risk_id": "RISK-EX-006",
+      "title": "Unmitigated vulnerabilities",
+      "description": "Unmitigated technical vulnerabilities that lack compensating controls or other mitigation actions.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-CM-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-EX-6",
+        "risk_grouping": "Exposure",
+        "nist_csf_function": "Protect"
+      },
+      "threat_ids": [
+        "THREAT-MT-016",
+        "THREAT-MT-018",
+        "THREAT-MT-007"
+      ]
+    },
+    {
+      "risk_id": "RISK-EX-007",
+      "title": "System compromise",
+      "description": "A compromise of a system, application or service that affects confidentiality, integrity, availability and/or safety.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-CM-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-EX-7",
+        "risk_grouping": "Exposure",
+        "nist_csf_function": "Protect"
+      },
+      "threat_ids": [
+        "THREAT-MT-016",
+        "THREAT-MT-018",
+        "THREAT-MT-007"
+      ]
+    },
+    {
+      "risk_id": "RISK-GV-001",
+      "title": "Inability to support business processes",
+      "description": "Insufficient cybersecurity and/or privacy practices that cannot securely support the organization's technologies & processes.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-AU-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-GV-1",
+        "risk_grouping": "Governance",
+        "nist_csf_function": "Protect"
+      },
+      "threat_ids": [
+        "THREAT-MT-011",
+        "THREAT-MT-015",
+        "THREAT-MT-016",
+        "THREAT-MT-018"
+      ]
+    },
+    {
+      "risk_id": "RISK-GV-002",
+      "title": "Incorrect controls scoping",
+      "description": "Missing or incorrect cybersecurity and/or privacy controls due to incorrect or inadequate control scoping practices.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-CM-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-GV-2",
+        "risk_grouping": "Governance",
+        "nist_csf_function": "Identify"
+      },
+      "threat_ids": [
+        "THREAT-MT-011",
+        "THREAT-MT-015",
+        "THREAT-MT-016",
+        "THREAT-MT-018"
+      ]
+    },
+    {
+      "risk_id": "RISK-GV-003",
+      "title": "Lack of roles & responsibilities",
+      "description": "Insufficient cybersecurity and/or privacy roles & responsibilities that cannot securely support the organization's technologies & processes.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-AU-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-GV-3",
+        "risk_grouping": "Governance",
+        "nist_csf_function": "Identify"
+      },
+      "threat_ids": [
+        "THREAT-MT-011",
+        "THREAT-MT-015",
+        "THREAT-MT-016",
+        "THREAT-MT-018"
+      ]
+    },
+    {
+      "risk_id": "RISK-GV-004",
+      "title": "Inadequate internal practices",
+      "description": "Insufficient cybersecurity and/or privacy practices that can securely support the organization's technologies & processes.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-AU-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-GV-4",
+        "risk_grouping": "Governance",
+        "nist_csf_function": "Protect"
+      },
+      "threat_ids": [
+        "THREAT-MT-011",
+        "THREAT-MT-015",
+        "THREAT-MT-016",
+        "THREAT-MT-018"
+      ]
+    },
+    {
+      "risk_id": "RISK-GV-005",
+      "title": "Inadequate third-party practices",
+      "description": "Insufficient Cybersecurity Supply Chain Risk Management (C-SCRM) practices that cannot securely support the organization's technologies & processes.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-AU-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-GV-5",
+        "risk_grouping": "Governance",
+        "nist_csf_function": "Protect"
+      },
+      "threat_ids": [
+        "THREAT-MT-011",
+        "THREAT-MT-015",
+        "THREAT-MT-016",
+        "THREAT-MT-018"
+      ]
+    },
+    {
+      "risk_id": "RISK-GV-006",
+      "title": "Lack of oversight of internal controls",
+      "description": "The inability to demonstrate appropriate evidence of due diligence and due care in overseeing the organization's internal cybersecurity and/or privacy controls.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-CM-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-GV-6",
+        "risk_grouping": "Governance",
+        "nist_csf_function": "Identify"
+      },
+      "threat_ids": [
+        "THREAT-MT-011",
+        "THREAT-MT-015",
+        "THREAT-MT-016",
+        "THREAT-MT-018"
+      ]
+    },
+    {
+      "risk_id": "RISK-GV-007",
+      "title": "Lack of oversight of third-party controls",
+      "description": "The inability to demonstrate appropriate evidence of due diligence and due care in overseeing third-party cybersecurity and/or privacy controls.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-CM-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-GV-7",
+        "risk_grouping": "Governance",
+        "nist_csf_function": "Identify"
+      },
+      "threat_ids": [
+        "THREAT-MT-011",
+        "THREAT-MT-015",
+        "THREAT-MT-016",
+        "THREAT-MT-018"
+      ]
+    },
+    {
+      "risk_id": "RISK-GV-008",
+      "title": "Illegal content or abusive action",
+      "description": "Disruptive content or actions that negatively affect business operations (e.g., abusive content, harmful speech, threats of violence, illegal content, etc.).",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-CM-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-GV-8",
+        "risk_grouping": "Governance",
+        "nist_csf_function": "Identify"
+      },
+      "threat_ids": [
+        "THREAT-MT-011",
+        "THREAT-MT-015",
+        "THREAT-MT-016",
+        "THREAT-MT-018"
+      ]
+    },
+    {
+      "risk_id": "RISK-IR-001",
+      "title": "Inability to investigate / prosecute incidents",
+      "description": "Insufficient incident response practices that prevent the organization from investigating and/or prosecuting incidents (e.g., chain of custody corruption, available sources of evidence, etc.).",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-IR-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-IR-1",
+        "risk_grouping": "Incident Response",
+        "nist_csf_function": "Respond"
+      },
+      "threat_ids": [
+        "THREAT-MT-002",
+        "THREAT-MT-006",
+        "THREAT-MT-014"
+      ]
+    },
+    {
+      "risk_id": "RISK-IR-002",
+      "title": "Improper response to incidents",
+      "description": "The inability to appropriately respond to incidents in a timely manner.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-IR-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-IR-2",
+        "risk_grouping": "Incident Response",
+        "nist_csf_function": "Respond"
+      },
+      "threat_ids": [
+        "THREAT-MT-002",
+        "THREAT-MT-006",
+        "THREAT-MT-014"
+      ]
+    },
+    {
+      "risk_id": "RISK-IR-003",
+      "title": "Ineffective remediation actions",
+      "description": "The inability to ensure incident response actions were correct and/or effective.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-IR-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-IR-3",
+        "risk_grouping": "Incident Response",
+        "nist_csf_function": "Protect"
+      },
+      "threat_ids": [
+        "THREAT-MT-002",
+        "THREAT-MT-006",
+        "THREAT-MT-014"
+      ]
+    },
+    {
+      "risk_id": "RISK-IR-004",
+      "title": "Expense associated with managing a loss event",
+      "description": "Financial repercussions from responding to an incident or loss.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-IR-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-IR-4",
+        "risk_grouping": "Incident Response",
+        "nist_csf_function": "Respond"
+      },
+      "threat_ids": [
+        "THREAT-MT-002",
+        "THREAT-MT-006",
+        "THREAT-MT-014"
+      ]
+    },
+    {
+      "risk_id": "RISK-SA-001",
+      "title": "Inability to maintain situational awareness",
+      "description": "The inability to detect cybersecurity and/or privacy incidents (e.g., a lack of situational awareness).",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-AU-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-SA-1",
+        "risk_grouping": "Situational Awareness",
+        "nist_csf_function": "Detect"
+      },
+      "threat_ids": [
+        "THREAT-MT-022",
+        "THREAT-MT-023",
+        "THREAT-MT-020"
+      ]
+    },
+    {
+      "risk_id": "RISK-SA-002",
+      "title": "Lack of a security-minded workforce",
+      "description": "The inability to appropriately educate and train personnel to foster a security-minded workforce.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-CM-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-SA-2",
+        "risk_grouping": "Situational Awareness",
+        "nist_csf_function": "Protect"
+      },
+      "threat_ids": [
+        "THREAT-MT-022",
+        "THREAT-MT-023",
+        "THREAT-MT-020"
+      ]
+    },
+    {
+      "risk_id": "RISK-SC-001",
+      "title": "Third-party cybersecurity exposure",
+      "description": "Loss of Confidentiality, Integrity, Availability and/or Safety (CIAS) from third-party cybersecurity practices, vulnerabilities and/or incidents that affects the supply chain through impacted products and/or services.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-SC-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-SC-1",
+        "risk_grouping": "Supply Chain",
+        "nist_csf_function": "Protect"
+      },
+      "threat_ids": [
+        "THREAT-MT-002",
+        "THREAT-MT-010",
+        "THREAT-MT-020"
+      ]
+    },
+    {
+      "risk_id": "RISK-SC-002",
+      "title": "Third-party physical security exposure",
+      "description": "Loss of Confidentiality, Integrity, Availability and/or Safety (CIAS) from physical security exposure of third-party structures, facilities and/or other physical assets that affects the supply chain through impacted products and/or services.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-SC-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-SC-2",
+        "risk_grouping": "Supply Chain",
+        "nist_csf_function": "Protect"
+      },
+      "threat_ids": [
+        "THREAT-MT-002",
+        "THREAT-MT-010",
+        "THREAT-MT-020"
+      ]
+    },
+    {
+      "risk_id": "RISK-SC-003",
+      "title": "Third-party supply chain relationships, visibility and controls",
+      "description": "Loss of Confidentiality, Integrity, Availability and/or Safety (CIAS) from \"downstream\" third-party relationships, visibility and controls that affect the supply chain through impacted products and/or services.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-SC-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-SC-3",
+        "risk_grouping": "Supply Chain",
+        "nist_csf_function": "Protect"
+      },
+      "threat_ids": [
+        "THREAT-MT-002",
+        "THREAT-MT-010",
+        "THREAT-MT-020"
+      ]
+    },
+    {
+      "risk_id": "RISK-SC-004",
+      "title": "Third-party compliance / legal exposure",
+      "description": "The inability to maintain compliance due to third-party non-compliance, criminal acts, or other relevant legal action(s).",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-SC-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-SC-4",
+        "risk_grouping": "Supply Chain",
+        "nist_csf_function": "Protect"
+      },
+      "threat_ids": [
+        "THREAT-MT-002",
+        "THREAT-MT-010",
+        "THREAT-MT-020"
+      ]
+    },
+    {
+      "risk_id": "RISK-SC-005",
+      "title": "Use of product / service",
+      "description": "The misuse of the product / service in a manner that it was not designed or how it was approved for use.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-SC-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-SC-5",
+        "risk_grouping": "Supply Chain",
+        "nist_csf_function": "Protect"
+      },
+      "threat_ids": [
+        "THREAT-MT-002",
+        "THREAT-MT-010",
+        "THREAT-MT-020"
+      ]
+    },
+    {
+      "risk_id": "RISK-SC-006",
+      "title": "Reliance on the third-party",
+      "description": "The inability to continue business operations, due to the reliance on the third-party product and/or service.",
+      "likelihood": 3,
+      "impact": 3,
+      "mapped_controls": [
+        "CTRL-SC-001"
+      ],
+      "set_theory_relationships": [
+        {
+          "relation": "subset_of",
+          "rationale": "semantic",
+          "source_scope": "risk_scenario_set",
+          "target_scope": "control_requirement_set",
+          "confidence_alignment": "medium"
+        }
+      ],
+      "source_catalog": {
+        "name": "Secure Controls Framework (SCF) 2025.4 Risk Catalog",
+        "source_risk_code": "R-SC-6",
+        "risk_grouping": "Supply Chain",
+        "nist_csf_function": "Protect"
+      },
+      "threat_ids": [
+        "THREAT-MT-002",
+        "THREAT-MT-010",
+        "THREAT-MT-020"
+      ]
+    }
+  ]
+}

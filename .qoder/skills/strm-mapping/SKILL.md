@@ -59,6 +59,16 @@ Before beginning any work, confirm both parameters with the user:
 
 ## Step-by-Step Workflow
 
+### Scripts to Call (by Step)
+
+| Step | Script to call |
+|---|---|
+| Step 1 (Gather) | `node scripts/bin/strm-check-existing-mapping.mjs --focal "<Focal>" --target "<Target>" --working-dir working-directory` |
+| Step 1 (JSON input) | `node scripts/bin/strm-extract-json.mjs <file.json>` |
+| Step 4 (Write CSV) | `node scripts/bin/strm-init-mapping.mjs --focal "<Focal>" --target "<Target>" --working-dir working-directory`, then `node scripts/bin/strm-generate-filename.mjs --focal "<Focal>" --target "<Target>" [--bridge "<Bridge>"]` |
+| Post-completion (required) | `node scripts/bin/strm-validate-csv.mjs --file "<output.csv>"` |
+| Post-completion | `node scripts/bin/strm-gap-report.mjs --file "<output.csv>" --focal "<Focal>" --target "<Target>" --working-dir working-directory` |
+
 ### 1. Gather Source Files
 
 Read before generating output:
@@ -70,6 +80,18 @@ working-directory/<target-document>.csv/.pdf/.md/.json/.yml/.toml  ← Reference
 ```
 
 Search order: `working-directory/` → repo root → `knowledge/`
+
+When an input is JSON and uses HTML-tagged descriptions, run:
+
+```bash
+node scripts/bin/strm-extract-json.mjs <input.json> [output.csv]
+```
+
+Default output is `working-directory/<framework>-extracted.csv` with columns:
+`controlId,title,family,description`.
+
+Write all intermediate files (extracted control lists, partial drafts) to
+`working-directory/scratch/`. Do not use system temp directories.
 
 Check for an existing STRM file for this source→target pair before starting.
 
@@ -106,7 +128,7 @@ result      : clamp(strength, 1, 10)
 | Attribute | Default | Override Condition |
 |---|---|---|
 | `Confidence Levels` | `high` | `medium` for ambiguity; `low` for significant inference |
-| `NIST IR-8477 Rational` | `semantic` | `functional` for same outcome via different mechanisms; `syntactic` only for word-for-word similarity (<1%) |
+| `NIST IR-8477 Rational` | `semantic` | `functional` for same outcome via different mechanisms. When mapping across different regulatory domains (for example healthcare → law enforcement, financial → defense), default to `functional` unless control wording and scope are substantially identical. Use `syntactic` only for word-for-word similarity (<1%). |
 
 ### 4. Write the Output CSV
 
@@ -190,6 +212,10 @@ For `intersects_with`: append "Both address <overlap>. <Source> additionally cov
 6. **Confidence defaults to `high`** — lower only when ambiguity or inference is required.
 7. **Focus on Baseline maturity first** — prioritize baseline/foundational controls.
 8. **Adapt column header labels** — replace `<Target>` in columns I and K with the actual target document name (e.g., `ISO 27001 Requirement Title`, `ISO 27001 Requirement Description`).
+9. **Run a relationship distribution self-check after all rows are complete**:
+   - If `subset_of + superset_of = 0%`, review `equal` rows; many may actually be `subset_of`.
+   - If `equal > 50%`, review each `equal` row and confirm neither control explicitly requires more than the other.
+   - If one control says "SHALL" and the other says "SHOULD", this is typically `subset_of`, not `equal`.
 
 ---
 
@@ -199,8 +225,8 @@ Load these files **only** when explicitly requested by the user:
 
 | File | Contents |
 |---|---|
-| `knowledge/libary/risks.json` | SCF 2025.4 risk catalog |
-| `knowledge/libary/threats.json` | Threat catalog |
+| `knowledge/library/risks.json` | SCF 2025.4 risk catalog |
+| `knowledge/library/threats.json` | Threat catalog |
 
 Trigger phrases: "include risk data", "add threat context", "risk-to-control mapping",
 "threat-to-control", "use the risk library".
@@ -216,5 +242,5 @@ Chain: **Threat → Risk → Control** — apply transitivity rules when travers
 | `TEMPLATE_Set Theory Relationship Mapping (STRM).csv` | Blank template — copy, never modify |
 | `knowledge/ir8477-strm-reference.md` | Full NIST IR 8477 methodology |
 | `examples/` | Worked examples for each mapping type |
-| `knowledge/libary/risks.json` | Risk catalog (opt-in only) |
-| `knowledge/libary/threats.json` | Threat catalog (opt-in only) |
+| `knowledge/library/risks.json` | Risk catalog (opt-in only) |
+| `knowledge/library/threats.json` | Threat catalog (opt-in only) |

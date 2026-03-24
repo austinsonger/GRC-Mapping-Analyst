@@ -11,6 +11,7 @@ fast startup, and shared logic with existing Gemini tooling).
 
 - `node scripts/bin/strm-list-input-files.mjs --dir working-directory`
 - `node scripts/bin/strm-check-existing-mapping.mjs --focal "<Focal>" --target "<Target>" --working-dir working-directory`
+- `node scripts/bin/strm-extract-json.mjs <input.json> [output.csv]`
 - `node scripts/bin/strm-generate-filename.mjs --focal "<Focal>" --target "<Target>" [--bridge "<Bridge>"]`
 - `node scripts/bin/strm-build-header.mjs --target "<Target>"`
 - `node scripts/bin/strm-compute-strength.mjs --relationship <equal|subset_of|superset_of|intersects_with|not_related> [--confidence high|medium|low] [--rationale semantic|functional|syntactic]`

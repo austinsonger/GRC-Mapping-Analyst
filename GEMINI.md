@@ -190,8 +190,8 @@ For `intersects_with`: append "Both address <overlap>. <Source> additionally cov
 
 | File | Contents |
 |---|---|
-| `knowledge/libary/risks.json` | SCF 2025.4 risk catalog |
-| `knowledge/libary/threats.json` | Threat catalog |
+| `knowledge/library/risks.json` | SCF 2025.4 risk catalog |
+| `knowledge/library/threats.json` | Threat catalog |
 
 Relationship chain: **Threat → Risk → Control**
 
@@ -219,5 +219,5 @@ Rename the copy per the file naming convention above.
 | `examples/example-control-to-control.md` | ISO 27001 → SOC 2 worked example |
 | `examples/example-framework-to-control.md` | Framework-to-control example |
 | `examples/example-framework-to-regulation.md` | Framework-to-regulation example |
-| `knowledge/libary/risks.json` | SCF 2025.4 risk catalog (opt-in only) |
-| `knowledge/libary/threats.json` | Threat catalog (opt-in only) |
+| `knowledge/library/risks.json` | SCF 2025.4 risk catalog (opt-in only) |
+| `knowledge/library/threats.json` | Threat catalog (opt-in only) |

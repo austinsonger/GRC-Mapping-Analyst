@@ -72,8 +72,8 @@ For `intersects_with`, append: "Both address <overlap>. <Source> additionally co
 | Blank template | `TEMPLATE_Set Theory Relationship Mapping (STRM).csv` |
 | Methodology reference | `knowledge/ir8477-strm-reference.md` |
 | Worked examples | `examples/` |
-| Risk catalog (opt-in) | `knowledge/libary/risks.json` |
-| Threat catalog (opt-in) | `knowledge/libary/threats.json` |
+| Risk catalog (opt-in) | `knowledge/library/risks.json` |
+| Threat catalog (opt-in) | `knowledge/library/threats.json` |
 
 Never write output to the repository root.
 

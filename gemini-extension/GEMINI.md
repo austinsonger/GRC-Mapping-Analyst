@@ -87,4 +87,4 @@ For `intersects_with`, append:
 | `TEMPLATE_Set Theory Relationship Mapping (STRM).csv` | Blank template |
 
 Never write output to the repository root.
-Risk and threat files (`knowledge/libary/`) are opt-in — load only when explicitly requested.
+Risk and threat files (`knowledge/library/`) are opt-in — load only when explicitly requested.

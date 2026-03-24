@@ -178,8 +178,8 @@ Load these files **only** when the user explicitly requests risk or threat conte
 
 | File | Contents |
 |---|---|
-| `knowledge/libary/risks.json` | SCF 2025.4 risk catalog |
-| `knowledge/libary/threats.json` | Threat catalog |
+| `knowledge/library/risks.json` | SCF 2025.4 risk catalog |
+| `knowledge/library/threats.json` | Threat catalog |
 
 Relationship chain: Threat → Risk → Control
 Apply transitivity rules when traversing the chain.

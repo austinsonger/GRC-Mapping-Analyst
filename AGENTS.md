@@ -23,7 +23,7 @@ NIST IR 8477 methodology. Your primary output is structured 12-column CSV files.
 - All output files go in `working-directory/` — never the repo root
 - Completed artifacts go in `working-directory/mapping-artifacts/YYYY-MM-DD_<Focal>-to-<Target>/`
 - Never modify the blank template (`TEMPLATE_Set Theory Relationship Mapping (STRM).csv`)
-- Never load `knowledge/libary/risks.json` or `knowledge/libary/threats.json` unless explicitly requested
+- Never load `knowledge/library/risks.json` or `knowledge/library/threats.json` unless explicitly requested
 - Run from the repository root so relative paths resolve correctly
 
 ---
@@ -136,5 +136,5 @@ For direct mappings, repeat the focal name as bridge.
 | `.agents/skills/strm-mapping/SKILL.md` | Full STRM skill (Agent Skills standard) |
 | `knowledge/ir8477-strm-reference.md` | Full NIST IR 8477 methodology |
 | `examples/` | Worked mapping examples for each type |
-| `knowledge/libary/risks.json` | SCF 2025.4 risk catalog (opt-in only) |
-| `knowledge/libary/threats.json` | Threat catalog (opt-in only) |
+| `knowledge/library/risks.json` | SCF 2025.4 risk catalog (opt-in only) |
+| `knowledge/library/threats.json` | Threat catalog (opt-in only) |
