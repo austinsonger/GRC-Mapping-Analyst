@@ -11,7 +11,8 @@ fast startup, and shared logic with existing Gemini tooling).
 
 - `node scripts/bin/strm-list-input-files.mjs --dir working-directory`
 - `node scripts/bin/strm-check-existing-mapping.mjs --focal "<Focal>" --target "<Target>" --working-dir working-directory`
-- `node scripts/bin/strm-extract-json.mjs <input.json> [output.csv]`
+- `node scripts/bin/strm-extract-json.mjs <input.json> [output.csv] [--all-fields]` (default: base 4 columns + core metadata when present: `subFamily`, `subControls`, `parameters`, `objectives`, `enhancements`; nested values are summarized for readability; use `--all-fields` for full field discovery)
+- `node scripts/bin/strm-map-extracted.mjs --focal "<Focal>" --target "<Target>" --focal-csv "<focal-extracted.csv>" --target-csv "<target-extracted.csv>" --output "<output.csv>"` (builds row-level STRM mappings with relationship-specific notes based on overlap/divergence, not generic auto-generated placeholders)
 - `node scripts/bin/strm-generate-filename.mjs --focal "<Focal>" --target "<Target>" [--bridge "<Bridge>"]`
 - `node scripts/bin/strm-build-header.mjs --target "<Target>"`
 - `node scripts/bin/strm-compute-strength.mjs --relationship <equal|subset_of|superset_of|intersects_with|not_related> [--confidence high|medium|low] [--rationale semantic|functional|syntactic]`
