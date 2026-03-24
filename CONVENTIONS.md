@@ -95,11 +95,8 @@ Both address <overlap>. <Source> additionally covers <A>; <Target> additionally 
 ## CSV Output Format (12 columns)
 
 ```
-Row 1: NIST IR 8477-Based Set Theory Relationship Mapping (STRM),,,,,,Focal Document:,<Source Name>,,,,
-Row 2: Target Document:,<Target Name>,,,,,Focal Document URL:,<URL or citation>,,,,
-Row 3: (empty)
-Row 4: FDE#,FDE Name,Focal Document Element (FDE),Confidence Levels,NIST IR-8477 Rational,STRM Rationale,STRM Relationship,Strength of Relationship,<Target> Control Title,Target ID #,<Target> Control Description,Notes
-Row 5+: <data rows>
+Row 1: FDE#,FDE Name,Focal Document Element (FDE),Confidence Levels,NIST IR-8477 Rational,STRM Rationale,STRM Relationship,Strength of Relationship,Target Requirement Title,Target ID #,Target Requirement Description,Notes
+Row 2+: <data rows>
 ```
 
 Column definitions:
@@ -111,9 +108,9 @@ Column definitions:
 - F: Rationale narrative
 - G: `equal` / `subset_of` / `superset_of` / `intersects_with` / `not_related`
 - H: Integer 1–10 (computed)
-- I: Target control title
-- J: Target control ID
-- K: Target control description (first sentence)
+- I: `Target Requirement Title` — target control short title
+- J: `Target ID #` — target control ID
+- K: `Target Requirement Description` — first sentence of target control text
 - L: Notes, caveats, gaps
 
 ---
@@ -169,7 +166,7 @@ Place the completed CSV inside the dated folder when mapping is fully complete.
 - [ ] Rationale (Column F) is filled for every row
 - [ ] Strength score matches the formula output
 - [ ] No target control IDs are invented — all IDs come from the actual target document
-- [ ] `<Target>` placeholder replaced with actual target name in column headers
+- [ ] Columns I and K use exact names: `Target Requirement Title` and `Target Requirement Description`
 - [ ] Baseline/foundational controls mapped before advanced tiers
 - [ ] Risk and threat files loaded only when explicitly requested
 

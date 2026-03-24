@@ -38,7 +38,7 @@ Use this **before starting** any new mapping to avoid duplication.
 
 1. Run `strm_list_input_files` to see available framework files.
 2. Run `strm_check_existing_mapping` to check for prior work.
-3. Run `strm_build_csv_header` to generate the CSV header block.
+3. Copy the template (`TEMPLATE_Set Theory Relationship Mapping (STRM).csv`) — it contains the single header row. Data starts at Row 2.
 4. For each FDE → RDE pair:
    a. Determine relationship, confidence, and rationale type semantically.
    b. Run `strm_compute_strength` to get the strength score.

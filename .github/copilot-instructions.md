@@ -24,11 +24,8 @@ apply the following rules to all suggestions and completions.
 All output CSV files must follow this 12-column structure:
 
 ```
-Row 1: NIST IR 8477-Based Set Theory Relationship Mapping (STRM),,,,,,Focal Document:,<Source Name>,,,,
-Row 2: Target Document:,<Target Name>,,,,,Focal Document URL:,<URL or citation>,,,,
-Row 3: (empty)
-Row 4: FDE#,FDE Name,Focal Document Element (FDE),Confidence Levels,NIST IR-8477 Rational,STRM Rationale,STRM Relationship,Strength of Relationship,<Target> Control Title,Target ID #,<Target> Control Description,Notes
-Row 5+: <data rows>
+Row 1: FDE#,FDE Name,Focal Document Element (FDE),Confidence Levels,NIST IR-8477 Rational,STRM Rationale,STRM Relationship,Strength of Relationship,Target Requirement Title,Target ID #,Target Requirement Description,Notes
+Row 2+: <data rows>
 ```
 
 ### File Naming Convention
@@ -104,5 +101,5 @@ When deriving A→C from A→B and B→C:
 - Always compute Strength via formula; never assign arbitrarily.
 - One FDE can produce multiple rows (one row per matching target control).
 - Never invent target control IDs — use only IDs from the actual target document.
-- Replace `<Target>` in column headers with the actual target framework name.
+- Columns I and K use fixed names: `Target Requirement Title` and `Target Requirement Description`.
 - Risk and threat files (`risks.json`, `threats.json`) are opt-in — load only when explicitly requested.

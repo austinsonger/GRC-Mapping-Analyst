@@ -236,9 +236,9 @@ All outputs are 12-column CSV files:
 | F | `STRM Rationale` | Narrative explaining why the relationship holds |
 | G | `STRM Relationship` | `equal` / `subset_of` / `superset_of` / `intersects_with` / `not_related` |
 | H | `Strength of Relationship` | Integer 1–10 (computed via formula) |
-| I | `<Target> Control Title` | Target control short title |
+| I | `Target Requirement Title` | Target control short title |
 | J | `Target ID #` | Target control ID |
-| K | `<Target> Control Description` | First sentence of target control text |
+| K | `Target Requirement Description` | First sentence of target control text |
 | L | `Notes` | Scope caveats, gaps, or flags |
 
 ### Strength Score Formula

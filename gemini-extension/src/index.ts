@@ -91,18 +91,15 @@ function generateStrmFilename(
 // CSV header builder
 // ---------------------------------------------------------------------------
 
-function buildCsvHeader(
-  sourceName: string,
-  sourceUrl: string,
-  targetName: string,
-): string[] {
-  const targetShort = targetName.split(' ')[0]; // first word for column headers
-  return [
-    `NIST IR 8477-Based Set Theory Relationship Mapping (STRM),,,,,,Focal Document:,${sourceName},,,,`,
-    `Target Document:,${targetName},,,,,Focal Document URL:,${sourceUrl},,,,`,
-    ``,
-    `FDE#,FDE Name,Focal Document Element (FDE),Confidence Levels,NIST IR-8477 Rational,STRM Rationale,STRM Relationship,Strength of Relationship,${targetShort} Control Title,Target ID #,${targetShort} Control Description,Notes`,
-  ];
+// Returns the single header row matching the canonical STRM template.
+// The template has one row (column headers); data begins at Row 2.
+const CSV_HEADER_ROW =
+  'FDE#,FDE Name,Focal Document Element (FDE),Confidence Levels,NIST IR-8477 Rational,' +
+  'STRM Rationale,STRM Relationship,Strength of Relationship,' +
+  'Target Requirement Title,Target ID #,Target Requirement Description,Notes';
+
+function buildCsvHeader(): string[] {
+  return [CSV_HEADER_ROW];
 }
 
 // ---------------------------------------------------------------------------
@@ -343,27 +340,20 @@ server.registerTool(
   'strm_build_csv_header',
   {
     description:
-      'Returns the first four rows of a STRM CSV (header block) ready to paste into the output file. ' +
-      'Use this when starting a new CSV.',
-    inputSchema: z.object({
-      source_name: z
-        .string()
-        .describe('Full name of the source (focal) document, e.g. "NIST Cybersecurity Framework 2.0".'),
-      source_url: z
-        .string()
-        .describe('URL or citation for the source document.'),
-      target_name: z
-        .string()
-        .describe('Full name of the target (reference) document, e.g. "ISO/IEC 27001:2022".'),
-    }).shape,
+      'Returns the single STRM CSV header row (Row 1) matching the canonical template. ' +
+      'Data rows begin at Row 2. Use this when starting a new CSV to get the exact column headers.',
+    inputSchema: z.object({}).shape,
   },
-  async ({ source_name, source_url, target_name }) => {
-    const rows = buildCsvHeader(source_name, source_url, target_name);
+  async () => {
+    const rows = buildCsvHeader();
     return {
       content: [
         {
           type: 'text' as const,
-          text: JSON.stringify({ csv_header_rows: rows, row_count: rows.length }, null, 2),
+          text: JSON.stringify({
+            csv_header_row: rows[0],
+            note: 'This is Row 1. Add data starting at Row 2. Columns: FDE#, FDE Name, Focal Document Element (FDE), Confidence Levels, NIST IR-8477 Rational, STRM Rationale, STRM Relationship, Strength of Relationship, Target Requirement Title, Target ID #, Target Requirement Description, Notes',
+          }, null, 2),
         },
       ],
     };

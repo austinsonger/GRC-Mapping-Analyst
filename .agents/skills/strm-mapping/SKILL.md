@@ -186,15 +186,9 @@ Examples:
 #### Required CSV Structure (12 columns)
 
 ```
-Row 1: NIST IR 8477-Based Set Theory Relationship Mapping (STRM),,,,,,Focal Document:,<Full Source Document Name>,,,,
-Row 2: Target Document:,<Full Target Document Name>,,,,,Focal Document URL:,<URL or citation>,,,,
-Row 3: (empty)
-Row 4: FDE#,FDE Name,Focal Document Element (FDE),Confidence Levels,NIST IR-8477 Rational,STRM Rationale,STRM Relationship,Strength of Relationship,<Target> Control Title,Target ID #,<Target> Control Description,Notes
-Row 5+: <data rows>
+Row 1: FDE#,FDE Name,Focal Document Element (FDE),Confidence Levels,NIST IR-8477 Rational,STRM Rationale,STRM Relationship,Strength of Relationship,Target Requirement Title,Target ID #,Target Requirement Description,Notes
+Row 2+: <data rows>
 ```
-
-> Replace `<Target>` in the column headers with the short name of the target document
-> (e.g., `ISO 27001`, `NIST CSF`, `CIS`).
 
 Column definitions:
 
@@ -208,9 +202,9 @@ Column definitions:
 | F | `STRM Rationale` | Narrative explaining both controls and why the relationship holds |
 | G | `STRM Relationship` | `equal` / `subset_of` / `superset_of` / `intersects_with` / `not_related` |
 | H | `Strength of Relationship` | Integer 1–10 |
-| I | `<Target> Control Title` | Target document control short title |
+| I | `Target Requirement Title` | Target document control short title |
 | J | `Target ID #` | Target document control ID |
-| K | `<Target> Control Description` | First sentence of the target control description |
+| K | `Target Requirement Description` | First sentence of the target control description |
 | L | `Notes` | Scope differences, gaps, or caveats |
 
 ### 5. Rationale Writing Pattern
@@ -271,7 +265,7 @@ When generating reverse mappings (Target → Source):
 5. **Do not invent target control IDs** — every `Target ID #` must come from the actual target document provided.
 6. **Confidence defaults to `high`** — use `medium` only when interpretation or jurisdictional ambiguity exists; use `low` only when the mapping requires significant inference.
 7. **Focus on Baseline maturity first** — when a framework has maturity tiers, prioritize baseline/foundational controls before advanced ones.
-8. **Adapt column header labels** — replace generic `<Target>` placeholders in headers with the actual target document name for clarity.
+8. **Use exact column header names** — columns I and K are `Target Requirement Title` and `Target Requirement Description` as shown in the template.
 
 ---
 

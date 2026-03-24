@@ -112,15 +112,12 @@ Set Theory Relationship Mapping (STRM)_ [(<Focal>-to-<Bridge>)-to-<Target>] - <F
 
 CSV structure:
 ```
-Row 1: NIST IR 8477-Based Set Theory Relationship Mapping (STRM),,,,,,Focal Document:,<Source Name>,,,,
-Row 2: Target Document:,<Target Name>,,,,,Focal Document URL:,<URL or citation>,,,,
-Row 3: (empty)
-Row 4: FDE#,FDE Name,Focal Document Element (FDE),Confidence Levels,NIST IR-8477 Rational,STRM Rationale,STRM Relationship,Strength of Relationship,<Target> Control Title,Target ID #,<Target> Control Description,Notes
-Row 5+: <data rows>
+Row 1: FDE#,FDE Name,Focal Document Element (FDE),Confidence Levels,NIST IR-8477 Rational,STRM Rationale,STRM Relationship,Strength of Relationship,Target Requirement Title,Target ID #,Target Requirement Description,Notes
+Row 2+: <data rows>
 ```
 
 Column mapping: A=FDE#, B=FDE Name, C=FDE text, D=Confidence, E=Rationale type,
-F=Rationale text, G=Relationship, H=Strength, I=Target title, J=Target ID, K=Target description, L=Notes
+F=Rationale text, G=Relationship, H=Strength, I=Target Requirement Title, J=Target ID #, K=Target Requirement Description, L=Notes
 
 ---
 
