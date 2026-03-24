@@ -103,6 +103,21 @@ Open the repository folder in VS Code with Copilot enabled.
 
 Open the repository folder in Cursor.
 
+#### Qoder
+
+**Agent Skill** (auto-discovered from `.qoder/skills/strm-mapping/`) — no install needed.
+
+```bash
+qoder   # run from repo root
+```
+
+To install at user-level (available across all projects):
+```bash
+cp -r .qoder/skills/strm-mapping ~/.qoder/skills/strm-mapping
+```
+
+Invoke with `/strm-mapping` or let Qoder activate it implicitly.
+
 #### Aider
 
 ```bash
@@ -128,6 +143,7 @@ read:
 | Google Gemini CLI (extension) | `gemini-extension/` | Link via `gemini extensions link` | Yes (after link + build) |
 | GitHub Copilot (repo instructions) | `.github/copilot-instructions.md` | `.github/` | Yes |
 | Cursor AI (legacy rules) | `.cursor/rules/strm-mapping.mdc` | `.cursor/rules/` | Yes (`alwaysApply: true`) |
+| Qoder | `.qoder/skills/strm-mapping/SKILL.md` | Repo root | Yes (auto-discovered) |
 | Aider | `CONVENTIONS.md` | Repo root | No (`--read` required) |
 
 See `platform-skills/PLATFORM-COMPATIBILITY.md` for format details and what changed for each platform.

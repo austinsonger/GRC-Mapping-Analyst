@@ -50,6 +50,7 @@ Body content: Markdown instructions. No format restrictions. Recommended: keep u
 | Google Gemini CLI | Context file | `GEMINI.md` | Yes (hierarchical search) |
 | Google Gemini CLI | Extension (MCP) | `gemini-extension/` | Yes (after `extensions link`) |
 | GitHub Copilot | Repo instructions | `.github/copilot-instructions.md` | Yes (auto-injected) |
+| Qoder | Agent Skill | `.qoder/skills/strm-mapping/SKILL.md` | Yes (auto-discovered) |
 | Aider | Conventions file | `CONVENTIONS.md` | No (explicit `--read`) |
 
 ---
@@ -298,6 +299,45 @@ Cursor versions. The `.cursor/rules/` entry remains as a fallback.
 
 ---
 
+### Qoder — `.qoder/skills/strm-mapping/SKILL.md`
+
+**Format:** Agent Skills standard (YAML frontmatter + Markdown body) — same spec as
+`.agents/skills/strm-mapping/SKILL.md`
+
+**Loading mechanism:** Qoder discovers skills from two locations:
+
+1. `~/.qoder/skills/{skill-name}/SKILL.md` — user-level (personal, persistent across projects)
+2. `.qoder/skills/{skill-name}/SKILL.md` — project-level ← **where our skill lives**
+
+Project-level skills take precedence over user-level skills when both exist.
+
+**Activation:** Type `/strm-mapping` in the chat or let Qoder activate the skill
+implicitly when the task description matches the `description` frontmatter field.
+
+**Install to user-level (optional):**
+```bash
+cp -r .qoder/skills/strm-mapping ~/.qoder/skills/strm-mapping
+```
+
+After copying, the skill is available in all Qoder projects without needing the repo.
+
+**Key constraints:**
+- Same `name`/`description` format as the open standard
+- `name` must be lowercase with hyphens only and match the parent directory name
+- Body should be under 500 lines
+
+**Relation to `.agents/skills/`:** Qoder also reads `.agents/skills/` (Agent Skills
+standard), so the skill at `.agents/skills/strm-mapping/SKILL.md` is also discovered.
+The `.qoder/skills/` copy is provided as the idiomatic Qoder-specific path for users who
+install to `~/.qoder/skills/`.
+
+**Changes from `.agents/skills/` version:**
+- `compatibility` field notes "Designed for Qoder"
+- "Working Directory" section uses generic phrasing
+- Otherwise identical — methodology and CSV format are the same
+
+---
+
 ### Aider — `CONVENTIONS.md`
 
 **Format:** Plain Markdown, no required frontmatter
@@ -357,6 +397,7 @@ When the STRM methodology changes in `.agents/skills/strm-mapping/SKILL.md`, upd
 | `.cursor/rules/strm-mapping.mdc` | Workflow, formula, rationale pattern, quality rules |
 | `CONVENTIONS.md` | Formula, rationale pattern, quality checklist |
 | `gemini-extension/GEMINI.md` | Tool usage guide sections that reference methodology |
+| `.qoder/skills/strm-mapping/SKILL.md` | Mirror all methodology changes; keep Qoder-specific compatibility note |
 | `README.md` | Output format table, formula, installation instructions |
 
 The canonical source of truth for methodology is `.agents/skills/strm-mapping/SKILL.md`.
