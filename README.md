@@ -1,12 +1,18 @@
 # STRM Mapping — NIST IR 8477 GRC Toolkit
 
-A Claude Code skill and supporting knowledge base for producing **Set-Theory Relationship Mapping (STRM)** CSV files between any two cybersecurity frameworks, control catalogs, or regulatory requirements, following the [NIST IR 8477](https://nvlpubs.nist.gov/nistpubs/ir/2023/NIST.IR.8477.pdf) methodology.
+A multi-platform AI assistant skill and supporting knowledge base for producing
+**Set-Theory Relationship Mapping (STRM)** CSV files between any two cybersecurity
+frameworks, control catalogs, or regulatory requirements, following the
+[NIST IR 8477](https://nvlpubs.nist.gov/nistpubs/ir/2023/NIST.IR.8477.pdf) methodology.
+
+Supported AI coding assistants: **Claude Code**, **Google Gemini CLI**,
+**OpenAI Codex CLI**, **GitHub Copilot**, **Cursor AI**, and **Aider**.
 
 ---
 
-## What This Skill Does
+## What This Toolkit Does
 
-The `strm-mapping` skill instructs Claude Code to:
+The STRM mapping skill instructs AI assistants to:
 
 - Map, crosswalk, align, or gap-analyze **any two** cybersecurity documents (frameworks, regulations, audits, policy catalogs, risk libraries, or threat catalogs)
 - Assign mathematically precise STRM relationship types (`equal`, `subset_of`, `superset_of`, `intersects_with`, `not_related`) with scored strength and rationale to each control pair
@@ -17,51 +23,92 @@ The `strm-mapping` skill instructs Claude Code to:
 
 ## Prerequisites
 
-| Requirement | Version / Notes |
+| Requirement | Notes |
 |---|---|
-| [Claude Code](https://docs.anthropic.com/claude-code) | Latest release |
-| Claude Code skills support | Skills must be enabled in your Claude Code installation |
 | Git | For cloning the repository |
+| Any supported AI assistant | See platform table below |
 
-No additional runtime dependencies are required. All inputs and outputs are plain CSV/Markdown/JSON files.
+No additional runtime dependencies. All inputs and outputs are plain CSV/Markdown/JSON files.
 
 ---
 
 ## Installation
 
-### 1. Clone the Repository
+### Step 1: Clone the Repository
 
 ```bash
 git clone https://github.com/austinsonger/strm-Mapping.git
 cd strm-Mapping
 ```
 
-### 2. Install the Skill into Claude Code
+### Step 2: Install for Your AI Assistant
 
-Copy the skill directory into your Claude Code user skills folder:
+All AI assistants must be started from the **repository root** so relative paths resolve correctly.
+
+#### Claude Code
 
 ```bash
 cp -r skills/strm-mapping ~/.claude/skills/strm-mapping
+claude   # run from repo root
 ```
 
-> **Note:** The default Claude Code skills path is `~/.claude/skills/`. If your installation uses a different path, adjust the destination accordingly.
+Verify: ask Claude `What skills do you have available?` — you should see `strm-mapping`.
 
-### 3. Verify Installation
+#### Google Gemini CLI
 
-Start Claude Code from the **repository root** (this is required so relative paths resolve correctly):
+`GEMINI.md` is already at the repo root — no installation step needed.
 
 ```bash
-cd /path/to/strm-Mapping
-claude
+gemini   # run from repo root
 ```
 
-Ask Claude to confirm the skill is loaded:
+#### OpenAI Codex CLI
 
-```
-What skills do you have available?
+`AGENTS.md` is already at the repo root — no installation step needed.
+
+```bash
+codex    # run from repo root
 ```
 
-You should see `strm-mapping` listed.
+#### GitHub Copilot
+
+`.github/copilot-instructions.md` is already committed — Copilot loads it automatically
+for all chat interactions in this repository.
+
+#### Cursor AI
+
+`.cursor/rules/strm-mapping.mdc` is already committed — Cursor loads it automatically
+with `alwaysApply: true`.
+
+Open the repo folder in Cursor.
+
+#### Aider
+
+```bash
+aider --read CONVENTIONS.md
+```
+
+Or add to `.aider.conf.yml`:
+```yaml
+read:
+  - CONVENTIONS.md
+```
+
+---
+
+## Platform File Reference
+
+| Platform | Instruction File | Location | Auto-Loaded |
+|---|---|---|---|
+| Claude Code | `skills/strm-mapping/SKILL.md` | Copy to `~/.claude/skills/strm-mapping/` | Yes (after install) |
+| Google Gemini CLI | `GEMINI.md` | Repository root | Yes |
+| OpenAI Codex CLI | `AGENTS.md` | Repository root | Yes |
+| GitHub Copilot | `.github/copilot-instructions.md` | `.github/` | Yes |
+| Cursor AI | `.cursor/rules/strm-mapping.mdc` | `.cursor/rules/` | Yes |
+| Aider | `CONVENTIONS.md` | Repository root | No (`--read` required) |
+
+See `platform-skills/PLATFORM-COMPATIBILITY.md` for a detailed breakdown of the
+format differences and adaptations made for each platform.
 
 ---
 
