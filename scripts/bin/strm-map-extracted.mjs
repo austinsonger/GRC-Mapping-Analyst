@@ -66,9 +66,15 @@ function tokenize(text) {
     .filter((w) => w.length >= 3 && !STOPWORDS.has(w));
 }
 
+function firstSentence(text) {
+  const t = clean(text);
+  const m = t.match(/^[^.!?]{1,420}[.!?]/);
+  return m ? m[0] : t.slice(0, 420);
+}
+
 function tokenFreq(control) {
   const freq = new Map();
-  for (const t of tokenize(`${control.title} ${control.description} ${control.family}`)) {
+  for (const t of tokenize(`${control.title} ${firstSentence(control.description)} ${control.family}`)) {
     freq.set(t, (freq.get(t) ?? 0) + 1);
   }
   return freq;
@@ -126,7 +132,8 @@ function parseControls(csvText) {
     .filter((c) => c.controlId);
 }
 
-function classify(src, tgt, lexical, overlap) {
+function classify(src, tgt, metrics) {
+  const { score, titleLexical, lexical, overlap, margin } = metrics;
   const srcText = `${src.title} ${src.description}`;
   const tgtText = `${tgt.title} ${tgt.description}`;
   const srcStrong = hasStrong(srcText);
@@ -134,7 +141,11 @@ function classify(src, tgt, lexical, overlap) {
   const srcWeak = hasWeak(srcText);
   const tgtWeak = hasWeak(tgtText);
 
-  if (lexical >= 0.55 && overlap >= 2 && srcStrong === tgtStrong) return 'equal';
+  const modalConflict = (srcStrong && tgtWeak) || (srcWeak && tgtStrong);
+  const strongEqualByTitle = titleLexical >= 0.56 && overlap >= 1 && !modalConflict;
+  const strongEqualByBlend = score >= 0.43 && titleLexical >= 0.34 && overlap >= 1 && margin >= 0.02 && !modalConflict;
+  const moderateEqualByBlend = score >= 0.30 && titleLexical >= 0.24 && overlap >= 1 && margin >= 0.008 && !modalConflict;
+  if (strongEqualByTitle || strongEqualByBlend || moderateEqualByBlend) return 'equal';
   if (srcStrong && tgtWeak) return 'subset_of';
   if (srcWeak && tgtStrong) return 'superset_of';
   if (lexical >= 0.16 || overlap > 0) return 'intersects_with';
@@ -171,9 +182,11 @@ const targetText = await fs.readFile(targetCsv, 'utf8');
 
 const focalControls = parseControls(focalText).map((c) => {
   const freq = tokenFreq(c);
+  const titleFreq = new Map(tokenize(c.title).map((t) => [t, 1]));
   return {
     ...c,
     freq,
+    titleFreq,
     tokens: tokenSet(freq),
     themes: themeHits(`${c.title} ${c.description} ${c.family}`),
   };
@@ -181,9 +194,11 @@ const focalControls = parseControls(focalText).map((c) => {
 
 const targetControls = parseControls(targetText).map((c) => {
   const freq = tokenFreq(c);
+  const titleFreq = new Map(tokenize(c.title).map((t) => [t, 1]));
   return {
     ...c,
     freq,
+    titleFreq,
     tokens: tokenSet(freq),
     themes: themeHits(`${c.title} ${c.description} ${c.family}`),
   };
@@ -193,15 +208,23 @@ const outRows = [buildHeader(targetName)];
 
 for (const src of focalControls) {
   let best = null;
+  let secondBestScore = -1;
   for (const tgt of targetControls) {
     const lexical = jaccard(src.tokens, tgt.tokens);
+    const titleLexical = jaccard(tokenSet(src.titleFreq), tokenSet(tgt.titleFreq));
     const overlap = [...src.themes].filter((x) => tgt.themes.has(x)).length;
-    const score = lexical * 0.7 + Math.min(0.3, overlap * 0.15);
-    if (!best || score > best.score) best = { tgt, lexical, overlap, score };
+    const score = titleLexical * 0.45 + lexical * 0.40 + Math.min(0.15, overlap * 0.075);
+    if (!best || score > best.score) {
+      if (best) secondBestScore = Math.max(secondBestScore, best.score);
+      best = { tgt, lexical, titleLexical, overlap, score };
+    } else {
+      secondBestScore = Math.max(secondBestScore, score);
+    }
   }
 
   const tgt = best.tgt;
-  let relationship = classify(src, tgt, best.lexical, best.overlap);
+  const margin = best.score - (secondBestScore < 0 ? 0 : secondBestScore);
+  let relationship = classify(src, tgt, { ...best, margin });
   if (relationship === 'not_related' && best.score > 0.08) relationship = 'intersects_with';
 
   const conf = confidence(best.score);
