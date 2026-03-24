@@ -160,7 +160,7 @@ function classify(src, tgt, metrics) {
 }
 
 function confidence(score) {
-  if (score >= 0.35) return 'high';
+  if (score >= 0.3) return 'high';
   return 'medium';
 }
 
@@ -186,9 +186,9 @@ function buildNotes(rel, sharedThemes, srcUnique, tgtUnique) {
 
 function collectReviewFlags({ score, margin, conf, relationship }) {
   const flags = [];
-  if (margin < 0.015) flags.push('low_margin');
-  if (score < 0.2) flags.push('weak_signal');
-  if (conf !== 'high') flags.push('medium_confidence');
+  if (margin < 0.01) flags.push('low_margin');
+  if (score < 0.12) flags.push('weak_signal');
+  if (conf !== 'high' && score < 0.2) flags.push('medium_confidence');
   if (relationship === 'not_related') flags.push('verify_not_related');
   return flags;
 }
