@@ -5,6 +5,11 @@ on:
     tags:
       - "v*"
   workflow_dispatch:
+    inputs:
+      tag_name:
+        description: "Release tag to create/use (example: v1.2.3)"
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -40,6 +45,8 @@ jobs:
       - name: Publish GitHub release assets
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ github.event_name == 'workflow_dispatch' && inputs.tag_name || github.ref_name }}
+          target_commitish: ${{ github.sha }}
           files: |
             gemini-extension/release/darwin.arm64.strm-mapping.tar.gz
             gemini-extension/release/linux.x64.strm-mapping.tar.gz
