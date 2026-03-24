@@ -27,9 +27,15 @@ fast startup, and shared logic with existing Gemini tooling).
 - Scripts are deterministic and enforce the NIST IR 8477 formula where applicable.
 - Output artifacts are created under `working-directory/mapping-artifacts/`.
 - The validator checks required columns, required row fields, formula correctness, duplicate `FDE# + Target ID #` pairs, and unresolved `<Target>` placeholders in header labels.
+- The validator also runs distribution self-check warnings (for example: no `subset_of/superset_of`, or `equal` ratio above 50%) and rationale-quality warnings (missing explicit IDs/shared objective language).
 - If `--focal-csv` is provided, the validator reports unmapped focal controls; add `--strict-coverage` to fail on coverage gaps.
 - `strm-map-extracted.mjs` output is **draft mapping only**. A manual row-by-row adjudication pass is required before declaring completion.
 - `strm-run-workflow.mjs` enforces phase gating: it always stops at `manual_qa_required` unless `--manual-qa-done` is explicitly provided.
 - `strm-init-review-log.mjs` writes a `Manual_Review_*.md` scaffold in the artifact folder using the required row-change format.
 - Run `strm-validate-csv.mjs` and `strm-gap-report.mjs` only **after** manual review edits are complete.
 - Manual review logs (`Manual_Review_*.md`) must include a reason for each changed row (not just the row id and relationship delta).
+
+## Regression Test
+
+- `node scripts/tests/strm-regression.mjs` (runs focused regression checks for CSV validation and draft mapping top-k/flag behavior)
+- `node scripts/tests/strm-rationale-regression.mjs` (runs edge-case rationale checks for SHALL/SHOULD mismatch, containment wording, and rationale structure warnings)
