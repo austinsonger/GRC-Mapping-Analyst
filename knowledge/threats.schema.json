@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Threats Dataset",
+  "type": "object",
+  "required": ["version", "generated_at", "threats"],
+  "properties": {
+    "version": {"type": "string"},
+    "generated_at": {"type": "string"},
+    "threats": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "threat_id",
+          "threat_grouping",
+          "source_threat_code",
+          "title",
+          "description",
+          "materiality_considerations"
+        ],
+        "properties": {
+          "threat_id": {"type": "string", "pattern": "^THREAT-[A-Z]{2,6}-[0-9]{3}$"},
+          "threat_grouping": {"type": "string"},
+          "source_threat_code": {"type": "string", "pattern": "^[A-Z]{2,6}-[0-9]{1,3}$"},
+          "title": {"type": "string"},
+          "description": {"type": "string"},
+          "mapped_risk_ids": {
+            "type": "array",
+            "description": "Optional linked risk identifiers from risks.json.",
+            "items": {"type": "string", "pattern": "^RISK-[A-Z]{2,8}-[0-9]{3}$"}
+          },
+          "materiality_considerations": {
+            "type": "object",
+            "required": [
+              "pre_tax_income_5_percent",
+              "total_assets_0_5_percent",
+              "total_equity_1_percent",
+              "total_revenue_0_5_percent"
+            ],
+            "properties": {
+              "pre_tax_income_5_percent": {"type": "string"},
+              "total_assets_0_5_percent": {"type": "string"},
+              "total_equity_1_percent": {"type": "string"},
+              "total_revenue_0_5_percent": {"type": "string"}
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

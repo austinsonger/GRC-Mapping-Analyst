@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Mappings Dataset",
+  "$defs": {
+    "setTheoryRelationship": {
+      "type": "object",
+      "required": ["relation", "source_scope", "target_scope"],
+      "properties": {
+        "relation": {
+          "type": "string",
+          "enum": ["equal", "equivalent", "subset_of", "subset", "superset_of", "superset", "intersects_with", "intersection", "overlap", "no_relationship", "disjoint"],
+          "description": "Set-theory relation following NIST IR 8477. Canonical values: equal, subset_of, superset_of, intersects_with, no_relationship; legacy aliases are retained for compatibility."
+        },
+        "source_scope": {
+          "type": "string",
+          "enum": [
+            "framework_control_set",
+            "normalized_control_set",
+            "control_requirement_set",
+            "risk_scenario_set",
+            "implementation_evidence_set"
+          ]
+        },
+        "target_scope": {
+          "type": "string",
+          "enum": [
+            "framework_control_set",
+            "normalized_control_set",
+            "control_requirement_set",
+            "risk_scenario_set",
+            "implementation_evidence_set"
+          ]
+        },
+        "confidence_alignment": {
+          "type": "string",
+          "enum": ["high", "medium", "low"],
+          "description": "Optional confidence estimate for the set-theory relation."
+        },
+        "rationale": {
+          "type": "string",
+          "enum": ["syntactic", "semantic", "functional"],
+          "description": "IR 8477 rationale type for this relation: syntactic, semantic, or functional."
+        }
+      }
+    }
+  },
+  "type": "object",
+  "required": ["version", "generated_at", "mappings"],
+  "properties": {
+    "version": {"type": "string"},
+    "generated_at": {"type": "string"},
+    "mappings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "mapping_id",
+          "source_framework",
+          "source_control",
+          "target_framework",
+          "target_control",
+          "normalized_control_id",
+          "relationship",
+          "confidence"
+        ],
+        "properties": {
+          "mapping_id": {"type": "string"},
+          "source_framework": {"type": "string"},
+          "source_control": {"type": "string"},
+          "source_control_parts": {
+            "type": "array",
+            "description": "Optional sub-part identifiers for source_control (for example NIST 800-53 control enhancements like (1), (2), or statement parts).",
+            "items": {"type": "string"}
+          },
+          "target_framework": {"type": "string"},
+          "target_control": {"type": "string"},
+          "target_control_parts": {
+            "type": "array",
+            "description": "Optional sub-part identifiers for target_control (for example NIST 800-53 control enhancements like (1), (2), or statement parts).",
+            "items": {"type": "string"}
+          },
+          "parameter": {
+            "type": "object",
+            "description": "Optional framework-specific parameterization for this mapping (for example review frequency, retention period, sampling cadence).",
+            "properties": {
+              "source": {
+                "type": "object",
+                "description": "Parameter values expressed in the source framework context.",
+                "additionalProperties": {
+                  "type": ["string", "number", "integer", "boolean", "array"]
+                }
+              },
+              "target": {
+                "type": "object",
+                "description": "Parameter values expressed in the target framework context.",
+                "additionalProperties": {
+                  "type": ["string", "number", "integer", "boolean", "array"]
+                }
+              }
+            },
+            "additionalProperties": false
+          },
+          "normalized_control_id": {"type": "string", "pattern": "^CTRL-[A-Z]{2,5}-[0-9]{3}$"},
+          "relationship": {"type": "string", "enum": ["equivalent", "overlap", "partial"]},
+          "confidence": {"type": "string", "enum": ["high", "medium", "low"]},
+          "rationale": {"type": "string"},
+          "set_theory_relationships": {
+            "type": "array",
+            "description": "Optional IR 8477-aligned set relations. Preserves legacy relationship field for compatibility.",
+            "items": {"$ref": "#/$defs/setTheoryRelationship"}
+          }
+        }
+      }
+    }
+  }
+}

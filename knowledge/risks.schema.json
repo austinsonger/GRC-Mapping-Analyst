@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Risks Dataset",
+  "$defs": {
+    "setTheoryRelationship": {
+      "type": "object",
+      "required": ["relation", "source_scope", "target_scope"],
+      "properties": {
+        "relation": {
+          "type": "string",
+          "enum": ["equal", "equivalent", "subset_of", "subset", "superset_of", "superset", "intersects_with", "intersection", "overlap", "no_relationship", "disjoint"],
+          "description": "Set-theory relation following NIST IR 8477. Canonical values: equal, subset_of, superset_of, intersects_with, no_relationship; legacy aliases are retained for compatibility."
+        },
+        "source_scope": {
+          "type": "string",
+          "enum": [
+            "framework_control_set",
+            "normalized_control_set",
+            "control_requirement_set",
+            "risk_scenario_set",
+            "implementation_evidence_set"
+          ]
+        },
+        "target_scope": {
+          "type": "string",
+          "enum": [
+            "framework_control_set",
+            "normalized_control_set",
+            "control_requirement_set",
+            "risk_scenario_set",
+            "implementation_evidence_set"
+          ]
+        },
+        "confidence_alignment": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "rationale": {
+          "type": "string",
+          "enum": ["syntactic", "semantic", "functional"],
+          "description": "IR 8477 rationale type for this relation: syntactic, semantic, or functional."
+        }
+      }
+    }
+  },
+  "type": "object",
+  "required": ["version", "generated_at", "risks"],
+  "properties": {
+    "version": {"type": "string"},
+    "generated_at": {"type": "string"},
+    "risks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["risk_id", "title", "description", "likelihood", "impact", "mapped_controls"],
+        "properties": {
+          "risk_id": {"type": "string", "pattern": "^RISK-[A-Z]{2,8}-[0-9]{3}$"},
+          "title": {"type": "string"},
+          "description": {"type": "string"},
+          "likelihood": {"type": "integer", "minimum": 1, "maximum": 5},
+          "impact": {"type": "integer", "minimum": 1, "maximum": 5},
+          "mapped_controls": {
+            "type": "array",
+            "items": {"type": "string", "pattern": "^CTRL-[A-Z]{2,5}-[0-9]{3}$"}
+          },
+          "threat_ids": {
+            "type": "array",
+            "description": "Optional linked threat identifiers from threats.json.",
+            "items": {"type": "string", "pattern": "^THREAT-[A-Z]{2,6}-[0-9]{3}$"}
+          },
+          "source_catalog": {
+            "type": "object",
+            "description": "Optional source catalog metadata when risks are imported from an external risk taxonomy.",
+            "properties": {
+              "name": {"type": "string"},
+              "source_risk_code": {"type": "string"},
+              "risk_grouping": {"type": "string"},
+              "nist_csf_function": {"type": "string"}
+            },
+            "additionalProperties": false
+          },
+          "set_theory_relationships": {
+            "type": "array",
+            "description": "Optional IR 8477-aligned set relations for risk-to-control or risk-to-risk semantics.",
+            "items": {"$ref": "#/$defs/setTheoryRelationship"}
+          }
+        }
+      }
+    }
+  }
+}
