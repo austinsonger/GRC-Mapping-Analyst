@@ -60,6 +60,11 @@ const relationCounts = {
   intersects_with: 0,
   not_related: 0,
 };
+const rationaleCounts = {
+  semantic: 0,
+  functional: 0,
+  syntactic: 0,
+};
 
 const unresolvedTargetHeaders = header
   .filter((h) => String(h ?? '').toLowerCase().includes('<target>'))
@@ -84,6 +89,10 @@ for (let i = 1; i < rows.length; i += 1) {
   warnings.push(...result.warnings);
   if (Object.hasOwn(relationCounts, result.relationship)) {
     relationCounts[result.relationship] += 1;
+  }
+  const rationaleType = String(row[idx.rationaleType] ?? '').trim();
+  if (Object.hasOwn(rationaleCounts, rationaleType)) {
+    rationaleCounts[rationaleType] += 1;
   }
 
   const fdeNum = String(row[idx.fdeNum] ?? '').trim();
@@ -113,6 +122,18 @@ if (dataRows > 0) {
   if (equalPct > 50) {
     warnings.push(
       `Distribution self-check: equal = ${equalPct.toFixed(2)}% (>50%). Reconfirm that scope and obligation are truly identical for equal rows.`
+    );
+  }
+
+  const rationaleEntries = Object.entries(rationaleCounts);
+  const [dominantRationale, dominantCount] = rationaleEntries.reduce(
+    (best, entry) => (entry[1] > best[1] ? entry : best),
+    ['semantic', 0]
+  );
+  const dominantPct = (dominantCount / dataRows) * 100;
+  if (dominantPct >= 95) {
+    warnings.push(
+      `Rationale distribution self-check: ${dominantRationale} = ${dominantPct.toFixed(2)}% (${dominantCount}/${dataRows}). Review whether semantic vs functional distinctions are being applied row-by-row.`
     );
   }
 }
@@ -159,6 +180,7 @@ const payload = {
   errorCount: errors.length,
   warningCount: warnings.length,
   relationshipCounts: relationCounts,
+  rationaleCounts,
   errors,
   warnings,
 };

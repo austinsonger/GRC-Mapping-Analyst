@@ -164,6 +164,51 @@ function confidence(score) {
   return 'medium';
 }
 
+function inferRationaleType(src, tgt, metrics) {
+  const { score, lexical, titleLexical, overlap } = metrics;
+  const srcText = `${src.title} ${src.description}`;
+  const tgtText = `${tgt.title} ${tgt.description}`;
+  const srcMechanisms = new Set();
+  const tgtMechanisms = new Set();
+
+  const mechanismPatterns = [
+    ['backup', /\b(back[\s-]?up|restore|recovery)\b/i],
+    ['redundancy', /\b(redundan|failover|high availability|resilien|replicat)\b/i],
+    ['review', /\b(review|recertif|attest)\b/i],
+    ['authentication', /\b(authenticat|login|credential|password|mfa)\b/i],
+    ['encryption', /\b(encrypt|cipher|tls|ssl|cryptograph)\b/i],
+    ['monitoring', /\b(log|monitor|audit trail|telemetry|alert)\b/i],
+    ['reporting', /\b(report|notify|escalat|communicat)\b/i],
+  ];
+
+  for (const [label, pattern] of mechanismPatterns) {
+    if (pattern.test(srcText)) srcMechanisms.add(label);
+    if (pattern.test(tgtText)) tgtMechanisms.add(label);
+  }
+
+  const wordingClose =
+    titleLexical >= 0.45 ||
+    lexical >= 0.38 ||
+    (score >= 0.34 && overlap >= 1);
+
+  if (wordingClose) return 'semantic';
+
+  const srcThemes = src.themes ?? new Set();
+  const tgtThemes = tgt.themes ?? new Set();
+  const sameThemeDifferentMechanism = overlap > 0 || (srcThemes.size > 0 && tgtThemes.size > 0);
+  const mechanismSignalsDiffer =
+    srcMechanisms.size > 0 &&
+    tgtMechanisms.size > 0 &&
+    [...srcMechanisms].every((label) => !tgtMechanisms.has(label)) &&
+    [...tgtMechanisms].every((label) => !srcMechanisms.has(label));
+
+  if (mechanismSignalsDiffer || sameThemeDifferentMechanism || hasStrong(srcText) || hasStrong(tgtText)) {
+    return 'functional';
+  }
+
+  return 'semantic';
+}
+
 function relationTail(rel) {
   if (rel === 'equal') return 'The requirements are materially equivalent in scope and intent.';
   if (rel === 'subset_of') return `${focalName} is narrower and fits within ${targetName} scope.`;
@@ -244,7 +289,7 @@ for (const src of focalControls) {
     if (relationship === 'not_related' && candidate.score > 0.08) relationship = 'intersects_with';
 
     const conf = confidence(candidate.score);
-    const rationaleType = 'functional';
+    const rationaleType = inferRationaleType(src, tgt, candidate);
     const strength = computeStrength(relationship, conf, rationaleType).score;
 
     const sharedThemes = [...src.themes].filter((t) => tgt.themes.has(t));

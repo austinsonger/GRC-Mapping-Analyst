@@ -23,6 +23,7 @@
 - Added tag_name input parameter documentation for flexible release management
 - Updated CI/CD integration patterns to include manual workflow execution
 - Revised release management strategy to support both automated and manual triggers
+- Updated workflow configuration to include automatic tag creation logic for manual releases
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -95,7 +96,7 @@ cmd_validate --> lib_core
 
 **Diagram sources**
 - [README.md:1-30](file://README.md#L1-L30)
-- [scripts/README.md:1-31](file://scripts/README.md#L1-L31)
+- [scripts/README.md:1-42](file://scripts/README.md#L1-L42)
 - [scripts/lib/strm-core.mjs:1-343](file://scripts/lib/strm-core.mjs#L1-L343)
 - [.github/workflows/release-gemini-extension.yml:1-69](file://.github/workflows/release-gemini-extension.yml#L1-L69)
 - [gemini-extension/package.json:1-26](file://gemini-extension/package.json#L1-L26)
@@ -106,7 +107,7 @@ cmd_validate --> lib_core
 
 **Section sources**
 - [README.md:1-30](file://README.md#L1-L30)
-- [scripts/README.md:1-31](file://scripts/README.md#L1-L31)
+- [scripts/README.md:1-42](file://scripts/README.md#L1-L42)
 
 ## Core Components
 - Deterministic scripts for mapping, initialization, gap reporting, and validation
@@ -123,7 +124,7 @@ Key responsibilities:
 - Support both automated and manual release management
 
 **Section sources**
-- [scripts/README.md:10-31](file://scripts/README.md#L10-L31)
+- [scripts/README.md:10-42](file://scripts/README.md#L10-L42)
 - [scripts/lib/strm-core.mjs:35-57](file://scripts/lib/strm-core.mjs#L35-L57)
 - [scripts/lib/strm-core.mjs:81-97](file://scripts/lib/strm-core.mjs#L81-L97)
 - [scripts/lib/strm-core.mjs:206-265](file://scripts/lib/strm-core.mjs#L206-L265)
@@ -535,3 +536,31 @@ The STRM Mapping scripts provide a robust foundation for automating cybersecurit
 - Metrics: Track mapping duration, relationship distribution, and validation pass rates
 - Alerting: Notify on failed validations, missing artifacts, or threshold breaches
 - Dashboards: Visualize coverage trends and compliance status over time
+
+### Enhanced GitHub Actions Workflow Configuration
+
+The release workflow now supports dual trigger mechanisms for maximum flexibility:
+
+**Event Configuration**
+- `push`: Triggers on tag pushes with pattern `v*`
+- `workflow_dispatch`: Enables manual execution with configurable inputs
+
+**Manual Trigger Inputs**
+- `tag_name`: Required string input for specifying release tag (e.g., `v1.2.3`)
+
+**Dynamic Tag Resolution**
+- Uses environment variable `RELEASE_TAG` that resolves to either:
+  - Manual input: `inputs.tag_name` when triggered manually
+  - Automatic: `github.ref_name` when triggered by tag push
+
+**Automatic Tag Management**
+- For manual triggers, automatically creates and pushes tags if they don't exist
+- Ensures tag consistency between local execution and remote repository state
+
+**Security Permissions**
+- Requires `contents: write` permission for creating releases and managing tags
+
+**Section sources**
+- [.github/workflows/release-gemini-extension.yml:3-12](file://.github/workflows/release-gemini-extension.yml#L3-L12)
+- [.github/workflows/release-gemini-extension.yml:22-39](file://.github/workflows/release-gemini-extension.yml#L22-L39)
+- [.github/workflows/release-gemini-extension.yml:14-15](file://.github/workflows/release-gemini-extension.yml#L14-L15)

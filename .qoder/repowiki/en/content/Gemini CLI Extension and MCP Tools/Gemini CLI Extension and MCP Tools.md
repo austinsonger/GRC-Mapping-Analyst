@@ -17,7 +17,15 @@
 - [scripts/bin/strm-validate-csv.mjs](file://scripts/bin/strm-validate-csv.mjs)
 - [scripts/lib/strm-core.mjs](file://scripts/lib/strm-core.mjs)
 - [README.md](file://README.md)
+- [.github/workflows/release-gemini-extension.yml](file://.github/workflows/release-gemini-extension.yml)
 </cite>
+
+## Update Summary
+**Changes Made**
+- Enhanced release workflow documentation to cover manual trigger capabilities
+- Added improved tag management procedures for the Gemini CLI Extension release process
+- Updated build and distribution documentation to reflect the new GitHub Actions workflow
+- Added security considerations for release automation and tag management
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -29,7 +37,8 @@
 7. [Performance Considerations](#performance-considerations)
 8. [Troubleshooting Guide](#troubleshooting-guide)
 9. [Security and Production Deployment](#security-and-production-deployment)
-10. [Conclusion](#conclusion)
+10. [Release Workflow and Distribution](#release-workflow-and-distribution)
+11. [Conclusion](#conclusion)
 
 ## Introduction
 This document describes the Gemini CLI Extension and Model Context Protocol (MCP) Tools that power deterministic STRM (Set-Theory Relationship Mapping) operations for cybersecurity frameworks. It explains how the MCP server exposes tools for computing strength scores, generating filenames, building CSV headers, validating rows, discovering inputs, and checking for existing mappings. It also documents the TypeScript-based processing engine, the slash command integration via prompt-driven TOML commands, and the build and distribution pipeline. Guidance is included for installation, configuration, server initialization, troubleshooting, and secure, production-ready deployment.
@@ -56,6 +65,9 @@ S_bin_init["bin/strm-init-mapping.mjs"]
 S_bin_val["bin/strm-validate-csv.mjs"]
 S_lib_core["lib/strm-core.mjs"]
 end
+subgraph ".github/workflows/"
+W_release["release-gemini-extension.yml"]
+end
 A_src --> S_lib_core
 A_cmd_map --> S_bin_init
 A_cmd_map --> S_bin_val
@@ -67,6 +79,7 @@ A_scripts --> A_manifest
 A_scripts --> A_pkg
 A_scripts --> A_ts
 A_scripts --> A_src
+W_release --> A_scripts
 ```
 
 **Diagram sources**
@@ -81,6 +94,7 @@ A_scripts --> A_src
 - [scripts/bin/strm-init-mapping.mjs:1-58](file://scripts/bin/strm-init-mapping.mjs#L1-L58)
 - [scripts/bin/strm-validate-csv.mjs:1-77](file://scripts/bin/strm-validate-csv.mjs#L1-L77)
 - [scripts/lib/strm-core.mjs:1-343](file://scripts/lib/strm-core.mjs#L1-L343)
+- [.github/workflows/release-gemini-extension.yml:1-69](file://.github/workflows/release-gemini-extension.yml#L1-L69)
 
 **Section sources**
 - [package.json:1-26](file://gemini-extension/package.json#L1-L26)
@@ -95,12 +109,14 @@ A_scripts --> A_src
 - TypeScript Processing Engine: Shared utilities for CSV parsing, validation, filename generation, and directory scanning used by both the MCP server and CLI scripts.
 - Slash Command Prompts: TOML files that define Gemini CLI slash commands (/strm:init, /strm:map, /strm:gap-analysis, /strm:validate) with step-by-step workflows.
 - Build and Distribution: TypeScript compilation, source maps, declarations, and packaging script for multi-platform releases.
+- GitHub Actions Release Pipeline: Automated release workflow with manual trigger capabilities and improved tag management.
 
 Key responsibilities:
 - Deterministic STRM scoring and validation
 - File discovery and naming consistency
 - CSV header construction and row validation
 - Cross-platform packaging for the extension
+- Automated release management with manual oversight
 
 **Section sources**
 - [src/index.ts:263-522](file://gemini-extension/src/index.ts#L263-L522)
@@ -110,9 +126,10 @@ Key responsibilities:
 - [commands/strm/gap-analysis.toml:1-19](file://gemini-extension/commands/strm/gap-analysis.toml#L1-L19)
 - [commands/strm/validate.toml:1-18](file://gemini-extension/commands/strm/validate.toml#L1-L18)
 - [scripts/package.mjs:47-100](file://gemini-extension/scripts/package.mjs#L47-L100)
+- [.github/workflows/release-gemini-extension.yml:1-69](file://.github/workflows/release-gemini-extension.yml#L1-L69)
 
 ## Architecture Overview
-The MCP server initializes, registers tools, and listens over STDIO. The extension manifest defines how Gemini CLI launches the server. The shared core library ensures consistent behavior across the MCP server and CLI scripts.
+The MCP server initializes, registers tools, and listens over STDIO. The extension manifest defines how Gemini CLI launches the server. The shared core library ensures consistent behavior across the MCP server and CLI scripts. The GitHub Actions workflow automates the release process with manual trigger capabilities and improved tag management.
 
 ```mermaid
 sequenceDiagram
@@ -225,6 +242,7 @@ Val --> End
 - TypeScript configuration targets ES2022 with NodeNext module resolution, emits declarations and source maps, and compiles from src to dist.
 - Build scripts compile TS, watch for development, run the built server, and package releases.
 - The packaging script validates required assets, stages them, and archives per platform/arch.
+- GitHub Actions workflow automates the complete release process with manual trigger capabilities.
 
 ```mermaid
 flowchart TD
@@ -237,17 +255,20 @@ Dev --> PackageAll["npm run package:all (multi-platform)"]
 Package --> Stage["Stage release assets"]
 PackageAll --> Stage
 Stage --> Archive["Archive to tar.gz or zip"]
+Archive --> Release["GitHub Release"]
 ```
 
 **Diagram sources**
 - [tsconfig.json:2-14](file://gemini-extension/tsconfig.json#L2-L14)
 - [package.json:7-12](file://gemini-extension/package.json#L7-L12)
 - [scripts/package.mjs:47-100](file://gemini-extension/scripts/package.mjs#L47-L100)
+- [.github/workflows/release-gemini-extension.yml:19-69](file://.github/workflows/release-gemini-extension.yml#L19-L69)
 
 **Section sources**
 - [tsconfig.json:1-18](file://gemini-extension/tsconfig.json#L1-L18)
 - [package.json:1-26](file://gemini-extension/package.json#L1-L26)
 - [scripts/package.mjs:1-106](file://gemini-extension/scripts/package.mjs#L1-L106)
+- [.github/workflows/release-gemini-extension.yml:1-69](file://.github/workflows/release-gemini-extension.yml#L1-L69)
 
 ### MCP Tools: Initialization, Mapping, Validation, and Gap Analysis Operations
 - Initialization: Generates a properly formatted CSV filename and writes the header row to a dated artifact directory.
@@ -350,5 +371,75 @@ Common issues and resolutions:
 - [scripts/package.mjs:47-100](file://gemini-extension/scripts/package.mjs#L47-L100)
 - [README.md:24-29](file://README.md#L24-L29)
 
+## Release Workflow and Distribution
+
+### Automated Release Pipeline
+The Gemini CLI Extension includes a comprehensive GitHub Actions workflow that automates the entire release process with enhanced manual trigger capabilities and improved tag management.
+
+**Manual Trigger Capabilities**
+The release workflow supports manual triggering through the GitHub Actions interface, allowing developers to create releases on-demand with custom tag names:
+
+- **Trigger Method**: `workflow_dispatch` event
+- **Required Input**: `tag_name` (e.g., `v1.2.3`)
+- **Flexibility**: Creates releases even when no matching tag exists on the repository
+
+**Enhanced Tag Management**
+The workflow includes sophisticated tag management logic:
+
+- **Automatic Tag Creation**: When running manually, the workflow checks if a tag exists on the remote origin
+- **Conditional Logic**: Uses `if` conditions to differentiate between automatic and manual triggers
+- **Git Operations**: Creates and pushes tags when they don't exist, ensuring proper versioning
+
+**Release Process Automation**
+The workflow automates the complete release lifecycle:
+
+```mermaid
+flowchart TD
+Start["Push to tag or Manual Trigger"] --> Check["Check Event Type"]
+Check --> Auto["Automatic (push: tags)"]
+Check --> Manual["Manual (workflow_dispatch)"]
+Auto --> TagCheck["Use existing tag"]
+Manual --> TagExists{"Tag Exists?"}
+TagExists --> Yes["Use provided tag"]
+TagExists --> No["Create & Push Tag"]
+Yes --> Build["Setup Node.js"]
+No --> CreateTag["Create and push tag"]
+CreateTag --> Build
+Build --> Install["Install Dependencies"]
+Install --> BuildExt["Build Extension"]
+BuildExt --> Package["Package Assets"]
+Package --> Release["Publish GitHub Release"]
+```
+
+**Diagram sources**
+- [.github/workflows/release-gemini-extension.yml:3-12](file://.github/workflows/release-gemini-extension.yml#L3-L12)
+- [.github/workflows/release-gemini-extension.yml:28-39](file://.github/workflows/release-gemini-extension.yml#L28-L39)
+
+**Section sources**
+- [.github/workflows/release-gemini-extension.yml:1-69](file://.github/workflows/release-gemini-extension.yml#L1-L69)
+
+### Multi-Platform Packaging
+The release workflow generates platform-specific packages for distribution:
+
+- **macOS ARM64**: `darwin.arm64.strm-mapping.tar.gz`
+- **Linux x64**: `linux.x64.strm-mapping.tar.gz`
+- **Windows x64**: `win32.x64.strm-mapping.zip`
+
+Each package contains the complete extension with all required assets including the manifest, context file, commands, compiled JavaScript, and dependencies.
+
+**Section sources**
+- [scripts/package.mjs:57-96](file://gemini-extension/scripts/package.mjs#L57-L96)
+- [.github/workflows/release-gemini-extension.yml:60-69](file://.github/workflows/release-gemini-extension.yml#L60-L69)
+
+### Security Considerations for Release Automation
+- **Permissions Management**: The workflow uses minimal required permissions (`contents: write`)
+- **Environment Variables**: Uses `RELEASE_TAG` environment variable for consistent tag handling
+- **Commit Verification**: Targets specific commit SHA for release consistency
+- **Asset Validation**: Ensures all required files exist before packaging
+
+**Section sources**
+- [.github/workflows/release-gemini-extension.yml:14-16](file://.github/workflows/release-gemini-extension.yml#L14-L16)
+- [scripts/package.mjs:71-81](file://gemini-extension/scripts/package.mjs#L71-L81)
+
 ## Conclusion
-The Gemini CLI Extension and MCP Tools provide a robust, deterministic foundation for STRM mapping across cybersecurity frameworks. The MCP server encapsulates validated, repeatable operations, while the shared TypeScript core ensures consistency with CLI scripts. The slash command prompts streamline end-to-end workflows from initialization to gap analysis and validation. With proper build and packaging processes, the extension is ready for secure, production-grade distribution and operation.
+The Gemini CLI Extension and MCP Tools provide a robust, deterministic foundation for STRM mapping across cybersecurity frameworks. The MCP server encapsulates validated, repeatable operations, while the shared TypeScript core ensures consistency with CLI scripts. The slash command prompts streamline end-to-end workflows from initialization to gap analysis and validation. With the enhanced release workflow featuring manual trigger capabilities and improved tag management, the extension is ready for secure, production-grade distribution and operation. The automated GitHub Actions pipeline ensures reliable, consistent releases with flexible manual oversight for critical deployments.

@@ -27,6 +27,15 @@ function countDataRows(csvText) {
   return lines.length - 1;
 }
 
+function parseDataRows(csvText) {
+  return csvText
+    .trim()
+    .split('\n')
+    .slice(1)
+    .filter(Boolean)
+    .map((line) => line.split(','));
+}
+
 const repoRoot = process.cwd();
 const validateScript = path.join(repoRoot, 'scripts/bin/strm-validate-csv.mjs');
 const mapScript = path.join(repoRoot, 'scripts/bin/strm-map-extracted.mjs');
@@ -40,6 +49,10 @@ try {
   const mapFocalCsv = path.join(tmpDir, 'map-focal.csv');
   const mapTargetCsv = path.join(tmpDir, 'map-target.csv');
   const outTopK = path.join(tmpDir, 'draft-topk.csv');
+  const rationaleFocalCsv = path.join(tmpDir, 'rationale-focal.csv');
+  const rationaleTargetCsv = path.join(tmpDir, 'rationale-target.csv');
+  const rationaleOut = path.join(tmpDir, 'draft-rationale.csv');
+  const dominatedRationaleCsv = path.join(tmpDir, 'dominated-rationale.csv');
 
   await fs.writeFile(
     targetCsv,
@@ -148,6 +161,73 @@ try {
   assert.equal(countDataRows(mappedOut), 4, 'output CSV should have expected data row count');
   assert.ok(topKRun.json.flaggedRows < topKRun.json.rowsWritten, 'flagging should not mark every row by default');
 
+  await fs.writeFile(
+    rationaleFocalCsv,
+    [
+      'controlId,title,family,description',
+      'F-S,Access Review,Basic,Organizations must review user access rights at least quarterly.',
+      'F-F,Data Backup,Basic,Organizations must back up critical systems and restore operations after disruption.',
+    ].join('\n') + '\n',
+    'utf8'
+  );
+
+  await fs.writeFile(
+    rationaleTargetCsv,
+    [
+      'controlId,title,family,description',
+      'T-S,Quarterly Access Reviews,Basic,Organizations must review user access rights every quarter.',
+      'T-F,High Availability,Basic,Organizations must maintain redundant infrastructure to keep critical systems available during disruption.',
+    ].join('\n') + '\n',
+    'utf8'
+  );
+
+  const rationaleRun = runNode(
+    mapScript,
+    [
+      '--focal', 'Focal',
+      '--target', 'Target',
+      '--focal-csv', rationaleFocalCsv,
+      '--target-csv', rationaleTargetCsv,
+      '--output', rationaleOut,
+    ],
+    repoRoot
+  );
+  assert.equal(rationaleRun.result.status, 0, 'rationale map run should succeed');
+
+  const rationaleRows = parseDataRows(await fs.readFile(rationaleOut, 'utf8'));
+  assert.equal(rationaleRows.length, 2, 'rationale test should emit one row per focal control');
+  assert.equal(
+    rationaleRows[0][4],
+    'semantic',
+    'close wording and intent matches should default to semantic rationale'
+  );
+  assert.equal(
+    rationaleRows[1][4],
+    'functional',
+    'same outcome through different mechanisms should use functional rationale'
+  );
+
+  await fs.writeFile(
+    dominatedRationaleCsv,
+    [
+      'FDE#,FDE Name,Focal Document Element (FDE),Confidence Levels,NIST IR-8477 Rational,STRM Rationale,STRM Relationship,Strength of Relationship,Target Requirement Title,Target ID #,Target Requirement Description,Notes',
+      'F-1,Access Governance,Must enforce account access and reviews.,high,functional,Focal F-1 requires account access reviews. Target T-1 requires authentication and account review. Both address access governance.,intersects_with,4,Target Access,T-1,Must enforce authentication and account review.,',
+      'F-2,Resilience Planning,Should plan resilience testing.,medium,functional,Focal F-2 requires resilience planning. Target T-2 requires incident reporting. Both address operational resilience.,intersects_with,3,Target Incident,T-2,Must detect and report incidents.,',
+    ].join('\n') + '\n',
+    'utf8'
+  );
+
+  const dominatedRationaleRun = runNode(
+    validateScript,
+    ['--file', dominatedRationaleCsv],
+    repoRoot
+  );
+  assert.equal(dominatedRationaleRun.result.status, 0, 'validator should warn, not fail, on dominated rationale types');
+  assert.ok(
+    dominatedRationaleRun.json.warnings.some((w) => w.includes('Rationale distribution self-check')),
+    'validator should warn when one rationale type dominates every row'
+  );
+
   console.log(
     JSON.stringify(
       {
@@ -156,6 +236,8 @@ try {
           'validator duplicate/header checks',
           'validator strict coverage check',
           'map-extracted top-k and review flag behavior',
+          'map-extracted rationale type calibration',
+          'validator rationale distribution warning',
         ],
         tmpDir,
       },

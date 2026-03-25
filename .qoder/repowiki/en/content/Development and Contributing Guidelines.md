@@ -13,6 +13,8 @@
 - [gemini-extension/commands/strm/init.toml](file://gemini-extension/commands/strm/init.toml)
 - [gemini-extension/commands/strm/validate.toml](file://gemini-extension/commands/strm/validate.toml)
 - [gemini-extension/commands/strm/gap-analysis.toml](file://gemini-extension/commands/strm/gap-analysis.toml)
+- [gemini-extension/scripts/package.mjs](file://gemini-extension/scripts/package.mjs)
+- [.github/workflows/release-gemini-extension.yml](file://.github/workflows/release-gemini-extension.yml)
 - [platform-skills/PLATFORM-COMPATIBILITY.md](file://platform-skills/PLATFORM-COMPATIBILITY.md)
 - [.agents/skills/strm-mapping/SKILL.md](file://.agents/skills/strm-mapping/SKILL.md)
 - [.agents/skills/strm-mapping/agents/openai.yaml](file://.agents/skills/strm-mapping/agents/openai.yaml)
@@ -25,6 +27,13 @@
 - [TEMPLATE_Set Theory Relationship Mapping (STRM).csv](file://TEMPLATE_Set Theory Relationship Mapping (STRM).csv)
 </cite>
 
+## Update Summary
+**Changes Made**
+- Added comprehensive CI/CD release process documentation with manual trigger capabilities
+- Enhanced tag management procedures for development workflows
+- Updated release management section to reflect automated release pipeline
+- Added detailed workflow dispatch configuration and tag validation processes
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -35,14 +44,15 @@
 7. [Performance Considerations](#performance-considerations)
 8. [Troubleshooting Guide](#troubleshooting-guide)
 9. [Contribution Guidelines](#contribution-guidelines)
-10. [Extension Points and Customization](#extension-points-and-customization)
-11. [Release Management and Backward Compatibility](#release-management-and-backward-compatibility)
-12. [Debugging and Optimization Strategies](#debugging-and-optimization-strategies)
-13. [Templates and Documentation Standards](#templates-and-documentation-standards)
-14. [Conclusion](#conclusion)
+10. [CI/CD Release Process](#cicd-release-process)
+11. [Extension Points and Customization](#extension-points-and-customization)
+12. [Release Management and Backward Compatibility](#release-management-and-backward-compatibility)
+13. [Debugging and Optimization Strategies](#debugging-and-optimization-strategies)
+14. [Templates and Documentation Standards](#templates-and-documentation-standards)
+15. [Conclusion](#conclusion)
 
 ## Introduction
-This document defines the development and contributing guidelines for the STRM toolkit. It consolidates the coding conventions, development workflow, testing and quality assurance procedures, contribution and pull request processes, extension points for new mapping types and AI assistants, and operational practices for maintaining backward compatibility and releasing updates. The guidance is grounded in the repository’s conventions and skills documentation.
+This document defines the development and contributing guidelines for the STRM toolkit. It consolidates the coding conventions, development workflow, testing and quality assurance procedures, contribution and pull request processes, extension points for new mapping types and AI assistants, CI/CD release automation, and operational practices for maintaining backward compatibility and releasing updates. The guidance is grounded in the repository's conventions and skills documentation.
 
 ## Project Structure
 The STRM toolkit is organized around a shared methodology and cross-platform integration layer:
@@ -51,6 +61,7 @@ The STRM toolkit is organized around a shared methodology and cross-platform int
 - An MCP-based Gemini extension augments deterministic tooling
 - Agent Skills define how the STRM capability is surfaced across platforms
 - Knowledge assets and schemas support validation and enrichment
+- Automated CI/CD pipelines handle release management and distribution
 
 ```mermaid
 graph TB
@@ -68,6 +79,10 @@ subgraph "Gemini Extension"
 E1["gemini-extension/src/index.ts"]
 E2["gemini-extension/package.json"]
 CMD["gemini-extension/commands/strm/*.toml"]
+PKG["gemini-extension/scripts/package.mjs"]
+end
+subgraph "CI/CD Pipeline"
+W1[".github/workflows/release-gemini-extension.yml"]
 end
 subgraph "Knowledge Assets"
 K1["knowledge/controls.schema.json"]
@@ -87,6 +102,8 @@ S1 --> K3
 S1 --> K4
 E1 --> S1
 CMD --> S1
+W1 --> E1
+W1 --> PKG
 ```
 
 **Diagram sources**
@@ -100,6 +117,8 @@ CMD --> S1
 - [gemini-extension/commands/strm/init.toml](file://gemini-extension/commands/strm/init.toml)
 - [gemini-extension/commands/strm/validate.toml](file://gemini-extension/commands/strm/validate.toml)
 - [gemini-extension/commands/strm/gap-analysis.toml](file://gemini-extension/commands/strm/gap-analysis.toml)
+- [gemini-extension/scripts/package.mjs](file://gemini-extension/scripts/package.mjs)
+- [.github/workflows/release-gemini-extension.yml](file://.github/workflows/release-gemini-extension.yml)
 - [scripts/README.md](file://scripts/README.md)
 - [knowledge/controls.schema.json](file://knowledge/controls.schema.json)
 - [knowledge/mappings.schema.json](file://knowledge/mappings.schema.json)
@@ -117,6 +136,7 @@ CMD --> S1
 - Cross-platform agent skills: unified skill definition compatible with Claude Code, OpenAI Codex, Cursor, Gemini CLI, GitHub Copilot, Qoder, and others
 - Deterministic CLI scripts: portable operations for listing inputs, checking existing mappings, computing strength, building headers, initializing artifacts, validating CSVs, and generating gap reports
 - Gemini MCP extension: deterministic tools and slash commands for score computation, filename generation, header building, row validation, input discovery, and existing mapping checks
+- CI/CD release pipeline: automated workflow for building, packaging, and distributing Gemini extension releases with manual trigger capabilities
 - Knowledge assets and schemas: JSON schemas for controls, mappings, risks, and threats; optional risk/threat libraries for enrichment
 
 **Section sources**
@@ -125,6 +145,8 @@ CMD --> S1
 - [scripts/README.md](file://scripts/README.md)
 - [gemini-extension/GEMINI.md](file://gemini-extension/GEMINI.md)
 - [gemini-extension/src/index.ts](file://gemini-extension/src/index.ts)
+- [.github/workflows/release-gemini-extension.yml](file://.github/workflows/release-gemini-extension.yml)
+- [gemini-extension/scripts/package.mjs](file://gemini-extension/scripts/package.mjs)
 - [knowledge/controls.schema.json](file://knowledge/controls.schema.json)
 - [knowledge/mappings.schema.json](file://knowledge/mappings.schema.json)
 - [knowledge/risks.schema.json](file://knowledge/risks.schema.json)
@@ -137,6 +159,7 @@ The STRM toolkit enforces a deterministic methodology across multiple AI assista
 - Methodology is centralized in the skill and conventions documents
 - Deterministic operations are exposed via CLI scripts and the Gemini MCP extension
 - Platform integrations adhere to the Agent Skills standard and inject appropriate context
+- CI/CD pipelines automate release management with manual trigger capabilities
 
 ```mermaid
 sequenceDiagram
@@ -144,11 +167,14 @@ participant Dev as "Developer"
 participant Skill as "Agent Skill (.agents/skills/...)"
 participant Scripts as "CLI Scripts (scripts/bin)"
 participant Ext as "Gemini MCP Extension"
+participant Pipeline as "CI/CD Pipeline"
 participant KC as "Knowledge/Schemas"
 Dev->>Skill : "Activate skill or use platform context"
 Skill->>Scripts : "Call deterministic operations"
 Skill->>KC : "Reference schemas and methodology"
 Ext->>Scripts : "Invoke same deterministic operations"
+Pipeline->>Ext : "Build and package extension"
+Pipeline-->>Dev : "Release assets and distributions"
 Scripts-->>Dev : "Structured CSV, validations, gap reports"
 Ext-->>Dev : "Deterministic tools and slash commands"
 ```
@@ -158,6 +184,8 @@ Ext-->>Dev : "Deterministic tools and slash commands"
 - [scripts/README.md](file://scripts/README.md)
 - [gemini-extension/GEMINI.md](file://gemini-extension/GEMINI.md)
 - [gemini-extension/src/index.ts](file://gemini-extension/src/index.ts)
+- [.github/workflows/release-gemini-extension.yml](file://.github/workflows/release-gemini-extension.yml)
+- [gemini-extension/scripts/package.mjs](file://gemini-extension/scripts/package.mjs)
 - [knowledge/controls.schema.json](file://knowledge/controls.schema.json)
 - [knowledge/mappings.schema.json](file://knowledge/mappings.schema.json)
 - [knowledge/risks.schema.json](file://knowledge/risks.schema.json)
@@ -302,6 +330,37 @@ McpServer --> Commands : "exposes"
 - [gemini-extension/commands/strm/validate.toml](file://gemini-extension/commands/strm/validate.toml)
 - [gemini-extension/commands/strm/gap-analysis.toml](file://gemini-extension/commands/strm/gap-analysis.toml)
 
+### CI/CD Release Pipeline
+- Automated workflow triggered by Git tags or manual dispatch
+- Supports both automatic releases from tagged commits and manual releases with custom tag specification
+- Handles cross-platform packaging for macOS ARM64, Linux x64, and Windows x64
+- Manages tag creation and validation for manual release triggers
+
+```mermaid
+flowchart TD
+Start(["Release Trigger"]) --> CheckEvent{"Event Type"}
+CheckEvent --> |Push Tag| AutoTrigger["Auto-triggered by tag push"]
+CheckEvent --> |Manual Dispatch| ManualTrigger["Manual trigger via workflow_dispatch"]
+AutoTrigger --> ValidateTag["Validate tag format (v*)"]
+ManualTrigger --> CreateTag["Create/validate custom tag"]
+ValidateTag --> BuildExt["Build extension"]
+CreateTag --> BuildExt
+BuildExt --> PackageAssets["Package cross-platform assets"]
+PackageAssets --> PublishRelease["Publish GitHub release assets"]
+PublishRelease --> End(["Release Complete"])
+style Start fill:#e1f5fe
+style End fill:#e8f5e8
+style ManualTrigger fill:#fff3e0
+```
+
+**Diagram sources**
+- [.github/workflows/release-gemini-extension.yml](file://.github/workflows/release-gemini-extension.yml)
+- [gemini-extension/scripts/package.mjs](file://gemini-extension/scripts/package.mjs)
+
+**Section sources**
+- [.github/workflows/release-gemini-extension.yml](file://.github/workflows/release-gemini-extension.yml)
+- [gemini-extension/scripts/package.mjs](file://gemini-extension/scripts/package.mjs)
+
 ### Knowledge Assets and Validation
 - JSON schemas define the shape of controls, mappings, risks, and threats
 - Optional risk/threat libraries enable enriched mappings when explicitly requested
@@ -361,6 +420,7 @@ THREATS ||--o{ RISKS : "maps_to"
 - The Agent Skills skill depends on methodology references and resource pointers
 - CLI scripts depend on knowledge assets and schemas for validation and enrichment
 - The Gemini MCP extension depends on the script layer for deterministic operations
+- The CI/CD pipeline depends on the extension build and packaging scripts
 - Platform compatibility documents ensure consistent behavior across tools
 
 ```mermaid
@@ -369,6 +429,8 @@ SKILL[".agents/skills/strm-mapping/SKILL.md"] --> REF["CONVENTIONS.md / AGENTS.m
 SKILL --> RES["Resource pointers (schemas/examples/templates)"]
 SCRIPTS["scripts/bin/*"] --> RES
 EXT["gemini-extension/src/index.ts"] --> SCRIPTS
+PIPELINE[".github/workflows/release-gemini-extension.yml"] --> EXT
+PIPELINE --> PKG["gemini-extension/scripts/package.mjs"]
 COMPAT["platform-skills/PLATFORM-COMPATIBILITY.md"] --> SKILL
 COMPAT --> EXT
 ```
@@ -379,6 +441,8 @@ COMPAT --> EXT
 - [AGENTS.md](file://AGENTS.md)
 - [scripts/README.md](file://scripts/README.md)
 - [gemini-extension/src/index.ts](file://gemini-extension/src/index.ts)
+- [.github/workflows/release-gemini-extension.yml](file://.github/workflows/release-gemini-extension.yml)
+- [gemini-extension/scripts/package.mjs](file://gemini-extension/scripts/package.mjs)
 - [platform-skills/PLATFORM-COMPATIBILITY.md](file://platform-skills/PLATFORM-COMPATIBILITY.md)
 
 **Section sources**
@@ -386,14 +450,15 @@ COMPAT --> EXT
 - [.agents/skills/strm-mapping/SKILL.md](file://.agents/skills/strm-mapping/SKILL.md)
 - [scripts/README.md](file://scripts/README.md)
 - [gemini-extension/src/index.ts](file://gemini-extension/src/index.ts)
+- [.github/workflows/release-gemini-extension.yml](file://.github/workflows/release-gemini-extension.yml)
+- [gemini-extension/scripts/package.mjs](file://gemini-extension/scripts/package.mjs)
 
 ## Performance Considerations
 - Prefer deterministic scripts and MCP tools to avoid repeated LLM calculations
-- Use the “list inputs” operation to minimize scanning overhead
+- Use the "list inputs" operation to minimize scanning overhead
 - Run validations and gap reports only after manual review to avoid redundant computations
 - Keep working-directory organized to reduce filesystem traversal costs
-
-[No sources needed since this section provides general guidance]
+- CI/CD pipeline optimizations: cached Node.js setup, dependency caching, and parallel asset packaging
 
 ## Troubleshooting Guide
 Common issues and resolutions:
@@ -404,12 +469,14 @@ Common issues and resolutions:
 - Syntactic rationale misuse: syntactic is rare; confirm wording similarity is the primary justification
 - Low confidence usage: reserved for significant inference; verify necessity
 - Target ID validation: never invent IDs; every target ID must originate from the actual target document
+- CI/CD release failures: verify tag format (v*), ensure proper permissions, and check workflow dispatch inputs
 
 **Section sources**
 - [CONVENTIONS.md](file://CONVENTIONS.md)
 - [.agents/skills/strm-mapping/SKILL.md](file://.agents/skills/strm-mapping/SKILL.md)
 - [gemini-extension/GEMINI.md](file://gemini-extension/GEMINI.md)
 - [gemini-extension/src/index.ts](file://gemini-extension/src/index.ts)
+- [.github/workflows/release-gemini-extension.yml](file://.github/workflows/release-gemini-extension.yml)
 
 ## Contribution Guidelines
 - Read and internalize the methodology and conventions before contributing
@@ -418,11 +485,68 @@ Common issues and resolutions:
 - Use the scripts and extension tools to ensure deterministic behavior
 - Maintain backward compatibility by preserving the CSV structure, naming conventions, and formula
 - Submit pull requests with clear descriptions of changes and their impact on methodology
+- For CI/CD changes: update workflow configurations and ensure proper tag management
 
 **Section sources**
 - [platform-skills/PLATFORM-COMPATIBILITY.md](file://platform-skills/PLATFORM-COMPATIBILITY.md)
 - [CONVENTIONS.md](file://CONVENTIONS.md)
 - [.agents/skills/strm-mapping/SKILL.md](file://.agents/skills/strm-mapping/SKILL.md)
+
+## CI/CD Release Process
+
+### Automated Release Triggers
+The STRM toolkit implements a dual-trigger release mechanism:
+
+**Automatic Trigger (Push-based)**
+- Triggered when a Git tag matching the pattern `v*` is pushed to the repository
+- Automatically validates tag format and proceeds with release pipeline
+- Ideal for version-controlled releases and continuous deployment workflows
+
+**Manual Trigger (Dispatch-based)**
+- Enabled through GitHub Actions workflow dispatch interface
+- Requires explicit tag specification in the format `vX.Y.Z`
+- Allows controlled release timing and custom tag management
+- Creates and pushes tags when they don't exist on remote origin
+
+### Release Pipeline Workflow
+The CI/CD pipeline executes the following stages:
+
+1. **Checkout and Tag Management**
+   - Checks out repository at the triggering commit
+   - Validates tag existence for manual triggers
+   - Creates and pushes tags when necessary
+
+2. **Environment Setup**
+   - Sets up Node.js 20.x environment
+   - Configures npm dependency caching
+   - Installs project dependencies
+
+3. **Build and Packaging**
+   - Compiles TypeScript source code
+   - Packages extension assets for multiple platforms
+   - Generates platform-specific release archives
+
+4. **Asset Distribution**
+   - Publishes release assets to GitHub Releases
+   - Creates cross-platform distributions:
+     - `darwin.arm64.strm-mapping.tar.gz` (macOS ARM64)
+     - `linux.x64.strm-mapping.tar.gz` (Linux x64)
+     - `win32.x64.strm-mapping.zip` (Windows x64)
+
+### Tag Management Procedures
+- **Automatic Tags**: Must follow semantic versioning format (vX.Y.Z)
+- **Manual Tags**: Can be customized but must adhere to semantic versioning standards
+- **Tag Validation**: Pipeline verifies tag existence and format before proceeding
+- **Remote Synchronization**: Manual triggers automatically push created tags to origin
+
+### Permissions and Security
+- Requires `contents: write` permission for release asset publishing
+- Uses GitHub Actions bot credentials for tag creation
+- Implements proper error handling and rollback procedures
+
+**Section sources**
+- [.github/workflows/release-gemini-extension.yml](file://.github/workflows/release-gemini-extension.yml)
+- [gemini-extension/scripts/package.mjs](file://gemini-extension/scripts/package.mjs)
 
 ## Extension Points and Customization
 - Adding new mapping types:
@@ -437,40 +561,51 @@ Common issues and resolutions:
   - Expose deterministic tools via the MCP server or CLI scripts
   - Maintain strict adherence to the CSV structure and naming conventions
   - Provide clear documentation and examples for new capabilities
+- CI/CD pipeline extensions:
+  - Add new platforms by extending the package script arguments
+  - Customize release conditions and triggers
+  - Integrate with external distribution channels
 
 **Section sources**
 - [platform-skills/PLATFORM-COMPATIBILITY.md](file://platform-skills/PLATFORM-COMPATIBILITY.md)
 - [.agents/skills/strm-mapping/SKILL.md](file://.agents/skills/strm-mapping/SKILL.md)
 - [gemini-extension/src/index.ts](file://gemini-extension/src/index.ts)
 - [scripts/README.md](file://scripts/README.md)
+- [.github/workflows/release-gemini-extension.yml](file://.github/workflows/release-gemini-extension.yml)
 
 ## Release Management and Backward Compatibility
 - Canonical methodology: the Agent Skills skill is the authoritative source; all platform documents mirror it
 - Synchronization: when methodology changes, update all platform-specific files consistently
 - Versioning: track changes to the skill and related documents; maintain version metadata in frontmatter
 - Compatibility: preserve CSV structure, naming conventions, and formula to ensure artifacts remain usable across releases
+- CI/CD consistency: automated pipeline ensures reproducible builds across environments
+- Tag management: semantic versioning enforced through workflow validation
 
 **Section sources**
 - [platform-skills/PLATFORM-COMPATIBILITY.md](file://platform-skills/PLATFORM-COMPATIBILITY.md)
 - [.agents/skills/strm-mapping/SKILL.md](file://.agents/skills/strm-mapping/SKILL.md)
+- [.github/workflows/release-gemini-extension.yml](file://.github/workflows/release-gemini-extension.yml)
 
 ## Debugging and Optimization Strategies
 - Use the validator to catch errors early; address warnings before finalizing mappings
 - Employ the strength calculator to verify computed scores
-- Leverage the “list inputs” and “check existing mapping” tools to avoid duplication and streamline workflows
+- Leverage the "list inputs" and "check existing mapping" tools to avoid duplication and streamline workflows
 - For performance-sensitive tasks, batch operations and defer gap reporting until after manual review
 - When extending functionality, encapsulate deterministic logic in tools or scripts to minimize variability
+- CI/CD optimization: utilize caching, parallel builds, and efficient packaging strategies
 
 **Section sources**
 - [gemini-extension/src/index.ts](file://gemini-extension/src/index.ts)
 - [scripts/README.md](file://scripts/README.md)
 - [gemini-extension/GEMINI.md](file://gemini-extension/GEMINI.md)
+- [.github/workflows/release-gemini-extension.yml](file://.github/workflows/release-gemini-extension.yml)
 
 ## Templates and Documentation Standards
 - Use the template CSV as the starting point for all new mappings; never modify the template directly
 - Follow the rationale pattern and CSV structure defined in the conventions and skill
 - Document new mapping types with examples and schema references
 - Maintain consistent terminology and headings across all platform documents
+- Update CI/CD documentation when modifying release processes or workflow configurations
 
 **Section sources**
 - [CONVENTIONS.md](file://CONVENTIONS.md)
@@ -478,4 +613,4 @@ Common issues and resolutions:
 - [TEMPLATE_Set Theory Relationship Mapping (STRM).csv](file://TEMPLATE_Set Theory Relationship Mapping (STRM).csv)
 
 ## Conclusion
-The STRM toolkit’s development and contribution framework emphasizes deterministic methodology, cross-platform consistency, and rigorous quality assurance. Contributors should align changes with the Agent Skills skill, leverage the script and extension layers for deterministic operations, and maintain backward compatibility and clear documentation.
+The STRM toolkit's development and contribution framework emphasizes deterministic methodology, cross-platform consistency, rigorous quality assurance, and automated release management. Contributors should align changes with the Agent Skills skill, leverage the script and extension layers for deterministic operations, utilize the CI/CD pipeline for reliable releases, and maintain backward compatibility and clear documentation. The enhanced CI/CD release process now provides both automated and manual trigger capabilities with robust tag management for flexible development workflows.
