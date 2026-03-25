@@ -17,6 +17,13 @@
 - [CONVENTIONS.md](file://CONVENTIONS.md)
 </cite>
 
+## Update Summary
+**Changes Made**
+- Enhanced GitHub Actions workflow documentation to reflect manual trigger capability (workflow_dispatch)
+- Added tag_name input parameter documentation for flexible release management
+- Updated CI/CD integration patterns to include manual workflow execution
+- Revised release management strategy to support both automated and manual triggers
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -45,7 +52,7 @@ The STRM Mapping toolkit produces deterministic CSV outputs following NIST IR 84
 ## Project Structure
 At a high level, the repository organizes automation around:
 - Core scripts under scripts/bin and shared logic under scripts/lib
-- GitHub Actions workflow for packaging and releasing the Gemini extension
+- GitHub Actions workflow for packaging and releasing the Gemini extension with manual trigger capability
 - Prompt-driven automation via TOML command files for the Gemini CLI extension
 - Conventions and validations that guide deterministic behavior and quality gates
 
@@ -90,7 +97,7 @@ cmd_validate --> lib_core
 - [README.md:1-30](file://README.md#L1-L30)
 - [scripts/README.md:1-31](file://scripts/README.md#L1-L31)
 - [scripts/lib/strm-core.mjs:1-343](file://scripts/lib/strm-core.mjs#L1-L343)
-- [.github/workflows/release-gemini-extension.yml:1-44](file://.github/workflows/release-gemini-extension.yml#L1-L44)
+- [.github/workflows/release-gemini-extension.yml:1-69](file://.github/workflows/release-gemini-extension.yml#L1-L69)
 - [gemini-extension/package.json:1-26](file://gemini-extension/package.json#L1-L26)
 - [gemini-extension/commands/strm/init.toml:1-14](file://gemini-extension/commands/strm/init.toml#L1-L14)
 - [gemini-extension/commands/strm/map.toml:1-20](file://gemini-extension/commands/strm/map.toml#L1-L20)
@@ -105,7 +112,7 @@ cmd_validate --> lib_core
 - Deterministic scripts for mapping, initialization, gap reporting, and validation
 - Shared core library implementing CSV parsing, header building, scoring, and artifact path resolution
 - Command prompts for the Gemini extension that orchestrate script invocations
-- GitHub Actions workflow for packaging and releasing the extension
+- GitHub Actions workflow for packaging and releasing the extension with manual trigger capability
 
 Key responsibilities:
 - Initialize mapping artifacts and CSV headers
@@ -113,6 +120,7 @@ Key responsibilities:
 - Validate CSVs against NIST IR 8477 formula and column requirements
 - Generate gap analysis summaries grouped by FDE
 - Provide consistent artifact directory layout and filenames
+- Support both automated and manual release management
 
 **Section sources**
 - [scripts/README.md:10-31](file://scripts/README.md#L10-L31)
@@ -126,7 +134,7 @@ Key responsibilities:
 - [gemini-extension/commands/strm/validate.toml:1-18](file://gemini-extension/commands/strm/validate.toml#L1-L18)
 
 ## Architecture Overview
-The automation architecture centers on deterministic Node.js scripts orchestrated by CI/CD systems. The scripts rely on a shared core library for CSV handling, scoring, and artifact path management. The Gemini extension’s prompt-driven commands wrap these scripts for interactive and automated use.
+The automation architecture centers on deterministic Node.js scripts orchestrated by CI/CD systems. The scripts rely on a shared core library for CSV handling, scoring, and artifact path management. The Gemini extension's prompt-driven commands wrap these scripts for interactive and automated use.
 
 ```mermaid
 graph TB
@@ -134,6 +142,7 @@ subgraph "CI/CD Orchestration"
 gh["GitHub Actions"]
 gl["GitLab CI"]
 jenkins["Jenkins"]
+manual["Manual Trigger"]
 end
 subgraph "Container Runtime"
 docker["Docker Image"]
@@ -152,6 +161,7 @@ end
 gh --> docker
 gl --> docker
 jenkins --> docker
+manual --> docker
 docker --> init
 docker --> map
 docker --> gap
@@ -319,16 +329,17 @@ class StrmCore {
 - [scripts/lib/strm-core.mjs:267-277](file://scripts/lib/strm-core.mjs#L267-L277)
 - [scripts/lib/strm-core.mjs:279-342](file://scripts/lib/strm-core.mjs#L279-L342)
 
-### GitHub Actions Workflow (release-gemini-extension.yml)
+### Enhanced GitHub Actions Workflow (release-gemini-extension.yml)
 Purpose:
-- Automates building and releasing the Gemini extension on tagged releases.
+- Automates building and releasing the Gemini extension on tagged releases with manual trigger capability.
 
 Highlights:
-- Checks out the repository
-- Sets up Node.js
-- Installs dependencies and builds the extension
-- Packages platform-specific assets
-- Publishes release assets
+- **Enhanced Trigger Configuration**: Supports both automatic tag-based triggers and manual workflow dispatch
+- **Flexible Tag Management**: Uses dynamic tag resolution for both automated and manual execution modes
+- **Tag Creation Logic**: Automatically creates and pushes tags for manual triggers when they don't exist
+- **Consistent Release Process**: Maintains the same build and packaging steps regardless of trigger type
+
+**Updated** Enhanced with manual trigger capability and flexible tag management for improved release flexibility
 
 ```mermaid
 sequenceDiagram
@@ -336,18 +347,24 @@ participant GH as "GitHub"
 participant Act as "Actions Runner"
 participant Node as "Node.js"
 participant Ext as "Gemini Extension"
-GH->>Act : Trigger on tag v*
+participant Manual as "Manual Trigger"
+GH->>Act : Automatic trigger on tag v*
 Act->>Node : Setup Node.js
 Act->>Ext : Install deps, build, package
+Act->>GH : Upload release assets
+Manual->>Act : Manual trigger via workflow_dispatch
+Act->>Node : Setup Node.js
+Act->>Ext : Install deps, build, package
+Act->>GH : Create and push tag if needed
 Act->>GH : Upload release assets
 ```
 
 **Diagram sources**
-- [.github/workflows/release-gemini-extension.yml:1-44](file://.github/workflows/release-gemini-extension.yml#L1-L44)
+- [.github/workflows/release-gemini-extension.yml:1-69](file://.github/workflows/release-gemini-extension.yml#L1-L69)
 - [gemini-extension/package.json:7-13](file://gemini-extension/package.json#L7-L13)
 
 **Section sources**
-- [.github/workflows/release-gemini-extension.yml:1-44](file://.github/workflows/release-gemini-extension.yml#L1-L44)
+- [.github/workflows/release-gemini-extension.yml:1-69](file://.github/workflows/release-gemini-extension.yml#L1-L69)
 - [gemini-extension/package.json:7-13](file://gemini-extension/package.json#L7-L13)
 
 ### Gemini CLI Commands (init.toml, map.toml, gap-analysis.toml, validate.toml)
@@ -395,8 +412,6 @@ bin_gap["strm-gap-report.mjs"] --> lib_core
 - Use the built-in validation early to fail fast on malformed CSVs.
 - Artifact directory layout includes dates and sanitized names to prevent collisions and improve discoverability.
 
-[No sources needed since this section provides general guidance]
-
 ## Troubleshooting Guide
 Common issues and remedies:
 - Missing required columns in CSV: The validator checks for presence of required fields and will exit with an error if missing.
@@ -415,39 +430,37 @@ Operational tips:
 - [README.md:24-30](file://README.md#L24-L30)
 
 ## Conclusion
-The STRM Mapping scripts provide a robust foundation for automating cybersecurity framework alignment and compliance workflows. By leveraging deterministic mappings, strict validation, and structured artifact outputs, teams can integrate these scripts into CI/CD pipelines across GitHub Actions, GitLab CI, and Jenkins. Containerization and cloud-native deployment further enable scalable, reproducible executions with consistent environment variable configuration and artifact handling.
-
-[No sources needed since this section summarizes without analyzing specific files]
+The STRM Mapping scripts provide a robust foundation for automating cybersecurity framework alignment and compliance workflows. By leveraging deterministic mappings, strict validation, and structured artifact outputs, teams can integrate these scripts into CI/CD pipelines across GitHub Actions, GitLab CI, and Jenkins. The enhanced GitHub Actions workflow now supports both automated and manual release management, providing greater flexibility for different deployment scenarios. Containerization and cloud-native deployment further enable scalable, reproducible executions with consistent environment variable configuration and artifact handling.
 
 ## Appendices
 
 ### CI/CD Integration Patterns
 
-- GitHub Actions
-  - Use matrix builds to test multiple Node.js versions
-  - Cache dependencies to speed up builds
-  - Publish artifacts and reports after successful mapping and validation
+- **GitHub Actions**
+  - **Automatic Triggers**: Use tag-based triggers for automated releases on version tags
+  - **Manual Triggers**: Utilize workflow_dispatch for on-demand releases with custom tag specification
+  - **Matrix Builds**: Test multiple Node.js versions for compatibility
+  - **Cache Dependencies**: Speed up builds using npm cache
+  - **Publish Artifacts**: Upload release assets and reports after successful mapping and validation
 
-- GitLab CI
+- **GitLab CI**
   - Define stages for linting, mapping, validation, and reporting
   - Use Docker images to ensure consistent environments
   - Store artifacts for downstream review and audit
 
-- Jenkins
+- **Jenkins**
   - Create declarative pipelines with parallel stages for mapping and validation
   - Integrate with artifact repositories for long-term storage
   - Configure post-build actions to notify stakeholders
 
-[No sources needed since this section provides general guidance]
+**Updated** Enhanced with manual trigger capabilities and flexible tag management for improved release flexibility
 
 ### Containerization with Docker
-- Base image: Use a Node.js slim image appropriate for the scripts’ engine requirements
+- Base image: Use a Node.js slim image appropriate for the scripts' engine requirements
 - Entrypoint: Set the working directory to the repository root
 - Volumes: Mount working-directory to persist artifacts across runs
 - Environment variables: Pass credentials and configuration via environment variables managed by the orchestrator
 - Multi-stage builds: Separate build-time dependencies from runtime image for smaller footprint
-
-[No sources needed since this section provides general guidance]
 
 ### Cloud-Native Deployment Strategies
 - Kubernetes Jobs: Run one-off mapping jobs for ad-hoc or scheduled tasks
@@ -455,14 +468,10 @@ The STRM Mapping scripts provide a robust foundation for automating cybersecurit
 - StatefulSets/PersistentVolumes: Persist mapping artifacts and knowledge bases
 - Secrets and ConfigMaps: Manage credentials and configuration securely
 
-[No sources needed since this section provides general guidance]
-
 ### Environment Variables and Credential Management
 - API keys and tokens: Inject via CI/CD secrets or Kubernetes Secrets
 - Script arguments: Prefer environment variables for focal/target/bridge names and working directory paths
 - Validation: Ensure variables are set before invoking scripts; fail fast on missing values
-
-[No sources needed since this section provides general guidance]
 
 ### Artifact Handling and Result Reporting
 - Artifact directory: Use working-directory/mapping-artifacts/<date>_<pair>/
@@ -470,26 +479,50 @@ The STRM Mapping scripts provide a robust foundation for automating cybersecurit
 - Reports: Generate Markdown gap summaries alongside CSV outputs
 - Publishing: Upload artifacts and reports to CI/CD artifact stores or object storage
 
-[No sources needed since this section provides general guidance]
+### Enhanced Release Management Strategy
+
+**Manual Trigger Workflow**
+1. **Trigger Selection**: Choose workflow_dispatch to initiate manual execution
+2. **Tag Specification**: Provide tag_name input parameter (e.g., v1.2.3)
+3. **Tag Validation**: System checks if tag exists on remote origin
+4. **Automatic Creation**: Creates and pushes tag if it doesn't exist
+5. **Build Execution**: Proceeds with standard build and packaging process
+6. **Asset Publication**: Uploads platform-specific release assets
+
+**Automated Trigger Workflow**
+1. **Tag Detection**: Automatic trigger on push events with tag pattern v*
+2. **Direct Execution**: Bypasses manual tag creation step
+3. **Standard Process**: Follows identical build and packaging steps
+4. **Asset Publication**: Publishes release assets to GitHub Releases
+
+**Benefits of Enhanced Workflow**
+- **Flexibility**: Supports both automated and manual release processes
+- **Control**: Allows precise tag management for release coordination
+- **Reliability**: Ensures consistent build process regardless of trigger type
+- **Traceability**: Maintains clear audit trail for both automated and manual releases
 
 ### Pipeline Examples
 
-- Automated Framework Mapping
+- **Automated Framework Mapping**
   - Steps: Initialize mapping, extract and map controls, compute strengths, validate, generate gap report
   - Triggers: Pull requests or pushes to specific branches
   - Outputs: CSV and gap report artifacts
 
-- Periodic Compliance Validation
+- **Periodic Compliance Validation**
   - Steps: List inputs, run mapping, validate, publish results
   - Triggers: Scheduled cron job
   - Outputs: Compliance dashboards and notifications
 
-- Change Detection Workflow
+- **Change Detection Workflow**
   - Steps: Detect file changes, re-run affected mappings, compare reports, alert on regressions
   - Triggers: Webhooks on repository updates
   - Outputs: Alerts and remediation tasks
 
-[No sources needed since this section provides general guidance]
+- **Enhanced Release Management**
+  - **Manual Trigger**: workflow_dispatch with tag_name parameter for on-demand releases
+  - **Automated Trigger**: push events with tag pattern for automated releases
+  - **Flexible Tagging**: Support for custom version tags and semantic versioning
+  - **Tag Validation**: Automatic tag creation and synchronization with remote repository
 
 ### Testing Strategies, Quality Gates, and Failure Recovery
 - Unit-like checks: Validate CSV headers, required columns, and formula consistency
@@ -497,12 +530,8 @@ The STRM Mapping scripts provide a robust foundation for automating cybersecurit
 - Quality gates: Fail on validation errors, enforce minimum coverage thresholds
 - Failure recovery: Retry transient failures, rollback to previous artifacts, notify operators
 
-[No sources needed since this section provides general guidance]
-
 ### Monitoring, Logging, Alerting, and Metrics
 - Logging: Emit structured JSON from scripts for ingestion by log collectors
 - Metrics: Track mapping duration, relationship distribution, and validation pass rates
 - Alerting: Notify on failed validations, missing artifacts, or threshold breaches
 - Dashboards: Visualize coverage trends and compliance status over time
-
-[No sources needed since this section provides general guidance]
