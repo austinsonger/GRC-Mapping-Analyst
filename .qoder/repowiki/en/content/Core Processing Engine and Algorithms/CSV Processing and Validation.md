@@ -13,6 +13,13 @@
 - [README.md](file://scripts/README.md)
 </cite>
 
+## Update Summary
+**Changes Made**
+- Added comprehensive rationale type distribution tracking system with automatic warnings
+- Implemented self-check warning system for dominance thresholds (≥95% threshold)
+- Enhanced validation pipeline with rationale distribution monitoring
+- Updated warning system to include rationale type balance monitoring
+
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Project Structure](#project-structure)
@@ -26,11 +33,11 @@
 10. [Appendices](#appendices)
 
 ## Introduction
-This document explains the CSV processing and validation systems used by the STRM Mapping project. It focuses on the custom CSV parser, quoting and escaping rules, header normalization and column indexing, and the STRM CSV schema validation pipeline. It also documents automated validation rules, error and warning detection, and practical guidance for handling large CSV files and encoding issues.
+This document explains the CSV processing and validation systems used by the STRM Mapping project. It focuses on the custom CSV parser, quoting and escaping rules, header normalization and column indexing, and the STRM CSV schema validation pipeline. It also documents automated validation rules, error and warning detection, rationale type distribution monitoring, and practical guidance for handling large CSV files and encoding issues.
 
 ## Project Structure
 The CSV processing and validation system centers around a small set of Node.js modules and scripts:
-- A command-line validator that reads a CSV file, parses it, validates headers and rows, and reports structured results.
+- A command-line validator that reads a CSV file, parses it, validates headers and rows, monitors rationale type distributions, and reports structured results.
 - A core module implementing the CSV parser, header normalization, column indexing, and row validation logic.
 - Example CSV templates and real mapping artifacts to demonstrate valid and invalid structures.
 - JSON Schema definitions for higher-level datasets (mappings and controls) that complement the STRM CSV validation.
@@ -74,23 +81,27 @@ CORE --> SCH2
 ## Core Components
 - Custom CSV Parser: Reads raw text and splits into rows and cells, honoring quoted fields and escaped quotes.
 - Header Normalization and Column Indexing: Normalizes header names and maps required columns to indices.
-- Row Validation: Enforces required fields, acceptable values, and formula-driven strength consistency.
+- Row Validation: Enforces required fields, acceptable values, formula-driven strength consistency, and rationale type distribution monitoring.
 - CSV Serialization: Escapes and quotes values when writing CSV.
+- Rationale Distribution Tracking: Monitors semantic, functional, and syntactic rationale type distributions across the dataset.
 
 Key responsibilities:
 - parseCsv(text): Tokenizes text into rows respecting quotes, commas, and newlines.
 - normalizeHeaderKey(value): Standardizes header labels for robust matching.
 - findColumnIndexes(headerRow): Returns indices for required STRM columns.
 - validateDataRow(row, indexes, rowNumber): Validates each data row and produces errors/warnings.
+- trackRationaleDistribution(): Monitors rationale type distributions and generates self-check warnings.
 - toCsv(rows): Serializes arrays to CSV with proper escaping.
 
 **Section sources**
 - [strm-core.mjs:99-180](file://scripts/lib/strm-core.mjs#L99-L180)
 - [strm-core.mjs:182-204](file://scripts/lib/strm-core.mjs#L182-L204)
 - [strm-core.mjs:206-265](file://scripts/lib/strm-core.mjs#L206-L265)
+- [strm-validate-csv.mjs:63-67](file://scripts/bin/strm-validate-csv.mjs#L63-L67)
+- [strm-validate-csv.mjs:128-139](file://scripts/bin/strm-validate-csv.mjs#L128-L139)
 
 ## Architecture Overview
-The validator orchestrates file reading, parsing, header validation, and per-row validation. It aggregates errors and warnings and exits with a non-zero status when errors are present.
+The validator orchestrates file reading, parsing, header validation, per-row validation, rationale distribution tracking, and self-check warnings. It aggregates errors and warnings and exits with a non-zero status when errors are present.
 
 ```mermaid
 sequenceDiagram
@@ -106,9 +117,11 @@ CLI->>CORE : findColumnIndexes(header)
 CORE-->>CLI : Index map
 loop For each data row
 CLI->>CORE : validateDataRow(row, idx, rowNumber)
-CORE-->>CLI : {errors, warnings}
+CORE-->>CLI : {errors, warnings, relationship}
+CLI->>CLI : Track rationale distribution
 CLI->>CLI : Aggregate errors and warnings
 end
+CLI->>CLI : Generate self-check warnings for dominance
 CLI->>OUT : Print JSON summary (status, counts, lists)
 CLI-->>CLI : Exit 0 or 2 depending on errors
 ```
@@ -186,6 +199,7 @@ The validator enforces:
 - Numeric constraints: Strength of Relationship must be an integer between 1 and 10.
 - Formula consistency: When valid, the provided strength must match the computed score derived from relationship, confidence, and rationale type.
 - Warnings: Guidance for edge cases such as not_related without notes, syntactic rationale, and low confidence usage.
+- **Updated**: Rationale distribution monitoring: Automatic warnings when any single rationale type dominates the dataset (≥95% threshold).
 
 ```mermaid
 flowchart TD
@@ -201,18 +215,52 @@ V6 --> |No| E3["Add errors for invalid strength"]
 V6 --> |Yes| V7["Compute expected strength"]
 V7 --> V8{"Matches provided?"}
 V8 --> |No| E4["Add errors for mismatch"]
-V8 --> |Yes| V9["No errors"]
-V1 --> W1["Add warnings for edge cases"]
+V8 --> |Yes| V9["Track rationale distribution"]
+V9 --> V10{"Check dominance threshold"}
+V10 --> |≥95%| W1["Add rationale distribution warning"]
+V10 --> |<95%| V11["No rationale warning"]
+V1 --> W2["Add warnings for edge cases"]
 ```
 
 **Diagram sources**
 - [strm-core.mjs:206-265](file://scripts/lib/strm-core.mjs#L206-L265)
+- [strm-validate-csv.mjs:128-139](file://scripts/bin/strm-validate-csv.mjs#L128-L139)
 
 **Section sources**
 - [strm-core.mjs:206-265](file://scripts/lib/strm-core.mjs#L206-L265)
+- [strm-validate-csv.mjs:128-139](file://scripts/bin/strm-validate-csv.mjs#L128-L139)
+
+### Rationale Type Distribution Monitoring
+**New Feature**: The validator now includes comprehensive monitoring of semantic, functional, and syntactic rationale type distributions with automatic warnings when any single rationale type dominates the dataset.
+
+Key features:
+- Tracks counts for each rationale type (semantic, functional, syntactic)
+- Calculates percentage distribution across all data rows
+- Generates warnings when any rationale type reaches ≥95% dominance
+- Provides actionable guidance for reviewing rationale type application consistency
+
+```mermaid
+flowchart TD
+Start["Process data rows"] --> Count["Count rationale types per row"]
+Count --> Accumulate["Accumulate running totals"]
+Accumulate --> Calculate["Calculate percentages"]
+Calculate --> Check{"Any type ≥95%?"}
+Check --> |Yes| Warn["Generate rationale distribution warning"]
+Check --> |No| Continue["Continue validation"]
+Warn --> Continue
+Continue --> End["Complete validation"]
+```
+
+**Diagram sources**
+- [strm-validate-csv.mjs:63-67](file://scripts/bin/strm-validate-csv.mjs#L63-L67)
+- [strm-validate-csv.mjs:128-139](file://scripts/bin/strm-validate-csv.mjs#L128-L139)
+
+**Section sources**
+- [strm-validate-csv.mjs:63-67](file://scripts/bin/strm-validate-csv.mjs#L63-L67)
+- [strm-validate-csv.mjs:128-139](file://scripts/bin/strm-validate-csv.mjs#L128-L139)
 
 ### Command-Line Integration
-- strm-validate-csv.mjs: Reads a CSV file, parses it, validates headers and rows, and prints a JSON summary with counts and lists of errors and warnings.
+- strm-validate-csv.mjs: Reads a CSV file, parses it, validates headers and rows, tracks rationale distributions, and prints a JSON summary with counts and lists of errors and warnings.
 - strm-build-header.mjs: Generates a properly formatted header row for new STRM CSV files.
 - strm-compute-strength.mjs: Computes the expected strength score given relationship, confidence, and rationale type.
 
@@ -231,11 +279,13 @@ User->>Compute : --relationship X [--confidence Y] [--rationale Z]
 Compute->>Core : computeStrength(...)
 Core-->>Compute : {score, base, adjustments}
 Compute-->>User : JSON result
-User->>Validate : --file path
+User->>Validate : --file path [--focal-csv path]
 Validate->>Core : parseCsv(...)
 Validate->>Core : findColumnIndexes(...)
 Validate->>Core : validateDataRow(...) for each row
-Core-->>Validate : {errors, warnings}
+Core-->>Validate : {errors, warnings, relationship}
+Validate->>Validate : Track rationale distribution
+Validate->>Validate : Generate self-check warnings
 Validate-->>User : JSON summary
 ```
 
@@ -255,17 +305,19 @@ Validate-->>User : JSON summary
 - Real mapping artifact: Demonstrates filled rows with relationships, strengths, and rationale. See [Set Theory Relationship Mapping (STRM)_ [(StateRAMP_Rev5_Moderate-to-StateRAMP_Rev5_Moderate)-to-NIST_800-82_r3_Moderate] - StateRAMP Rev5 Moderate to NIST 800-82 r3 Moderate.csv](file://working-directory/mapping-artifacts/2026-03-24_StateRAMP_Rev5_Moderate-to-NIST_800-82_r3_Moderate/Set Theory Relationship Mapping (STRM)_ [(StateRAMP_Rev5_Moderate-to-StateRAMP_Rev5_Moderate)-to-NIST_800-82_r3_Moderate] - StateRAMP Rev5 Moderate to NIST 800-82 r3 Moderate.csv#L1-L124).
 
 Examples of invalid structures and corresponding outcomes:
-- Empty CSV: Validator reports “CSV is empty.” and exits with error status. See [strm-validate-csv.mjs:25-28](file://scripts/bin/strm-validate-csv.mjs#L25-L28).
-- Missing required columns: Validator reports “Missing required columns” and exits with error status. See [strm-validate-csv.mjs:36-44](file://scripts/bin/strm-validate-csv.mjs#L36-L44).
-- Row with empty required fields: Errors include “FDE# is empty”, “Target ID # is empty”, or “STRM Rationale is empty”. See [strm-core.mjs:221-223](file://scripts/lib/strm-core.mjs#L221-L223).
-- Invalid vocabulary values: Errors include “Invalid STRM Relationship …”, “Invalid Confidence Levels …”, or “Invalid NIST IR-8477 Rational …”. See [strm-core.mjs:225-233](file://scripts/lib/strm-core.mjs#L225-L233).
-- Strength not an integer or out of range: Errors include “Strength of Relationship is not an integer.” or “Strength of Relationship must be 1-10.” See [strm-core.mjs:236-240](file://scripts/lib/strm-core.mjs#L236-L240).
-- Strength mismatch: Errors include “Strength mismatch …” when provided score does not match computed score. See [strm-core.mjs:248-251](file://scripts/lib/strm-core.mjs#L248-L251).
-- Warnings: Guidance for “not_related should include Notes context,” “syntactic rationale is uncommon,” and “low confidence should be used only when significant inference is required.” See [strm-core.mjs:254-262](file://scripts/lib/strm-core.mjs#L254-L262).
+- Empty CSV: Validator reports "CSV is empty." and exits with error status. See [strm-validate-csv.mjs:25-28](file://scripts/bin/strm-validate-csv.mjs#L25-L28).
+- Missing required columns: Validator reports "Missing required columns" and exits with error status. See [strm-validate-csv.mjs:36-44](file://scripts/bin/strm-validate-csv.mjs#L36-L44).
+- Row with empty required fields: Errors include "FDE# is empty", "Target ID # is empty", or "STRM Rationale is empty". See [strm-core.mjs:221-223](file://scripts/lib/strm-core.mjs#L221-L223).
+- Invalid vocabulary values: Errors include "Invalid STRM Relationship …", "Invalid Confidence Levels …", or "Invalid NIST IR-8477 Rational …". See [strm-core.mjs:225-233](file://scripts/lib/strm-core.mjs#L225-L233).
+- Strength not an integer or out of range: Errors include "Strength of Relationship is not an integer." or "Strength of Relationship must be 1-10." See [strm-core.mjs:236-240](file://scripts/lib/strm-core.mjs#L236-L240).
+- Strength mismatch: Errors include "Strength mismatch …" when provided score does not match computed score. See [strm-core.mjs:248-251](file://scripts/lib/strm-core.mjs#L248-L251).
+- **Updated**: Rationale distribution warnings: "Rationale distribution self-check: [type] = [percentage]% ([count]/[total_rows]). Review whether semantic vs functional distinctions are being applied row-by-row." See [strm-validate-csv.mjs:135-137](file://scripts/bin/strm-validate-csv.mjs#L135-L137).
+- Warnings: Guidance for "not_related should include Notes context," "syntactic rationale is uncommon," and "low confidence should be used only when significant inference is required." See [strm-core.mjs:254-262](file://scripts/lib/strm-core.mjs#L254-L262).
 
 **Section sources**
 - [strm-validate-csv.mjs:25-44](file://scripts/bin/strm-validate-csv.mjs#L25-L44)
 - [strm-core.mjs:221-262](file://scripts/lib/strm-core.mjs#L221-L262)
+- [strm-validate-csv.mjs:135-137](file://scripts/bin/strm-validate-csv.mjs#L135-L137)
 - [TEMPLATE_Set Theory Relationship Mapping (STRM).csv](file://TEMPLATE_Set Theory Relationship Mapping (STRM).csv#L1-L2)
 - [Set Theory Relationship Mapping (STRM)_ [(StateRAMP_Rev5_Moderate-to-StateRAMP_Rev5_Moderate)-to-NIST_800-82_r3_Moderate] - StateRAMP Rev5 Moderate to NIST 800-82 r3 Moderate.csv](file://working-directory/mapping-artifacts/2026-03-24_StateRAMP_Rev5_Moderate-to-NIST_800-82_r3_Moderate/Set Theory Relationship Mapping (STRM)_ [(StateRAMP_Rev5_Moderate-to-StateRAMP_Rev5_Moderate)-to-NIST_800-82_r3_Moderate] - StateRAMP Rev5 Moderate to NIST 800-82 r3 Moderate.csv#L1-L124)
 
@@ -294,6 +346,7 @@ CORE --> STRONG["computeStrength"]
 - Memory usage: The parser constructs a full 2D array of rows and cells. For very large CSV files, this can consume significant memory proportional to the number of cells. Consider streaming approaches if memory becomes a constraint.
 - I/O: Reading entire files into memory is efficient for moderate sizes but may need buffering or chunked processing for extremely large files.
 - Validation overhead: The validator iterates rows once and performs constant-time checks per row. Complexity is O(R) for R rows plus O(C) for header normalization where C is the number of columns.
+- **Updated**: Rationale distribution tracking adds minimal overhead with O(R) time complexity and O(1) space complexity for tracking counts.
 - Recommendations:
   - Prefer UTF-8 encoding to avoid transcoding overhead.
   - For massive files, consider splitting the CSV into smaller chunks and validating incrementally.
@@ -307,10 +360,10 @@ Common issues and resolutions:
   - Symptom: Garbled characters or unexpected bytes.
   - Resolution: Ensure the CSV is saved and read as UTF-8. The validator reads files as UTF-8.
 - Empty or malformed CSV:
-  - Symptom: “CSV is empty.”
+  - Symptom: "CSV is empty."
   - Resolution: Verify the file is not blank and contains a header row.
 - Missing required columns:
-  - Symptom: “Missing required columns …”
+  - Symptom: "Missing required columns …"
   - Resolution: Confirm the header row includes all required STRM columns (e.g., STRM Relationship, Confidence Levels, NIST IR-8477 Rational, STRM Rationale, Strength of Relationship, FDE#, Target ID #, Notes).
 - Blank rows:
   - Behavior: Blank rows are skipped during validation.
@@ -319,10 +372,13 @@ Common issues and resolutions:
   - Symptom: Errors indicating invalid relationship/confidence/rationale.
   - Resolution: Use only accepted values: relationship must be one of equal, subset_of, superset_of, intersects_with, not_related; confidence must be high, medium, or low; rationale must be semantic, functional, or syntactic.
 - Strength errors:
-  - Symptom: “Strength of Relationship is not an integer.” or “must be 1-10.”
+  - Symptom: "Strength of Relationship is not an integer." or "must be 1-10."
   - Resolution: Enter a whole number between 1 and 10.
-  - Symptom: “Strength mismatch …”
+  - Symptom: "Strength mismatch …"
   - Resolution: Adjust strength to match the computed score for the given relationship, confidence, and rationale type.
+- **Updated**: Rationale distribution warnings:
+  - Symptom: "Rationale distribution self-check: [type] = [percentage]% …"
+  - Resolution: Review rationale type application across rows to ensure semantic vs functional distinctions are being applied consistently. Consider diversifying rationale types to avoid dominance by any single type.
 - Warnings:
   - not_related without notes: Add contextual notes.
   - Syntactic rationale: Verify intent; prefer semantic or functional when appropriate.
@@ -331,9 +387,10 @@ Common issues and resolutions:
 **Section sources**
 - [strm-validate-csv.mjs:25-44](file://scripts/bin/strm-validate-csv.mjs#L25-L44)
 - [strm-core.mjs:225-262](file://scripts/lib/strm-core.mjs#L225-L262)
+- [strm-validate-csv.mjs:135-137](file://scripts/bin/strm-validate-csv.mjs#L135-L137)
 
 ## Conclusion
-The STRM CSV processing and validation system provides a robust, deterministic pipeline for ensuring data quality in STRM mapping artifacts. Its custom CSV parser handles quoting and escaping correctly, header normalization enables flexible column matching, and the row validation enforces required fields, controlled vocabularies, numeric bounds, and formula consistency. Together with the provided CLI tools and example CSVs, it supports reliable, repeatable validation of STRM datasets.
+The STRM CSV processing and validation system provides a robust, deterministic pipeline for ensuring data quality in STRM mapping artifacts. Its custom CSV parser handles quoting and escaping correctly, header normalization enables flexible column matching, and the row validation enforces required fields, controlled vocabularies, numeric bounds, and formula consistency. **Updated**: The system now includes comprehensive rationale type distribution monitoring with automatic warnings when any single rationale type dominates the dataset (≥95% threshold), enhancing data quality assurance through self-check mechanisms. Together with the provided CLI tools and example CSVs, it supports reliable, repeatable validation of STRM datasets.
 
 [No sources needed since this section summarizes without analyzing specific files]
 
@@ -357,12 +414,16 @@ The STRM CSV processing and validation system provides a robust, deterministic p
   - Strength of Relationship: integer in [1, 10]
 - Formula consistency:
   - Strength must match computeStrength(relationship, confidence, rationale).score
+- **Updated**: Rationale distribution monitoring:
+  - Automatic warnings when any single rationale type reaches ≥95% dominance
+  - Actionable guidance for reviewing rationale type application consistency
 
 **Section sources**
 - [strm-core.mjs:4-13](file://scripts/lib/strm-core.mjs#L4-L13)
 - [strm-core.mjs:15-57](file://scripts/lib/strm-core.mjs#L15-L57)
 - [strm-core.mjs:186-204](file://scripts/lib/strm-core.mjs#L186-L204)
 - [strm-core.mjs:206-265](file://scripts/lib/strm-core.mjs#L206-L265)
+- [strm-validate-csv.mjs:128-139](file://scripts/bin/strm-validate-csv.mjs#L128-L139)
 
 ### JSON Schemas for Higher-Level Datasets
 While the CSV validator focuses on STRM CSV artifacts, the repository includes JSON Schemas for mappings and controls that define broader dataset structures and constraints. These schemas are useful for cross-validation and understanding the ecosystem context.
@@ -373,3 +434,20 @@ While the CSV validator focuses on STRM CSV artifacts, the repository includes J
 **Section sources**
 - [mappings.schema.json:1-117](file://knowledge/mappings.schema.json#L1-L117)
 - [controls.schema.json:1-141](file://knowledge/controls.schema.json#L1-L141)
+
+### Rationale Distribution Self-Check Guidelines
+**New Section**: Guidelines for interpreting and responding to rationale distribution warnings:
+
+- **Warning Threshold**: ≥95% dominance by any single rationale type triggers automatic warnings
+- **Common Patterns**:
+  - All semantic rationales: May indicate overuse of semantic reasoning without functional distinction
+  - All functional rationales: May indicate overuse of functional reasoning without semantic grounding
+  - All syntactic rationales: May indicate rare usage but should be verified for appropriateness
+- **Actionable Steps**:
+  - Review rationale type application across rows for consistency
+  - Ensure semantic vs functional distinctions are being applied appropriately
+  - Consider diversifying rationale types to achieve balanced distribution
+  - Verify that rationale types align with the actual mapping relationships
+
+**Section sources**
+- [strm-validate-csv.mjs:128-139](file://scripts/bin/strm-validate-csv.mjs#L128-L139)

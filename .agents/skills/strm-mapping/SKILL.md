@@ -104,7 +104,7 @@ already specified in the request:
 | Step 4 (Write CSV) | `node scripts/bin/strm-init-mapping.mjs --focal "<Focal>" --target "<Target>" --working-dir working-directory` (creates canonical filename + artifact path) |
 | Step 5 (Manual QA, required) | `node scripts/bin/strm-init-review-log.mjs --focal "<Focal>" --target "<Target>" --csv "<output.csv>"` (optional scaffold), then review every row and correct relationship/confidence/rationale/notes before validation. |
 | Post-completion (required) | `node scripts/bin/strm-validate-csv.mjs --file "<output.csv>"` |
-| Post-completion | `node scripts/bin/strm-gap-report.mjs --file "<output.csv>" --focal "<Focal>" --target "<Target>" --working-dir working-directory` |
+| Post-completion | `node scripts/bin/strm-gap-report.mjs --file "<output.csv>" --focal "<Focal>" --target "<Target>" --working-dir working-directory` — then **expand the gap report** per the Gap Analysis Content Standard below |
 
 ### 1. Gather Source Files
 
@@ -302,6 +302,65 @@ When generating reverse mappings (Target → Source):
 
 ---
 
+## Gap Analysis Content Standard
+
+The script `strm-gap-report.mjs` generates a minimal stub. After running it, **always overwrite** the generated file with a fully expanded gap analysis. The expanded report must contain all of the following sections:
+
+### Required Sections
+
+#### 1. Header metadata
+```
+- Source (Focal): <full framework name>
+- Target (Reference): <full framework name>
+- Generated: <YYYY-MM-DD>
+- Regulations/Controls evaluated: <N>
+- Input CSV: <relative path to the STRM CSV>
+```
+
+#### 2. Coverage Summary table
+A 4-row table with these exact tiers:
+
+| Tier | Count | % | Meaning |
+|---|---|---|---|
+| ✅ Full Coverage | N | % | Target control fully satisfies the source requirement (`equal` or `subset_of`) |
+| 🟡 Partial Coverage | N | % | Some overlap; supplemental controls likely needed (`intersects_with`) |
+| 🟠 Source Exceeds Target Scope | N | % | Source requirement is broader; target only partially addresses it (`superset_of`) |
+| 🔴 No Coverage | N | % | No meaningful target control found (`not_related`) |
+
+> Replace "Source" and "Target" labels with the actual focal and reference framework names.
+
+#### 3. Relationship Distribution table
+Counts and percentages for all five STRM relationship types.
+
+#### 4. Per-tier regulation/control tables
+
+For each of the four tiers, include a table listing every FDE in that tier with:
+- FDE ID and title
+- Mapped target control ID and title
+- STRM relationship
+- Strength of Relationship score
+
+For the **No Coverage** tier, add a `Notes` column explaining why no control exists or what kind of supplemental evidence would be needed.
+
+#### 5. Recommended Actions section
+
+Prioritized by tier:
+- **Priority 1** — Address No Coverage gaps: list each FDE with a concrete recommended action (new control, policy, or evidence artifact)
+- **Priority 2** — Strengthen Partial / Exceeds Scope: list specific FDEs with strength ≤ 4 and suggest supplemental controls or documentation
+
+### Classification Logic
+
+Classify each FDE by its **best** relationship across all its mapped rows:
+
+| Best relationship present | Tier |
+|---|---|
+| `equal` or `subset_of` | ✅ Full Coverage |
+| `intersects_with` (no equal/subset_of) | 🟡 Partial Coverage |
+| `superset_of` (no equal/subset_of/intersects_with) | 🟠 Source Exceeds Target Scope |
+| only `not_related` | 🔴 No Coverage |
+
+---
+
 ## Quality Rules
 
 1. **Never leave Column F (Rationale) empty** — every row needs a narrative.
@@ -318,6 +377,7 @@ When generating reverse mappings (Target → Source):
    - If one control says "SHALL" and the other says "SHOULD", this is typically `subset_of`, not `equal`.
 10. **Manual QA is mandatory** — never declare completion from script output alone.
 11. **Validation and gap report run after manual QA only** — do not run post-completion checks in parallel with row generation.
+12. **Gap analysis must be fully expanded** — the stub produced by `strm-gap-report.mjs` is not the final output. Always replace it with the full expanded report per the Gap Analysis Content Standard above, including per-regulation tables for all four coverage tiers and a Recommended Actions section.
 
 ---
 

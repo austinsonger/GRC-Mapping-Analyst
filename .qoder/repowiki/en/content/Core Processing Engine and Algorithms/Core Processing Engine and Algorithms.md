@@ -14,7 +14,17 @@
 - [README.md](file://scripts/README.md)
 - [TEMPLATE_Set Theory Relationship Mapping (STRM).csv](file://TEMPLATE_Set Theory Relationship Mapping (STRM).csv)
 - [Set Theory Relationship Mapping (STRM).csv](file://working-directory/mapping-artifacts/2026-03-24_StateRAMP_Rev5_Moderate-to-NIST_800-82_r3_Moderate/Set Theory Relationship Mapping (STRM)_ [(StateRAMP_Rev5_Moderate-to-StateRAMP_Rev5_Moderate)-to-NIST_800-82_r3_Moderate] - StateRAMP Rev5 Moderate to NIST 800-82 r3 Moderate.csv)
+- [strm-rationale-regression.mjs](file://scripts/tests/strm-rationale-regression.mjs)
 </cite>
+
+## Update Summary
+**Changes Made**
+- Added comprehensive documentation for the new rationale inference algorithms
+- Enhanced relationship classification logic documentation with lexical similarity scoring
+- Documented theme overlap analysis and contextual word pattern recognition
+- Updated validation mechanisms with enhanced rationale type checking
+- Added detailed explanation of the inferRationaleType function and its decision logic
+- Expanded manual review integration with new rationale-based validation rules
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -31,6 +41,8 @@
 ## Introduction
 This document describes the Core Processing Engine and Algorithms that power the STRM toolkit. It explains the mathematical foundations for set-theory relationships, strength scoring, and validation workflows; documents the core processing functions, data transformation pipelines, and quality assurance mechanisms; and details CSV processing utilities, file system operations, and automated validation. It also covers relationship calculation algorithms, confidence assessment, manual review integration, performance characteristics, scalability limitations, error handling, logging, and debugging strategies.
 
+**Updated** The core processing engine now includes sophisticated rationale inference algorithms with lexical similarity scoring, theme overlap analysis, and contextual word pattern recognition for determining appropriate rationale types. Enhanced validation mechanisms ensure proper application of semantic, functional, and syntactic rationale classifications.
+
 ## Project Structure
 The STRM toolkit organizes its computational foundation around a small set of deterministic Node.js scripts and a shared core module. The scripts provide command-line entry points for extraction, mapping, validation, gap reporting, initialization, and filename generation. The core module encapsulates constants, scoring, parsing, validation, and filesystem helpers.
 
@@ -38,7 +50,7 @@ The STRM toolkit organizes its computational foundation around a small set of de
 graph TB
 subgraph "Core Library"
 CORE["scripts/lib/strm-core.mjs"]
-end
+END
 subgraph "CLI Scripts"
 EXTRACT["scripts/bin/strm-extract-json.mjs"]
 MAP["scripts/bin/strm-map-extracted.mjs"]
@@ -47,12 +59,12 @@ GAP["scripts/bin/strm-gap-report.mjs"]
 INIT["scripts/bin/strm-init-mapping.mjs"]
 FILENAME["scripts/bin/strm-generate-filename.mjs"]
 STRENGTH["scripts/bin/strm-compute-strength.mjs"]
-end
+END
 subgraph "Working Directory"
 SCRATCH["working-directory/scratch/"]
 ARTIFACTS["working-directory/mapping-artifacts/"]
 TEMPLATE["TEMPLATE_Set Theory Relationship Mapping (STRM).csv"]
-end
+END
 EXTRACT --> CORE
 MAP --> CORE
 VALIDATE --> CORE
@@ -102,7 +114,8 @@ This section documents the central building blocks of the STRM processing engine
 
 - Validation Pipeline
   - validateDataRow: enforces required fields, validates enumerations, checks numeric bounds, and verifies strength against computed formula
-  - strm-validate-csv: orchestrates header detection, per-row validation, and emits structured results
+  - Enhanced validation includes rationale type consistency checks and contextual word pattern recognition
+  - strm-validate-csv: orchestrates header detection, per-row validation, and emits structured results with rationale distribution analysis
 
 - Filesystem and Naming
   - sanitizeFrameworkName: cleans framework identifiers for filenames
@@ -122,7 +135,7 @@ This section documents the central building blocks of the STRM processing engine
 - [TEMPLATE_Set Theory Relationship Mapping (STRM).csv](file://TEMPLATE_Set Theory Relationship Mapping (STRM).csv)
 
 ## Architecture Overview
-The STRM processing engine follows a modular, deterministic pipeline. Extraction transforms vendor catalogs into standardized control datasets. Mapping computes similarity-based relationships and confidence. Validation ensures data integrity and adherence to the NIST IR 8477 formula. Gap reporting summarizes coverage and distribution. Manual review refines mappings. Initialization and filename generation standardize outputs.
+The STRM processing engine follows a modular, deterministic pipeline. Extraction transforms vendor catalogs into standardized control datasets. Mapping computes similarity-based relationships and confidence. The new rationale inference algorithms determine appropriate rationale types based on lexical similarity, theme overlap, and contextual word patterns. Validation ensures data integrity and adherence to the NIST IR 8477 formula. Gap reporting summarizes coverage and distribution. Manual review refines mappings with enhanced rationale-based validation rules. Initialization and filename generation standardize outputs.
 
 ```mermaid
 sequenceDiagram
@@ -138,10 +151,11 @@ Extract->>Core : toCsv()
 Extract-->>User : Extracted CSV
 User->>Map : Focal/target CSVs
 Map->>Core : parseCsv(), buildHeader(), computeStrength()
-Map-->>User : STRM CSV draft
+Map->>Map : inferRationaleType(), classify(), confidence()
+Map-->>User : STRM CSV draft with rationale types
 User->>Validate : STRM CSV path
 Validate->>Core : parseCsv(), findColumnIndexes(), validateDataRow()
-Validate-->>User : Validation report
+Validate-->>User : Validation report with rationale distribution
 User->>Gap : STRM CSV path
 Gap->>Core : parseCsv(), findColumnIndexes()
 Gap-->>User : Gap analysis markdown
@@ -214,6 +228,8 @@ Clamp --> Out(["Output: score, base, adj, rationaleAdj"])
   - Composite similarity score blending lexical, title, and theme overlap
   - Classification thresholds determine relationship
   - Confidence derived from similarity threshold
+  - **Enhanced**: Sophisticated rationale inference determines appropriate rationale types
+  - **New**: inferRationaleType function analyzes lexical similarity, theme overlap, and mechanism patterns
   - Functional rationale applied; strength computed via formula
   - Notes summarize shared themes and divergent signals
 
@@ -228,7 +244,8 @@ LoadSrc --> LoadTgt["Load target controls"]
 LoadTgt --> Similarity["Compute Jaccard/title/theme similarity"]
 Similarity --> Classify["Classify relationship"]
 Classify --> Confidence["Assign confidence"]
-Confidence --> Strength["Compute strength"]
+Confidence --> Rationale["Infer rationale type"]
+Rationale --> Strength["Compute strength"]
 Strength --> Notes["Build rationale and notes"]
 Notes --> WriteM["Write STRM CSV"]
 ```
@@ -241,17 +258,58 @@ Notes --> WriteM["Write STRM CSV"]
 - [strm-extract-json.mjs](file://scripts/bin/strm-extract-json.mjs)
 - [strm-map-extracted.mjs](file://scripts/bin/strm-map-extracted.mjs)
 
+### Enhanced Rationale Inference Algorithms
+**New Section** The STRM toolkit now includes sophisticated rationale inference algorithms that automatically determine appropriate rationale types based on multiple analytical criteria.
+
+#### Lexical Similarity Scoring
+- Title lexical similarity threshold: ≥ 0.45 for semantic rationale
+- Token lexical similarity threshold: ≥ 0.38 for semantic rationale  
+- Combined score threshold: ≥ 0.34 with overlap ≥ 1 for semantic rationale
+
+#### Theme Overlap Analysis
+- Theme categories include access control, incident response, risk management, governance and policy, audit and monitoring, data protection, and third-party management
+- Overlap detection identifies shared thematic domains between controls
+- Same theme different mechanism scenarios trigger functional rationale assignment
+
+#### Contextual Word Pattern Recognition
+- Strong obligation patterns: shall, must, required, ensure, implement, maintain
+- Weak obligation patterns: should, may, consider, as applicable, addressable
+- Mechanism detection patterns for backup, redundancy, review, authentication, encryption, monitoring, and reporting
+
+#### Rationale Type Decision Logic
+```mermaid
+flowchart TD
+Start(["Analyze Control Pair"]) --> Wording["Check wording similarity"]
+Wording --> Semantic{"Wording close?"}
+Semantic --> |Yes| AssignSemantic["Assign semantic rationale"]
+Semantic --> |No| Themes["Analyze theme overlap"]
+Themes --> Mechanisms["Detect mechanism patterns"]
+Mechanisms --> Functional{"Same theme, different mechanisms?"}
+Functional --> |Yes| AssignFunctional["Assign functional rationale"]
+Functional --> |No| DefaultSemantic["Default to semantic rationale"]
+```
+
+**Diagram sources**
+- [strm-map-extracted.mjs](file://scripts/bin/strm-map-extracted.mjs)
+
+**Section sources**
+- [strm-map-extracted.mjs](file://scripts/bin/strm-map-extracted.mjs)
+
 ### Quality Assurance: Validation and Gap Reporting
 - Validation
   - Detects missing required columns
   - Validates enumerations for relationship, confidence, and rationale
   - Ensures numeric strength is integer within 1–10
   - Verifies strength equals computed formula result
+  - **Enhanced**: Checks rationale type consistency and contextual word patterns
+  - **New**: Validates that semantic rationale is used appropriately based on wording similarity
+  - **New**: Ensures functional rationale is justified by mechanism differences or theme overlap
   - Emits errors and warnings with row-specific context
 
 - Gap Reporting
   - Aggregates by FDE to classify full/partial/gap coverage
   - Computes distribution of relationships
+  - **Enhanced**: Analyzes rationale type distribution to identify potential misclassifications
   - Generates markdown summary under the artifact directory
 
 ```mermaid
@@ -259,6 +317,7 @@ sequenceDiagram
 participant V as "Validator"
 participant P as "Parser"
 participant C as "Core"
+participant R as "Rationale Analyzer"
 participant FS as "Filesystem"
 V->>FS : Read CSV
 FS-->>V : Text
@@ -267,6 +326,8 @@ P-->>V : Rows
 V->>C : findColumnIndexes()
 C-->>V : Column indices
 loop For each data row
+V->>R : validateRationaleConsistency()
+R-->>V : Rationale validation results
 V->>C : validateDataRow()
 C-->>V : {errors, warnings, relationship}
 end
@@ -288,7 +349,11 @@ V-->>FS : Write JSON report
 - Manual QA Script
   - Loads focal and target control sets by ID
   - Recomputes tokenized Jaccard similarities for title and description
-  - Applies rules to adjust relationships (e.g., downgrading equal to intersects_with if parity is weak or modal mismatch exists; promoting subset/superset to equal if strong parity)
+  - **Enhanced**: Applies new rationale-based validation rules during manual review
+  - **New**: Checks for mixed obligation language (SHALL/SHOULD) in equal relationships
+  - **New**: Validates that subset_of relationships include explicit containment direction language
+  - **New**: Ensures rationale references FDE# and Target ID # explicitly
+  - **New**: Verifies shared objective statements are included in rationale text
   - Updates strength accordingly and appends a review note
   - Produces a manual review log summarizing changes
 
@@ -297,8 +362,9 @@ flowchart TD
 MRStart(["Manual Review"]) --> LoadSets["Load src/tgt by ID"]
 LoadSets --> Iterate["Iterate STRM rows"]
 Iterate --> ComputeSim["Compute title/desc Jaccard"]
-ComputeSim --> Adjust["Apply adjustment rules"]
-Adjust --> Update["Update relationship/strength/notes"]
+ComputeSim --> CheckRationale["Validate rationale consistency"]
+CheckRationale --> ApplyRules["Apply rationale-based adjustment rules"]
+ApplyRules --> Update["Update relationship/strength/notes"]
 Update --> Log["Write review log"]
 Log --> MREnd(["Done"])
 ```
@@ -358,21 +424,26 @@ CORE --> STRENGTH["strm-compute-strength.mjs"]
 ## Performance Considerations
 - Complexity of Mapping
   - For each focal control, the mapper scans all target controls to compute similarity metrics and select the best match. This yields O(F × T) comparisons, where F is the number of focal controls and T is the number of target controls.
-  - Tokenization and Jaccard similarity are linear in token counts; theme overlap is proportional to the number of themes checked.
-  - Memory usage scales with storing token sets and frequency maps for both focal and target control sets.
+  - **Enhanced**: The new rationale inference adds additional computational overhead through pattern matching and theme analysis
+  - Tokenization and Jaccard similarity are linear in token counts; theme overlap is proportional to the number of themes checked
+  - **New**: Mechanism pattern detection uses regular expressions across control text, adding logarithmic complexity per pattern
+  - Memory usage scales with storing token sets and frequency maps for both focal and target control sets
 
 - Practical Recommendations
-  - Pre-filter controls by coarse heuristics (e.g., ID-like prefixes) to reduce T when feasible.
-  - Consider batching or parallelizing row processing if F is large.
-  - Cache repeated computations (e.g., tokenization) if memory allows.
-  - For very large catalogs, consider streaming or chunked processing to reduce peak memory.
+  - Pre-filter controls by coarse heuristics (e.g., ID-like prefixes) to reduce T when feasible
+  - Consider batching or parallelizing row processing if F is large
+  - Cache repeated computations (e.g., tokenization) if memory allows
+  - **New**: Consider optimizing regex pattern compilation for repeated mechanism detection
+  - For very large catalogs, consider streaming or chunked processing to reduce peak memory
 
 - CSV Parsing and Writing
-  - The custom CSV parser avoids external dependencies and supports robust quoting and escaping.
-  - toCsv performs escaping and newline handling; ensure buffered writes for large outputs.
+  - The custom CSV parser avoids external dependencies and supports robust quoting and escaping
+  - toCsv performs escaping and newline handling; ensure buffered writes for large outputs
 
 - Validation Overhead
-  - Validation runs in O(R) where R is the number of data rows. Keep header normalization and enumeration checks efficient.
+  - Validation runs in O(R) where R is the number of data rows
+  - **Enhanced**: New rationale validation adds additional checks for each row
+  - Keep header normalization and enumeration checks efficient
 
 [No sources needed since this section provides general guidance]
 
@@ -383,6 +454,13 @@ CORE --> STRENGTH["strm-compute-strength.mjs"]
   - Strength mismatch: verify the formula computation and that strength is integer in 1–10
   - Empty CSV: handle gracefully with a structured error payload
 
+- **New**: Rationale Type Issues
+  - Semantic vs functional rationale confusion: check wording similarity thresholds and theme overlap
+  - Mixed obligation language warnings: verify SHALL/SHOULD consistency in equal relationships
+  - Missing containment direction language: ensure subset_of rationale includes explicit scope language
+  - Unreferenced IDs in rationale: verify FDE# and Target ID # are explicitly mentioned
+  - Missing shared objective statements: ensure "Both ..." phrasing is included
+
 - Extraction Issues
   - Malformed JSON: ensure catalog.securityControls[] is present and is an array
   - Unexpected fields: use --all-fields to include discovered fields; otherwise defaults to core metadata
@@ -390,10 +468,12 @@ CORE --> STRENGTH["strm-compute-strength.mjs"]
 - Mapping Discrepancies
   - Weak parity: manual review may downgrade equal to intersects_with or promote subset/superset to equal
   - Modal mismatch: strong vs weak language differences can alter classification
+  - **New**: Rationale misclassification: verify lexical similarity, theme overlap, and mechanism patterns justify the assigned rationale type
 
 - Logging and Debugging
   - All scripts emit structured JSON payloads for machine processing
   - Use the validator and gap report to isolate problematic rows and distributions
+  - **New**: Check rationale distribution analysis to identify systematic misclassifications
   - For debugging, temporarily write intermediate CSVs (e.g., extracted controls) to disk
 
 **Section sources**
@@ -403,7 +483,7 @@ CORE --> STRENGTH["strm-compute-strength.mjs"]
 - [manual-qa-strm.mjs](file://working-directory/scratch/manual-qa-strm.mjs)
 
 ## Conclusion
-The STRM toolkit’s core processing engine combines deterministic CSV utilities, a robust strength scoring formula, and a similarity-driven mapping pipeline. Quality assurance is enforced through automated validation and gap reporting, with manual review as a safety net. The architecture is modular, scalable, and designed for cross-platform operation with Node.js. By understanding the mathematical relationships, data transformations, and validation workflows, practitioners can operate the toolkit reliably at scale while maintaining traceability and reproducibility.
+The STRM toolkit's core processing engine combines deterministic CSV utilities, a robust strength scoring formula, and a similarity-driven mapping pipeline. **Enhanced** with sophisticated rationale inference algorithms, the system now automatically determines appropriate rationale types based on lexical similarity, theme overlap, and contextual word patterns. Quality assurance is enforced through automated validation and gap reporting, with manual review as a safety net. The architecture is modular, scalable, and designed for cross-platform operation with Node.js. By understanding the mathematical relationships, data transformations, and validation workflows, practitioners can operate the toolkit reliably at scale while maintaining traceability and reproducibility.
 
 [No sources needed since this section summarizes without analyzing specific files]
 
@@ -426,3 +506,16 @@ The STRM toolkit’s core processing engine combines deterministic CSV utilities
 **Section sources**
 - [Set Theory Relationship Mapping (STRM).csv](file://working-directory/mapping-artifacts/2026-03-24_StateRAMP_Rev5_Moderate-to-NIST_800-82_r3_Moderate/Set Theory Relationship Mapping (STRM)_ [(StateRAMP_Rev5_Moderate-to-StateRAMP_Rev5_Moderate)-to-NIST_800-82_r3_Moderate] - StateRAMP Rev5 Moderate to NIST 800-82 r3 Moderate.csv)
 - [TEMPLATE_Set Theory Relationship Mapping (STRM).csv](file://TEMPLATE_Set Theory Relationship Mapping (STRM).csv)
+
+### Enhanced Validation Features
+**New Section** The STRM toolkit now includes comprehensive validation features for rationale type consistency:
+
+- **Rationale Distribution Analysis**: Automatically detects when semantic rationale dominates (≥ 95%) indicating potential misclassification issues
+- **Contextual Word Pattern Validation**: Ensures rationale text includes appropriate shared objective statements and explicit ID references
+- **Obligation Language Consistency**: Validates that equal relationships don't mix SHALL/SHOULD language
+- **Containment Direction Language**: Requires explicit scope language for subset_of relationships
+- **Mechanism Pattern Detection**: Identifies when functional rationale is justified by different implementation approaches
+
+**Section sources**
+- [strm-validate-csv.mjs](file://scripts/bin/strm-validate-csv.mjs)
+- [strm-rationale-regression.mjs](file://scripts/tests/strm-rationale-regression.mjs)
